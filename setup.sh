@@ -10,6 +10,8 @@ apt-get install -y --no-install-recommends \
   libffi-dev libcairo2 fontconfig fonts-dejavu-core
 
 # Paquets listés en clair (le script de setup peut tourner avant le clone du repo).
-pip install "weasyprint>=62,<64" "jinja2>=3.1" "jsonschema>=4" "pypdfium2>=4" "pillow>=10" "requests>=2.31"
+# --break-system-packages : Ubuntu 24.04 refuse sinon l'install globale (PEP 668).
+python3 -m pip install --break-system-packages \
+  "weasyprint>=62,<64" "jinja2>=3.1" "jsonschema>=4" "pypdfium2>=4" "pillow>=10" "requests>=2.31"
 
 echo "setup_render OK"
