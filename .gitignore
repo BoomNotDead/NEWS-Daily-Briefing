@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+out/
+_debug/
+artifacts/
+.env

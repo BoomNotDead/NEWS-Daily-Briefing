@@ -1,0 +1,154 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Trading Brief Matin - payload",
+  "type": "object",
+  "required": ["meta", "verdict", "niveaux", "condense"],
+  "properties": {
+    "meta": {
+      "type": "object",
+      "required": ["date_str"],
+      "properties": {
+        "date_str": { "type": "string" },
+        "heure": { "type": "string" },
+        "snapshot": { "type": "string" },
+        "tz": { "type": "string" }
+      }
+    },
+    "verdict": {
+      "type": "object",
+      "required": ["biais", "pivot", "ne_pas_lacher", "vol"],
+      "properties": {
+        "biais": { "type": "string" },
+        "pivot": { "type": "string" },
+        "ne_pas_lacher": { "type": "string" },
+        "vol": { "type": "string" }
+      }
+    },
+    "niveaux": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["actif", "spot", "sup1", "sup2", "res1", "res2"],
+        "properties": {
+          "actif": { "type": "string" },
+          "spot": { "type": "number" },
+          "close_prev": { "type": ["number", "null"] },
+          "sup1": { "type": "number" },
+          "sup2": { "type": "number" },
+          "res1": { "type": "number" },
+          "res2": { "type": "number" },
+          "biais": { "type": "string" },
+          "decimals": { "type": "integer" },
+          "unit": { "type": "string" }
+        }
+      }
+    },
+    "courbe": {
+      "type": "object",
+      "properties": {
+        "points": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["t", "v"],
+            "properties": { "t": { "type": "string" }, "v": { "type": "number" } }
+          }
+        },
+        "bund10y": { "type": ["number", "null"] },
+        "oat10y": { "type": ["number", "null"] },
+        "spread_2s10s": { "type": ["number", "null"] },
+        "spread_oat_bund": { "type": ["number", "null"] },
+        "fed_funds_proba": { "type": "string" },
+        "fed_funds_range": { "type": "string" }
+      }
+    },
+    "volatilite": {
+      "type": "object",
+      "properties": {
+        "vix": { "type": ["number", "null"] },
+        "vix1d": { "type": ["number", "null"] },
+        "vix3m": { "type": ["number", "null"] },
+        "move": { "type": ["number", "null"] },
+        "straddle_pct": { "type": ["number", "null"] },
+        "straddle_actif": { "type": "string" }
+      }
+    },
+    "cross_asset": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["label", "pct"],
+        "properties": { "label": { "type": "string" }, "pct": { "type": "number" } }
+      }
+    },
+    "agenda": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["heure", "evenement"],
+        "properties": {
+          "heure": { "type": "string" },
+          "evenement": { "type": "string" },
+          "attendu": { "type": "string" },
+          "precedent": { "type": "string" },
+          "tier": { "type": "integer", "minimum": 1, "maximum": 3 },
+          "move_implicite": { "type": "string" },
+          "evenement_du_jour": { "type": "boolean" }
+        }
+      }
+    },
+    "secteurs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["secteur"],
+        "properties": {
+          "secteur": { "type": "string" },
+          "pct": { "type": ["number", "null"] },
+          "biais": { "type": "string" }
+        }
+      }
+    },
+    "playbook": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["si", "proba", "alors", "biais"],
+        "properties": {
+          "si": { "type": "string" },
+          "proba": { "type": "number" },
+          "alors": { "type": "string" },
+          "biais": { "type": "string", "enum": ["long", "short", "attente"] }
+        }
+      }
+    },
+    "invalidation": { "type": "string" },
+    "delta": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["label", "direction"],
+        "properties": {
+          "label": { "type": "string" },
+          "direction": { "type": "string", "enum": ["up", "down", "stable"] }
+        }
+      }
+    },
+    "condense": {
+      "type": "object",
+      "required": ["idee"],
+      "properties": {
+        "idee": { "type": "string" },
+        "pourquoi": { "type": "string" },
+        "evenement": { "type": "string" },
+        "plan_avant": { "type": "string" },
+        "plan_apres": { "type": "string" },
+        "a_surveiller": { "type": "string" },
+        "overnight": { "type": "string" },
+        "inflation": { "type": "string" }
+      }
+    },
+    "sources": { "type": "array", "items": { "type": "string" } }
+  }
+}

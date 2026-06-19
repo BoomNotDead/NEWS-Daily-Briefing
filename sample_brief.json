@@ -1,0 +1,59 @@
+{
+  "meta": { "date_str": "jeudi 19 juin 2026", "heure": "08:00", "snapshot": "07:55", "tz": "Europe/Paris" },
+  "verdict": {
+    "biais": "Risk-on sélectif — cycliques oui, tech non",
+    "pivot": "CAC 8 440",
+    "ne_pas_lacher": "8 380",
+    "vol": "VIX en hausse avant 20h"
+  },
+  "niveaux": [
+    { "actif": "CAC 40",    "spot": 8450,   "close_prev": 8462,   "sup1": 8380,   "sup2": 8320,   "res1": 8500,   "res2": 8560,   "biais": "neutre",   "decimals": 0 },
+    { "actif": "DAX",       "spot": 24000,  "close_prev": 23950,  "sup1": 23800,  "sup2": 23700,  "res1": 24200,  "res2": 24350,  "biais": "neutre",   "decimals": 0 },
+    { "actif": "EUR/USD",   "spot": 1.1605, "close_prev": 1.1598, "sup1": 1.1560, "sup2": 1.1520, "res1": 1.1660, "res2": 1.1700, "biais": "haussier", "decimals": 4 },
+    { "actif": "Brent",     "spot": 78.9,   "close_prev": 82.3,   "sup1": 77.5,   "sup2": 76.5,   "res1": 80.0,   "res2": 82.0,   "biais": "baissier", "decimals": 1, "unit": "$" },
+    { "actif": "Or",        "spot": 4100,   "close_prev": 4090,   "sup1": 4000,   "sup2": 3950,   "res1": 4180,   "res2": 4250,   "biais": "neutre",   "decimals": 0, "unit": "$" },
+    { "actif": "US 10 ans", "spot": 4.43,   "close_prev": 4.48,   "sup1": 4.38,   "sup2": 4.30,   "res1": 4.50,   "res2": 4.55,   "biais": "detente",  "decimals": 2, "unit": "%" }
+  ],
+  "courbe": {
+    "points": [ { "t": "2Y", "v": 3.78 }, { "t": "5Y", "v": 4.05 }, { "t": "10Y", "v": 4.43 } ],
+    "bund10y": 2.95, "oat10y": 3.67, "spread_2s10s": 65, "spread_oat_bund": 72,
+    "fed_funds_proba": "99 %", "fed_funds_range": "3,50–3,75 %"
+  },
+  "volatilite": { "vix": 17.8, "vix1d": 24.5, "vix3m": 19.1, "move": 102, "straddle_pct": 1.3, "straddle_actif": "S&P 500" },
+  "cross_asset": [
+    { "label": "Dow", "pct": 0.64 }, { "label": "S&P 500", "pct": -0.57 }, { "label": "Nasdaq", "pct": -1.15 },
+    { "label": "Nikkei", "pct": 0.76 }, { "label": "Brent", "pct": -4.0 }, { "label": "Or", "pct": 0.5 }
+  ],
+  "agenda": [
+    { "heure": "14:30", "evenement": "Inscriptions chômage US", "attendu": "230k", "precedent": "229k", "tier": 2, "evenement_du_jour": false },
+    { "heure": "20:00", "evenement": "Décision de taux Fed (FOMC)", "attendu": "3,50–3,75 %", "precedent": "3,50–3,75 %", "tier": 1, "move_implicite": "±1,3 %", "evenement_du_jour": true },
+    { "heure": "20:30", "evenement": "Conférence de presse (K. Warsh)", "attendu": "—", "precedent": "—", "tier": 1, "evenement_du_jour": false }
+  ],
+  "secteurs": [
+    { "secteur": "Banques", "pct": 0.8, "biais": "haussier" }, { "secteur": "Énergie", "pct": -1.5, "biais": "baissier" },
+    { "secteur": "Tech/Semis", "pct": -1.2, "biais": "baissier" }, { "secteur": "Industrie", "pct": 0.6, "biais": "haussier" },
+    { "secteur": "Luxe", "pct": 0.2, "biais": "neutre" }, { "secteur": "Transport", "pct": 0.9, "biais": "haussier" }
+  ],
+  "playbook": [
+    { "si": "Ton accommodant (baisses confirmées)", "proba": 20, "alors": "Hausse : CAC vise 8 540, EUR/USD > 1,1660", "biais": "long" },
+    { "si": "Sans surprise (statu quo, ton neutre)", "proba": 55, "alors": "Calme : range, la volatilité retombe après 20h", "biais": "attente" },
+    { "si": "Ton ferme (projections retirées)", "proba": 25, "alors": "Baisse : CAC teste 8 380, EUR/USD < 1,1560", "biais": "short" }
+  ],
+  "invalidation": "Au-dessus de 4,50 % sur le taux US 10 ans, le scénario « cycliques » s'essouffle.",
+  "delta": [
+    { "label": "Pétrole en baisse, ça accélère", "direction": "down" },
+    { "label": "Rotation vers les cycliques", "direction": "up" },
+    { "label": "Taux US 10 ans en détente", "direction": "down" }
+  ],
+  "condense": {
+    "idee": "Ambiance prudente : les valeurs « cycliques » (banques, industrie) montent, la tech baisse. Tout le monde attend la banque centrale US ce soir, donc journée plutôt calme avant 20h.",
+    "pourquoi": "Le pétrole chute (accord US-Iran), ça calme l'inflation, et ça rassure les marchés.",
+    "evenement": "Décision de taux de la Fed (1re réunion du nouveau président, K. Warsh). Les taux vont quasi sûrement rester à 3,50-3,75 %. Ce qui compte, c'est le TON du discours, pas le chiffre.",
+    "plan_avant": "peu de mouvement, on patiente.",
+    "plan_apres": "gros pic possible. On regarde si le CAC casse 8 380 (signal baissier) ou 8 500 (signal haussier).",
+    "a_surveiller": "le pétrole et les valeurs techno (Nasdaq -1,15 % cette nuit).",
+    "overnight": "Dow +0,64 % (record) · S&P -0,57 % · Nasdaq -1,15 %.",
+    "inflation": "4,2 %"
+  },
+  "sources": ["TradingEconomics", "Reuters", "Investing.com"]
+}
