@@ -69,7 +69,7 @@ def _pills(data: dict) -> list[dict]:
 
 
 def build_context(data: dict) -> dict:
-    rails = [{"n": n, "svg": charts.rail(n)} for n in data["niveaux"]]
+    rails = [{"n": n, "img": charts.rail(n)} for n in data["niveaux"]]
     secteurs = []
     for s in data.get("secteurs", []) or []:
         bg, fg = TINT[_sens(s.get("biais"))]
@@ -79,9 +79,9 @@ def build_context(data: dict) -> dict:
     return dict(
         d=data, P=P, rails=rails, pills=_pills(data),
         secteurs=secteurs, playbook=playbook, agenda=agenda,
-        svg_curve=charts.yield_curve(data.get("courbe", {}) or {}),
-        svg_cross=charts.cross_asset_bars(data.get("cross_asset", []) or []),
-        svg_vix=charts.vix_gauge(data.get("volatilite", {}) or {}),
+        img_curve=charts.yield_curve(data.get("courbe", {}) or {}),
+        img_cross=charts.cross_asset_bars(data.get("cross_asset", []) or []),
+        img_vix=charts.vix_gauge(data.get("volatilite", {}) or {}),
     )
 
 

@@ -12,6 +12,6 @@ apt-get install -y --no-install-recommends \
 # Paquets listés en clair (le script de setup peut tourner avant le clone du repo).
 # --break-system-packages : Ubuntu 24.04 refuse sinon l'install globale (PEP 668).
 python3 -m pip install --break-system-packages \
-  "weasyprint>=62,<64" "jinja2>=3.1" "jsonschema>=4" "pypdfium2>=4" "pillow>=10" "requests>=2.31"
+  "weasyprint>=62,<64" "matplotlib>=3.8" "jinja2>=3.1" "jsonschema>=4" "pypdfium2>=4" "pillow>=10" "requests>=2.31"
 
 echo "setup_render OK"

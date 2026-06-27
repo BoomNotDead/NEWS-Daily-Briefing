@@ -5,58 +5,69 @@
 <style>
   @page {
     size: A4 landscape;
-    margin: 8mm 9mm 9mm 9mm;
-    @bottom-right { content: "p. " counter(page) "/" counter(pages); font: 7pt "DejaVu Sans"; color: #6B7280; }
+    margin: 10mm 11mm;
+    @bottom-left { content: "MACROPULSE — note de marché"; font: 7pt "DejaVu Sans"; color: #586070; }
+    @bottom-right { content: "p. " counter(page) "/" counter(pages); font: 7pt "DejaVu Sans"; color: #586070; }
   }
   * { box-sizing: border-box; }
-  body { font-family: "DejaVu Sans", sans-serif; color: #2B2B2B; font-size: 8.4pt; line-height: 1.32; margin: 0; }
+  body { font-family: "DejaVu Sans", sans-serif; color: #2B2B2B; font-size: 8.4pt; line-height: 1.32; margin: 0;
+         font-variant-numeric: tabular-nums; font-feature-settings: "tnum" 1; }
   .mono { font-family: "DejaVu Sans Mono", monospace; }
   .b { font-weight: bold; }
-  .muted { color: #6B7280; }
+  .muted { color: #586070; }
 
-  .band { background: #14304A; color: #fff; padding: 5pt 9pt; border-radius: 3pt; display: table; width: 100%; }
-  .band .t { display: table-cell; font-size: 15pt; font-weight: bold; letter-spacing: .3pt; }
-  .band .d { display: table-cell; text-align: right; vertical-align: middle; color: #AFC4DA; font-size: 8pt; }
+  .band { background: #14304A; color: #fff; padding: 5pt 9pt; border-radius: 3pt; display: table; width: 100%; table-layout: fixed; break-after: avoid; }
+  .band .t { display: table-cell; width: 58%; font-size: 15pt; font-weight: bold; letter-spacing: .3pt; }
+  .band .d { display: table-cell; width: 42%; text-align: right; vertical-align: middle; color: #AFC4DA; font-size: 8pt; white-space: nowrap; }
 
-  table.verdict { width: 100%; border-collapse: separate; border-spacing: 5pt 0; margin: 6pt 0 4pt; table-layout: fixed; }
+  table.verdict { width: 100%; border-collapse: separate; border-spacing: 5pt 0; margin: 6pt 0 4pt; table-layout: fixed; break-inside: avoid; }
   table.verdict td { border: .5pt solid #D8D2C8; border-radius: 3pt; padding: 4pt 7pt; vertical-align: top; }
-  .vlab { font-size: 6.6pt; letter-spacing: .8pt; text-transform: uppercase; color: #6B7280; }
+  .vlab { font-size: 6.6pt; letter-spacing: .8pt; text-transform: uppercase; color: #586070; }
   .vval { font-size: 11pt; font-weight: bold; margin-top: 1pt; }
 
   .pills { margin: 2pt 0 6pt; }
   .pill { display: inline-block; background: #F1EEE8; border-radius: 3pt; padding: 2pt 6pt; font-size: 7.6pt; margin: 0 4pt 3pt 0; }
 
-  table.grid3 { width: 100%; table-layout: fixed; border-collapse: separate; border-spacing: 6pt 0; }
-  table.grid3 > tr > td, table.grid3 td.col { vertical-align: top; }
+  table.grid3 { width: 100%; table-layout: fixed; border-collapse: collapse; }
+  table.grid3 td.col { vertical-align: top; padding: 0 4pt; }
+  table.grid3 td.col:first-child { padding-left: 0; }
+  table.grid3 td.col:last-child { padding-right: 0; }
 
-  .card { border: .5pt solid #D8D2C8; border-radius: 3pt; padding: 5pt 6pt; margin-bottom: 6pt; }
+  .card { border: .5pt solid #D8D2C8; border-radius: 3pt; padding: 5pt 6pt; margin-bottom: 6pt; break-inside: avoid; }
   .card.hero { background: #FAF8F4; }
-  .h { font-size: 7pt; letter-spacing: .8pt; text-transform: uppercase; color: #14304A; font-weight: bold; border-bottom: .5pt solid #D8D2C8; padding-bottom: 2pt; margin-bottom: 4pt; }
+  .card img { max-width: 100%; height: auto; }
+  .h { font-size: 8.7pt; letter-spacing: .5pt; text-transform: uppercase; color: #14304A; font-weight: bold; border-bottom: .5pt solid #D8D2C8; padding-bottom: 2pt; margin-bottom: 4pt; break-after: avoid; }
 
   table.data { width: 100%; border-collapse: collapse; font-size: 7.8pt; }
-  table.data th { text-align: left; color: #6B7280; font-weight: bold; font-size: 6.8pt; text-transform: uppercase; letter-spacing: .4pt; padding: 0 3pt 2pt; }
+  table.data th { text-align: left; color: #586070; font-weight: bold; font-size: 6.8pt; text-transform: uppercase; letter-spacing: .4pt; padding: 0 3pt 2pt; }
   table.data td { padding: 2.4pt 3pt; border-top: .5pt solid #ECE7DE; vertical-align: middle; }
+  table.data tr, table.pb tr { break-inside: avoid; }
   td.num { text-align: right; font-family: "DejaVu Sans Mono", monospace; }
 
-  table.lvl td.rail { width: 142pt; padding-left: 6pt; }
-  table.lvl td.rail svg { display: block; }
+  table.lvl td.rail { width: 150pt; padding-left: 6pt; }
+  table.lvl td.rail img { display: block; width: 100%; }
+  .chart { display: block; width: 100%; margin: 1pt 0; }
 
   .dot { display: inline-block; width: 6pt; height: 6pt; border-radius: 50%; vertical-align: middle; }
   tr.today td { background: #F8EFD8; }
 
-  .sect { display: inline-block; width: 31%; margin: 0 1% 4pt 0; border-radius: 3pt; padding: 3pt 5pt; font-size: 7.6pt; }
-  .sect .p { font-weight: bold; float: right; }
+  .sectors { display: flex; flex-wrap: wrap; gap: 4pt; }
+  .sect { display: flex; justify-content: space-between; width: 31.5%; border-radius: 3pt; padding: 3pt 5pt; font-size: 7.6pt; }
+  .sect .name { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .sect .p { font-weight: bold; padding-left: 4pt; }
 
   table.pb { width: 100%; border-collapse: collapse; font-size: 7.8pt; }
   table.pb td { padding: 3pt 5pt; border: .5pt solid #ECE7DE; vertical-align: middle; }
-  .pbar { height: 7pt; background: #14304A; border-radius: 2pt; display: inline-block; vertical-align: middle; }
+  .ptrack { display: inline-block; width: 52pt; height: 7pt; background: #ECE7DE; border-radius: 2pt; vertical-align: middle; overflow: hidden; }
+  .pbar { display: block; height: 7pt; background: #14304A; border-radius: 2pt; }
 
-  .delta { margin-top: 4pt; }
+  .delta { margin-top: 4pt; break-inside: avoid; }
   .dpill { display: inline-block; background: #F1EEE8; border-radius: 3pt; padding: 2pt 6pt; font-size: 7.4pt; margin: 0 4pt 3pt 0; }
 
-  .foot { border-top: .5pt solid #D8D2C8; margin-top: 5pt; padding-top: 3pt; font-size: 6.8pt; color: #6B7280; display: table; width: 100%; }
-  .foot .l { display: table-cell; } .foot .r { display: table-cell; text-align: right; }
-  .note { color: #6B7280; font-size: 7pt; font-style: italic; }
+  .foot { border-top: .5pt solid #D8D2C8; margin-top: 5pt; padding-top: 3pt; font-size: 7pt; color: #586070; display: table; width: 100%; table-layout: fixed; }
+  .foot .l { display: table-cell; width: 62%; }
+  .foot .r { display: table-cell; width: 38%; text-align: right; }
+  .note { color: #586070; font-size: 7.2pt; font-style: italic; }
 </style>
 </head>
 <body>
@@ -77,17 +88,18 @@
   <div class="pills">{% for p in pills %}<span class="pill" style="color:{{ p.color }}">{{ p.label }} {{ p.disp }} {{ p.sym }}</span>{% endfor %}</div>
   {% endif %}
 
-  <table class="grid3"><tr>
+  <table class="grid3">
+    <colgroup><col style="width:27%"><col style="width:40%"><col style="width:33%"></colgroup>
+    <tr>
 
     <td class="col">
-      {% if svg_cross %}
-      <div class="card"><div class="h">Marchés cette nuit (var %)</div>{{ svg_cross|safe }}</div>
+      {% if img_cross %}
+      <div class="card"><div class="h">Marchés cette nuit (var %)</div><img class="chart" src="{{ img_cross }}"></div>
       {% endif %}
-      {% if svg_curve %}
-      <div class="card"><div class="h">Taux &amp; courbe</div>{{ svg_curve|safe }}
+      {% if img_curve %}
+      <div class="card"><div class="h">Taux &amp; courbe</div><img class="chart" src="{{ img_curve }}">
         <div class="muted" style="font-size:7.2pt;margin-top:3pt">
-          {% if d.courbe.spread_2s10s is defined %}Pente 2-10 ans : {{ d.courbe.spread_2s10s|signed(0) }} pb · {% endif %}
-          {% if d.courbe.spread_oat_bund is defined %}OAT-Bund : {{ d.courbe.spread_oat_bund|fmt(0) }} pb{% endif %}<br>
+          {% if d.courbe.spread_oat_bund is defined and d.courbe.spread_oat_bund is not none %}OAT-Bund : {{ d.courbe.spread_oat_bund|fmt(0) }} pb<br>{% endif %}
           {% if d.courbe.fed_funds_range %}Fed : maintien probable ({{ d.courbe.fed_funds_proba }}) à {{ d.courbe.fed_funds_range }}{% endif %}
         </div>
       </div>
@@ -100,22 +112,22 @@
         <table class="data lvl">
           <thead><tr><th>Actif</th><th style="text-align:right">Prix</th><th>Zone à surveiller</th><th>Support &harr; résistance</th></tr></thead>
           <tbody>
-          {% for row in rails %}{% set n = row.n %}{% set dec = n.decimals|default(0) %}
+          {% for row in rails[:14] %}{% set n = row.n %}{% set dec = n.decimals|default(0) %}
             <tr>
               <td class="b">{{ n.actif }}</td>
               <td class="num">{{ n.spot|fmt(dec) }}{% if n.unit %} {{ n.unit }}{% endif %}</td>
               <td class="mono muted" style="font-size:7pt">{{ n.sup1|fmt(dec) }} – {{ n.res1|fmt(dec) }}</td>
-              <td class="rail">{{ row.svg|safe }}</td>
+              <td class="rail"><img src="{{ row.img }}"></td>
             </tr>
           {% endfor %}
           </tbody>
         </table>
-        <div class="muted" style="font-size:6.8pt;margin-top:3pt">Marqueur = prix actuel · trait vert = support · trait rouge = résistance. Niveaux indicatifs.</div>
+        <div class="muted" style="font-size:6.8pt;margin-top:3pt">Point = prix actuel · barres grises = supports/résistances · flèche = cassure. Niveaux indicatifs.</div>
       </div>
 
       {% if secteurs %}
       <div class="card"><div class="h">Secteurs du jour</div>
-        {% for s in secteurs %}<span class="sect" style="background:{{ s.bg }};color:{{ s.fg }}">{{ s.s.secteur }}<span class="p">{% if s.s.pct is not none %}{{ s.s.pct|pct(1) }}{% endif %}</span></span>{% endfor %}
+        <div class="sectors">{% for s in secteurs[:9] %}<span class="sect" style="background:{{ s.bg }};color:{{ s.fg }}"><span class="name">{{ s.s.secteur }}</span><span class="p">{% if s.s.pct is not none %}{{ s.s.pct|pct(1) }}{% endif %}</span></span>{% endfor %}</div>
       </div>
       {% endif %}
     </td>
@@ -124,23 +136,24 @@
       {% if agenda %}
       <div class="card"><div class="h">Agenda du jour (heure FR)</div>
         <table class="data">
-          <thead><tr><th>Heure</th><th>Événement</th><th>Att.</th><th></th></tr></thead>
+          <thead><tr><th>Heure</th><th>Événement</th><th>Att.</th><th>Préc.</th><th></th></tr></thead>
           <tbody>
-          {% for it in agenda %}{% set a = it.a %}
+          {% for it in agenda[:8] %}{% set a = it.a %}
             <tr class="{{ 'today' if a.evenement_du_jour else '' }}">
               <td class="mono">{{ a.heure }}</td>
               <td>{{ a.evenement }}{% if a.move_implicite %} <span class="muted">({{ a.move_implicite }})</span>{% endif %}</td>
               <td class="mono">{{ a.attendu|default('—') }}</td>
+              <td class="mono muted">{{ a.precedent|default('—') }}</td>
               <td><span class="dot" style="background:{{ it.tc }}"></span></td>
             </tr>
           {% endfor %}
           </tbody>
         </table>
-        <div class="muted" style="font-size:6.6pt;margin-top:2pt"><span class="dot" style="background:#C0392B"></span> fort &nbsp; <span class="dot" style="background:#C8861A"></span> moyen &nbsp; <span class="dot" style="background:#6B7280"></span> mineur</div>
+        <div class="muted" style="font-size:6.8pt;margin-top:2pt"><span class="dot" style="background:#C0392B"></span> fort &nbsp; <span class="dot" style="background:#C8861A"></span> moyen &nbsp; <span class="dot" style="background:#586070"></span> mineur</div>
       </div>
       {% endif %}
-      {% if svg_vix %}
-      <div class="card"><div class="h">Volatilité</div>{{ svg_vix|safe }}
+      {% if img_vix %}
+      <div class="card"><div class="h">Volatilité</div><img class="chart" src="{{ img_vix }}">
         <div class="muted" style="font-size:7.2pt;margin-top:2pt">
           {% if d.volatilite.vix1d %}VIX 1 jour {{ d.volatilite.vix1d|fmt(1) }} · {% endif %}
           {% if d.volatilite.vix3m %}3 mois {{ d.volatilite.vix3m|fmt(1) }}{% endif %}
@@ -156,10 +169,10 @@
   <div class="card"><div class="h">Scénarios pour ce soir — que se passe-t-il si…</div>
     <table class="pb">
       <tbody>
-      {% for it in playbook %}{% set r = it.r %}
+      {% for it in playbook[:6] %}{% set r = it.r %}
         <tr style="background:{{ it.bg }}">
           <td style="width:38%"><span class="b">{{ r.si }}</span></td>
-          <td style="width:16%"><span class="pbar" style="width:{{ (r.proba|float)*0.9 }}pt"></span> <span class="mono">{{ r.proba|fmt(0) }} %</span></td>
+          <td style="width:18%"><span class="ptrack"><span class="pbar" style="width:{{ [r.proba|float, 100]|min }}%"></span></span> <span class="mono">{{ r.proba|fmt(0) }} %</span></td>
           <td>{{ r.alors }}</td>
         </tr>
       {% endfor %}
@@ -171,7 +184,7 @@
 
   {% if d.delta %}
   <div class="delta"><span class="muted b" style="font-size:7pt;text-transform:uppercase;letter-spacing:.6pt">Ce qui a changé depuis hier :</span>
-    {% for x in d.delta %}<span class="dpill">{% if x.direction=='up' %}&#9650;{% elif x.direction=='down' %}&#9660;{% else %}&#8226;{% endif %} {{ x.label }}</span>{% endfor %}
+    {% for x in d.delta[:5] %}<span class="dpill">{% if x.direction=='up' %}&#9650;{% elif x.direction=='down' %}&#9660;{% else %}&#8226;{% endif %} {{ x.label }}</span>{% endfor %}
   </div>
   {% endif %}
 
