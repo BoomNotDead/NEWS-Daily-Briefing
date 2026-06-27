@@ -5,7 +5,7 @@
 <style>
   @page {
     size: A4 landscape;
-    margin: 10mm 11mm;
+    margin: 6mm 8mm;
     @bottom-left { content: "MACROPULSE — note de marché"; font: 7pt "DejaVu Sans"; color: #586070; }
     @bottom-right { content: "p. " counter(page) "/" counter(pages); font: 7pt "DejaVu Sans"; color: #586070; }
   }
@@ -21,11 +21,11 @@
   .band .d { display: table-cell; width: 42%; text-align: right; vertical-align: middle; color: #AFC4DA; font-size: 8pt; white-space: nowrap; }
 
   table.verdict { width: 100%; border-collapse: separate; border-spacing: 5pt 0; margin: 6pt 0 4pt; table-layout: fixed; break-inside: avoid; }
-  table.verdict td { border: .5pt solid #D8D2C8; border-radius: 3pt; padding: 4pt 7pt; vertical-align: top; }
+  table.verdict td { border: .5pt solid #D8D2C8; border-radius: 3pt; padding: 3pt 6pt; vertical-align: top; }
   .vlab { font-size: 6.6pt; letter-spacing: .8pt; text-transform: uppercase; color: #586070; }
-  .vval { font-size: 11pt; font-weight: bold; margin-top: 1pt; }
+  .vval { font-size: 10pt; font-weight: bold; margin-top: 1pt; }
 
-  .pills { margin: 2pt 0 6pt; }
+  .pills { margin: 1pt 0 4pt; }
   .pill { display: inline-block; background: #F1EEE8; border-radius: 3pt; padding: 2pt 6pt; font-size: 7.6pt; margin: 0 4pt 3pt 0; }
 
   table.grid3 { width: 100%; table-layout: fixed; border-collapse: collapse; }
@@ -33,14 +33,14 @@
   table.grid3 td.col:first-child { padding-left: 0; }
   table.grid3 td.col:last-child { padding-right: 0; }
 
-  .card { border: .5pt solid #D8D2C8; border-radius: 3pt; padding: 5pt 6pt; margin-bottom: 6pt; break-inside: avoid; }
+  .card { border: .5pt solid #D8D2C8; border-radius: 3pt; padding: 3pt 5pt; margin-bottom: 3pt; break-inside: avoid; }
   .card.hero { background: #FAF8F4; }
   .card img { max-width: 100%; height: auto; }
-  .h { font-size: 8.7pt; letter-spacing: .5pt; text-transform: uppercase; color: #14304A; font-weight: bold; border-bottom: .5pt solid #D8D2C8; padding-bottom: 2pt; margin-bottom: 4pt; break-after: avoid; }
+  .h { font-size: 8.4pt; letter-spacing: .5pt; text-transform: uppercase; color: #14304A; font-weight: bold; border-bottom: .5pt solid #D8D2C8; padding-bottom: 2pt; margin-bottom: 3pt; break-after: avoid; }
 
   table.data { width: 100%; border-collapse: collapse; font-size: 7.8pt; }
   table.data th { text-align: left; color: #586070; font-weight: bold; font-size: 6.8pt; text-transform: uppercase; letter-spacing: .4pt; padding: 0 3pt 2pt; }
-  table.data td { padding: 2.4pt 3pt; border-top: .5pt solid #ECE7DE; vertical-align: middle; }
+  table.data td { padding: 1.5pt 3pt; border-top: .5pt solid #ECE7DE; vertical-align: middle; }
   table.data tr, table.pb tr { break-inside: avoid; }
   td.num { text-align: right; font-family: "DejaVu Sans Mono", monospace; }
 
@@ -57,14 +57,14 @@
   .sect .p { font-weight: bold; padding-left: 4pt; }
 
   table.pb { width: 100%; border-collapse: collapse; font-size: 7.8pt; }
-  table.pb td { padding: 3pt 5pt; border: .5pt solid #ECE7DE; vertical-align: middle; }
+  table.pb td { padding: 2pt 5pt; border: .5pt solid #ECE7DE; vertical-align: middle; }
   .ptrack { display: inline-block; width: 52pt; height: 7pt; background: #ECE7DE; border-radius: 2pt; vertical-align: middle; overflow: hidden; }
   .pbar { display: block; height: 7pt; background: #14304A; border-radius: 2pt; }
 
   .delta { margin-top: 4pt; break-inside: avoid; }
   .dpill { display: inline-block; background: #F1EEE8; border-radius: 3pt; padding: 2pt 6pt; font-size: 7.4pt; margin: 0 4pt 3pt 0; }
 
-  .foot { border-top: .5pt solid #D8D2C8; margin-top: 5pt; padding-top: 3pt; font-size: 7pt; color: #586070; display: table; width: 100%; table-layout: fixed; }
+  .foot { border-top: .5pt solid #D8D2C8; margin-top: 3pt; padding-top: 3pt; font-size: 7pt; color: #586070; display: table; width: 100%; table-layout: fixed; }
   .foot .l { display: table-cell; width: 62%; }
   .foot .r { display: table-cell; width: 38%; text-align: right; }
   .note { color: #586070; font-size: 7.2pt; font-style: italic; }
@@ -104,6 +104,11 @@
         </div>
       </div>
       {% endif %}
+      {% if secteurs %}
+      <div class="card"><div class="h">Secteurs du jour</div>
+        <div class="sectors">{% for s in secteurs[:9] %}<span class="sect" style="background:{{ s.bg }};color:{{ s.fg }}"><span class="name">{{ s.s.secteur }}</span><span class="p">{% if s.s.pct is not none %}{{ s.s.pct|pct(1) }}{% endif %}</span></span>{% endfor %}</div>
+      </div>
+      {% endif %}
     </td>
 
     <td class="col">
@@ -124,12 +129,6 @@
         </table>
         <div class="muted" style="font-size:6.8pt;margin-top:3pt">Point = prix actuel · barres grises = supports/résistances · flèche = cassure. Niveaux indicatifs.</div>
       </div>
-
-      {% if secteurs %}
-      <div class="card"><div class="h">Secteurs du jour</div>
-        <div class="sectors">{% for s in secteurs[:9] %}<span class="sect" style="background:{{ s.bg }};color:{{ s.fg }}"><span class="name">{{ s.s.secteur }}</span><span class="p">{% if s.s.pct is not none %}{{ s.s.pct|pct(1) }}{% endif %}</span></span>{% endfor %}</div>
-      </div>
-      {% endif %}
     </td>
 
     <td class="col">

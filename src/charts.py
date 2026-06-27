@@ -42,7 +42,7 @@ def cross_asset_bars(items: list) -> str:
     n = len(items)
     maxv = max((abs(v) for v in vals), default=1) or 1
 
-    fig, ax = plt.subplots(figsize=(3.25, 0.33 * n + 0.25))
+    fig, ax = plt.subplots(figsize=(3.25, 0.25 * n + 0.12))
     y = list(range(n))
     ax.barh(y, vals, color=colors, height=0.6, zorder=3)
     ax.axvline(0, color=PALETTE["muted"], lw=0.8, zorder=2)
@@ -76,7 +76,7 @@ def yield_curve(courbe: dict) -> str:
     ys = [p["v"] for p in pts]
     labels = [p["t"] for p in pts]
 
-    fig, ax = plt.subplots(figsize=(3.25, 1.55))
+    fig, ax = plt.subplots(figsize=(3.25, 1.05))
     ax.plot(xs, ys, "-o", color=PALETTE["navy"], lw=1.8, ms=4.5, zorder=4)
     slope_up = len(ys) > 1 and ys[-1] >= ys[0]
     for x, yv in zip(xs, ys):
@@ -121,7 +121,7 @@ def vix_gauge(vol: dict) -> str:
     bounds = [(0, 15, PALETTE["up"]), (15, 20, PALETTE["amber2"]),
               (20, 30, PALETTE["warn"]), (30, 50, PALETTE["down"]), (50, 80, DEEP_RED)]
 
-    fig, ax = plt.subplots(figsize=(3.25, 0.82))
+    fig, ax = plt.subplots(figsize=(3.25, 0.72))
     for a, b, c in bounds:
         if a >= maxv:
             break
@@ -153,7 +153,7 @@ def rail(item: dict) -> str:
     marker = PALETTE["down"] if below else (PALETTE["up"] if above else level_color(item.get("biais")))
     lo, hi = min(s2, spot), max(r2, spot)
 
-    fig, ax = plt.subplots(figsize=(2.6, 0.34))
+    fig, ax = plt.subplots(figsize=(3.9, 0.17))
     ax.hlines(0, s2, r2, color=PALETTE["rule"], lw=3.4, zorder=1)
     ax.hlines(0, s1, r1, color=PALETTE["neutral"], lw=3.4, zorder=2)
     ax.vlines(s1, -0.55, 0.55, color=PALETTE["muted"], lw=1.5, zorder=3)
