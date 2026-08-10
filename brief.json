@@ -1,0 +1,58 @@
+{
+  "meta": { "date_str": "lundi 10 août 2026", "heure": "08:00", "snapshot": "07:55", "tz": "Europe/Paris" },
+  "verdict": {
+    "biais": "Records tenus mais prudence — pétrole et CPI de mercredi en embuscade",
+    "pivot": "CAC 8 715",
+    "ne_pas_lacher": "8 660",
+    "vol": "VIX très bas (14,9) — sérénité fragile avant le CPI"
+  },
+  "niveaux": [
+    { "actif": "CAC 40",       "spot": 8705,   "close_prev": 8715,   "sup1": 8660,   "sup2": 8600,   "res1": 8760,   "res2": 8820,   "biais": "neutre",   "decimals": 0 },
+    { "actif": "DAX",          "spot": 26200,  "close_prev": 26244,  "sup1": 26000,  "sup2": 25700,  "res1": 26400,  "res2": 26600,  "biais": "neutre",   "decimals": 0 },
+    { "actif": "EuroStoxx 50", "spot": 6525,   "close_prev": 6530,   "sup1": 6470,   "sup2": 6400,   "res1": 6570,   "res2": 6620,   "biais": "neutre",   "decimals": 0 },
+    { "actif": "EUR/USD",      "spot": 1.1548, "close_prev": 1.1550, "sup1": 1.1500, "sup2": 1.1460, "res1": 1.1590, "res2": 1.1620, "biais": "neutre",   "decimals": 4 },
+    { "actif": "Brent",        "spot": 84.4,   "close_prev": 83.5,   "sup1": 82.5,   "sup2": 81.0,   "res1": 85.5,   "res2": 87.0,   "biais": "haussier", "decimals": 1, "unit": "$" },
+    { "actif": "Or",           "spot": 4335,   "close_prev": 4310,   "sup1": 4280,   "sup2": 4230,   "res1": 4370,   "res2": 4420,   "biais": "haussier", "decimals": 0, "unit": "$" },
+    { "actif": "US 10 ans",    "spot": 4.68,   "close_prev": 4.68,   "sup1": 4.60,   "sup2": 4.52,   "res1": 4.72,   "res2": 4.78,   "biais": "tension",  "decimals": 2, "unit": "%" }
+  ],
+  "courbe": {
+    "points": [ { "t": "2Y", "v": 4.25 }, { "t": "5Y", "v": 4.40 }, { "t": "10Y", "v": 4.68 } ],
+    "bund10y": 3.06, "oat10y": 3.75, "spread_2s10s": 43, "spread_oat_bund": 76
+  },
+  "volatilite": { "vix": 14.9 },
+  "cross_asset": [
+    { "label": "Dow", "pct": 0.28 }, { "label": "S&P 500", "pct": 0.62 }, { "label": "Nasdaq", "pct": 1.30 },
+    { "label": "Nikkei", "pct": -0.28 }, { "label": "Hang Seng", "pct": 0.50 }, { "label": "Brent", "pct": 1.04 }
+  ],
+  "agenda": [
+    { "heure": "—", "evenement": "Pas de publication majeure aujourd'hui", "tier": 3, "evenement_du_jour": false },
+    { "heure": "mer. 14:30", "evenement": "Inflation américaine (CPI) de juillet", "attendu": "3,6 %", "precedent": "3,5 %", "tier": 1, "evenement_du_jour": false }
+  ],
+  "secteurs": [
+    { "secteur": "Énergie", "pct": 0.9, "biais": "haussier" }, { "secteur": "Banques", "pct": 0.3, "biais": "neutre" },
+    { "secteur": "Luxe", "pct": 0.2, "biais": "neutre" }, { "secteur": "Tech/Semis", "pct": -0.3, "biais": "neutre" },
+    { "secteur": "Industrie", "pct": 0.2, "biais": "neutre" }, { "secteur": "Transport", "pct": -0.6, "biais": "baissier" }
+  ],
+  "playbook": [
+    { "si": "CPI de mercredi ≤ 3,5 % et le pétrole se calme", "proba": 45, "alors": "Records prolongés : CAC vise 8 760 puis 8 820, EUR/USD rebondit vers 1,1590", "biais": "long" },
+    { "si": "Attente pure : range étroit jusqu'à mercredi", "proba": 35, "alors": "Consolidation : CAC entre 8 660 et 8 760, volatilité au plancher (VIX < 16)", "biais": "attente" },
+    { "si": "Brent > 86 $ (Ormuz se tend) ou CPI ≥ 3,7 %", "proba": 20, "alors": "Repli : CAC teste 8 660 puis 8 600, US 10 ans vers 4,72 %, EUR/USD < 1,1500", "biais": "short" }
+  ],
+  "invalidation": "Un Brent durablement au-dessus de 87 $ couplé à un US 10 ans repassant au-dessus de 4,72 % invaliderait le scénario « records tenus » et rouvrirait la porte à une correction avant le CPI.",
+  "delta": [
+    { "label": "Pétrole repart à la hausse (détroit d'Ormuz)", "direction": "up" },
+    { "label": "Or proche de son record (valeur refuge)", "direction": "up" },
+    { "label": "VIX au plancher (14,9) = excès de sérénité", "direction": "down" }
+  ],
+  "condense": {
+    "idee": "Les Bourses restent au plus haut : Wall Street et le DAX ont battu des records vendredi, le CAC est tout près du sien, et la peur est au plancher (VIX à 14,9, très bas). Mais deux nuages approchent : le pétrole remonte ce matin et l'inflation américaine sort mercredi. Journée d'attente, plutôt calme mais fragile.",
+    "pourquoi": "Le pétrole monte (Brent +1 % vers 84 $) car les discussions États-Unis / Iran pour rouvrir le détroit d'Ormuz — passage clé du pétrole mondial — patinent. Un baril plus cher relance la crainte d'inflation… juste avant le chiffre d'inflation américain de mercredi.",
+    "evenement": "Rien de majeur aujourd'hui. L'événement de la semaine est l'inflation américaine de juillet (CPI), publiée mercredi à 14h30 (heure de Paris). On attend environ +3,6 % sur un an (contre +3,5 % le mois précédent). Un chiffre plus élevé ferait peur ; un chiffre plus bas rassurerait sur de futures baisses de taux.",
+    "plan_avant": "Peu de mouvement attendu, marché en veille. On surveille surtout le pétrole.",
+    "plan_apres": "Aujourd'hui : si le CAC casse 8 660, signal de prudence ; s'il franchit 8 760, l'élan record se poursuit. La grosse réaction viendra mercredi avec le CPI.",
+    "a_surveiller": "Le pétrole (détroit d'Ormuz) et l'or, qui frôle son record vers 4 335 $ — signe que certains se couvrent malgré des Bourses au plus haut.",
+    "overnight": "Vendredi : S&P 500 +0,62 % (record, 7 758), Nasdaq +1,30 %, Dow +0,28 % (record). Asie ce matin : Nikkei -0,28 %, Hang Seng +0,50 %.",
+    "inflation": "3,5 %"
+  },
+  "sources": ["Reuters", "CNBC", "Al Jazeera", "TradingEconomics", "FXStreet", "BLS"]
+}
