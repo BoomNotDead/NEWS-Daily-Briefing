@@ -1,0 +1,61 @@
+{
+  "meta": { "date_str": "mardi 11 août 2026", "heure": "08:00", "snapshot": "07:55 (clôtures veille)", "tz": "Europe/Paris" },
+  "verdict": {
+    "biais": "Attentisme sous tension : le pétrole tire l'énergie et le dollar refuge, actions à l'arrêt avant le CPI US",
+    "pivot": "CAC 8 700",
+    "ne_pas_lacher": "8 680",
+    "vol": "VIX très bas (15,9) — trop calme avant le CPI de demain"
+  },
+  "niveaux": [
+    { "actif": "CAC 40",    "spot": 8726,   "close_prev": 8715,   "sup1": 8680,   "sup2": 8620,   "res1": 8760,   "res2": 8800,   "biais": "neutre",   "decimals": 0 },
+    { "actif": "DAX",       "spot": 26360,  "close_prev": 26308,  "sup1": 26150,  "sup2": 25950,  "res1": 26500,  "res2": 26700,  "biais": "neutre",   "decimals": 0 },
+    { "actif": "EUR/USD",   "spot": 1.1547, "close_prev": 1.1559, "sup1": 1.1500, "sup2": 1.1450, "res1": 1.1600, "res2": 1.1660, "biais": "baissier", "decimals": 4 },
+    { "actif": "Brent",     "spot": 87.7,   "close_prev": 83.6,   "sup1": 85.0,   "sup2": 82.5,   "res1": 90.0,   "res2": 93.0,   "biais": "haussier", "decimals": 1, "unit": "$" },
+    { "actif": "Or",        "spot": 4330,   "close_prev": 4356,   "sup1": 4280,   "sup2": 4200,   "res1": 4400,   "res2": 4450,   "biais": "neutre",   "decimals": 0, "unit": "$" },
+    { "actif": "US 10 ans", "spot": 4.65,   "close_prev": 4.64,   "sup1": 4.58,   "sup2": 4.50,   "res1": 4.72,   "res2": 4.80,   "biais": "tension",  "decimals": 2, "unit": "%" }
+  ],
+  "courbe": {
+    "points": [ { "t": "2Y", "v": 4.25 }, { "t": "5Y", "v": 4.41 }, { "t": "10Y", "v": 4.65 } ],
+    "bund10y": 3.12, "oat10y": null, "spread_2s10s": 40, "spread_oat_bund": null
+  },
+  "volatilite": { "vix": 15.89 },
+  "cross_asset": [
+    { "label": "Dow", "pct": -0.1 }, { "label": "S&P 500", "pct": -0.1 }, { "label": "Nasdaq", "pct": -0.3 },
+    { "label": "Nikkei", "pct": 2.0 }, { "label": "Brent", "pct": 4.95 }, { "label": "Or", "pct": -0.6 }
+  ],
+  "agenda": [
+    { "heure": "—", "evenement": "Pas de publication majeure aujourd'hui (veille du CPI américain)", "tier": 3, "evenement_du_jour": false },
+    { "heure": "14:30 (demain)", "evenement": "Inflation US (CPI juillet, glissement annuel)", "attendu": "3,4 %", "precedent": "3,5 %", "tier": 1, "evenement_du_jour": true },
+    { "heure": "14:30 (demain)", "evenement": "Inflation sous-jacente US (core CPI, hors énergie/alimentation)", "attendu": "2,5 %", "precedent": "2,6 %", "tier": 1, "evenement_du_jour": false }
+  ],
+  "secteurs": [
+    { "secteur": "Énergie", "pct": null, "biais": "haussier" },
+    { "secteur": "Banques", "pct": null, "biais": "haussier" },
+    { "secteur": "Tech/Semis", "pct": null, "biais": "baissier" },
+    { "secteur": "Transport/Aérien", "pct": null, "biais": "baissier" },
+    { "secteur": "Automobile", "pct": null, "biais": "baissier" },
+    { "secteur": "Luxe", "pct": null, "biais": "neutre" }
+  ],
+  "playbook": [
+    { "si": "Le Brent casse 90 $ (escalade sur le détroit d'Ormuz)", "proba": 30, "alors": "Risk-off : CAC vers 8 680 puis 8 620, transport et auto décrochent, US 10 ans > 4,72 %, or revient tester 4 400", "biais": "short" },
+    { "si": "Brent se stabilise 85-88 $, le marché attend le CPI", "proba": 45, "alors": "Range d'attente : CAC coincé 8 700-8 760, volumes faibles, la volatilité reste basse (VIX ~16)", "biais": "attente" },
+    { "si": "Détente géopolitique, Brent repasse sous 85 $", "proba": 25, "alors": "Rebond : CAC vise 8 760 puis un nouveau record, EUR/USD reprend 1,1600, l'énergie corrige et le dollar se détend", "biais": "long" }
+  ],
+  "invalidation": "Sous 85 $, le Brent casse la dynamique du pétrole : le fil directeur « choc énergétique » du jour s'essouffle et les valeurs pénalisées par le carburant (transport, auto) se détendent.",
+  "delta": [
+    { "label": "Brent +5 % : le pétrole dicte la séance", "direction": "up" },
+    { "label": "Dollar refuge, EUR/USD sous 1,1550", "direction": "down" },
+    { "label": "Taux US 10 ans sous tension (4,65 %)", "direction": "up" }
+  ],
+  "condense": {
+    "idee": "Le pétrole est le patron du jour : le Brent a bondi d'environ 5 % (près de 88 $) après l'échec des discussions USA-Iran ce week-end et de nouvelles attaques dans le détroit d'Ormuz (le passage maritime par lequel transite une grande partie du pétrole mondial). Ça relance la peur de l'inflation, soutient le dollar « refuge » et fige les actions, qui attendent le chiffre d'inflation américain de demain.",
+    "pourquoi": "Un pétrole plus cher = essence et transport plus chers = inflation qui remonte. Et plus d'inflation peut empêcher la banque centrale américaine de baisser ses taux. D'où l'enchaînement : taux US en hausse (10 ans à 4,65 %), dollar plus fort, et Wall Street en léger repli (Nasdaq -0,3 %, Nvidia en baisse).",
+    "evenement": "Le grand rendez-vous est DEMAIN (mercredi, 14h30 heure de Paris) : l'inflation américaine de juillet (le « CPI »). On attend 3,4 % sur un an (contre 3,5 % en juin) et 2,5 % pour l'inflation « cœur » (hors énergie et alimentation). Un chiffre plus élevé que prévu ferait grimper les taux et chuter les actions ; plus bas, ce serait l'inverse.",
+    "plan_avant": "Séance d'attente : peu de conviction, volumes faibles, on surveille les gros titres sur Ormuz. Le CAC évolue sans doute dans un mouchoir, entre 8 700 et 8 760.",
+    "plan_apres": "La vraie cassure viendra avec le CPI de demain. Repères sur le CAC : au-dessus de 8 760 = signal positif (vers un nouveau record) ; sous 8 680 = signal négatif.",
+    "a_surveiller": "Le Brent (chaque titre sur le détroit d'Ormuz le fait bouger), les valeurs « énergie » type TotalEnergies qui profitent de la hausse, et à l'inverse le transport aérien et l'automobile pénalisés par le carburant cher. Et le VIX étonnamment bas (~16) : le marché semble trop serein avant un CPI à risque.",
+    "overnight": "Wall Street en léger repli — Dow -0,1 % · S&P 500 -0,1 % · Nasdaq -0,3 %. En Asie, Nikkei +2,0 %. En Europe lundi, indices proches de leurs records (CAC 8 726, DAX ~26 360).",
+    "inflation": "3,5 %"
+  },
+  "sources": ["Trading Economics", "Reuters", "Bloomberg", "CNBC", "Investing.com", "Forbes"]
+}
