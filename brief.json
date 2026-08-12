@@ -1,0 +1,58 @@
+{
+  "meta": { "date_str": "mercredi 12 août 2026", "heure": "08:00", "snapshot": "07:55", "tz": "Europe/Paris" },
+  "verdict": {
+    "biais": "Attentisme avant le CPI US — indices figés près des records",
+    "pivot": "CAC 8 725",
+    "ne_pas_lacher": "8 680",
+    "vol": "VIX bas (~15,5), calme trompeur avant 14h30"
+  },
+  "niveaux": [
+    { "actif": "CAC 40",    "spot": 8728,    "close_prev": 8725,    "sup1": 8680,    "sup2": 8620,    "res1": 8760,    "res2": 8800,    "biais": "neutre",   "decimals": 0 },
+    { "actif": "DAX",       "spot": 26352,   "close_prev": 26357,   "sup1": 26200,   "sup2": 26000,   "res1": 26500,   "res2": 26700,   "biais": "neutre",   "decimals": 0 },
+    { "actif": "EUR/USD",   "spot": 1.1542,  "close_prev": 1.1560,  "sup1": 1.1500,  "sup2": 1.1460,  "res1": 1.1600,  "res2": 1.1680,  "biais": "baissier", "decimals": 4 },
+    { "actif": "Brent",     "spot": 88.2,    "close_prev": 87.7,    "sup1": 86.0,    "sup2": 84.0,    "res1": 89.5,    "res2": 91.0,    "biais": "haussier", "decimals": 1, "unit": "$" },
+    { "actif": "Or",        "spot": 4396,    "close_prev": 4332,    "sup1": 4330,    "sup2": 4280,    "res1": 4440,    "res2": 4500,    "biais": "haussier", "decimals": 0, "unit": "$" },
+    { "actif": "US 10 ans", "spot": 4.72,    "close_prev": 4.70,    "sup1": 4.65,    "sup2": 4.60,    "res1": 4.78,    "res2": 4.85,    "biais": "tension",  "decimals": 2, "unit": "%" }
+  ],
+  "courbe": {
+    "points": [ { "t": "2Y", "v": 4.25 }, { "t": "5Y", "v": 4.41 }, { "t": "10Y", "v": 4.72 } ],
+    "bund10y": 3.20, "oat10y": 3.96, "spread_2s10s": 47, "spread_oat_bund": 76
+  },
+  "volatilite": { "vix": 15.5 },
+  "cross_asset": [
+    { "label": "Dow", "pct": -0.11 }, { "label": "S&P 500", "pct": -0.10 }, { "label": "Nasdaq", "pct": -0.30 },
+    { "label": "Brent", "pct": 0.6 }, { "label": "Or", "pct": 1.5 }
+  ],
+  "agenda": [
+    { "heure": "14:30", "evenement": "Inflation US (CPI) — juillet, glissement annuel", "attendu": "3,4 %", "precedent": "3,5 %", "tier": 1, "move_implicite": "±1,2 %", "evenement_du_jour": true },
+    { "heure": "14:30", "evenement": "Inflation sous-jacente US (Core CPI) — juillet, a/a", "attendu": "2,5 %", "precedent": "2,6 %", "tier": 1, "evenement_du_jour": false }
+  ],
+  "secteurs": [
+    { "secteur": "Énergie / Pétrolières", "pct": null, "biais": "haussier" },
+    { "secteur": "Tech / Semis", "pct": null, "biais": "baissier" },
+    { "secteur": "Banques", "pct": null, "biais": "neutre" },
+    { "secteur": "Luxe", "pct": null, "biais": "neutre" }
+  ],
+  "playbook": [
+    { "si": "CPI ≤ consensus (≤ 3,4 % / core ≤ 2,5 %)", "proba": 45, "alors": "Soulagement : la peur d'une hausse Fed retombe. CAC vise 8 760 puis 8 800, EUR/USD rebondit vers 1,1600, US 10 ans détend vers 4,65 %", "biais": "long" },
+    { "si": "CPI conforme (3,4 % / core 2,5 %)", "proba": 30, "alors": "Statu quo : range 8 680–8 760 sur le CAC, la volatilité retombe après 14h30", "biais": "attente" },
+    { "si": "CPI chaud (≥ 3,6 % / core ≥ 2,7 %, effet pétrole)", "proba": 25, "alors": "Décrochage : le scénario « hausse Fed en septembre » se réveille. CAC teste 8 620, EUR/USD sous 1,1500, US 10 ans > 4,80 %", "biais": "short" }
+  ],
+  "invalidation": "Un CPI supérieur à 3,6 % (ou un core au-dessus de 2,7 %) validerait le camp « hausse de taux Fed en septembre » : le scénario de soulagement s'annule et les actions décrochent.",
+  "delta": [
+    { "label": "Brent : 5e séance de hausse (~88 $), risque inflation", "direction": "up" },
+    { "label": "Or au-dessus de 4 400 $ (aversion, Iran)", "direction": "up" },
+    { "label": "EUR/USD sous 1,16 avant le CPI", "direction": "down" }
+  ],
+  "condense": {
+    "idee": "Journée sous cloche : le CAC et le DAX campent tout près de leurs records mais ne bougent presque pas. Tout le monde attend UN chiffre, l'inflation américaine de 14h30. Deux forces s'opposent : l'emploi US faible (vendredi, −23 000 postes) plaidait pour des baisses de taux, mais la flambée du pétrole relance la peur de l'inflation. Le CPI est l'arbitre.",
+    "pourquoi": "Le pétrole monte pour la 5e séance de suite (Brent ~88 $) à cause des tensions avec l'Iran (détroit d'Ormuz). Un pétrole cher = plus d'inflation, donc le marché s'est remis à craindre une HAUSSE des taux de la Fed en septembre. Le chiffre d'aujourd'hui dira quel camp a raison.",
+    "evenement": "Inflation américaine (CPI) de juillet, publiée à 14h30 (heure de Paris). On attend 3,4 % sur un an, un poil sous les 3,5 % de juin ; l'inflation « sous-jacente » (hors énergie et alimentation) est attendue à 2,5 %. Un chiffre plus bas rassure ; un chiffre plus haut relance la peur des taux.",
+    "plan_avant": "peu de mouvement, on patiente. Éviter de sur-réagir aux micro-variations du matin.",
+    "plan_apres": "gros pic possible à 14h30. On regarde si le CAC casse 8 680 (signal baissier) ou franchit 8 760 (signal haussier).",
+    "a_surveiller": "le pétrole (Brent) et les valeurs techno US (Alphabet a décroché hier soir, les semis sous pression).",
+    "overnight": "Dow −0,1 % · S&P 500 −0,1 % · Nasdaq −0,3 % (Wall Street tassée sur l'impasse US-Iran).",
+    "inflation": "3,5 %"
+  },
+  "sources": ["AJ Bell", "TradingEconomics", "Reuters", "CNBC", "Federal Reserve (H.15)", "Investing.com"]
+}
