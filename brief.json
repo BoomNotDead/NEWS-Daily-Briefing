@@ -1,0 +1,60 @@
+{
+  "meta": { "date_str": "jeudi 13 août 2026", "heure": "08:00", "snapshot": "07:55", "tz": "Europe/Paris" },
+  "verdict": {
+    "biais": "Risk-on tiré par les semi-conducteurs — le luxe reste à la traîne",
+    "pivot": "CAC 8 700",
+    "ne_pas_lacher": "8 640",
+    "vol": "VIX très bas (15,3) : complaisance avant le PPI de 14h30"
+  },
+  "niveaux": [
+    { "actif": "CAC 40",    "spot": 8699,   "close_prev": 8739,   "sup1": 8640,   "sup2": 8580,   "res1": 8760,   "res2": 8820,   "biais": "neutre",   "decimals": 0 },
+    { "actif": "DAX",       "spot": 26331,  "close_prev": 26391,  "sup1": 26100,  "sup2": 25850,  "res1": 26600,  "res2": 26850,  "biais": "neutre",   "decimals": 0 },
+    { "actif": "EUR/USD",   "spot": 1.1520, "close_prev": 1.1560, "sup1": 1.1480, "sup2": 1.1440, "res1": 1.1580, "res2": 1.1620, "biais": "baissier", "decimals": 4 },
+    { "actif": "Brent",     "spot": 87.9,   "close_prev": 89.0,   "sup1": 86.0,   "sup2": 84.0,   "res1": 90.0,   "res2": 92.5,   "biais": "baissier", "decimals": 1, "unit": "$" },
+    { "actif": "Or",        "spot": 4377,   "close_prev": 4395,   "sup1": 4320,   "sup2": 4260,   "res1": 4440,   "res2": 4500,   "biais": "neutre",   "decimals": 0, "unit": "$" },
+    { "actif": "US 10 ans", "spot": 4.68,   "close_prev": 4.71,   "sup1": 4.60,   "sup2": 4.52,   "res1": 4.75,   "res2": 4.82,   "biais": "detente",  "decimals": 2, "unit": "%" }
+  ],
+  "courbe": {
+    "points": [ { "t": "2Y", "v": 4.25 }, { "t": "5Y", "v": 4.42 }, { "t": "10Y", "v": 4.68 } ],
+    "bund10y": 3.16, "oat10y": 3.83, "spread_2s10s": 43, "spread_oat_bund": 67
+  },
+  "volatilite": { "vix": 15.28 },
+  "cross_asset": [
+    { "label": "Dow", "pct": -0.04 }, { "label": "S&P 500", "pct": 0.26 }, { "label": "Nasdaq", "pct": 0.54 },
+    { "label": "Nikkei", "pct": 1.6 }, { "label": "Kospi", "pct": 4.0 }, { "label": "Brent", "pct": -1.2 }
+  ],
+  "agenda": [
+    { "heure": "14:30", "evenement": "Prix à la production US — PPI cœur (juillet)", "attendu": "+0,3 % (mois)", "precedent": "+0,2 %", "tier": 2, "evenement_du_jour": true }
+  ],
+  "secteurs": [
+    { "secteur": "Tech / Semi-conducteurs", "pct": null, "biais": "haussier" },
+    { "secteur": "Luxe", "pct": null, "biais": "baissier" },
+    { "secteur": "Banques", "pct": null, "biais": "haussier" },
+    { "secteur": "Énergie", "pct": null, "biais": "baissier" },
+    { "secteur": "Industrie", "pct": null, "biais": "haussier" },
+    { "secteur": "Automobile", "pct": null, "biais": "neutre" }
+  ],
+  "playbook": [
+    { "si": "PPI cœur ≤ +0,2 % (désinflation confirmée)", "proba": 45, "alors": "Le rally des puces s'étend à l'Europe : CAC vise 8 760, EUR/USD rebondit vers 1,1580", "biais": "long" },
+    { "si": "PPI conforme (+0,3 %)", "proba": 35, "alors": "Statu quo : CAC oscille dans 8 640–8 760, le dollar reste ferme sous 1,1580", "biais": "attente" },
+    { "si": "PPI chaud ≥ +0,4 % (le pétrole cher se diffuse aux prix)", "proba": 20, "alors": "Retour du risque inflation : CAC teste 8 640, US 10 ans repasse 4,75 %, EUR/USD sous 1,1480", "biais": "short" }
+  ],
+  "invalidation": "Une remontée du taux US 10 ans au-dessus de 4,75 % (PPI chaud + prime pétrole liée à Hormuz) casserait le scénario risk-on et pèserait d'abord sur les semi-conducteurs.",
+  "delta": [
+    { "label": "Semi-conducteurs : rally mondial (Kospi +4 %, SK Hynix +7 %)", "direction": "up" },
+    { "label": "Luxe plombé par la demande chinoise", "direction": "down" },
+    { "label": "Taux US 10 ans en détente (4,68 %)", "direction": "down" },
+    { "label": "Brent toujours élevé (~88 $) — détroit d'Hormuz fermé", "direction": "stable" }
+  ],
+  "condense": {
+    "idee": "Ambiance nettement risk-on ce matin, portée par les semi-conducteurs. L'inflation américaine a ralenti hier (3,4 %), ce qui a relancé l'espoir de baisses de taux de la Fed et déclenché un rally des puces en Asie (Kospi coréen +4 %, SK Hynix +7 %). L'Europe, qui avait fini en baisse hier (le luxe plombé par la Chine), devrait rattraper une partie de ce retard à l'ouverture. Incohérence à noter : malgré une inflation plus douce, le dollar a rebondi et l'euro est retombé vers 1,1520 — les cambistes avaient déjà « acheté la rumeur ».",
+    "pourquoi": "Une inflation qui ralentit, c'est plus de marge pour la Fed pour baisser ses taux plus tard dans l'année. Or des taux plus bas rendent les actions de croissance (technologie, semi-conducteurs) plus attractives : c'est pour ça que les puces montent partout.",
+    "evenement": "Prix à la production aux États-Unis (PPI de juillet), à 14h30. Le PPI mesure l'inflation côté usines et entreprises, en amont des prix payés par le consommateur. Après le bon chiffre d'inflation d'hier, ce PPI sert de confirmation : s'il reste sage, le scénario « baisses de taux » se renforce ; s'il surprend à la hausse (le pétrole cher pourrait se diffuser aux prix), la peur de l'inflation revient.",
+    "plan_avant": "peu de conviction avant 14h30 ; l'Europe ouvre en hausse pour rattraper Wall Street et l'Asie, mais le luxe reste un poids.",
+    "plan_apres": "réaction sur le PPI. On regarde si le CAC tient au-dessus de 8 640 (soutien) et peut viser 8 760 (zone de record), ou s'il décroche.",
+    "a_surveiller": "les semi-conducteurs (ASML, STMicro en écho au rally asiatique), le luxe (LVMH, Kering sur la demande chinoise) et le pétrole, toujours élevé vers 88 $ à cause de la fermeture du détroit d'Hormuz.",
+    "overnight": "Wall Street en légère hausse (S&P +0,26 %, Nasdaq +0,54 %, Dow stable) · Asie en fête (Nikkei +1,6 %, Kospi +4 %).",
+    "inflation": "3,4 %"
+  },
+  "sources": ["TradingEconomics", "Reuters", "CNBC", "Bloomberg", "Investing.com", "BLS"]
+}
