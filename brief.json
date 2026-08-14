@@ -1,0 +1,63 @@
+{
+  "meta": { "date_str": "vendredi 14 août 2026", "heure": "08:00", "snapshot": "07:55", "tz": "Europe/Paris" },
+  "verdict": {
+    "biais": "Consolidation à haut niveau — désinflation US confirmée, mais essoufflement sous les records avant les ventes de détail",
+    "pivot": "CAC 8 650",
+    "ne_pas_lacher": "8 600",
+    "vol": "VIX au plancher (14,6) — complaisance"
+  },
+  "niveaux": [
+    { "actif": "CAC 40",    "spot": 8650,   "close_prev": 8675,   "sup1": 8600,   "sup2": 8540,   "res1": 8715,   "res2": 8760,   "biais": "neutre",   "decimals": 0 },
+    { "actif": "DAX",       "spot": 26300,  "close_prev": 26331,  "sup1": 26200,  "sup2": 26050,  "res1": 26490,  "res2": 26600,  "biais": "neutre",   "decimals": 0 },
+    { "actif": "EUR/USD",   "spot": 1.1536, "close_prev": 1.1528, "sup1": 1.1500, "sup2": 1.1460, "res1": 1.1575, "res2": 1.1620, "biais": "haussier", "decimals": 4 },
+    { "actif": "Brent",     "spot": 88.0,   "close_prev": 88.7,   "sup1": 86.5,   "sup2": 85.0,   "res1": 89.1,   "res2": 90.5,   "biais": "neutre",   "decimals": 1, "unit": "$" },
+    { "actif": "Or",        "spot": 4405,   "close_prev": 4432,   "sup1": 4350,   "sup2": 4280,   "res1": 4470,   "res2": 4540,   "biais": "haussier", "decimals": 0, "unit": "$" },
+    { "actif": "US 10 ans", "spot": 4.65,   "close_prev": 4.68,   "sup1": 4.58,   "sup2": 4.50,   "res1": 4.70,   "res2": 4.78,   "biais": "detente",  "decimals": 2, "unit": "%" }
+  ],
+  "courbe": {
+    "points": [ { "t": "2Y", "v": 4.15 }, { "t": "5Y", "v": 4.32 }, { "t": "10Y", "v": 4.65 } ],
+    "bund10y": 3.10, "oat10y": 3.75, "spread_2s10s": 50, "spread_oat_bund": 65,
+    "fed_funds_proba": "50 %", "fed_funds_range": "3,50–3,75 %"
+  },
+  "volatilite": { "vix": 14.6 },
+  "cross_asset": [
+    { "label": "Dow", "pct": 0.13 }, { "label": "S&P 500", "pct": 0.32 }, { "label": "Nasdaq", "pct": 0.81 },
+    { "label": "Nikkei", "pct": 0.83 }, { "label": "Brent", "pct": -0.8 }, { "label": "Or", "pct": -0.6 }
+  ],
+  "agenda": [
+    { "heure": "14:30", "evenement": "Ventes de détail US (juillet)", "attendu": "+0,3 %", "precedent": "+0,2 %", "tier": 2, "evenement_du_jour": true },
+    { "heure": "14:30", "evenement": "Ventes de détail hors automobiles US (juillet)", "attendu": "+0,2 %", "precedent": "−0,2 %", "tier": 2, "evenement_du_jour": false },
+    { "heure": "16:00", "evenement": "Confiance des ménages (Michigan, préliminaire août)", "attendu": "54,1", "precedent": "55,2", "tier": 2, "evenement_du_jour": false },
+    { "heure": "16:00", "evenement": "Anticipations d'inflation à 1 an (Michigan)", "attendu": "4,2 %", "precedent": "4,2 %", "tier": 3, "evenement_du_jour": false }
+  ],
+  "secteurs": [
+    { "secteur": "Énergie", "pct": null, "biais": "haussier" },
+    { "secteur": "Tech/Semis", "pct": null, "biais": "haussier" },
+    { "secteur": "Luxe", "pct": null, "biais": "neutre" },
+    { "secteur": "Banques", "pct": null, "biais": "haussier" },
+    { "secteur": "Automobile", "pct": null, "biais": "neutre" },
+    { "secteur": "Utilities", "pct": null, "biais": "baissier" }
+  ],
+  "playbook": [
+    { "si": "Ventes de détail solides (≥ +0,3 %) sans flambée des anticipations d'inflation", "proba": 45, "alors": "Scénario « boucle d'or » : le CAC revient tester 8 715 (record), EUR/USD vise 1,1575", "biais": "long" },
+    { "si": "Ventes conformes aux attentes, sans surprise", "proba": 35, "alors": "Range : le CAC oscille entre 8 600 et 8 715, la volatilité reste au plancher", "biais": "attente" },
+    { "si": "Ventes molles ou anticipations d'inflation Michigan > 4,2 %", "proba": 20, "alors": "Repli : le CAC casse 8 600 vers 8 540, l'or repart à l'assaut de son record", "biais": "short" }
+  ],
+  "invalidation": "Sous 8 600 en clôture, la consolidation vire à la correction ; au-dessus de 8 715, le CAC valide un nouveau record et relance la tendance.",
+  "delta": [
+    { "label": "CPI et PPI US plus mous que prévu (PPI 0,0 % en juillet)", "direction": "down" },
+    { "label": "La crainte d'une HAUSSE de taux de la Fed s'éloigne", "direction": "down" },
+    { "label": "Or perché près de ses records (~+10 % sur un mois)", "direction": "up" }
+  ],
+  "condense": {
+    "idee": "Bonne nouvelle sur l'inflation américaine : les prix à la production (PPI) et à la consommation (CPI) sont ressortis plus bas que prévu cette semaine. Conséquence : la crainte d'une HAUSSE des taux de la Fed s'éloigne, l'or reste perché près de ses records (4 400 $) et Wall Street a fini sur un plus haut historique. En Europe, CAC et DAX calent juste sous leurs records (le CAC a terminé −0,28 % hier) : les acheteurs soufflent avant les ventes de détail américaines de cet après-midi.",
+    "pourquoi": "Quand l'inflation ralentit, la banque centrale US n'a plus besoin de durcir sa politique. Des taux qui ne montent pas = de l'oxygène pour les actions et pour l'or (qui ne verse pas d'intérêts, donc il apprécie des taux stables ou bas). Le dollar, lui, se détend (1 € ≈ 1,15 $).",
+    "evenement": "Ventes de détail US de juillet à 14h30 (attendu +0,3 %, après +0,2 %). C'est le thermomètre du consommateur américain : s'il dépense encore SANS relancer l'inflation, le scénario idéal (« ni trop chaud, ni trop froid ») tient. À 16h, la confiance des ménages (Michigan) et surtout leurs anticipations d'inflation (4,2 %) seront scrutées de près.",
+    "plan_avant": "séance calme et peu directionnelle ; on reste sous les records, la volatilité est au plus bas.",
+    "plan_apres": "après 14h30, le CAC se joue autour de 8 650. Une cassure de 8 715 = nouveau record (signal haussier) ; un passage sous 8 600 = la consolidation vire à la correction.",
+    "a_surveiller": "l'or (près de 4 400 $, au contact de son record), le dollar (faible, EUR/USD ~1,15) et le pétrole (Brent ~88 $, sensible aux tensions autour du détroit d'Ormuz).",
+    "overnight": "Wall Street à un record : S&P 500 +0,3 %, Nasdaq +0,81 %, Dow +0,13 %. Asie bien orientée (Nikkei +0,8 %).",
+    "inflation": "PPI +4,7 % sur un an (cœur +4,2 %), en léger repli"
+  },
+  "sources": ["BLS", "CNBC", "Reuters", "Trading Economics", "Investing.com"]
+}
