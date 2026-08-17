@@ -1,0 +1,63 @@
+{
+  "meta": { "date_str": "lundi 17 août 2026", "heure": "08:00", "snapshot": "07:55", "tz": "Europe/Paris" },
+  "verdict": {
+    "biais": "Prudence : records à portée mais plafonnés par le pétrole",
+    "pivot": "CAC 8 637",
+    "ne_pas_lacher": "8 580",
+    "vol": "VIX au plancher (14,3) — complaisance avant Jackson Hole"
+  },
+  "niveaux": [
+    { "actif": "CAC 40",       "spot": 8640,   "close_prev": 8637,   "sup1": 8600,   "sup2": 8540,   "res1": 8700,   "res2": 8745,   "biais": "neutre",   "decimals": 0 },
+    { "actif": "DAX",          "spot": 26500,  "close_prev": 26440,  "sup1": 26300,  "sup2": 26100,  "res1": 26650,  "res2": 26800,  "biais": "haussier", "decimals": 0 },
+    { "actif": "EuroStoxx 50", "spot": 6548,   "close_prev": 6547,   "sup1": 6490,   "sup2": 6430,   "res1": 6600,   "res2": 6660,   "biais": "neutre",   "decimals": 0 },
+    { "actif": "EUR/USD",      "spot": 1.1602, "close_prev": 1.1595, "sup1": 1.1560, "sup2": 1.1520, "res1": 1.1660, "res2": 1.1700, "biais": "haussier", "decimals": 4 },
+    { "actif": "Brent",        "spot": 88.7,   "close_prev": 88.5,   "sup1": 86.5,   "sup2": 84.5,   "res1": 90.5,   "res2": 92.5,   "biais": "haussier", "decimals": 1, "unit": "$" },
+    { "actif": "Or",           "spot": 4440,   "close_prev": 4437,   "sup1": 4380,   "sup2": 4320,   "res1": 4480,   "res2": 4540,   "biais": "haussier", "decimals": 0, "unit": "$" },
+    { "actif": "US 10 ans",    "spot": 4.69,   "close_prev": 4.64,   "sup1": 4.62,   "sup2": 4.55,   "res1": 4.75,   "res2": 4.80,   "biais": "tension",  "decimals": 2, "unit": "%" }
+  ],
+  "courbe": {
+    "points": [ { "t": "2Y", "v": 4.17 }, { "t": "5Y", "v": 4.35 }, { "t": "10Y", "v": 4.69 } ],
+    "bund10y": 3.20, "oat10y": 4.06, "spread_2s10s": 52, "spread_oat_bund": 86,
+    "fed_funds_proba": "69 %", "fed_funds_range": "3,50–3,75 %"
+  },
+  "volatilite": { "vix": 14.25 },
+  "cross_asset": [
+    { "label": "Dow", "pct": -0.20 }, { "label": "S&P 500", "pct": -0.29 }, { "label": "Nasdaq", "pct": -0.30 },
+    { "label": "Nikkei", "pct": 0.13 }, { "label": "Hang Seng", "pct": 0.60 },
+    { "label": "Brent", "pct": 1.67 }, { "label": "Or", "pct": 0.38 }
+  ],
+  "agenda": [
+    { "heure": "—", "evenement": "Pas de publication majeure aujourd'hui", "tier": 3 }
+  ],
+  "secteurs": [
+    { "secteur": "Énergie", "pct": null, "biais": "haussier" },
+    { "secteur": "Banques", "pct": null, "biais": "haussier" },
+    { "secteur": "Mines/Matériaux", "pct": null, "biais": "haussier" },
+    { "secteur": "Luxe", "pct": null, "biais": "neutre" },
+    { "secteur": "Tech/Semis", "pct": null, "biais": "baissier" },
+    { "secteur": "Transport/Aérien", "pct": null, "biais": "baissier" },
+    { "secteur": "Utilities", "pct": null, "biais": "baissier" }
+  ],
+  "playbook": [
+    { "si": "Désescalade au Moyen-Orient, le Brent reflue sous 86 $", "proba": 30, "alors": "Détente : le CAC repart vers 8 700-8 745, l'US 10 ans se détend sous 4,62 %", "biais": "long" },
+    { "si": "Statu quo géopolitique, marché en attente des minutes du FOMC (mercredi)", "proba": 45, "alors": "Range : le CAC oscille 8 600-8 700, volumes d'août réduits", "biais": "attente" },
+    { "si": "Escalade / menace sur le détroit d'Ormuz, le Brent casse 90 $", "proba": 25, "alors": "Repli : le CAC teste 8 580 puis 8 540, l'US 10 ans vise 4,75 %", "biais": "short" }
+  ],
+  "invalidation": "Au-dessus de 4,75 % sur le taux US 10 ans (pétrole > 90 $), la complaisance des actions — VIX à 14 — devient intenable et les records européens sont vulnérables.",
+  "delta": [
+    { "label": "Pétrole en hausse (tensions au Moyen-Orient)", "direction": "up" },
+    { "label": "Taux US 10 ans sous tension (4,69 %)", "direction": "up" },
+    { "label": "VIX au plancher, complaisance des actions", "direction": "down" }
+  ],
+  "condense": {
+    "idee": "Les Bourses européennes sont tout près de leurs records (CAC ~8 640, DAX ~26 500), mais elles calent. La raison : le pétrole remonte (Brent ~88,7 $) à cause des tensions au Moyen-Orient, ce qui réveille la peur de l'inflation et empêche les marchés de grimper plus haut. Incohérence à noter : l'euro reste fort (1,16 $) alors que les taux américains montent — signe que le dollar est structurellement boudé.",
+    "pourquoi": "Le pétrole monte parce que les négociations pour mettre fin au conflit au Moyen-Orient patinent et qu'on craint pour le détroit d'Ormuz (par où transite une grande partie du pétrole mondial). Un pétrole cher = plus d'inflation = des taux d'intérêt qui restent élevés, ce qui pèse sur les actions, surtout la techno sensible aux taux.",
+    "evenement": "Journée calme côté chiffres : aucune publication majeure ce lundi. Les rendez-vous de la semaine : les « minutes » de la Fed (le compte-rendu détaillé de sa dernière réunion) mercredi, puis les indices PMI (baromètres de l'activité des entreprises) vendredi. Le symposium de Jackson Hole (grand rendez-vous annuel des banquiers centraux) se tiendra du 27 au 29 août.",
+    "plan_avant": "peu de catalyseurs aujourd'hui et volumes d'août réduits : on surveille surtout le prix du pétrole.",
+    "plan_apres": "si le Brent casse 90 $, l'ambiance se tend (CAC vers 8 580) ; s'il reflue sous 86 $, les records reviennent en ligne de mire (CAC 8 700+).",
+    "a_surveiller": "le prix du pétrole (Brent / détroit d'Ormuz), le taux américain à 10 ans (4,69 %) et l'euro/dollar près de ses plus hauts de 2 mois.",
+    "overnight": "Vendredi à Wall Street : Dow −0,20 %, S&P 500 −0,29 %, Nasdaq −0,30 % (repli après un moral des ménages décevant et des ventes au détail en forte baisse). Asie ce matin : Nikkei +0,13 %, Hang Seng +0,6 %, Séoul fermé (jour férié).",
+    "inflation": "3,4 %"
+  },
+  "sources": ["Trading Economics", "Reuters", "CNBC", "Newsquawk"]
+}
