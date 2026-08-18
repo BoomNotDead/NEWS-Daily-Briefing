@@ -1,0 +1,61 @@
+{
+  "meta": { "date_str": "mardi 18 août 2026", "heure": "08:00", "snapshot": "07:55", "tz": "Europe/Paris" },
+  "verdict": {
+    "biais": "Prudence — le pétrole et les taux longs mènent, mais pas de panique (VIX bas)",
+    "pivot": "CAC 8 560",
+    "ne_pas_lacher": "8 500",
+    "vol": "VIX bas (~15) mais qui remonte : calme fragile"
+  },
+  "niveaux": [
+    { "actif": "CAC 40",    "spot": 8560,   "close_prev": 8579.6, "sup1": 8500,   "sup2": 8440,   "res1": 8620,   "res2": 8680,   "biais": "baissier", "decimals": 0 },
+    { "actif": "DAX",       "spot": 26246,  "close_prev": 26339,  "sup1": 26100,  "sup2": 25900,  "res1": 26450,  "res2": 26650,  "biais": "baissier", "decimals": 0 },
+    { "actif": "EUR/USD",   "spot": 1.1580, "close_prev": 1.1595, "sup1": 1.1540, "sup2": 1.1500, "res1": 1.1615, "res2": 1.1660, "biais": "neutre",   "decimals": 4 },
+    { "actif": "Brent",     "spot": 91.66,  "close_prev": 90.87,  "sup1": 89.5,   "sup2": 88.0,   "res1": 93.0,   "res2": 95.0,   "biais": "haussier", "decimals": 2, "unit": "$" },
+    { "actif": "Or",        "spot": 4437,   "close_prev": 4420,   "sup1": 4380,   "sup2": 4320,   "res1": 4480,   "res2": 4550,   "biais": "haussier", "decimals": 0, "unit": "$" },
+    { "actif": "US 10 ans", "spot": 4.70,   "close_prev": 4.66,   "sup1": 4.60,   "sup2": 4.52,   "res1": 4.75,   "res2": 4.82,   "biais": "tension",  "decimals": 2, "unit": "%" }
+  ],
+  "courbe": {
+    "points": [ { "t": "2Y", "v": 4.20 }, { "t": "5Y", "v": 4.40 }, { "t": "10Y", "v": 4.70 } ],
+    "bund10y": 3.22, "oat10y": 4.07, "spread_2s10s": 50, "spread_oat_bund": 85
+  },
+  "volatilite": { "vix": 15.19 },
+  "cross_asset": [
+    { "label": "Dow", "pct": -0.51 }, { "label": "S&P 500", "pct": -0.52 }, { "label": "Nasdaq", "pct": -0.32 },
+    { "label": "Brent", "pct": 0.87 }, { "label": "Or", "pct": 0.38 }, { "label": "VIX", "pct": 6.6 }
+  ],
+  "agenda": [
+    { "heure": "14:30", "evenement": "Mises en chantier de logements US (juillet)", "attendu": "1,36 M", "precedent": "1,35 M", "tier": 2, "evenement_du_jour": false },
+    { "heure": "14:30", "evenement": "Permis de construire US (juillet)", "attendu": "1,39 M", "precedent": "1,37 M", "tier": 2, "evenement_du_jour": false },
+    { "heure": "15:15", "evenement": "Production industrielle US (juillet, m/m)", "attendu": "0,2 %", "precedent": "0,3 %", "tier": 2, "evenement_du_jour": true },
+    { "heure": "15:15", "evenement": "Taux d'utilisation des capacités US (juillet)", "attendu": "76,2 %", "precedent": "76,3 %", "tier": 2, "evenement_du_jour": false }
+  ],
+  "secteurs": [
+    { "secteur": "Énergie/Pétrole", "pct": 1.6, "biais": "haussier" },
+    { "secteur": "Défense/Aéro", "pct": 0.8, "biais": "haussier" },
+    { "secteur": "Banques", "pct": 0.2, "biais": "neutre" },
+    { "secteur": "Tech/Semis", "pct": -0.9, "biais": "baissier" },
+    { "secteur": "Automobile", "pct": -0.7, "biais": "baissier" },
+    { "secteur": "Luxe", "pct": -1.1, "biais": "baissier" }
+  ],
+  "playbook": [
+    { "si": "Le pétrole se calme (désescalade Iran, Brent repasse sous 89 $)", "proba": 30, "alors": "Détente : les taux longs refluent, le CAC rebondit vers 8 620, l'or corrige sous 4 380 $", "biais": "long" },
+    { "si": "Statu quo tendu (Brent 90-93 $, taux fermes)", "proba": 45, "alors": "Range nerveux : le CAC oscille 8 500-8 620, l'énergie surperforme, la tech reste à la traîne", "biais": "attente" },
+    { "si": "Escalade (détroit d'Hormuz menacé, Brent > 95 $)", "proba": 25, "alors": "Choc : le CAC casse 8 500 et vise 8 440, l'or > 4 480 $, le 10 ans US > 4,75 %", "biais": "short" }
+  ],
+  "invalidation": "Si le Brent franchit 95 $, le scénario « range » saute : le risk-off s'accélère et le 10 ans US casse 4,75 %, ce qui intensifie la pression sur la tech.",
+  "delta": [
+    { "label": "Pétrole : 3e séance de hausse (Brent > 91 $)", "direction": "up" },
+    { "label": "Taux longs US sous tension (30 ans au plus haut depuis des décennies)", "direction": "up" },
+    { "label": "Dollar faible malgré la géopolitique (DXY < 100)", "direction": "down" }
+  ],
+  "condense": {
+    "idee": "Journée sous tension géopolitique. Le pétrole grimpe pour la 3e séance de suite (Brent au-dessus de 91 $) à cause des tensions USA-Iran autour du détroit d'Hormuz — le passage maritime par où transite une grande partie du pétrole mondial. Résultat : Wall Street a reculé hier (~-0,5 %) et l'Europe ouvre prudente. Détail surprenant : le « baromètre de la peur » (le VIX) reste bas, autour de 15. Le marché voit donc ça comme un problème de pétrole et d'inflation, pas comme une panique généralisée.",
+    "pourquoi": "Un pétrole plus cher = plus d'inflation attendue = les taux d'intérêt à long terme montent (le 10 ans américain revient vers 4,70 %). Or des taux longs qui montent pénalisent surtout les actions technologiques (leurs profits futurs valent « moins » quand les taux montent). Autre signe parlant : le dollar est faible (indice DXY sous 100, au plus bas depuis 2 mois) — d'habitude il monte quand il y a une crise. Ici, c'est l'OR qui joue le rôle de valeur-refuge (~4 437 $), pas le billet vert, car les statistiques US récentes (emploi, inflation) sont molles.",
+    "evenement": "Pas de banque centrale ni de grande statistique d'inflation aujourd'hui. Au menu américain : mises en chantier de logements (14h30) et production industrielle (15h15) — utile à suivre mais secondaire. Le vrai moteur du jour, c'est le pétrole, pas l'agenda.",
+    "plan_avant": "séance dictée par le baril. Tant que le Brent reste sous 93 $, on reste dans un range nerveux et on évite de courir après les mouvements.",
+    "plan_apres": "surveiller le 8 500 sur le CAC : en dessous, le repli peut s'accélérer vers 8 440 ; au-dessus de 8 620, la prudence retombe.",
+    "a_surveiller": "le pétrole (Brent), les valeurs pétrolières (en hausse), le luxe et l'automobile (Kering et Stellantis ont pesé sur le CAC hier) et le taux américain à 10 ans.",
+    "overnight": "Dow -0,51 % · S&P 500 -0,52 % · Nasdaq -0,32 % · Brent +0,9 % (> 91 $) · Or +0,4 % (~4 437 $)."
+  },
+  "sources": ["TradingEconomics", "Reuters", "Yahoo Finance", "CNBC"]
+}
