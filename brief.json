@@ -1,0 +1,62 @@
+{
+  "meta": { "date_str": "mercredi 19 août 2026", "heure": "08:00", "snapshot": "07:55", "tz": "Europe/Paris" },
+  "verdict": {
+    "biais": "Prudence — la flambée des taux longs pèse ; cycliques et énergie tiennent, la tech décroche",
+    "pivot": "CAC 8 500",
+    "ne_pas_lacher": "8 450",
+    "vol": "VIX bas (15,8) malgré la baisse : repli ordonné, pas de panique"
+  },
+  "niveaux": [
+    { "actif": "CAC 40",    "spot": 8517,   "close_prev": 8580,   "sup1": 8450,   "sup2": 8380,   "res1": 8580,   "res2": 8650,   "biais": "baissier", "decimals": 0 },
+    { "actif": "DAX",       "spot": 26250,  "close_prev": 26338,  "sup1": 26000,  "sup2": 25800,  "res1": 26450,  "res2": 26700,  "biais": "baissier", "decimals": 0 },
+    { "actif": "EUR/USD",   "spot": 1.1615, "close_prev": 1.1605, "sup1": 1.1560, "sup2": 1.1520, "res1": 1.1660, "res2": 1.1700, "biais": "haussier", "decimals": 4 },
+    { "actif": "Brent",     "spot": 89.6,   "close_prev": 89.0,   "sup1": 87.5,   "sup2": 85.0,   "res1": 91.0,   "res2": 93.0,   "biais": "haussier", "decimals": 1, "unit": "$" },
+    { "actif": "Or",        "spot": 4447,   "close_prev": 4473,   "sup1": 4400,   "sup2": 4350,   "res1": 4500,   "res2": 4560,   "biais": "baissier", "decimals": 0, "unit": "$" },
+    { "actif": "US 10 ans", "spot": 4.72,   "close_prev": 4.70,   "sup1": 4.65,   "sup2": 4.55,   "res1": 4.75,   "res2": 4.80,   "biais": "baissier", "decimals": 2, "unit": "%" }
+  ],
+  "courbe": {
+    "points": [ { "t": "2Y", "v": 4.19 }, { "t": "5Y", "v": 4.38 }, { "t": "10Y", "v": 4.72 }, { "t": "30Y", "v": 5.31 } ],
+    "bund10y": 3.20, "spread_2s10s": 53,
+    "fed_funds_range": "3,50–3,75 %"
+  },
+  "volatilite": { "vix": 15.84 },
+  "cross_asset": [
+    { "label": "Dow", "pct": -0.2 }, { "label": "S&P 500", "pct": -0.7 }, { "label": "Nasdaq", "pct": -1.3 },
+    { "label": "Nikkei", "pct": -2.24 }, { "label": "Brent", "pct": 0.7 }, { "label": "Or", "pct": -0.6 }
+  ],
+  "agenda": [
+    { "heure": "08:00", "evenement": "Inflation (CPI) Royaume-Uni — juillet", "attendu": "2,9 %", "precedent": "2,6 %", "tier": 1, "evenement_du_jour": false },
+    { "heure": "11:00", "evenement": "Inflation (CPI) finale zone euro — juillet", "attendu": "2,9 %", "precedent": "2,8 %", "tier": 2, "evenement_du_jour": false },
+    { "heure": "14:30", "evenement": "Mises en chantier de logements US — juillet", "attendu": "1,32 M", "precedent": "1,32 M", "tier": 3, "evenement_du_jour": false }
+  ],
+  "secteurs": [
+    { "secteur": "Banques", "pct": 0.6, "biais": "haussier" },
+    { "secteur": "Énergie", "pct": 1.2, "biais": "haussier" },
+    { "secteur": "Tech/Semis", "pct": -1.4, "biais": "baissier" },
+    { "secteur": "Luxe", "pct": -0.9, "biais": "baissier" },
+    { "secteur": "Immobilier", "pct": -1.1, "biais": "baissier" },
+    { "secteur": "Services aux collectivités", "pct": -0.7, "biais": "baissier" }
+  ],
+  "playbook": [
+    { "si": "Minutes du FOMC jugées « fermes » (l'inflation inquiète encore la Fed)", "proba": 35, "alors": "Le 10Y US casse 4,75 % ; CAC teste 8 450 puis 8 380, la tech reste sous pression", "biais": "short" },
+    { "si": "Minutes sans surprise (statu quo assumé, ton équilibré)", "proba": 45, "alors": "Range 8 450–8 580 ; la volatilité retombe, la rotation vers banques/énergie se poursuit", "biais": "attente" },
+    { "si": "Minutes jugées « accommodantes » (porte ouverte à une baisse)", "proba": 20, "alors": "Détente des taux : le 10Y repasse sous 4,65 %, CAC rebondit vers 8 580, EUR/USD > 1,1660", "biais": "long" }
+  ],
+  "invalidation": "Un retour du taux US 10 ans sous 4,55 % (détente) invaliderait la pression baissière sur la tech et rouvrirait la voie d'un rebond des indices.",
+  "delta": [
+    { "label": "Taux longs au plus haut (30Y US ~5,3 %, plus haut en ~20 ans)", "direction": "up" },
+    { "label": "Tech sous pression (Nasdaq −1,3 %, Tokyo −2,2 %)", "direction": "down" },
+    { "label": "Pétrole ferme sur les tensions USA-Iran (Brent ~90 $)", "direction": "up" }
+  ],
+  "condense": {
+    "idee": "Les taux d'emprunt des États montent partout dans le monde : le taux américain à 30 ans (~5,3 %) est au plus haut depuis près de 20 ans, le 10 ans à 4,72 %, le taux allemand à 15 ans de sommet. Quand les taux montent, les actions « de croissance » (technologie) deviennent moins attractives et baissent (Nasdaq −1,3 % hier soir, Tokyo −2,2 % cette nuit). Les banques et l'énergie résistent mieux. Rassurant : le « thermomètre de la peur » (VIX) reste bas à 15,8 — c'est un repli ordonné, pas une panique.",
+    "pourquoi": "Curieusement, l'inflation américaine a ralenti (3,4 % en juillet). La hausse des taux ne vient donc pas des États-Unis mais de deux autres inquiétudes : la dette des États (les investisseurs exigent plus pour prêter à long terme) et l'inflation qui repart en Europe (Royaume-Uni et zone euro à 2,9 %).",
+    "evenement": "Ce soir 20h (Paris) : compte-rendu (« minutes ») de la dernière réunion de la banque centrale américaine (Fed). Ce n'est pas une décision de taux, mais les traders y cherchent des indices sur son état d'esprit : la Fed s'inquiète-t-elle encore de l'inflation ? Un ton ferme ferait remonter les taux et pèserait sur la tech.",
+    "plan_avant": "matinée calme et prudente. On surveille l'ouverture après l'inflation britannique de 8h. Peu de raisons de bouger fort avant 20h.",
+    "plan_apres": "réaction possible après les minutes. On suit le taux US 10 ans : au-dessus de 4,75 %, la tech resouffre ; sous 4,55 %, soulagement et rebond des indices.",
+    "a_surveiller": "le taux américain à 10 ans (4,72 %), le pétrole (Brent ~90 $, tensions USA-Iran sur le détroit d'Ormuz) et les valeurs technologiques.",
+    "overnight": "Wall Street en baisse : Dow −0,2 % · S&P 500 −0,7 % · Nasdaq −1,3 %. Asie : Tokyo −2,2 %.",
+    "inflation": "3,4 %"
+  },
+  "sources": ["Federal Reserve H.15", "TradingEconomics", "Reuters", "Investing.com", "Eurostat", "ONS", "CNBC"]
+}
