@@ -1,0 +1,55 @@
+{
+  "meta": { "date_str": "jeudi 20 août 2026", "heure": "08:00", "snapshot": "07:55", "tz": "Europe/Paris" },
+  "verdict": {
+    "biais": "Rebond fragile — soulagement obligataire technique, les taux longs restent juges de paix",
+    "pivot": "CAC 8 500",
+    "ne_pas_lacher": "8 380",
+    "vol": "VIX bas (15,8) malgré le stress obligataire — prudence avant les minutes de la Fed à 20h"
+  },
+  "niveaux": [
+    { "actif": "CAC 40",    "spot": 8500,   "close_prev": 8502,   "sup1": 8440,   "sup2": 8380,   "res1": 8560,   "res2": 8650,   "biais": "neutre",   "decimals": 0 },
+    { "actif": "DAX",       "spot": 26090,  "close_prev": 26130,  "sup1": 25800,  "sup2": 25500,  "res1": 26300,  "res2": 26600,  "biais": "neutre",   "decimals": 0 },
+    { "actif": "EUR/USD",   "spot": 1.1607, "close_prev": 1.1576, "sup1": 1.1560, "sup2": 1.1500, "res1": 1.1660, "res2": 1.1720, "biais": "haussier", "decimals": 4 },
+    { "actif": "Brent",     "spot": 91.5,   "close_prev": 90.9,   "sup1": 89.5,   "sup2": 87.5,   "res1": 93.0,   "res2": 95.0,   "biais": "haussier", "decimals": 1, "unit": "$" },
+    { "actif": "Or",        "spot": 4490,   "close_prev": 4335,   "sup1": 4400,   "sup2": 4300,   "res1": 4550,   "res2": 4650,   "biais": "haussier", "decimals": 0, "unit": "$" },
+    { "actif": "US 10 ans", "spot": 4.65,   "close_prev": 4.70,   "sup1": 4.55,   "sup2": 4.45,   "res1": 4.75,   "res2": 4.85,   "biais": "detente",  "decimals": 2, "unit": "%" }
+  ],
+  "courbe": {
+    "points": [ { "t": "2Y", "v": 4.17 }, { "t": "10Y", "v": 4.65 }, { "t": "30Y", "v": 5.27 } ],
+    "bund10y": null, "oat10y": null, "spread_2s10s": 48, "spread_oat_bund": null
+  },
+  "volatilite": { "vix": 15.84 },
+  "cross_asset": [
+    { "label": "Dow", "pct": 0.2 }, { "label": "S&P 500", "pct": 0.2 }, { "label": "Nasdaq", "pct": 0.2 },
+    { "label": "Kospi", "pct": -5.4 }, { "label": "Brent", "pct": 0.6 }, { "label": "Or", "pct": 3.6 }
+  ],
+  "agenda": [
+    { "heure": "20:00", "evenement": "Minutes de la Fed (compte rendu du FOMC des 28-29 juillet)", "tier": 1, "move_implicite": "sensible sur les taux et le dollar", "evenement_du_jour": true }
+  ],
+  "secteurs": [
+    { "secteur": "Tech/Semis", "pct": -1.2, "biais": "baissier" }, { "secteur": "Santé/Pharma", "pct": 1.5, "biais": "haussier" },
+    { "secteur": "Énergie", "pct": 0.8, "biais": "haussier" }, { "secteur": "Banques", "pct": 0.5, "biais": "haussier" },
+    { "secteur": "Luxe", "pct": -0.3, "biais": "neutre" }, { "secteur": "Industrie", "pct": -0.4, "biais": "neutre" }
+  ],
+  "playbook": [
+    { "si": "Minutes prudentes (la Fed s'inquiète surtout de la croissance)", "proba": 30, "alors": "Détente : US 10 ans repasse sous 4,55 %, le CAC vise 8 560, l'or consolide", "biais": "long" },
+    { "si": "Minutes sans surprise (débat inflation contre risque budgétaire, statu quo)", "proba": 45, "alors": "Range : CAC 8 440–8 560, le rebond obligataire tient, la volatilité reste contenue", "biais": "attente" },
+    { "si": "Minutes fermes (inflation jugée collante, dissidence côté hausse)", "proba": 25, "alors": "Retour du stress : US 10 ans > 4,75 %, le CAC teste 8 380, la tech repart à la baisse", "biais": "short" }
+  ],
+  "invalidation": "Un retour du taux US 30 ans au-dessus de 5,33 % (le plus haut de 19 ans touché le 18 août) rallumerait le stress obligataire et invaliderait le rebond des actions.",
+  "delta": [
+    { "label": "Taux longs US : détente après le rachat de dette du Trésor", "direction": "down" },
+    { "label": "Or : ruée vers la valeur refuge (+3,6 %)", "direction": "up" },
+    { "label": "Semi-conducteurs : purge mondiale (Kospi -5,4 %)", "direction": "down" }
+  ],
+  "condense": {
+    "idee": "Après trois jours de baisse, Wall Street a rebondi cette nuit (+0,2 %). Mais c'est un soulagement fragile : ce qui commande le marché en ce moment, ce sont les taux d'intérêt à long terme (le coût auquel les États empruntent sur 30 ans), montés cette semaine à des sommets qu'on n'avait pas vus depuis près de 20 ans. Détail curieux : l'indice de la peur (VIX) reste très bas (15,8) alors que le marché obligataire, lui, panique — les actions n'ont pas encore pris toute la mesure du risque.",
+    "pourquoi": "Les taux longs grimpent car les investisseurs réclament davantage pour prêter aux États : déficits élevés, dette américaine proche de 40 000 milliards $, inflation encore tenace et pétrole à 91 $ (tensions Iran/détroit d'Ormuz). Pour calmer le jeu, le Trésor américain a annoncé doubler ses rachats de dette longue — d'où la détente d'hier soir.",
+    "evenement": "À 20h (heure de Paris), publication du compte rendu (les « minutes ») de la dernière réunion de la banque centrale américaine des 28-29 juillet. Réunion tendue : décision votée à 9 voix contre 3, une rare triple dissidence. Il n'y a pas de chiffre attendu ici : ce qui compte, c'est le TON — la Fed s'inquiète-t-elle plus de l'inflation ou du ralentissement ?",
+    "plan_avant": "Peu d'appétit pour le risque avant 20h : on garde des positions légères et on laisse passer les minutes.",
+    "plan_apres": "Réaction possible sur les taux et le dollar. On surveille si le US 10 ans casse 4,55 % (soulagement, favorable aux actions) ou repasse au-dessus de 4,75 % (retour du stress). Côté CAC, 8 380 en cas de rechute, 8 560 en cas de rebond.",
+    "a_surveiller": "les valeurs de semi-conducteurs (la purge partie d'Asie, Kospi -5,4 %, peut revenir en Europe), le pétrole (Iran/Ormuz) et l'or, qui joue à plein son rôle de refuge.",
+    "overnight": "Wall Street +0,2 % (Dow, S&P, Nasdaq), premières hausses de la semaine, grâce au rachat de dette du Trésor et à Moderna (+176 % sur un vaccin anti-mélanome). Nuit rouge en Asie plus tôt : Kospi -5,4 %, Nikkei -3,0 % sur la déroute des puces."
+  },
+  "sources": ["CNBC", "Yahoo Finance", "Saxo", "Trading Economics", "MarketScreener", "Reuters"]
+}
