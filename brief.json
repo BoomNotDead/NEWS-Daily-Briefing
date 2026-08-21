@@ -1,0 +1,62 @@
+{
+  "meta": { "date_str": "vendredi 21 août 2026", "heure": "08:00", "snapshot": "07:55", "tz": "Europe/Paris" },
+  "verdict": {
+    "biais": "Risk-off contrôlé — Europe coincée entre pétrole cher et taux longs qui flambent",
+    "pivot": "CAC 8 450",
+    "ne_pas_lacher": "8 400",
+    "vol": "VIX bas (~15) mais le vrai stress est sur les taux longs, pas sur les actions"
+  },
+  "niveaux": [
+    { "actif": "CAC 40",    "spot": 8453,    "close_prev": 8501.91, "sup1": 8400,   "sup2": 8320,   "res1": 8500,   "res2": 8560,   "biais": "baissier", "decimals": 0 },
+    { "actif": "DAX",       "spot": 26030,   "close_prev": 26138,   "sup1": 25900,  "sup2": 25700,  "res1": 26150,  "res2": 26350,  "biais": "baissier", "decimals": 0 },
+    { "actif": "EUR/USD",   "spot": 1.1693,  "close_prev": 1.1678,  "sup1": 1.1650, "sup2": 1.1600, "res1": 1.1720, "res2": 1.1760, "biais": "haussier", "decimals": 4 },
+    { "actif": "Brent",     "spot": 93.23,   "close_prev": 93.78,   "sup1": 91.5,   "sup2": 90.0,   "res1": 94.5,   "res2": 96.0,   "biais": "haussier", "decimals": 2, "unit": "$" },
+    { "actif": "Or",        "spot": 4548,    "close_prev": 4515.78, "sup1": 4480,   "sup2": 4420,   "res1": 4600,   "res2": 4660,   "biais": "haussier", "decimals": 0, "unit": "$" },
+    { "actif": "US 10 ans", "spot": 4.71,    "close_prev": 4.68,    "sup1": 4.60,   "sup2": 4.50,   "res1": 4.80,   "res2": 4.90,   "biais": "tension",  "decimals": 2, "unit": "%" }
+  ],
+  "courbe": {
+    "points": [ { "t": "2Y", "v": 4.19 }, { "t": "5Y", "v": 4.39 }, { "t": "10Y", "v": 4.71 }, { "t": "30Y", "v": 5.25 } ],
+    "bund10y": 3.26, "oat10y": 4.13, "spread_2s10s": 52, "spread_oat_bund": 87,
+    "fed_funds_range": "4,25–4,50 %"
+  },
+  "volatilite": { "vix": 14.9 },
+  "cross_asset": [
+    { "label": "Dow", "pct": -0.74 }, { "label": "S&P 500", "pct": -0.36 }, { "label": "Nasdaq", "pct": -0.70 },
+    { "label": "Or", "pct": 0.72 }, { "label": "EUR/USD", "pct": 0.13 }, { "label": "DXY", "pct": -0.07 }
+  ],
+  "agenda": [
+    { "heure": "09:15", "evenement": "PMI composite France (flash, S&P Global)", "attendu": "49,9", "precedent": "49,5", "tier": 2, "evenement_du_jour": true },
+    { "heure": "09:30", "evenement": "PMI composite Allemagne (flash, S&P Global)", "attendu": "51,4", "precedent": "51,3", "tier": 2, "evenement_du_jour": false },
+    { "heure": "10:00", "evenement": "PMI composite zone euro (flash, S&P Global)", "attendu": "51,6", "precedent": "51,7", "tier": 2, "evenement_du_jour": false },
+    { "heure": "15:45", "evenement": "PMI manufacturier États-Unis (flash, S&P Global)", "attendu": "53,5", "precedent": "53,9", "tier": 2, "evenement_du_jour": false }
+  ],
+  "secteurs": [
+    { "secteur": "Énergie", "pct": 1.0, "biais": "haussier" },
+    { "secteur": "Banques", "pct": 0.4, "biais": "haussier" },
+    { "secteur": "Distribution/Conso", "pct": -1.5, "biais": "baissier" },
+    { "secteur": "Industrie/Aéro", "pct": -0.8, "biais": "baissier" },
+    { "secteur": "Tech/Semis", "pct": -1.0, "biais": "baissier" },
+    { "secteur": "Luxe", "pct": -0.6, "biais": "baissier" }
+  ],
+  "playbook": [
+    { "si": "PMI meilleurs qu'attendu (France > 50, zone euro > 51,6)", "proba": 30, "alors": "Rebond de soulagement : CAC vise 8 500 puis 8 560, la série de 8 baisses s'arrête", "biais": "long" },
+    { "si": "PMI conformes (stagnation confirmée, France ~49,9)", "proba": 45, "alors": "Range nerveux sous 8 500 : le marché reste otage du pétrole et des taux longs", "biais": "attente" },
+    { "si": "PMI décevants + Brent > 94 $", "proba": 25, "alors": "Peur de stagflation : CAC casse 8 400, test 8 320 ; Bund et OAT montent encore", "biais": "short" }
+  ],
+  "invalidation": "Un retour du Brent sous 90 $ ET du Bund 10 ans sous 3,20 % casserait le scénario de stagflation et rouvrirait la porte à un rebond des indices.",
+  "delta": [
+    { "label": "Pétrole à 93 $ rallume l'inflation", "direction": "up" },
+    { "label": "Taux longs au plus haut (Bund depuis 2011, OAT depuis 2008)", "direction": "up" },
+    { "label": "CAC 40 : 8e séance de baisse d'affilée", "direction": "down" }
+  ],
+  "condense": {
+    "idee": "Les Bourses européennes reculent pour la 8e séance de suite (CAC 8 453, plus bas depuis 3 semaines ; DAX au plus bas depuis fin juillet), prises en étau entre un pétrole cher et des taux d'emprunt d'État qui flambent. Détail qui étonne : l'euro monte (1,1693, plus haut depuis 3 mois) malgré l'ambiance prudente — ce n'est pas de la force de l'euro, c'est le dollar qui faiblit (le Trésor US va racheter beaucoup de dette, ce qui « crée » du dollar). Le juge de paix du jour : les PMI publiés ce matin.",
+    "pourquoi": "Deux forces poussent dans le même sens. 1) Le pétrole grimpe (Brent ~93 $, 2e semaine de hausse) à cause des tensions au Moyen-Orient (Iran) : plus de pétrole cher = plus d'inflation. 2) Les taux longs s'envolent (Bund allemand 3,26 %, au plus haut depuis 2011 ; OAT français 4,13 %, au plus haut depuis 2008) : emprunter coûte plus cher, ce qui pèse sur les actions.",
+    "evenement": "Journée des PMI « flash ». Un PMI, c'est un sondage mensuel auprès des directeurs d'achats des entreprises : au-dessus de 50 l'activité progresse, en dessous elle se contracte. France attendue à 49,9 (encore sous 50 = économie qui stagne), zone euro à 51,6, États-Unis à 53,5. C'est le premier vrai thermomètre de l'économie du mois.",
+    "plan_avant": "Peu de mouvement avant 09:15 : le marché attend les chiffres, on ne court pas après le prix.",
+    "plan_apres": "Le mouvement se fait après les PMI. On surveille si le CAC casse 8 400 (signal baissier, la série noire continue) ou repasse 8 500 (signal de rebond).",
+    "a_surveiller": "Le pétrole (un Brent au-dessus de 94 $ relancerait la peur de l'inflation), les taux longs (OAT et Bund), et les valeurs de distribution/conso (Adidas, Puma en baisse hier).",
+    "overnight": "Wall Street a fini en baisse : Dow -0,74 % · S&P 500 -0,36 % · Nasdaq -0,70 %. L'or monte (+0,72 %, 3e semaine de hausse) comme valeur refuge."
+  },
+  "sources": ["TradingEconomics", "Reuters", "Investing.com", "S&P Global PMI"]
+}
