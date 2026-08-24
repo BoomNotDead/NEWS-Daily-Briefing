@@ -1,0 +1,63 @@
+{
+  "meta": { "date_str": "lundi 24 août 2026", "heure": "08:00", "snapshot": "07:55", "tz": "Europe/Paris" },
+  "verdict": {
+    "biais": "Digestion prudente du rally Powell — taux longs contre baisse Fed",
+    "pivot": "CAC 8 500",
+    "ne_pas_lacher": "8 400",
+    "vol": "VIX bas (~16), mais 10 ans US collé à 4,71 %"
+  },
+  "niveaux": [
+    { "actif": "CAC 40",    "spot": 8484,    "close_prev": 8453,    "sup1": 8430,   "sup2": 8380,   "res1": 8500,   "res2": 8560,   "biais": "neutre",   "decimals": 0 },
+    { "actif": "DAX",       "spot": 26137,   "close_prev": 25984,   "sup1": 25950,  "sup2": 25750,  "res1": 26300,  "res2": 26500,  "biais": "neutre",   "decimals": 0 },
+    { "actif": "S&P 500",   "spot": 7674,    "close_prev": 7642,    "sup1": 7620,   "sup2": 7560,   "res1": 7700,   "res2": 7750,   "biais": "haussier", "decimals": 0 },
+    { "actif": "EUR/USD",   "spot": 1.1677,  "close_prev": 1.1697,  "sup1": 1.1620, "sup2": 1.1560, "res1": 1.1720, "res2": 1.1780, "biais": "haussier", "decimals": 4 },
+    { "actif": "Brent",     "spot": 92.95,   "close_prev": 94.38,   "sup1": 91.5,   "sup2": 89.5,   "res1": 94.5,   "res2": 96.0,   "biais": "baissier", "decimals": 2, "unit": "$" },
+    { "actif": "Or",        "spot": 4649,    "close_prev": 4607,    "sup1": 4580,   "sup2": 4500,   "res1": 4700,   "res2": 4780,   "biais": "haussier", "decimals": 0, "unit": "$" },
+    { "actif": "US 10 ans", "spot": 4.71,    "close_prev": 4.69,    "sup1": 4.60,   "sup2": 4.50,   "res1": 4.80,   "res2": 4.90,   "biais": "tendu",    "decimals": 2, "unit": "%" }
+  ],
+  "courbe": {
+    "points": [ { "t": "2Y", "v": 4.23 }, { "t": "5Y", "v": 4.36 }, { "t": "10Y", "v": 4.71 } ],
+    "bund10y": 3.24, "oat10y": 4.13, "spread_2s10s": 48, "spread_oat_bund": 89,
+    "fed_funds_proba": "85 %", "fed_funds_range": "4,00–4,25 %"
+  },
+  "volatilite": { "vix": 16.0, "straddle_pct": 0.6, "straddle_actif": "S&P 500" },
+  "cross_asset": [
+    { "label": "Dow", "pct": 0.98 }, { "label": "S&P 500", "pct": 0.43 }, { "label": "Nasdaq", "pct": 0.43 },
+    { "label": "Nikkei", "pct": -0.60 }, { "label": "Hang Seng", "pct": -2.10 }, { "label": "Kospi", "pct": -3.50 },
+    { "label": "Brent", "pct": -1.52 }, { "label": "Or", "pct": 0.91 }
+  ],
+  "agenda": [
+    { "heure": "14:30", "evenement": "Chicago Fed National Activity Index (juillet)", "attendu": "-0,10", "precedent": "-0,10", "tier": 3, "evenement_du_jour": true },
+    { "heure": "16:30", "evenement": "Dallas Fed Manufacturing (août)", "attendu": "-2,0", "precedent": "-0,9", "tier": 3, "evenement_du_jour": false }
+  ],
+  "secteurs": [
+    { "secteur": "Luxe", "pct": 1.2, "biais": "haussier" },
+    { "secteur": "Banques", "pct": 0.5, "biais": "haussier" },
+    { "secteur": "Auto", "pct": 0.9, "biais": "haussier" },
+    { "secteur": "Énergie", "pct": -1.0, "biais": "baissier" },
+    { "secteur": "Tech/Semis", "pct": -0.3, "biais": "neutre" },
+    { "secteur": "Utilities", "pct": -0.2, "biais": "neutre" }
+  ],
+  "playbook": [
+    { "si": "Le rally Powell s'étend, S&P casse 7 700", "proba": 30, "alors": "CAC vise 8 560, EUR/USD > 1,17, or continue vers 4 700 $", "biais": "long" },
+    { "si": "Digestion en range (scénario central)", "proba": 50, "alors": "CAC bloqué entre 8 430 et 8 500, la volatilité reste basse avant l'Ifo mardi", "biais": "attente" },
+    { "si": "Les taux longs US remontent, Asie contamine l'Europe", "proba": 20, "alors": "CAC sous 8 400, EUR/USD teste 1,1620, tech en tête des baisses", "biais": "short" }
+  ],
+  "invalidation": "Au-dessus de 4,80 % sur le taux US 10 ans, la thèse « baisse de taux confirmée en septembre » vacille — la rotation vers les cycliques et le rally de l'or calent.",
+  "delta": [
+    { "label": "Powell (Jackson Hole) ouvre la porte à une baisse en septembre", "direction": "up" },
+    { "label": "Or au plus haut (+0,9 % à 4 649 $), dollar en repli (DXY ~99)", "direction": "up" },
+    { "label": "Taux US 10 ans tenus haut par la crainte tarifs/inflation", "direction": "up" }
+  ],
+  "condense": {
+    "idee": "Vendredi, le patron de la banque centrale US (Powell) a laissé entendre qu'une baisse de taux arrivait en septembre. Wall Street a bondi (Dow +0,98 %, record). Mais ce matin l'Asie n'y croit qu'à moitié — les taux longs américains restent tendus. Résultat : on digère, on ne s'emballe pas.",
+    "pourquoi": "Deux forces qui se tirent dessus. Côté positif : la Fed va baisser (dollar plus faible, or au plus haut). Côté négatif : les tarifs douaniers gardent l'inflation collante (CPI juillet à 3,4 %), donc les taux à 10 ans refusent de baisser (4,71 %). Le pétrole recule (-1,5 %), ce qui calme un peu le côté inflation.",
+    "evenement": "Journée calme côté chiffres : Chicago Fed National Activity Index à 14 h 30 (indice avancé US, tier mineur), Dallas Fed à 16 h 30. Les vrais rendez-vous sont plus tard cette semaine : Ifo allemand mardi (moral des chefs d'entreprise), PCE US vendredi (inflation préférée de la Fed).",
+    "plan_avant": "Peu de mouvement attendu à l'ouverture de Paris. Le CAC ouvre proche de 8 484 (clôture vendredi), les traders digèrent le rally US et surveillent si l'Asie négative pèse.",
+    "plan_apres": "On regarde Wall Street à 15 h 30. Si le S&P casse 7 700, ça relance la hausse. Si le taux US 10 ans repasse 4,80 %, le rally cyclique s'arrête net.",
+    "a_surveiller": "Le taux US 10 ans (4,71 %) — juge de paix. Le Brent (sous 93 $, negative pour Total, positif pour l'inflation). Le spread OAT/Bund toujours large (~89 pb) rappelle que la dette française coûte cher (climat politique tendu à Paris).",
+    "overnight": "Wall Street vendredi post-Powell : Dow +0,98 % (record à 53 277) · S&P +0,43 % · Nasdaq +0,43 %. Asie lundi : Nikkei -0,60 %, Hang Seng -2,1 %, Kospi -3,5 %.",
+    "inflation": "3,4 % (US CPI juillet)"
+  },
+  "sources": ["Trading Economics", "Reuters", "CNBC", "Yahoo Finance", "FXStreet", "Ideal-Investisseur (OAT/Bund)"]
+}
