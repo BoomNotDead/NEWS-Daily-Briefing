@@ -1,0 +1,60 @@
+{
+  "meta": { "date_str": "mardi 25 août 2026", "heure": "08:00", "snapshot": "07:55", "tz": "Europe/Paris" },
+  "verdict": {
+    "biais": "Prudence — dollar fort, actions offertes avant Nvidia et le PCE",
+    "pivot": "CAC 8 450",
+    "ne_pas_lacher": "8 420",
+    "vol": "VIX bas (15,9) mais sensible aux sanctions Iran"
+  },
+  "niveaux": [
+    { "actif": "CAC 40",       "spot": 8453,   "close_prev": 8484,   "sup1": 8420,   "sup2": 8380,   "res1": 8500,   "res2": 8540,   "biais": "baissier", "decimals": 0 },
+    { "actif": "DAX",          "spot": 26107,  "close_prev": 26137,  "sup1": 26000,  "sup2": 25850,  "res1": 26250,  "res2": 26400,  "biais": "neutre",   "decimals": 0 },
+    { "actif": "EuroStoxx 50", "spot": 6450,   "close_prev": 6463,   "sup1": 6400,   "sup2": 6350,   "res1": 6500,   "res2": 6550,   "biais": "neutre",   "decimals": 0 },
+    { "actif": "EUR/USD",      "spot": 1.1660, "close_prev": 1.1685, "sup1": 1.1620, "sup2": 1.1580, "res1": 1.1700, "res2": 1.1745, "biais": "baissier", "decimals": 4 },
+    { "actif": "Brent",        "spot": 92.2,   "close_prev": 94.4,   "sup1": 90.5,   "sup2": 88.5,   "res1": 94.0,   "res2": 96.0,   "biais": "baissier", "decimals": 1, "unit": "$" },
+    { "actif": "Or",           "spot": 4674,   "close_prev": 4683,   "sup1": 4620,   "sup2": 4560,   "res1": 4715,   "res2": 4760,   "biais": "neutre",   "decimals": 0, "unit": "$" },
+    { "actif": "US 10 ans",    "spot": 4.71,   "close_prev": 4.72,   "sup1": 4.65,   "sup2": 4.58,   "res1": 4.75,   "res2": 4.80,   "biais": "stable",   "decimals": 2, "unit": "%" }
+  ],
+  "courbe": {
+    "points": [ { "t": "2Y", "v": 4.25 }, { "t": "5Y", "v": 4.45 }, { "t": "10Y", "v": 4.71 } ],
+    "bund10y": 3.24, "oat10y": 4.08, "spread_2s10s": 46, "spread_oat_bund": 84
+  },
+  "volatilite": { "vix": 15.85 },
+  "cross_asset": [
+    { "label": "Dow", "pct": 1.0 }, { "label": "S&P 500", "pct": 0.4 }, { "label": "Nasdaq", "pct": 0.4 },
+    { "label": "Nikkei", "pct": -0.6 }, { "label": "Brent", "pct": -2.3 }, { "label": "DXY", "pct": 0.2 }
+  ],
+  "agenda": [
+    { "heure": "10:00", "evenement": "Climat des affaires IFO (Allemagne)", "attendu": "87,0", "precedent": "86,6", "tier": 2, "evenement_du_jour": false },
+    { "heure": "16:00", "evenement": "Confiance des consommateurs (Conference Board, US)", "attendu": "90,8", "precedent": "90,8", "tier": 2, "evenement_du_jour": true }
+  ],
+  "secteurs": [
+    { "secteur": "Tech/Semis", "pct": -1.2, "biais": "baissier" },
+    { "secteur": "Énergie", "pct": -1.0, "biais": "baissier" },
+    { "secteur": "Auto", "pct": -0.8, "biais": "baissier" },
+    { "secteur": "Banques", "pct": 0.5, "biais": "haussier" },
+    { "secteur": "Industrie", "pct": 0.4, "biais": "haussier" },
+    { "secteur": "Luxe", "pct": -0.1, "biais": "neutre" }
+  ],
+  "playbook": [
+    { "si": "IFO ≥ 87 et confiance conso US résiste (≥ 90)", "proba": 35, "alors": "Rebond : le CAC récupère 8 500, EUR/USD tente 1,1700, les cycliques mènent", "biais": "long" },
+    { "si": "Journée d'attente avant Nvidia et le PCE (mercredi)", "proba": 45, "alors": "Range : CAC coince entre 8 420 et 8 500, dollar ferme, volumes faibles", "biais": "attente" },
+    { "si": "Sanctions Iran durcies + tech encore vendue", "proba": 20, "alors": "Repli : CAC casse 8 420 vers 8 380, EUR/USD sous 1,1620, le VIX remonte", "biais": "short" }
+  ],
+  "invalidation": "Au-dessus de 4,80 % sur le taux US 10 ans, ou un EUR/USD repassant nettement au-dessus de 1,1700, le scénario « dollar fort / prudence » se délite.",
+  "delta": [
+    { "label": "Dollar repasse au-dessus de 99 (DXY)", "direction": "up" },
+    { "label": "Pétrole solde son rallye (−2,3 %)", "direction": "down" },
+    { "label": "Tech à la traîne avant Nvidia", "direction": "down" }
+  ],
+  "condense": {
+    "idee": "Le dollar remonte comme valeur refuge après le durcissement des sanctions américaines contre l'Iran. Résultat : l'euro recule (EUR/USD repasse sous 1,17) et, à contre-courant, le pétrole BAISSE (Brent −2,3 %) au lieu de monter. À Wall Street lundi, les valeurs « solides » ont mené (Dow +1,0 %, record) pendant que la tech traînait avant les résultats de Nvidia. En Europe, ouverture prudente attendue après un lundi en léger repli (CAC −0,37 %).",
+    "pourquoi": "Quand une tension géopolitique inquiète, les investisseurs achètent des dollars, jugés sûrs : les sanctions Iran renforcent donc le billet vert. Le pétrole baisse malgré tout car les traders parient sur l'absence de vraie coupure de l'offre et prennent leurs bénéfices après deux semaines de hausse.",
+    "evenement": "Deux chiffres aujourd'hui, sans banque centrale : le moral des patrons allemands (indice IFO) à 10h (prévu 87,0, un peu mieux que 86,6 le mois dernier) et la confiance des ménages américains à 16h (prévue 90,8, stable). Le vrai rendez-vous de la semaine reste l'inflation américaine (indice PCE) mercredi.",
+    "plan_avant": "Peu d'élan avant l'IFO de 10h : on surveille si l'euro tient 1,1620 et si le CAC reste au-dessus de 8 420.",
+    "plan_apres": "Après la confiance US de 16h, la vraie tension viendra de Nvidia (résultats mercredi) et du PCE. Un CAC qui casse 8 420 = signal de faiblesse ; au-dessus de 8 500 = reprise.",
+    "a_surveiller": "Le dollar (indice DXY autour de 99), le pétrole (Brent 92 $) et la tech/semis avant Nvidia.",
+    "overnight": "Dow +1,0 % (record) · S&P 500 +0,4 % · Nasdaq +0,4 % · Nikkei −0,6 % · Brent −2,3 %."
+  },
+  "sources": ["Trading Economics", "Reuters", "FXStreet", "CNBC", "ifo Institute", "Conference Board"]
+}
