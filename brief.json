@@ -1,0 +1,57 @@
+{
+  "meta": { "date_str": "mercredi 26 août 2026", "heure": "08:00", "snapshot": "07:55", "tz": "Europe/Paris" },
+  "verdict": {
+    "biais": "Attentisme avant Nvidia — rotation défensive, tech allégée",
+    "pivot": "CAC 8 470",
+    "ne_pas_lacher": "8 420",
+    "vol": "VIX bas à 15,8 mais en hausse (+4,8 %) : calme trompeur avant le verdict de ce soir"
+  },
+  "niveaux": [
+    { "actif": "CAC 40",    "spot": 8470,   "close_prev": 8439,   "sup1": 8420,   "sup2": 8380,   "res1": 8500,   "res2": 8540,   "biais": "neutre",   "decimals": 0 },
+    { "actif": "DAX",       "spot": 26206,  "close_prev": 26285,  "sup1": 26100,  "sup2": 25950,  "res1": 26350,  "res2": 26500,  "biais": "neutre",   "decimals": 0 },
+    { "actif": "EUR/USD",   "spot": 1.1668, "close_prev": 1.1664, "sup1": 1.1620, "sup2": 1.1580, "res1": 1.1700, "res2": 1.1740, "biais": "haussier", "decimals": 4 },
+    { "actif": "Brent",     "spot": 86.2,   "close_prev": 88.5,   "sup1": 85.0,   "sup2": 83.5,   "res1": 88.0,   "res2": 90.0,   "biais": "baissier", "decimals": 1, "unit": "$" },
+    { "actif": "Or",        "spot": 4650,   "close_prev": 4620,   "sup1": 4580,   "sup2": 4520,   "res1": 4700,   "res2": 4760,   "biais": "haussier", "decimals": 0, "unit": "$" },
+    { "actif": "US 10 ans", "spot": 4.23,   "close_prev": 4.25,   "sup1": 4.18,   "sup2": 4.10,   "res1": 4.30,   "res2": 4.38,   "biais": "detente",  "decimals": 2, "unit": "%" }
+  ],
+  "courbe": {
+    "points": [ { "t": "2Y", "v": 4.19 }, { "t": "5Y", "v": 4.16 }, { "t": "10Y", "v": 4.23 } ],
+    "bund10y": 3.24, "oat10y": 4.08, "spread_2s10s": 4, "spread_oat_bund": 84,
+    "fed_funds_proba": "≈ 33 % de hausse en sept. (Warsh faucon)"
+  },
+  "volatilite": { "vix": 15.85, "straddle_pct": 6.5, "straddle_actif": "Nvidia (implicite ce soir)" },
+  "cross_asset": [
+    { "label": "Dow", "pct": 0.30 }, { "label": "S&P 500", "pct": 0.32 }, { "label": "Nasdaq", "pct": 0.60 },
+    { "label": "Nikkei", "pct": 0.65 }, { "label": "CSI 300", "pct": 1.31 }, { "label": "Brent", "pct": -2.6 }
+  ],
+  "agenda": [
+    { "heure": "14:30", "evenement": "PIB US T2 2026 (2e estimation)", "attendu": "1,5 %", "precedent": "1,5 %", "tier": 2, "evenement_du_jour": false },
+    { "heure": "≈22:20", "evenement": "Résultats trimestriels Nvidia (T2, après clôture Wall Street)", "attendu": "CA ~92 Md$ · BPA 2,09 $", "precedent": "CA ~46,7 Md$ · BPA ~1,05 $", "tier": 1, "move_implicite": "±6-7 %", "evenement_du_jour": true }
+  ],
+  "secteurs": [
+    { "secteur": "Tech/Semis", "pct": -0.7, "biais": "baissier" }, { "secteur": "Énergie", "pct": -1.3, "biais": "baissier" },
+    { "secteur": "Santé/Défensives", "pct": 0.6, "biais": "haussier" }, { "secteur": "Banques", "pct": 0.3, "biais": "neutre" },
+    { "secteur": "Utilities", "pct": 0.4, "biais": "haussier" }, { "secteur": "Luxe", "pct": 0.2, "biais": "neutre" }
+  ],
+  "playbook": [
+    { "si": "Nvidia bat le consensus ET relève le guidance T3 (> 107 Md$)", "proba": 45, "alors": "Soulagement : rebond tech, CAC vise 8 540, futures Nasdaq +1,5 %", "biais": "long" },
+    { "si": "Chiffres en ligne mais prévisions prudentes", "proba": 35, "alors": "Digestion : range, CAC autour de 8 440, la tech consolide", "biais": "attente" },
+    { "si": "Guidance décevant / marges qui s'effritent", "proba": 20, "alors": "Correction tech : CAC teste 8 420 puis 8 380, VIX repasse > 20", "biais": "short" }
+  ],
+  "invalidation": "Au-dessus de 4,30 % sur le taux US 10 ans, la détente des taux qui soutient l'or et la tech s'inverse — l'appétit pour le risque se referme.",
+  "delta": [
+    { "label": "Pétrole -2,6 % (espoir de réouverture d'Ormuz)", "direction": "down" },
+    { "label": "Or au plus haut en 3 mois (~4 650 $)", "direction": "up" },
+    { "label": "Taux US 10 ans en légère détente", "direction": "down" }
+  ],
+  "condense": {
+    "idee": "Journée d'attente avant LE rendez-vous du soir : les résultats de Nvidia. En apparence tout est calme (VIX très bas à 15,8), mais sous la surface les investisseurs se replient sur le défensif (santé, or) et allègent la tech. C'est le calme avant le verdict, pas une vraie confiance.",
+    "pourquoi": "Nvidia est la plus grosse valeur du marché mondial : son résultat de ce soir peut faire bouger tout le secteur technologique demain, en Europe comme aux US. Tant que le chiffre n'est pas connu, personne ne veut prendre de risque — d'où les faibles volumes et la prudence.",
+    "evenement": "Résultats du 2e trimestre de Nvidia, publiés après la clôture de Wall Street (~22h20 heure de Paris). Le marché attend un chiffre d'affaires d'environ 92 milliards de dollars (presque le double d'il y a un an) et un bénéfice de 2,09 $ par action. LE point clé sera la PRÉVISION pour le trimestre suivant (le « guidance »), plus que le chiffre du jour.",
+    "plan_avant": "peu de mouvement et faibles volumes dans la journée : on patiente. La vraie volatilité arrivera ce soir après 22h.",
+    "plan_apres": "grand écart possible sur les futures du Nasdaq. On regarde si le CAC ouvre demain au-dessus de 8 500 (bon accueil) ou casse 8 420 (déception).",
+    "a_surveiller": "le pétrole (Brent -2,6 %, espoir de réouverture du détroit d'Ormuz qui calme l'inflation) et les semi-conducteurs européens comme ASML, qui donnent le ton avant Nvidia.",
+    "overnight": "Wall Street en hausse hier : Dow +0,30 % · S&P 500 +0,32 % · Nasdaq +0,6 %. Asie ferme ce matin : CSI 300 +1,31 %, KOSPI +1,04 %, Nikkei +0,65 %."
+  },
+  "sources": ["TradingEconomics", "Reuters", "CNBC", "Saxo", "Investing.com"]
+}
