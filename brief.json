@@ -1,0 +1,58 @@
+{
+  "meta": { "date_str": "jeudi 27 août 2026", "heure": "08:00", "snapshot": "07:55", "tz": "Europe/Paris" },
+  "verdict": {
+    "biais": "Risk-on porté par la tech (Nvidia) — mais bridé avant Jackson Hole",
+    "pivot": "CAC 8 440",
+    "ne_pas_lacher": "8 380",
+    "vol": "VIX bas à 15,5 — calme avant le discours de K. Warsh vendredi"
+  },
+  "niveaux": [
+    { "actif": "CAC 40",    "spot": 8496,   "close_prev": 8438,   "sup1": 8440,   "sup2": 8380,   "res1": 8540,   "res2": 8600,   "biais": "haussier", "decimals": 0 },
+    { "actif": "DAX",       "spot": 26300,  "close_prev": 26266,  "sup1": 26100,  "sup2": 25800,  "res1": 26500,  "res2": 26700,  "biais": "haussier", "decimals": 0 },
+    { "actif": "EUR/USD",   "spot": 1.1664, "close_prev": 1.1675, "sup1": 1.1620, "sup2": 1.1560, "res1": 1.1700, "res2": 1.1740, "biais": "neutre",   "decimals": 4 },
+    { "actif": "Brent",     "spot": 86.9,   "close_prev": 87.8,   "sup1": 86.0,   "sup2": 84.5,   "res1": 88.5,   "res2": 90.0,   "biais": "baissier", "decimals": 1, "unit": "$" },
+    { "actif": "Or",        "spot": 4620,   "close_prev": 4600,   "sup1": 4560,   "sup2": 4500,   "res1": 4700,   "res2": 4760,   "biais": "haussier", "decimals": 0, "unit": "$" },
+    { "actif": "US 10 ans", "spot": 4.51,   "close_prev": 4.53,   "sup1": 4.45,   "sup2": 4.38,   "res1": 4.55,   "res2": 4.62,   "biais": "neutre",   "decimals": 2, "unit": "%" }
+  ],
+  "courbe": {
+    "points": [ { "t": "2Y", "v": 3.80 }, { "t": "5Y", "v": 4.37 }, { "t": "10Y", "v": 4.51 } ],
+    "bund10y": 3.20, "oat10y": 4.03, "spread_2s10s": 71, "spread_oat_bund": 83
+  },
+  "volatilite": { "vix": 15.45 },
+  "cross_asset": [
+    { "label": "Dow", "pct": -0.21 }, { "label": "S&P 500", "pct": -0.03 }, { "label": "Nasdaq", "pct": -0.08 },
+    { "label": "Nvidia (ap. clôture)", "pct": 4.7 }, { "label": "Nikkei", "pct": -0.4 }, { "label": "Kospi", "pct": 1.5 },
+    { "label": "Brent", "pct": -1.0 }, { "label": "Or", "pct": 0.5 }
+  ],
+  "agenda": [
+    { "heure": "14:30", "evenement": "PIB américain T2 (2e estimation)", "attendu": "1,5 %", "precedent": "1,5 %", "tier": 1, "evenement_du_jour": true },
+    { "heure": "14:30", "evenement": "Inscriptions hebdomadaires au chômage (États-Unis)", "attendu": "206k", "precedent": "212k", "tier": 2, "evenement_du_jour": false }
+  ],
+  "secteurs": [
+    { "secteur": "Tech/Semis", "pct": 1.8, "biais": "haussier" }, { "secteur": "Industrie", "pct": 0.4, "biais": "haussier" },
+    { "secteur": "Luxe", "pct": 0.3, "biais": "neutre" }, { "secteur": "Banques", "pct": 0.2, "biais": "neutre" },
+    { "secteur": "Auto", "pct": -0.3, "biais": "baissier" }, { "secteur": "Énergie", "pct": -0.6, "biais": "baissier" }
+  ],
+  "playbook": [
+    { "si": "L'euphorie Nvidia l'emporte, la vague semis porte l'Europe", "proba": 45, "alors": "Hausse : CAC vise 8 540 puis 8 600, DAX teste 26 500. Invalidation sous 8 440.", "biais": "long" },
+    { "si": "Consolidation prudente avant le discours de Jackson Hole", "proba": 40, "alors": "Range 8 440–8 540 sur le CAC, volatilité qui reste basse (VIX ~15).", "biais": "attente" },
+    { "si": "Le marché anticipe un ton ferme de K. Warsh (taux qui remontent)", "proba": 15, "alors": "Baisse : CAC repasse sous 8 440, cap sur 8 380, EUR/USD sous 1,1620.", "biais": "short" }
+  ],
+  "invalidation": "Un retour du taux US 10 ans au-dessus de 4,62 % (ou un CAC qui casse 8 380) enterrerait le rebond porté par Nvidia.",
+  "delta": [
+    { "label": "Nvidia dope la tech mondiale (+4,7 % après-Bourse)", "direction": "up" },
+    { "label": "Taux US 10 ans détendus à 4,51 %", "direction": "down" },
+    { "label": "Prudence avant le discours de Warsh (Jackson Hole vendredi)", "direction": "stable" }
+  ],
+  "condense": {
+    "idee": "Journée « tech en fête, mais on ne s'emballe pas ». Nvidia a écrasé ses résultats hier soir et son action bondit de ~4,7 % après la clôture : ça tire les fabricants de puces (ASML, BE Semiconductor) et devrait faire ouvrir Paris et Francfort en hausse. Attention : Wall Street avait fini quasi à l'équilibre hier AVANT Nvidia, freiné par une inflation encore chaude. Donc de l'appétit pour le risque, oui, mais bridé.",
+    "pourquoi": "Nvidia est le baromètre de toute la « trade IA ». Un chiffre d'affaires de 96 Md$ (+106 % sur un an) et des prévisions au-dessus des attentes rassurent sur le fait que la demande en puces IA ne faiblit pas. Résultat : les valeurs technos du monde entier montent dans son sillage.",
+    "evenement": "Deux rendez-vous US à 14h30 : le PIB du 2e trimestre (2e estimation, attendu à +1,5 %, sans surprise) et les inscriptions au chômage (206k attendus). Mais LE vrai catalyseur est demain : le discours du président de la Fed, Kevin Warsh, à Jackson Hole — il pourrait donner le ton sur les futures baisses de taux.",
+    "plan_avant": "peu d'agitation attendue avant 14h30, on surfe sur l'élan Nvidia à l'ouverture.",
+    "plan_apres": "on surveille si le CAC tient au-dessus de 8 440 (rebond crédible) ou décroche sous 8 380 (les vendeurs reprennent la main avant Warsh).",
+    "a_surveiller": "les semi-conducteurs européens (ASML, ASM) qui suivent Nvidia, et le taux US 10 ans (détendu à 4,51 % : s'il remonte vers 4,62 %, la fête tech s'essouffle).",
+    "overnight": "Wall Street à plat AVANT Nvidia : Dow -0,21 % · S&P -0,03 % · Nasdaq -0,08 % · Nvidia +4,7 % après-Bourse. Asie partagée : Nikkei -0,4 %, Kospi +1,5 % (hausse de taux surprise en Corée).",
+    "inflation": "3,7 %"
+  },
+  "sources": ["BEA", "US Treasury", "Reuters", "CNBC", "Investing.com", "TradingEconomics"]
+}
