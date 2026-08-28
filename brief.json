@@ -1,0 +1,61 @@
+{
+  "meta": { "date_str": "vendredi 28 août 2026", "heure": "08:00", "snapshot": "07:55", "tz": "Europe/Paris" },
+  "verdict": {
+    "biais": "Risque France isolé — banques et OAT sous pression, tech mondiale au record",
+    "pivot": "CAC 8 320",
+    "ne_pas_lacher": "8 280",
+    "vol": "VIX bas (15,2) : le stress reste franco-français, pas global"
+  },
+  "niveaux": [
+    { "actif": "CAC 40",     "spot": 8320,    "close_prev": 8462,    "sup1": 8280,   "sup2": 8200,   "res1": 8400,   "res2": 8462,   "biais": "baissier", "decimals": 0 },
+    { "actif": "DAX",        "spot": 26357,   "close_prev": 26286,   "sup1": 26200,  "sup2": 26000,  "res1": 26450,  "res2": 26600,  "biais": "neutre",   "decimals": 0 },
+    { "actif": "EUR/USD",    "spot": 1.1662,  "close_prev": 1.1675,  "sup1": 1.1620, "sup2": 1.1580, "res1": 1.1700, "res2": 1.1740, "biais": "neutre",   "decimals": 4 },
+    { "actif": "OAT 10 ans", "spot": 4.07,    "close_prev": 4.08,    "sup1": 4.00,   "sup2": 3.92,   "res1": 4.12,   "res2": 4.20,   "biais": "tension",  "decimals": 2, "unit": "%" },
+    { "actif": "US 10 ans",  "spot": 4.65,    "close_prev": 4.66,    "sup1": 4.58,   "sup2": 4.50,   "res1": 4.70,   "res2": 4.78,   "biais": "neutre",   "decimals": 2, "unit": "%" },
+    { "actif": "Brent",      "spot": 87.65,   "close_prev": null,    "sup1": 86.5,   "sup2": 85.0,   "res1": 89.0,   "res2": 90.5,   "biais": "haussier", "decimals": 1, "unit": "$" },
+    { "actif": "Or",         "spot": 4603,    "close_prev": 4594,    "sup1": 4550,   "sup2": 4480,   "res1": 4680,   "res2": 4750,   "biais": "haussier", "decimals": 0, "unit": "$" }
+  ],
+  "courbe": {
+    "points": [ { "t": "2Y", "v": 3.80 }, { "t": "5Y", "v": 4.15 }, { "t": "10Y", "v": 4.65 } ],
+    "bund10y": 3.25, "oat10y": 4.07, "spread_2s10s": 85, "spread_oat_bund": 82
+  },
+  "volatilite": { "vix": 15.2, "straddle_actif": "CAC 40" },
+  "cross_asset": [
+    { "label": "Nasdaq", "pct": 1.4 }, { "label": "S&P 500", "pct": 0.7 }, { "label": "Dow", "pct": 0.19 },
+    { "label": "Nikkei", "pct": 0.81 }, { "label": "Hang Seng", "pct": 0.15 }, { "label": "CAC 40", "pct": -1.68 }
+  ],
+  "agenda": [
+    { "heure": "08:45", "evenement": "Inflation France (IPC, estimation provisoire août)", "attendu": "2,1 %", "precedent": "2,1 %", "tier": 1, "evenement_du_jour": true },
+    { "heure": "09:55", "evenement": "Taux de chômage Allemagne (août)", "attendu": "6,4 %", "precedent": "6,4 %", "tier": 2, "evenement_du_jour": false }
+  ],
+  "secteurs": [
+    { "secteur": "Banques", "pct": -4.2, "biais": "baissier" },
+    { "secteur": "Assurance", "pct": -2.0, "biais": "baissier" },
+    { "secteur": "Immobilier", "pct": -1.8, "biais": "baissier" },
+    { "secteur": "Luxe", "pct": -0.4, "biais": "neutre" },
+    { "secteur": "Tech/Semis", "pct": 0.9, "biais": "haussier" },
+    { "secteur": "Énergie", "pct": 0.4, "biais": "haussier" }
+  ],
+  "playbook": [
+    { "si": "Fitch dégrade la France ce soir (AA- vers A+)", "proba": 30, "alors": "Baisse : CAC vers 8 200, spread OAT-Bund > 90 pb, banques sous pression", "biais": "short" },
+    { "si": "Fitch confirme AA- / négatif + inflation dans les clous", "proba": 50, "alors": "Stabilisation : rebond technique du CAC vers 8 400, spread ancré ~80 pb", "biais": "attente" },
+    { "si": "Détente politique ou inflation FR sous 2,1 %", "proba": 20, "alors": "Rebond : CAC comble le gap vers 8 462, EUR/USD > 1,1700", "biais": "long" }
+  ],
+  "invalidation": "Sous 8 280, le repli s'accélère vers 8 200 ; au-dessus de 8 400, la panique bancaire s'essouffle.",
+  "delta": [
+    { "label": "Banques françaises décrochent (BNP −4,4 %, SocGen −4,0 %)", "direction": "down" },
+    { "label": "Wall Street au record grâce à Nvidia (Nasdaq +1,4 %)", "direction": "up" },
+    { "label": "Spread OAT-Bund quasi stable (82 pb) malgré la chute des actions", "direction": "stable" }
+  ],
+  "condense": {
+    "idee": "Journée à deux vitesses. La Bourse de Paris a plongé (CAC −1,68 %, pire d'Europe) sur fond de craintes budgétaires et politiques françaises, pendant que Wall Street battait des records grâce à Nvidia. Le stress est donc franco-français, pas mondial : le DAX allemand a même fini en hausse. Nuance importante : les actions ont violemment sanctionné le risque France, mais le marché obligataire est resté calme (spread OAT-Bund à peine bougé, 82 pb). Soit les actions surréagissent, soit les obligations dorment avant la décision de Fitch de ce soir.",
+    "pourquoi": "Le déficit et la dette de la France inquiètent à nouveau, et les banques (qui détiennent beaucoup de dette d'État) trinquent en premier. C'est un risque local : il ne contamine ni l'Allemagne ni les États-Unis.",
+    "evenement": "Ce soir, l'agence Fitch réexamine la note de la France (aujourd'hui AA-, perspective « négative », c'est-à-dire menacée de baisse). Une note, c'est le bulletin scolaire de l'emprunteur : plus elle baisse, plus la France emprunte cher. Avant cela, à 8h45, on aura l'inflation française d'août.",
+    "plan_avant": "positionnement prudent : le marché se place avant le verdict de Fitch (qui tombe après la clôture).",
+    "plan_apres": "on regarde si le CAC casse 8 280 (signal de nouvelle baisse) ou reprend 8 400 (la peur retombe).",
+    "a_surveiller": "la note Fitch sur la France ce soir, l'inflation française de 8h45, les valeurs bancaires (BNP, Société Générale) et le spread OAT-Bund (82 pb, l'écart de taux France/Allemagne).",
+    "overnight": "Wall Street record : Nasdaq +1,4 % · S&P +0,7 % · Dow +0,2 % (Nvidia +8,6 %). Asie en hausse : Nikkei +0,8 % · Hang Seng +0,2 %.",
+    "inflation": "2,1 %"
+  },
+  "sources": ["Insee", "MarketScreener", "Trading Economics", "FXStreet", "Reuters", "Investing.com"]
+}
