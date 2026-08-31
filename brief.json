@@ -1,0 +1,63 @@
+{
+  "meta": { "date_str": "lundi 31 août 2026", "heure": "08:00", "snapshot": "07:55", "tz": "Europe/Paris" },
+  "verdict": {
+    "biais": "Prudence : repricing « faucon » post-Jackson Hole, l'Europe menacée d'un rattrapage baissier",
+    "pivot": "CAC 8 400",
+    "ne_pas_lacher": "8 320",
+    "vol": "VIX très bas (14) — complaisance à surveiller"
+  },
+  "niveaux": [
+    { "actif": "CAC 40",    "spot": 8401,   "close_prev": 8318.69, "sup1": 8320,   "sup2": 8250,   "res1": 8480,   "res2": 8560,   "biais": "neutre",   "decimals": 0 },
+    { "actif": "DAX",       "spot": 26531,  "close_prev": 26328,   "sup1": 26300,  "sup2": 26100,  "res1": 26700,  "res2": 26900,  "biais": "neutre",   "decimals": 0 },
+    { "actif": "EuroStoxx 50", "spot": 6483, "close_prev": 6422,   "sup1": 6420,   "sup2": 6360,   "res1": 6520,   "res2": 6580,   "biais": "neutre",   "decimals": 0 },
+    { "actif": "EUR/USD",   "spot": 1.1586, "close_prev": 1.1610,  "sup1": 1.1560, "sup2": 1.1520, "res1": 1.1650, "res2": 1.1685, "biais": "baissier", "decimals": 4 },
+    { "actif": "DXY",       "spot": 99.5,   "close_prev": 99.2,    "sup1": 99.0,   "sup2": 98.5,   "res1": 100.0,  "res2": 100.5,  "biais": "haussier", "decimals": 1 },
+    { "actif": "Brent",     "spot": 88.3,   "close_prev": 88.5,    "sup1": 87.0,   "sup2": 85.5,   "res1": 90.0,   "res2": 91.5,   "biais": "neutre",   "decimals": 1, "unit": "$" },
+    { "actif": "Or",        "spot": 4432,   "close_prev": 4453,    "sup1": 4380,   "sup2": 4300,   "res1": 4500,   "res2": 4600,   "biais": "baissier", "decimals": 0, "unit": "$" },
+    { "actif": "US 10 ans", "spot": 4.73,   "close_prev": 4.70,    "sup1": 4.65,   "sup2": 4.58,   "res1": 4.78,   "res2": 4.85,   "biais": "tension",  "decimals": 2, "unit": "%" }
+  ],
+  "courbe": {
+    "points": [ { "t": "2Y", "v": 4.34 }, { "t": "5Y", "v": 4.48 }, { "t": "10Y", "v": 4.73 } ],
+    "bund10y": 3.27, "oat10y": 4.10, "spread_2s10s": 39, "spread_oat_bund": 83,
+    "fed_funds_range": "3,50–3,75 %"
+  },
+  "volatilite": { "vix": 14.35 },
+  "cross_asset": [
+    { "label": "S&P 500", "pct": -0.25 }, { "label": "Nasdaq", "pct": -0.52 },
+    { "label": "Shanghai", "pct": -0.35 }, { "label": "Hang Seng", "pct": 0.0 },
+    { "label": "Or", "pct": -0.47 }, { "label": "DXY", "pct": 0.3 }
+  ],
+  "agenda": [
+    { "heure": "14:00", "evenement": "Inflation allemande (CPI, estimation d'août)", "attendu": "3,1 %", "precedent": "2,8 %", "tier": 1, "evenement_du_jour": true }
+  ],
+  "secteurs": [
+    { "secteur": "Automobile", "pct": 1.5, "biais": "haussier" },
+    { "secteur": "Banques", "pct": 0.9, "biais": "haussier" },
+    { "secteur": "Énergie", "pct": -0.2, "biais": "neutre" },
+    { "secteur": "Tech/Semis", "pct": -0.6, "biais": "baissier" },
+    { "secteur": "Luxe", "pct": 0.3, "biais": "neutre" },
+    { "secteur": "Immobilier/Utilities", "pct": -0.8, "biais": "baissier" }
+  ],
+  "playbook": [
+    { "si": "CPI allemande chaude (surprise au-dessus de 3,1 %)", "proba": 40, "alors": "Le risk-off s'accélère : CAC glisse vers 8 320 puis 8 250, EUR/USD casse 1,1560, Bund et OAT montent encore, or sous 4 380", "biais": "short" },
+    { "si": "CPI conforme (~3,1 %, pas de surprise)", "proba": 40, "alors": "Consolidation nerveuse : CAC tient le range 8 320–8 480, le marché attend l'inflation zone euro de demain", "biais": "attente" },
+    { "si": "CPI plus douce (sous 3,0 %)", "proba": 20, "alors": "Rebond de soulagement : CAC revient vers 8 480, EUR/USD rebondit vers 1,1650, l'or se stabilise au-dessus de 4 450", "biais": "long" }
+  ],
+  "invalidation": "Un retour du 10 ans US sous 4,65 % et du Bund sous 3,20 % annulerait le scénario « repricing faucon » et redonnerait de l'air aux actions et à l'or.",
+  "delta": [
+    { "label": "Taux mondiaux en forte hausse (Bund au plus haut depuis 2011)", "direction": "up" },
+    { "label": "L'or décroche sous 4 450 $", "direction": "down" },
+    { "label": "Dollar (DXY) revient tester 100", "direction": "up" }
+  ],
+  "condense": {
+    "idee": "Attention au piège : vendredi les Bourses européennes ont fini en hausse (CAC +1 %, DAX +0,8 %) AVANT le discours du patron de la Fed. Ce discours, tenu l'après-midi à Jackson Hole, a été « faucon » (ton dur sur l'inflation), et Wall Street a reculé APRÈS la clôture européenne. Le vert de vendredi ne dit donc rien de la journée : l'Europe risque de « rattraper » cette baisse ce lundi.",
+    "pourquoi": "« Faucon » (hawkish) = une banque centrale qui veut garder des taux élevés pour freiner l'inflation. Le président de la Fed, Kevin Warsh, s'inquiète de l'inflation et laisse même entendre qu'une HAUSSE des taux reste possible, au lieu d'une baisse. Quand on attend des taux plus hauts : les rendements obligataires montent (le Bund allemand est au plus haut depuis 2011), le dollar se renforce, et l'or — qui ne verse aucun intérêt — devient moins attractif et chute (sous 4 450 $).",
+    "evenement": "Inflation allemande d'août (première estimation) vers 14h00. Attendu : 3,1 % sur un an, contre 2,8 % en juillet — une accélération surtout tirée par l'énergie. C'est le hors-d'œuvre avant l'inflation de toute la zone euro, publiée demain. Un chiffre élevé renforcerait la crainte d'une inflation « collante » et donc de taux durablement hauts.",
+    "plan_avant": "Marché nerveux, biais vendeur tant que les taux montent : l'Europe digère le message dur de la Fed. Volumes réduits car Londres est fermée (jour férié au Royaume-Uni).",
+    "plan_apres": "Après le chiffre allemand (14h), on surveille le CAC : s'il tient 8 320 (support clé), la baisse est contenue ; s'il casse, prochain palier 8 250. Au-dessus de 8 480, le rebond reprend la main.",
+    "a_surveiller": "L'or (chute en cours), le taux américain à 10 ans (4,73 %) et le Bund (3,27 %) : tant qu'ils montent, la pression reste sur les actions. Wall Street rouvre ce soir après un vendredi baissier.",
+    "overnight": "Vendredi US : S&P 500 -0,25 % · Nasdaq -0,52 % (choc « faucon » de Jackson Hole). Asie ce matin : Shanghai -0,35 %, Hong Kong ≈ stable.",
+    "inflation": "Allemagne 2,8 % (juillet) → 3,1 % attendu (août)"
+  },
+  "sources": ["TradingEconomics", "FXStreet", "Newsquawk", "Reuters", "Investing.com"]
+}
