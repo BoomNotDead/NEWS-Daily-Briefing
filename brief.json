@@ -1,0 +1,57 @@
+{
+  "meta": { "date_str": "mercredi 2 septembre 2026", "heure": "08:00", "snapshot": "07:55", "tz": "Europe/Paris" },
+  "verdict": {
+    "biais": "Défensif — le choc obligataire commande (taux + pétrole)",
+    "pivot": "CAC 8 360",
+    "ne_pas_lacher": "8 300",
+    "vol": "VIX ~16,8 en hausse ; volatilité des taux (MOVE) tendue"
+  },
+  "niveaux": [
+    { "actif": "CAC 40",    "spot": 8360,   "close_prev": 8367,   "sup1": 8300,   "sup2": 8240,   "res1": 8420,   "res2": 8480,   "biais": "neutre",   "decimals": 0 },
+    { "actif": "DAX",       "spot": 26090,  "close_prev": 26140,  "sup1": 25900,  "sup2": 25700,  "res1": 26300,  "res2": 26500,  "biais": "neutre",   "decimals": 0 },
+    { "actif": "EUR/USD",   "spot": 1.1584, "close_prev": 1.1601, "sup1": 1.1550, "sup2": 1.1500, "res1": 1.1620, "res2": 1.1660, "biais": "baissier", "decimals": 4 },
+    { "actif": "Brent",     "spot": 96.6,   "close_prev": 94.6,   "sup1": 94.0,   "sup2": 91.0,   "res1": 98.0,   "res2": 100.0,  "biais": "haussier", "decimals": 1, "unit": "$" },
+    { "actif": "Or",        "spot": 4359,   "close_prev": 4441,   "sup1": 4300,   "sup2": 4250,   "res1": 4420,   "res2": 4480,   "biais": "baissier", "decimals": 0, "unit": "$" },
+    { "actif": "US 10 ans", "spot": 4.81,   "close_prev": 4.79,   "sup1": 4.75,   "sup2": 4.70,   "res1": 4.85,   "res2": 4.90,   "biais": "tension",  "decimals": 2, "unit": "%" }
+  ],
+  "courbe": {
+    "points": [ { "t": "2Y", "v": 4.40 }, { "t": "10Y", "v": 4.81 } ],
+    "bund10y": 3.36, "oat10y": 4.20, "spread_2s10s": 41, "spread_oat_bund": 84,
+    "fed_funds_proba": "≈ 68 % pour +25 pb (hausse)"
+  },
+  "volatilite": { "vix": 16.8 },
+  "cross_asset": [
+    { "label": "Dow", "pct": -0.79 }, { "label": "S&P 500", "pct": -0.71 }, { "label": "Nasdaq", "pct": -1.03 },
+    { "label": "Nikkei", "pct": -2.53 }, { "label": "Brent", "pct": 2.1 }, { "label": "Or", "pct": -1.86 }
+  ],
+  "agenda": [
+    { "heure": "14:15", "evenement": "Rapport ADP sur l'emploi privé US (août)", "attendu": "68k", "precedent": "95k", "tier": 2, "evenement_du_jour": true }
+  ],
+  "secteurs": [
+    { "secteur": "Énergie", "pct": 1.5, "biais": "haussier" }, { "secteur": "Banques", "pct": 0.5, "biais": "haussier" },
+    { "secteur": "Défense/Industrie", "pct": 0.6, "biais": "haussier" }, { "secteur": "Tech/Semis", "pct": -1.8, "biais": "baissier" },
+    { "secteur": "Luxe", "pct": -0.8, "biais": "baissier" }, { "secteur": "Immobilier", "pct": -1.2, "biais": "baissier" }
+  ],
+  "playbook": [
+    { "si": "Détente : 10 ans US repasse sous 4,75 % et le Brent reflue sous 94 $", "proba": 25, "alors": "Respiration : CAC vers 8 420, la tech rebondit, l'or se stabilise", "biais": "long" },
+    { "si": "Statu quo tendu : 10 ans US bloqué 4,80–4,85 %, Brent > 95 $", "proba": 50, "alors": "Range nerveux : énergie et banques surperforment, tech à la traîne", "biais": "attente" },
+    { "si": "Aggravation : 10 ans US > 4,90 %, Brent > 100 $ (escalade Iran)", "proba": 25, "alors": "Baisse : CAC casse 8 300 vers 8 240, dollar recherché", "biais": "short" }
+  ],
+  "invalidation": "Sous 4,70 % sur le taux US 10 ans avec un Brent repassé sous 92 $, la thèse « inflation par le pétrole » s'efface et les indices peuvent respirer.",
+  "delta": [
+    { "label": "Taux longs US au plus haut depuis janvier 2025", "direction": "up" },
+    { "label": "Pétrole en flambée (Brent > 96 $)", "direction": "up" },
+    { "label": "Or en baisse malgré le risque géopolitique", "direction": "down" }
+  ],
+  "condense": {
+    "idee": "Journée défensive. Un même choc explique tout : le pétrole flambe (Brent > 96 $), ce qui fait remonter l'inflation, donc les taux d'emprunt des États, donc pèse sur les actions — surtout la tech (Nasdaq −1 %, Nikkei −2,5 % cette nuit). On préfère l'énergie et les banques, on se méfie de la tech et des valeurs sensibles aux taux (luxe, immobilier).",
+    "pourquoi": "L'escalade militaire entre les États-Unis et l'Iran (frappes, mines dans le détroit d'Ormuz) fait bondir le prix du pétrole. Un pétrole cher = plus d'inflation, donc les banques centrales pourraient devoir monter les taux, ce qui fait chuter le prix des obligations et monter leurs rendements.",
+    "evenement": "Pas de « gros » chiffre programmé aujourd'hui. Seule publication à surveiller : le rapport ADP sur l'emploi privé américain à 14h15 (baromètre avant l'emploi officiel de vendredi). Le vrai moteur reste le marché des taux et le pétrole, en direct.",
+    "plan_avant": "prudence : les taux montent depuis 5 séances, tant qu'ils grimpent les actions restent sous pression. On surveille le seuil 8 300 sur le CAC.",
+    "plan_apres": "si le 10 ans US repasse sous 4,75 %, respiration possible (CAC vers 8 420). S'il dépasse 4,90 % ou si le Brent franchit 100 $, la baisse s'accélère.",
+    "a_surveiller": "le taux US 10 ans (4,81 %), le Brent (96,6 $) et l'écart OAT-Bund (84 points) qui mesure le stress sur la dette française.",
+    "overnight": "Wall Street en baisse (Dow −0,79 % · S&P −0,71 % · Nasdaq −1,03 %) ; Asie décrochage (Nikkei −2,53 %, Kospi −2,41 %).",
+    "inflation": "3,3 %"
+  },
+  "sources": ["Eurostat", "TradingEconomics", "Reuters", "CNBC", "Investing.com"]
+}
