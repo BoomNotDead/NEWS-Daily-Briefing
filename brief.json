@@ -1,0 +1,62 @@
+{
+  "meta": { "date_str": "jeudi 3 septembre 2026", "heure": "08:00", "snapshot": "07:55", "tz": "Europe/Paris" },
+  "verdict": {
+    "biais": "Rebond de soulagement fragile — le « bonne nouvelle = mauvaise nouvelle » domine avant l'ISM",
+    "pivot": "CAC 8 260",
+    "ne_pas_lacher": "8 180",
+    "vol": "VIX bas (16,3) malgré le stress obligataire"
+  },
+  "niveaux": [
+    { "actif": "CAC 40",       "spot": 8295,   "close_prev": 8263,   "sup1": 8230,   "sup2": 8180,   "res1": 8340,   "res2": 8400,   "biais": "neutre",   "decimals": 0 },
+    { "actif": "DAX",          "spot": 25910,  "close_prev": 25839,  "sup1": 25650,  "sup2": 25450,  "res1": 26050,  "res2": 26250,  "biais": "neutre",   "decimals": 0 },
+    { "actif": "EuroStoxx 50", "spot": 6375,   "close_prev": 6363,   "sup1": 6320,   "sup2": 6270,   "res1": 6410,   "res2": 6460,   "biais": "neutre",   "decimals": 0 },
+    { "actif": "EUR/USD",      "spot": 1.1586, "close_prev": 1.1590, "sup1": 1.1550, "sup2": 1.1510, "res1": 1.1620, "res2": 1.1660, "biais": "neutre",   "decimals": 4 },
+    { "actif": "Brent",        "spot": 95.26,  "close_prev": 95.64,  "sup1": 93.0,   "sup2": 90.5,   "res1": 97.0,   "res2": 100.0,  "biais": "haussier", "decimals": 1, "unit": "$" },
+    { "actif": "Or",           "spot": 4375,   "close_prev": 4377,   "sup1": 4300,   "sup2": 4230,   "res1": 4450,   "res2": 4520,   "biais": "neutre",   "decimals": 0, "unit": "$" },
+    { "actif": "US 10 ans",    "spot": 4.79,   "close_prev": 4.80,   "sup1": 4.72,   "sup2": 4.65,   "res1": 4.85,   "res2": 4.92,   "biais": "tension",  "decimals": 2, "unit": "%" }
+  ],
+  "courbe": {
+    "points": [ { "t": "2Y", "v": 4.38 }, { "t": "5Y", "v": 4.54 }, { "t": "10Y", "v": 4.79 } ],
+    "bund10y": 3.40, "oat10y": 4.22, "spread_2s10s": 41, "spread_oat_bund": 82,
+    "fed_funds_proba": "66 % de HAUSSE (FOMC 15-16 sept.)"
+  },
+  "volatilite": { "vix": 16.34 },
+  "cross_asset": [
+    { "label": "Dow", "pct": 0.56 }, { "label": "S&P 500", "pct": 0.46 }, { "label": "Nasdaq", "pct": 0.45 },
+    { "label": "Nikkei", "pct": 0.2 }, { "label": "Kospi", "pct": 1.4 }, { "label": "Brent", "pct": -0.4 }
+  ],
+  "agenda": [
+    { "heure": "14:30", "evenement": "Inscriptions hebdomadaires au chômage (US)", "attendu": "205k", "precedent": "203k", "tier": 2, "evenement_du_jour": false },
+    { "heure": "16:00", "evenement": "ISM Services (PMI non-manufacturier US)", "attendu": "56,8", "precedent": "54,6", "tier": 2, "evenement_du_jour": true }
+  ],
+  "secteurs": [
+    { "secteur": "Énergie", "pct": null, "biais": "haussier" },
+    { "secteur": "Banques", "pct": null, "biais": "haussier" },
+    { "secteur": "Tech/Semis", "pct": null, "biais": "neutre" },
+    { "secteur": "Utilities/Immobilier", "pct": null, "biais": "baissier" },
+    { "secteur": "Luxe", "pct": null, "biais": "neutre" }
+  ],
+  "playbook": [
+    { "si": "ISM Services chaud (≥ 56,8) — « good news = bad news »", "proba": 45, "alors": "Baisse : les taux repartent, le CAC vise 8 180 et le US 10 ans casse 4,85 %", "biais": "short" },
+    { "si": "ISM conforme, le rebond de soulagement tient", "proba": 40, "alors": "Range prudent : CAC 8 260–8 340, on souffle avant le NFP de vendredi", "biais": "attente" },
+    { "si": "ISM plus faible que prévu (< 54,6)", "proba": 15, "alors": "Hausse : détente des taux, le CAC vise 8 400 et le US 10 ans reflue vers 4,72 %", "biais": "long" }
+  ],
+  "invalidation": "Un retour du US 10 ans au-dessus de 4,85 % relancerait la vente d'actions et invaliderait le rebond ; à l'inverse, sous 4,70 % la thématique « good news = bad news » se desserre.",
+  "delta": [
+    { "label": "Brent ~95 $ après les frappes US-Iran", "direction": "up" },
+    { "label": "US 10 ans ~4,79 %, plus haut depuis oct. 2023", "direction": "up" },
+    { "label": "Bund (2011) et OAT (2008) au plus haut de 15 ans", "direction": "up" },
+    { "label": "Actions US rebondissent, VIX bas (16,3)", "direction": "stable" }
+  ],
+  "condense": {
+    "idee": "Après trois séances de baisse, les actions rebondissent un peu (Wall Street et l'Asie dans le vert), mais ce rebond est fragile. Le vrai patron du marché aujourd'hui, ce sont les taux : ils sont au plus haut depuis des années. Piège du jour : une donnée économique TROP bonne serait mal prise, car une économie forte pousse la banque centrale à monter les taux — c'est le fameux « bonne nouvelle = mauvaise nouvelle ».",
+    "pourquoi": "Les frappes US-Iran près du détroit d'Ormuz ont fait bondir le pétrole (Brent ~95 $, +5 % sur la semaine). Un pétrole cher relance l'inflation, ce qui pousse la Fed vers une HAUSSE de taux (rare) : le marché la voit désormais à 66 % pour le 16 septembre.",
+    "evenement": "16h00 — ISM Services : une grande enquête mensuelle auprès des entreprises de services (le plus gros de l'économie US). Attendu en nette hausse (56,8 contre 54,6). Aujourd'hui, un chiffre élevé serait mal reçu : il renforcerait le pari d'une hausse de taux. Demain (vendredi) tombe le rapport emploi US (NFP), le vrai juge de paix de la semaine.",
+    "plan_avant": "rebond calme mais nerveux ; on garde un œil sur le pétrole et le taux US 10 ans (4,80 %).",
+    "plan_apres": "si l'ISM sort chaud, les taux montent et les actions rechutent ; on surveille la cassure du CAC sous 8 260 (signal baissier) ou au-dessus de 8 340 (le rebond respire).",
+    "a_surveiller": "le pétrole, le US 10 ans à 4,80 %, et le NFP de demain qui peut sceller la hausse de taux du 16 septembre.",
+    "overnight": "Dow +0,56 % · S&P 500 +0,46 % · Nasdaq +0,45 % · Asie en hausse (Nikkei +0,2 %, Kospi +1,4 %).",
+    "inflation": "3,7 % (PCE — presque le double de la cible de 2 %, selon Warsh)"
+  },
+  "sources": ["TradingEconomics", "Reuters", "CNBC", "Investing.com", "Yahoo Finance"]
+}
