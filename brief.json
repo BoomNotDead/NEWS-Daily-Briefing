@@ -1,0 +1,57 @@
+{
+  "meta": { "date_str": "vendredi 4 septembre 2026", "heure": "08:00", "snapshot": "07:55", "tz": "Europe/Paris" },
+  "verdict": {
+    "biais": "Risk-on prudent — le marché parie sur un statu quo Fed, tout se joue à 14h30 (emploi US)",
+    "pivot": "CAC 8 286",
+    "ne_pas_lacher": "8 240",
+    "vol": "VIX au plancher (15,4) : marché très détendu avant l'emploi, couverture peu chère"
+  },
+  "niveaux": [
+    { "actif": "CAC 40",    "spot": 8286,   "close_prev": 8281,   "sup1": 8240,   "sup2": 8180,   "res1": 8340,   "res2": 8400,   "biais": "neutre",   "decimals": 0 },
+    { "actif": "DAX",       "spot": 26056,  "close_prev": 26003,  "sup1": 25850,  "sup2": 25600,  "res1": 26250,  "res2": 26450,  "biais": "neutre",   "decimals": 0 },
+    { "actif": "EUR/USD",   "spot": 1.1627, "close_prev": 1.1625, "sup1": 1.1580, "sup2": 1.1540, "res1": 1.1660, "res2": 1.1700, "biais": "haussier", "decimals": 4 },
+    { "actif": "Brent",     "spot": 95.5,   "close_prev": 94.65,  "sup1": 93.5,   "sup2": 91.5,   "res1": 97.0,   "res2": 99.0,   "biais": "haussier", "decimals": 1, "unit": "$" },
+    { "actif": "Or",        "spot": 4723,   "close_prev": 4698,   "sup1": 4650,   "sup2": 4580,   "res1": 4780,   "res2": 4850,   "biais": "haussier", "decimals": 0, "unit": "$" },
+    { "actif": "US 10 ans", "spot": 4.76,   "close_prev": 4.79,   "sup1": 4.70,   "sup2": 4.62,   "res1": 4.82,   "res2": 4.88,   "biais": "detente",  "decimals": 2, "unit": "%" }
+  ],
+  "courbe": {
+    "points": [ { "t": "2Y", "v": 4.35 }, { "t": "5Y", "v": 4.52 }, { "t": "10Y", "v": 4.76 } ],
+    "bund10y": 3.35, "oat10y": 4.21, "spread_2s10s": 41, "spread_oat_bund": 86,
+    "fed_funds_proba": "≈ 50 % (hausse en septembre)"
+  },
+  "volatilite": { "vix": 15.4 },
+  "cross_asset": [
+    { "label": "Dow", "pct": 0.6 }, { "label": "S&P 500", "pct": 0.5 }, { "label": "Nasdaq", "pct": 0.5 },
+    { "label": "Nikkei", "pct": 0.8 }, { "label": "Brent", "pct": 0.9 }, { "label": "Or", "pct": 0.5 }
+  ],
+  "agenda": [
+    { "heure": "14:30", "evenement": "Emploi US : créations de postes non agricoles (NFP, août)", "attendu": "+56k", "precedent": "-23k", "tier": 1, "evenement_du_jour": true },
+    { "heure": "14:30", "evenement": "Taux de chômage US (août)", "attendu": "4,1 %", "precedent": "4,1 %", "tier": 1, "evenement_du_jour": false }
+  ],
+  "secteurs": [
+    { "secteur": "Automobile", "pct": 0.9, "biais": "haussier" }, { "secteur": "Énergie", "pct": 0.8, "biais": "haussier" },
+    { "secteur": "Technologie", "pct": 0.7, "biais": "haussier" }, { "secteur": "Industrie", "pct": 0.6, "biais": "haussier" },
+    { "secteur": "Banques", "pct": 0.5, "biais": "haussier" }, { "secteur": "Luxe", "pct": -0.5, "biais": "baissier" }
+  ],
+  "playbook": [
+    { "si": "Emploi solide (> +80k ou salaires chauds)", "proba": 30, "alors": "Le pari d'une hausse Fed repart : CAC vers 8 240 puis 8 180, EUR/USD sous 1,1580, 10 ans US > 4,82 %", "biais": "short" },
+    { "si": "Emploi conforme/mou (+40 à +70k, chômage 4,1 %)", "proba": 45, "alors": "Statu quo Fed conforté : CAC vise 8 340, EUR/USD > 1,1660, détente des taux, cycliques portées", "biais": "long" },
+    { "si": "Nouveau chiffre négatif (choc croissance)", "proba": 25, "alors": "Peur sur la croissance : rotation défensive, CAC teste 8 240, or vers 4 780, taux en baisse mais actions nerveuses", "biais": "attente" }
+  ],
+  "invalidation": "Un chiffre d'emploi > +80k relancerait le pari d'une hausse de taux Fed en septembre : au-dessus de 4,82 % sur le 10 ans US, le scénario risk-on s'inverse et les cycliques décrochent.",
+  "delta": [
+    { "label": "Waller apaise les craintes de hausse Fed", "direction": "up" },
+    { "label": "Dollar en repli avant l'emploi, yen très ferme", "direction": "down" },
+    { "label": "Brent repart à la hausse (tensions US-Iran)", "direction": "up" }
+  ],
+  "condense": {
+    "idee": "Journée suspendue à UN chiffre : l'emploi américain à 14h30. Les marchés montent un peu partout (Asie ce matin, Wall Street hier) car un responsable de la Fed (Waller) a laissé entendre qu'il préférait NE PAS monter les taux ce mois-ci : dollar plus faible, actions en hausse. Mais le CAC reste quasi à l'arrêt (8 286), suspendu au rapport. Point de vigilance : la « peur » mesurée par le VIX est au plus bas (15,4), donc le marché est très détendu juste avant un événement qui peut tout faire bouger.",
+    "pourquoi": "Depuis Jackson Hole, le patron de la Fed (Kevin Warsh) veut casser l'inflation et évoque même une HAUSSE des taux. Problème : l'emploi US se dégrade fort (-23 000 postes le mois dernier). Un autre membre de la Fed (Waller) penche, lui, pour ne pas bouger. Le chiffre d'aujourd'hui va trancher ce débat.",
+    "evenement": "Rapport sur l'emploi américain (NFP) du mois d'août, publié à 14h30 (Paris). On attend +56 000 créations de postes après une chute surprise de -23 000 en juillet ; taux de chômage attendu stable à 4,1 %. Un chiffre fort relance l'idée d'une hausse de taux ; un chiffre faible confirme le statu quo.",
+    "plan_avant": "peu de mouvement, le marché retient son souffle : futures US et EuroStoxx à plat.",
+    "plan_apres": "gros pic possible à 14h30. On surveille si le CAC casse 8 240 (signal baissier) ou franchit 8 340 (signal haussier), et le taux US 10 ans autour de 4,82 %.",
+    "a_surveiller": "le pétrole (Brent ~95 $, tensions US-Iran, mauvais pour l'inflation et donc pour le scénario « statu quo ») et le dollar. Un VIX aussi bas avant l'emploi = protection peu chère pour qui veut se couvrir.",
+    "overnight": "Wall Street en hausse hier (Dow +0,6 % record · S&P +0,5 % · Nasdaq +0,5 %) · Asie en hausse ce matin (Nikkei +0,8 %) · yen très ferme (155,7/$)."
+  },
+  "sources": ["Reuters", "CNBC", "Trading Economics", "Investing.com", "FXStreet"]
+}
