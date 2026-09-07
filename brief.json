@@ -1,0 +1,59 @@
+{
+  "meta": { "date_str": "lundi 7 septembre 2026", "heure": "08:00", "snapshot": "07:50", "tz": "Europe/Paris" },
+  "verdict": {
+    "biais": "Marché coupé en deux : l'IA tire la tech, la remontée des taux US freine le reste",
+    "pivot": "CAC 8 240",
+    "ne_pas_lacher": "8 200",
+    "vol": "VIX bas (14,5) — calme trompeur avant l'inflation US de jeudi"
+  },
+  "niveaux": [
+    { "actif": "CAC 40",    "spot": 8267,   "close_prev": 8279,   "sup1": 8220,   "sup2": 8150,   "res1": 8320,   "res2": 8380,   "biais": "neutre",   "decimals": 0 },
+    { "actif": "DAX",       "spot": 25990,  "close_prev": 26004,  "sup1": 25800,  "sup2": 25600,  "res1": 26150,  "res2": 26350,  "biais": "neutre",   "decimals": 0 },
+    { "actif": "EUR/USD",   "spot": 1.1611, "close_prev": 1.1614, "sup1": 1.1560, "sup2": 1.1520, "res1": 1.1660, "res2": 1.1700, "biais": "baissier", "decimals": 4 },
+    { "actif": "Brent",     "spot": 97.6,   "close_prev": 96.3,   "sup1": 95.0,   "sup2": 92.5,   "res1": 99.0,   "res2": 101.0,  "biais": "haussier", "decimals": 1, "unit": "$" },
+    { "actif": "Or",        "spot": 4389,   "close_prev": 4432,   "sup1": 4350,   "sup2": 4300,   "res1": 4450,   "res2": 4500,   "biais": "baissier", "decimals": 0, "unit": "$" },
+    { "actif": "US 10 ans", "spot": 4.79,   "close_prev": 4.76,   "sup1": 4.70,   "sup2": 4.62,   "res1": 4.85,   "res2": 4.92,   "biais": "tension",  "decimals": 2, "unit": "%" }
+  ],
+  "courbe": {
+    "points": [ { "t": "2Y", "v": 4.37 }, { "t": "5Y", "v": 4.55 }, { "t": "10Y", "v": 4.79 } ],
+    "bund10y": 3.34, "oat10y": 4.20, "spread_2s10s": 42, "spread_oat_bund": 86
+  },
+  "volatilite": { "vix": 14.5 },
+  "cross_asset": [
+    { "label": "Dow", "pct": -0.51 }, { "label": "S&P 500", "pct": -0.38 }, { "label": "Nasdaq", "pct": 0.21 },
+    { "label": "Nikkei", "pct": 2.0 }, { "label": "Brent", "pct": 1.4 }, { "label": "Or", "pct": -1.0 }
+  ],
+  "agenda": [
+    { "heure": "—", "evenement": "Pas de publication majeure aujourd'hui (le gros rendez-vous est jeudi : inflation US et décision BCE)", "tier": 3, "evenement_du_jour": false }
+  ],
+  "secteurs": [
+    { "secteur": "Énergie", "pct": null, "biais": "haussier" },
+    { "secteur": "Banques", "pct": null, "biais": "haussier" },
+    { "secteur": "Tech/Semis", "pct": null, "biais": "haussier" },
+    { "secteur": "Immobilier", "pct": null, "biais": "baissier" },
+    { "secteur": "Services collectifs", "pct": null, "biais": "baissier" },
+    { "secteur": "Luxe", "pct": null, "biais": "neutre" }
+  ],
+  "playbook": [
+    { "si": "Les taux US se détendent (le 10 ans repasse sous 4,70 %)", "proba": 25, "alors": "Soulagement : le CAC vise 8 320 puis 8 380, la tech continue de porter. Invalidation sous 8 240", "biais": "long" },
+    { "si": "Statu quo : le marché patiente avant jeudi (CPI US + BCE)", "proba": 50, "alors": "Range 8 200–8 320, volumes faibles ; l'IA soutient la tech mais le reste stagne", "biais": "attente" },
+    { "si": "Les taux US repartent à la hausse (10 ans > 4,85 %) et le Brent dépasse 99 $", "proba": 25, "alors": "Repli : le CAC teste 8 200 puis 8 150. Invalidation du short au-dessus de 8 320", "biais": "short" }
+  ],
+  "invalidation": "Un retour du taux US 10 ans sous 4,62 %, accompagné d'un pétrole qui reflue, casserait le scénario « peur de l'inflation » et redonnerait de l'air à toute la cote.",
+  "delta": [
+    { "label": "Emploi US trop fort → peur d'une hausse des taux Fed", "direction": "up" },
+    { "label": "Taux long US en tension (10 ans à 4,79 %)", "direction": "up" },
+    { "label": "Or en baisse MALGRÉ la géopolitique (−1 %)", "direction": "down" },
+    { "label": "IA : la tech asiatique flambe (Nikkei +2 %)", "direction": "up" }
+  ],
+  "condense": {
+    "idee": "Marché coupé en deux ce matin. D'un côté, l'intelligence artificielle fait flamber la tech en Asie (Nikkei +2 %, dopé par un nouveau modèle d'OpenAI qui gonflerait la demande de puces mémoire). De l'autre, la remontée des taux d'intérêt américains pèse sur le reste de la cote. Le CAC ouvre quasi à l'équilibre, juste sous 8 280.",
+    "pourquoi": "Vendredi, les États-Unis ont créé 162 000 emplois en août, alors qu'on en attendait seulement 53 000. Une économie aussi solide fait craindre que la banque centrale américaine (la Fed) RELÈVE ses taux au lieu de les baisser — le marché y croit désormais à environ 59 % pour septembre. Des taux qui montent, c'est de l'argent plus cher : mauvais pour les actions et pour l'or.",
+    "evenement": "Rien de chiffré et majeur aujourd'hui. Le vrai rendez-vous de la semaine est jeudi : l'inflation américaine (indice des prix CPI d'août) puis la décision de taux de la BCE. C'est ce qui dira si la peur d'une Fed plus dure est justifiée.",
+    "plan_avant": "journée sans catalyseur chiffré, volumes probablement calmes : le marché digère l'emploi US de vendredi et garde un œil sur le pétrole.",
+    "plan_apres": "pas de publication ce soir, on se cale pour jeudi. D'ici là : sous 8 200, le CAC montre sa faiblesse ; au-dessus de 8 320, la pression retombe.",
+    "a_surveiller": "le pétrole (Brent ~97,6 $, +1,4 % sur fond de tensions au Moyen-Orient) qui rajoute une couche d'inflation, et l'or qui baisse (−1 %) MALGRÉ cette géopolitique : preuve que c'est bien l'histoire des taux qui commande aujourd'hui, pas la peur. Jeudi : CPI US + BCE.",
+    "overnight": "Vendredi à Wall Street : Dow −0,51 %, S&P 500 −0,38 %, Nasdaq +0,21 %. Ce lundi en Asie : Nikkei +2 % porté par l'IA et les puces."
+  },
+  "sources": ["TradingEconomics", "Reuters", "CNBC", "Investing.com", "BLS (rapport emploi)"]
+}
