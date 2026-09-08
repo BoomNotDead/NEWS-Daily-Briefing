@@ -1,0 +1,58 @@
+{
+  "meta": { "date_str": "mardi 8 septembre 2026", "heure": "08:00", "snapshot": "07:55", "tz": "Europe/Paris" },
+  "verdict": {
+    "biais": "Prudent, porté par l'énergie — le pétrole et les taux mènent la danse",
+    "pivot": "CAC 8 320",
+    "ne_pas_lacher": "8 280",
+    "vol": "VIX 15 : calme trompeur avant le CPI de vendredi"
+  },
+  "niveaux": [
+    { "actif": "CAC 40",    "spot": 8348,   "close_prev": 8321,   "sup1": 8280,   "sup2": 8220,   "res1": 8400,   "res2": 8460,   "biais": "neutre",   "decimals": 0 },
+    { "actif": "DAX",       "spot": 25986,  "close_prev": 26051,  "sup1": 25800,  "sup2": 25600,  "res1": 26150,  "res2": 26350,  "biais": "neutre",   "decimals": 0 },
+    { "actif": "EUR/USD",   "spot": 1.1620, "close_prev": 1.1614, "sup1": 1.1560, "sup2": 1.1520, "res1": 1.1660, "res2": 1.1700, "biais": "neutre",   "decimals": 4 },
+    { "actif": "Brent",     "spot": 97.0,   "close_prev": 96.3,   "sup1": 94.0,   "sup2": 91.5,   "res1": 99.0,   "res2": 101.0,  "biais": "haussier", "decimals": 1, "unit": "$" },
+    { "actif": "Or",        "spot": 4414,   "close_prev": 4405,   "sup1": 4350,   "sup2": 4300,   "res1": 4480,   "res2": 4550,   "biais": "neutre",   "decimals": 0, "unit": "$" },
+    { "actif": "US 10 ans", "spot": 4.78,   "close_prev": 4.80,   "sup1": 4.70,   "sup2": 4.62,   "res1": 4.85,   "res2": 4.92,   "biais": "tension",  "decimals": 2, "unit": "%" }
+  ],
+  "courbe": {
+    "points": [ { "t": "2Y", "v": 4.37 }, { "t": "10Y", "v": 4.78 } ],
+    "bund10y": 3.39, "oat10y": 4.25, "spread_2s10s": 41, "spread_oat_bund": 86
+  },
+  "volatilite": { "vix": 15.3 },
+  "cross_asset": [
+    { "label": "Nikkei", "pct": 2.12 }, { "label": "Kospi", "pct": 4.61 },
+    { "label": "S&P 500 (vend.)", "pct": -0.38 }, { "label": "Nasdaq (vend.)", "pct": -0.29 },
+    { "label": "Brent", "pct": 0.8 }, { "label": "Or", "pct": 0.2 }
+  ],
+  "agenda": [
+    { "heure": "12:00", "evenement": "Indice de confiance des PME US (NFIB, août)", "attendu": "99,7", "precedent": "99,3", "tier": 3, "evenement_du_jour": true }
+  ],
+  "secteurs": [
+    { "secteur": "Énergie (pétrole & gaz)", "pct": 1.14, "biais": "haussier" },
+    { "secteur": "Tech/Semis", "pct": 0.55, "biais": "haussier" },
+    { "secteur": "Santé", "pct": -1.0, "biais": "baissier" },
+    { "secteur": "Banques", "pct": null, "biais": "haussier" },
+    { "secteur": "Transport", "pct": null, "biais": "baissier" }
+  ],
+  "playbook": [
+    { "si": "Le pétrole reflue (désescalade Ormuz, Brent < 94 $)", "proba": 30, "alors": "Soulagement : CAC rebondit vers 8 400 puis 8 460, le 10 ans US se détend sous 4,70 %", "biais": "long" },
+    { "si": "Statu quo tendu (Brent 96–98 $, taux fermes)", "proba": 45, "alors": "Range nerveux : CAC entre 8 280 et 8 400, l'énergie surperforme, santé et défensives à la traîne", "biais": "attente" },
+    { "si": "Escalade (Brent > 100 $, 10 ans US > 4,85 %)", "proba": 25, "alors": "Repli : CAC casse 8 280 vers 8 220, le VIX se réveille, l'or repasse au-dessus de 4 480 $", "biais": "short" }
+  ],
+  "invalidation": "Un retour du Brent sous 94 $ casse le récit inflationniste et redonne la main aux acheteurs. À l'inverse, au-dessus de 4,85 % sur le 10 ans US, la pression sur les actions s'intensifie.",
+  "delta": [
+    { "label": "Brent ~97 $ : +9 % sur la semaine, plus haut de 6 semaines", "direction": "up" },
+    { "label": "10 ans US 4,78 % : plus haut depuis novembre 2023", "direction": "up" },
+    { "label": "Le marché parie désormais sur une HAUSSE de taux, plus une baisse", "direction": "up" }
+  ],
+  "condense": {
+    "idee": "Journée prudente. Le pétrole flambe à cause de la guerre USA-Iran, ce qui ravive la peur de l'inflation et d'une hausse des taux — l'inverse de ce que le marché espérait cet été. Résultat : les valeurs pétrolières montent, la santé et les défensives reculent, et les Bourses européennes hésitent. Curiosité du jour : malgré la guerre, l'indice de la peur (VIX) reste très bas (15), signe d'un marché encore serein… peut-être trop.",
+    "pourquoi": "La guerre entre les États-Unis et l'Iran menace le détroit d'Ormuz, le passage maritime par où transite une grande partie du pétrole mondial. Le Brent (pétrole de référence en Europe) est à ~97 $, en hausse de 9 % en une semaine. Pétrole cher = prix qui montent (inflation) = les banques centrales sont tentées de MONTER les taux d'intérêt pour freiner, ce qui pèse sur les actions.",
+    "evenement": "Pas de grande statistique aujourd'hui : seule sort la confiance des petites entreprises américaines (indice mineur). Les vrais rendez-vous de la semaine sont l'inflation américaine (le « CPI », qui mesure la hausse des prix) vendredi 11, puis la décision de taux de la Fed (banque centrale US) mercredi 16. Ce sont eux qui donneront la direction.",
+    "plan_avant": "peu de catalyseur aujourd'hui : c'est le prix du pétrole qui dicte le ton, minute par minute.",
+    "plan_apres": "on surveille deux seuils : Brent à 100 $ (signal de stress qui ferait plonger les actions) et le taux US 10 ans à 4,85 % (au-delà, la pression monte encore sur les Bourses).",
+    "a_surveiller": "le pétrole (toute nouvelle sur le détroit d'Ormuz) et les taux longs américains.",
+    "overnight": "Wall Street était fermé lundi (Labor Day) ; dernière clôture vendredi : S&P 500 -0,38 %, Nasdaq -0,29 %, Dow -0,51 %. Nuit asiatique très forte : Nikkei +2,1 %, Kospi +4,6 %."
+  },
+  "sources": ["Trading Economics", "CNBC", "Forbes", "Reuters", "Investing.com"]
+}
