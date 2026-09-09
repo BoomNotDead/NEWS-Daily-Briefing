@@ -1,0 +1,57 @@
+{
+  "meta": { "date_str": "mercredi 9 septembre 2026", "heure": "08:00", "snapshot": "07:55", "tz": "Europe/Paris" },
+  "verdict": {
+    "biais": "Prudence avant la BCE — énergie et industrie tiennent, taux et or sous tension",
+    "pivot": "CAC 8 300",
+    "ne_pas_lacher": "8 260",
+    "vol": "VIX bas (14,5) mais risque de pic demain 14:15 (BCE)"
+  },
+  "niveaux": [
+    { "actif": "CAC 40",     "spot": 8318,   "close_prev": 8306,   "sup1": 8260,   "sup2": 8200,   "res1": 8360,   "res2": 8420,   "biais": "neutre",   "decimals": 0 },
+    { "actif": "DAX",        "spot": 26008,  "close_prev": 26012,  "sup1": 25800,  "sup2": 25600,  "res1": 26200,  "res2": 26400,  "biais": "neutre",   "decimals": 0 },
+    { "actif": "EUR/USD",    "spot": 1.1605, "close_prev": 1.1585, "sup1": 1.1560, "sup2": 1.1520, "res1": 1.1660, "res2": 1.1700, "biais": "haussier", "decimals": 4 },
+    { "actif": "Brent",      "spot": 98.9,   "close_prev": 97.9,   "sup1": 96.5,   "sup2": 94.5,   "res1": 100.5,  "res2": 102.5,  "biais": "haussier", "decimals": 1, "unit": "$" },
+    { "actif": "Or",         "spot": 4477,   "close_prev": 4540,   "sup1": 4400,   "sup2": 4320,   "res1": 4560,   "res2": 4640,   "biais": "baissier", "decimals": 0, "unit": "$" },
+    { "actif": "US 10 ans",  "spot": 4.79,   "close_prev": 4.80,   "sup1": 4.70,   "sup2": 4.62,   "res1": 4.85,   "res2": 4.92,   "biais": "tension",  "decimals": 2, "unit": "%" },
+    { "actif": "OAT 10 ans", "spot": 4.27,   "close_prev": 4.25,   "sup1": 4.18,   "sup2": 4.10,   "res1": 4.35,   "res2": 4.45,   "biais": "tension",  "decimals": 2, "unit": "%" }
+  ],
+  "courbe": {
+    "points": [ { "t": "2Y", "v": 4.41 }, { "t": "5Y", "v": 4.57 }, { "t": "10Y", "v": 4.79 } ],
+    "bund10y": 3.37, "oat10y": 4.27, "spread_2s10s": 38, "spread_oat_bund": 90
+  },
+  "volatilite": { "vix": 14.5 },
+  "cross_asset": [
+    { "label": "Dow", "pct": -1.18 }, { "label": "S&P 500", "pct": -0.58 }, { "label": "Nasdaq", "pct": -0.32 },
+    { "label": "Nikkei", "pct": -1.70 }, { "label": "Brent", "pct": 1.06 }, { "label": "Or", "pct": -1.39 }
+  ],
+  "agenda": [
+    { "heure": "16:00", "evenement": "Stocks des grossistes US (juillet, définitif)", "attendu": "1,0 %", "precedent": "1,1 %", "tier": 3, "evenement_du_jour": false },
+    { "heure": "Demain 14:15", "evenement": "Décision de taux BCE (taux de dépôt)", "attendu": "2,50 %", "precedent": "2,25 %", "tier": 1, "move_implicite": "hausse quasi certaine (+25 pb)", "evenement_du_jour": true }
+  ],
+  "secteurs": [
+    { "secteur": "Énergie", "pct": 1.0, "biais": "haussier" }, { "secteur": "Industrie", "pct": 0.6, "biais": "haussier" },
+    { "secteur": "Banques", "pct": -0.4, "biais": "baissier" }, { "secteur": "Tech/Semis", "pct": -0.6, "biais": "baissier" },
+    { "secteur": "Luxe", "pct": -0.4, "biais": "baissier" }, { "secteur": "Immobilier", "pct": -0.9, "biais": "baissier" }
+  ],
+  "playbook": [
+    { "si": "BCE +25 pb + ton FERME (porte ouverte à d'autres hausses)", "proba": 45, "alors": "Euro > 1,1660, les taux montent encore, les actifs sensibles aux taux souffrent : CAC teste 8 260", "biais": "short" },
+    { "si": "BCE +25 pb + ton NEUTRE (fin de cycle suggérée)", "proba": 45, "alors": "Soulagement : la volatilité retombe, CAC revient vers 8 360, l'euro se calme sous 1,1660", "biais": "attente" },
+    { "si": "Surprise : BCE maintient (pas de hausse)", "proba": 10, "alors": "Choc : euro sous 1,1560, rebond réflexe des actions mais crédibilité BCE en question", "biais": "long" }
+  ],
+  "invalidation": "Un spread OAT-Bund qui franchit 95 pb signalerait que le stress budgétaire français prend le pas sur le thème BCE — à surveiller avant le projet de loi de finances du 30 septembre.",
+  "delta": [
+    { "label": "Pétrole en hausse (Moyen-Orient) → inflation", "direction": "up" },
+    { "label": "Taux US 10 ans au plus haut d'un an (4,79 %)", "direction": "up" },
+    { "label": "Or en repli malgré la géopolitique", "direction": "down" }
+  ],
+  "condense": {
+    "idee": "Journée d'attente avant la BCE (demain). Fait rare : la banque centrale va MONTER ses taux, pas les baisser, à cause du pétrole qui flambe et fait remonter l'inflation. Résultat : l'énergie et l'industrie tiennent, mais tout ce qui est sensible aux taux (techno, immobilier, or) recule. Le CAC fait du surplace autour de 8 300.",
+    "pourquoi": "Le pétrole grimpe (Brent ~99 $) à cause des tensions au Moyen-Orient (frappes USA-Iran). Un pétrole cher = plus d'inflation = les banques centrales gardent des taux élevés, voire les remontent. Du coup les taux d'emprunt montent (US 10 ans à 4,79 %, plus haut depuis un an) et pèsent sur les actions de croissance et sur l'or (qui ne rapporte pas d'intérêt).",
+    "evenement": "Pas de gros chiffre AUJOURD'HUI. Le rendez-vous est DEMAIN 14:15 : la BCE devrait relever son taux de dépôt de 2,25 % à 2,50 % (+0,25 point), sa première hausse de ce cycle. Le chiffre est quasi acquis ; ce qui comptera, c'est le TON de Christine Lagarde — laisse-t-elle la porte ouverte à d'autres hausses ?",
+    "plan_avant": "journée probablement calme, on se positionne avant la BCE ; l'euro reste ferme au-dessus de 1,16.",
+    "plan_apres": "après la décision de demain, on regarde si le CAC casse 8 260 (signal de faiblesse) ou repasse 8 360 (soulagement).",
+    "a_surveiller": "le pétrole (Brent ~99 $), le taux US 10 ans (4,79 %) et le « risque français » : l'écart de taux entre la France et l'Allemagne (spread OAT-Bund ~90 pb, près de son plus haut) avant le budget du 30 septembre.",
+    "overnight": "Dow −1,18 % (−628 pts) · S&P −0,58 % · Nasdaq −0,32 % · Nikkei −1,70 %."
+  },
+  "sources": ["TradingEconomics", "Reuters", "CNBC", "FXStreet", "Investing.com"]
+}
