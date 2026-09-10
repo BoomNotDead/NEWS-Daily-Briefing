@@ -1,0 +1,62 @@
+{
+  "meta": { "date_str": "jeudi 10 septembre 2026", "heure": "08:00", "snapshot": "07:55", "tz": "Europe/Paris" },
+  "verdict": {
+    "biais": "Risk-off inflationniste — le choc pétrolier domine, actions sous pression",
+    "pivot": "CAC 8 160",
+    "ne_pas_lacher": "8 100",
+    "vol": "VIX bas (16) mais taux tendus — le stress est sur les taux, pas (encore) les actions"
+  },
+  "niveaux": [
+    { "actif": "CAC 40",    "spot": 8165,    "close_prev": 8162,    "sup1": 8100,   "sup2": 8020,   "res1": 8250,   "res2": 8330,   "biais": "baissier", "decimals": 0 },
+    { "actif": "DAX",       "spot": 25593,   "close_prev": 25554,   "sup1": 25300,  "sup2": 25000,  "res1": 25800,  "res2": 26100,  "biais": "baissier", "decimals": 0 },
+    { "actif": "EUR/USD",   "spot": 1.1639,  "close_prev": 1.1639,  "sup1": 1.1580, "sup2": 1.1520, "res1": 1.1680, "res2": 1.1720, "biais": "neutre",   "decimals": 4 },
+    { "actif": "Brent",     "spot": 100.7,   "close_prev": 97.9,    "sup1": 98.0,   "sup2": 95.0,   "res1": 103.0,  "res2": 105.5,  "biais": "haussier", "decimals": 1, "unit": "$" },
+    { "actif": "Or",        "spot": 4407,    "close_prev": 4402,    "sup1": 4350,   "sup2": 4280,   "res1": 4450,   "res2": 4500,   "biais": "haussier", "decimals": 0, "unit": "$" },
+    { "actif": "US 10 ans", "spot": 4.84,    "close_prev": 4.83,    "sup1": 4.75,   "sup2": 4.68,   "res1": 4.90,   "res2": 4.95,   "biais": "tension",  "decimals": 2, "unit": "%" }
+  ],
+  "courbe": {
+    "points": [ { "t": "2Y", "v": 4.43 }, { "t": "5Y", "v": 4.61 }, { "t": "10Y", "v": 4.84 } ],
+    "bund10y": 3.43, "oat10y": 4.33, "spread_2s10s": 41, "spread_oat_bund": 90,
+    "fed_funds_proba": "62 % (proba de HAUSSE)", "fed_funds_range": "4,25–4,50 % → 4,50–4,75 % (16 sept.)"
+  },
+  "volatilite": { "vix": 16.26 },
+  "cross_asset": [
+    { "label": "Dow", "pct": -0.77 }, { "label": "S&P 500", "pct": -0.48 }, { "label": "Nasdaq", "pct": -0.64 },
+    { "label": "Nikkei", "pct": -0.8 }, { "label": "Hang Seng", "pct": -1.4 }, { "label": "Brent", "pct": 2.9 }
+  ],
+  "agenda": [
+    { "heure": "14:15", "evenement": "Décision de taux BCE (taux de dépôt)", "attendu": "2,00 %", "precedent": "2,00 %", "tier": 1, "evenement_du_jour": true },
+    { "heure": "14:30", "evenement": "Prix à la production US (PPI, août, mensuel)", "attendu": "+0,4 %", "precedent": "0,0 %", "tier": 2, "evenement_du_jour": false }
+  ],
+  "secteurs": [
+    { "secteur": "Énergie", "pct": 1.6, "biais": "haussier" },
+    { "secteur": "Banques", "pct": 0.5, "biais": "haussier" },
+    { "secteur": "Luxe", "pct": -2.7, "biais": "baissier" },
+    { "secteur": "Tech/Semis", "pct": -1.5, "biais": "baissier" },
+    { "secteur": "Industrie", "pct": -0.9, "biais": "baissier" },
+    { "secteur": "Automobile", "pct": -1.1, "biais": "baissier" }
+  ],
+  "playbook": [
+    { "si": "BCE ferme (ton hawkish, porte ouverte à une hausse) + PPI chaud > +0,4 %", "proba": 35, "alors": "Choc taux : CAC casse 8 100 vers 8 020, or et pétrole restent recherchés, taux 10a US > 4,90 %", "biais": "short" },
+    { "si": "BCE statu quo assumé (ton prudent) + PPI conforme (+0,4 %)", "proba": 45, "alors": "Stabilisation : CAC se cale entre 8 100 et 8 250, on temporise avant le CPI US de vendredi", "biais": "attente" },
+    { "si": "Le Brent reflue sous 98 $ (signes de désescalade au détroit d'Ormuz)", "proba": 20, "alors": "Rebond de soulagement : CAC vise 8 250 puis 8 330, les taux longs US se détendent", "biais": "long" }
+  ],
+  "invalidation": "Un Brent qui repasse durablement sous 95 $ (désescalade au détroit d'Ormuz) casse le scénario inflationniste et rouvre le débat sur des baisses de taux — les actions rebondiraient.",
+  "delta": [
+    { "label": "Brent repasse au-dessus de 100 $ (1re fois depuis mai)", "direction": "up" },
+    { "label": "Taux US 10 ans tendus (~4,84 %, plus haut de 3 ans)", "direction": "up" },
+    { "label": "Le marché price désormais une HAUSSE de la Fed (62 %)", "direction": "up" },
+    { "label": "Luxe massacré (Kering -4 %, LVMH -2,7 %)", "direction": "down" }
+  ],
+  "condense": {
+    "idee": "Journée sous tension : le pétrole a bondi au-dessus de 100 $ le baril (frappes entre les États-Unis et l'Iran près du détroit d'Ormuz, un passage maritime clé pour le pétrole). Un pétrole cher = plus d'inflation, donc les marchés craignent que les banques centrales ne baissent PLUS leurs taux — voire les remontent. Résultat : actions européennes en recul (CAC -1,9 %, DAX -1,7 %), taux d'emprunt en hausse, mais l'or grimpe quand même car il joue son rôle de valeur refuge en cas de conflit. À noter : le VIX (l'« indice de la peur » des actions) reste bas (16) — la vraie tension du moment est sur les taux, pas encore sur les actions.",
+    "pourquoi": "Le détroit d'Ormuz laisse passer environ un cinquième du pétrole mondial. Toute menace sur cette zone fait grimper le prix du baril, et un baril plus cher renchérit l'énergie pour tout le monde : c'est mécaniquement inflationniste.",
+    "evenement": "Double rendez-vous aujourd'hui. À 14h15, la Banque centrale européenne (BCE) annonce ses taux : elle devrait les laisser inchangés à 2,00 %, mais avec le pétrole qui flambe, le marché guette un ton plus ferme. À 14h30, l'inflation des producteurs américains (PPI) est attendue à +0,4 %. Et demain vendredi tombe le CPI, l'inflation américaine grand public : c'est LE chiffre de la semaine.",
+    "plan_avant": "Prudence avant 14h15 : marché nerveux, on évite de se surexposer tant que la BCE n'a pas parlé.",
+    "plan_apres": "Après la BCE et le PPI, on surveille si le CAC tient 8 100 (sinon cap sur 8 020) ou rebondit vers 8 250. Le pétrole reste le juge de paix : sous 98 $ = soulagement, au-dessus de 103 $ = la pression continue.",
+    "a_surveiller": "Le baril de Brent (le vrai moteur du jour) et le taux américain à 10 ans, déjà à 4,84 %, proche de son plus haut depuis 3 ans.",
+    "overnight": "Wall Street en baisse : Dow -0,77 %, S&P 500 -0,48 %, Nasdaq -0,64 %. Asie dans le rouge : Hang Seng -1,4 %, Nikkei -0,8 %.",
+    "inflation": "4,7 % (prix producteurs US, juillet)"
+  },
+  "sources": ["Trading Economics", "CNBC", "Reuters", "Investing.com"]
+}
