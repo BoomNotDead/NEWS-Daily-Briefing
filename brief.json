@@ -1,0 +1,60 @@
+{
+  "meta": { "date_str": "vendredi 11 septembre 2026", "heure": "08:00", "snapshot": "07:55", "tz": "Europe/Paris" },
+  "verdict": {
+    "biais": "Défensif avant le CPI US — l'inflation commande le marché",
+    "pivot": "CAC 8 200",
+    "ne_pas_lacher": "8 050",
+    "vol": "VIX à 17,8 : étonnamment calme"
+  },
+  "niveaux": [
+    { "actif": "CAC 40",    "spot": 8117,   "close_prev": 8162,   "sup1": 8050,   "sup2": 7980,   "res1": 8200,   "res2": 8280,   "biais": "baissier", "decimals": 0 },
+    { "actif": "DAX",       "spot": 25352,  "close_prev": 25566,  "sup1": 25150,  "sup2": 24900,  "res1": 25600,  "res2": 25900,  "biais": "baissier", "decimals": 0 },
+    { "actif": "EUR/USD",   "spot": 1.1605, "close_prev": 1.1634, "sup1": 1.1560, "sup2": 1.1520, "res1": 1.1660, "res2": 1.1700, "biais": "neutre",   "decimals": 4 },
+    { "actif": "Brent",     "spot": 105.7,  "close_prev": 100.4,  "sup1": 102.0,  "sup2": 98.0,   "res1": 108.0,  "res2": 112.0,  "biais": "haussier", "decimals": 1, "unit": "$" },
+    { "actif": "WTI",       "spot": 100.8,  "close_prev": 95.5,   "sup1": 98.0,   "sup2": 95.0,   "res1": 104.0,  "res2": 108.0,  "biais": "haussier", "decimals": 1, "unit": "$" },
+    { "actif": "Or",        "spot": 4400,   "close_prev": null,   "sup1": 4300,   "sup2": 4200,   "res1": 4480,   "res2": 4560,   "biais": "neutre",   "decimals": 0, "unit": "$" },
+    { "actif": "US 10 ans", "spot": 4.90,   "close_prev": 4.83,   "sup1": 4.80,   "sup2": 4.72,   "res1": 4.98,   "res2": 5.05,   "biais": "tension",  "decimals": 2, "unit": "%" }
+  ],
+  "courbe": {
+    "points": [ { "t": "2Y", "v": 4.55 }, { "t": "10Y", "v": 4.90 } ],
+    "bund10y": 3.44, "oat10y": 4.30, "spread_2s10s": 35, "spread_oat_bund": 86
+  },
+  "volatilite": { "vix": 17.8 },
+  "cross_asset": [
+    { "label": "Dow", "pct": -0.60 }, { "label": "S&P 500", "pct": -0.58 }, { "label": "Nasdaq", "pct": -0.65 },
+    { "label": "Nikkei", "pct": -0.26 }, { "label": "Brent", "pct": 5.3 }, { "label": "WTI", "pct": 5.5 }
+  ],
+  "agenda": [
+    { "heure": "14:30", "evenement": "Inflation US (indice CPI, glissement annuel) — août", "attendu": "3,4 %", "precedent": "3,4 %", "tier": 1, "evenement_du_jour": true }
+  ],
+  "secteurs": [
+    { "secteur": "Énergie",    "pct": null, "biais": "haussier" },
+    { "secteur": "Banques",    "pct": null, "biais": "haussier" },
+    { "secteur": "Luxe",       "pct": null, "biais": "baissier" },
+    { "secteur": "Industrie",  "pct": null, "biais": "baissier" },
+    { "secteur": "Auto",       "pct": null, "biais": "baissier" },
+    { "secteur": "Tech/Semis", "pct": null, "biais": "baissier" }
+  ],
+  "playbook": [
+    { "si": "CPI plus chaud que prévu (> 3,4 %)", "proba": 40, "alors": "Choc stagflation : le 10 ans US vise 5,00 %, le CAC casse 8 050 puis 7 980, EUR/USD sous 1,1560", "biais": "short" },
+    { "si": "CPI conforme (3,4 %)", "proba": 40, "alors": "Soulagement fragile : range 8 117–8 200 sur le CAC, la pression sur les taux se stabilise", "biais": "attente" },
+    { "si": "CPI plus doux (< 3,3 %)", "proba": 20, "alors": "Rebond de soulagement : le CAC revient vers 8 280, le 10 ans US reflue sous 4,80 %, EUR/USD > 1,1660", "biais": "long" }
+  ],
+  "invalidation": "Un CAC 40 qui reprend 8 280 avec un 10 ans US repassant sous 4,80 % invaliderait le biais défensif : le marché aurait alors « digéré » le choc pétrole/taux.",
+  "delta": [
+    { "label": "Pétrole en flambée (Brent > 105 $)", "direction": "up" },
+    { "label": "Taux longs au plus haut depuis 2023", "direction": "up" },
+    { "label": "Actions US : 4e séance de baisse d'affilée", "direction": "down" }
+  ],
+  "condense": {
+    "idee": "Journée sous tension avant LE chiffre du jour : l'inflation américaine (CPI) à 14h30. Depuis 4 jours, la guerre au Moyen-Orient fait flamber le pétrole (Brent > 105 $), ce qui relance l'inflation et pousse les banques centrales à remonter leurs taux. Résultat : les taux d'emprunt sont au plus haut depuis 2023 et les actions reculent. Le CAC 40 (−0,5 %) résiste un peu mieux que Wall Street grâce aux banques (qui gagnent quand les taux montent), mais le luxe et l'industrie ont souffert.",
+    "pourquoi": "Le pétrole grimpe à cause de la guerre au Moyen-Orient (l'Arabie saoudite produit au plus bas depuis 1990). Un pétrole cher = tout coûte plus cher = plus d'inflation. Pour la freiner, la BCE a encore monté son taux hier (à 2,50 %, sa 2e hausse depuis le début de la guerre) et la Fed pourrait devoir rester ferme.",
+    "evenement": "Inflation US (indice CPI) pour août, publiée à 14h30. Le « CPI » mesure la hausse des prix sur un an. On attend 3,4 %, comme le mois dernier. Plus haut = mauvais signe (les taux montent, les actions baissent) ; plus bas = soulagement.",
+    "plan_avant": "Peu de mouvement et petits volumes : le marché retient son souffle avant 14h30.",
+    "plan_apres": "Gros écart possible. On surveille si le CAC casse 8 050 (signal de baisse) ou repasse 8 200 (signal de rebond).",
+    "a_surveiller": "Le pétrole (Brent au-dessus de 105 $) et le taux américain à 10 ans qui approche 5 %, un seuil qui fait mal aux actions.",
+    "overnight": "Wall Street en baisse pour la 4e séance : Dow −0,60 % · S&P 500 −0,58 % · Nasdaq −0,65 %.",
+    "inflation": "3,4 %"
+  },
+  "sources": ["Reuters", "Bloomberg", "Trading Economics", "CNBC", "Yahoo Finance", "Investing.com"]
+}
