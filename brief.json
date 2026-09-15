@@ -1,0 +1,58 @@
+{
+  "meta": { "date_str": "mardi 15 septembre 2026", "heure": "08:00", "snapshot": "07:55", "tz": "Europe/Paris" },
+  "verdict": {
+    "biais": "Défensif — prudence avant une Fed qui pourrait DURCIR (choc pétrolier + inflation)",
+    "pivot": "CAC 8 118",
+    "ne_pas_lacher": "8 080",
+    "vol": "VIX 17 (+8 %), tension sur les taux longs"
+  },
+  "niveaux": [
+    { "actif": "CAC 40",    "spot": 8118,   "close_prev": 8180,   "sup1": 8080,   "sup2": 8000,   "res1": 8180,   "res2": 8250,   "biais": "baissier", "decimals": 0 },
+    { "actif": "DAX",       "spot": 25441,  "close_prev": 25569,  "sup1": 25300,  "sup2": 25100,  "res1": 25650,  "res2": 25900,  "biais": "baissier", "decimals": 0 },
+    { "actif": "EUR/USD",   "spot": 1.1600, "close_prev": 1.1625, "sup1": 1.1560, "sup2": 1.1520, "res1": 1.1660, "res2": 1.1710, "biais": "baissier", "decimals": 4 },
+    { "actif": "Brent",     "spot": 107.2,  "close_prev": 105.6,  "sup1": 104.0,  "sup2": 100.0,  "res1": 110.0,  "res2": 114.0,  "biais": "haussier", "decimals": 1, "unit": "$" },
+    { "actif": "Or",        "spot": 4300,   "close_prev": 4322,   "sup1": 4250,   "sup2": 4180,   "res1": 4360,   "res2": 4420,   "biais": "baissier", "decimals": 0, "unit": "$" },
+    { "actif": "US 10 ans", "spot": 4.96,   "close_prev": 4.92,   "sup1": 4.85,   "sup2": 4.78,   "res1": 5.01,   "res2": 5.10,   "biais": "tension",  "decimals": 2, "unit": "%" }
+  ],
+  "courbe": {
+    "points": [ { "t": "2Y", "v": 4.66 }, { "t": "5Y", "v": 4.82 }, { "t": "10Y", "v": 4.96 } ],
+    "bund10y": 3.52, "oat10y": 4.50, "spread_2s10s": 30, "spread_oat_bund": 98,
+    "fed_funds_proba": "≈ 83 % (hausse +0,25)", "fed_funds_range": "3,50–3,75 % → 3,75–4,00 %"
+  },
+  "volatilite": { "vix": 17.1 },
+  "cross_asset": [
+    { "label": "Dow", "pct": -0.29 }, { "label": "S&P 500", "pct": -0.48 }, { "label": "Nasdaq", "pct": -0.56 },
+    { "label": "Nikkei", "pct": 0.8 }, { "label": "Hang Seng", "pct": -0.2 }, { "label": "Brent", "pct": 1.5 }, { "label": "Or", "pct": -0.5 }
+  ],
+  "agenda": [
+    { "heure": "11:05", "evenement": "Indice ZEW du sentiment économique (Allemagne)", "attendu": "40,0", "precedent": "34,2", "tier": 2, "evenement_du_jour": false },
+    { "heure": "Demain 20:00", "evenement": "Décision de taux Fed (FOMC)", "attendu": "3,75–4,00 %", "precedent": "3,50–3,75 %", "tier": 1, "move_implicite": "≈ ±1 % sur le S&P 500", "evenement_du_jour": true }
+  ],
+  "secteurs": [
+    { "secteur": "Énergie", "pct": 1.2, "biais": "haussier" }, { "secteur": "Banques", "pct": 0.3, "biais": "neutre" },
+    { "secteur": "Tech/Semis", "pct": -1.3, "biais": "baissier" }, { "secteur": "Services aux collectivités", "pct": -1.1, "biais": "baissier" },
+    { "secteur": "Luxe", "pct": -0.9, "biais": "baissier" }, { "secteur": "Auto/Industrie", "pct": -0.6, "biais": "baissier" }
+  ],
+  "playbook": [
+    { "si": "Hausse +0,25 % confirmée + ton ferme (Fed hawkish)", "proba": 55, "alors": "Baisse : US 10 ans vers 5,10 %, CAC teste 8 000, dollar plus fort (EUR/USD < 1,1560)", "biais": "short" },
+    { "si": "Hausse déjà anticipée + ton équilibré", "proba": 30, "alors": "Soulagement mesuré : range 8 080–8 250 sur le CAC, la volatilité retombe après 20h", "biais": "attente" },
+    { "si": "Statu quo surprise (pas de hausse)", "proba": 15, "alors": "Rebond : détente du 10 ans sous 4,85 %, CAC vers 8 250, le dollar recule", "biais": "long" }
+  ],
+  "invalidation": "Un retour du Brent sous 100 $ et du taux US 10 ans sous 4,85 % invaliderait le scénario défensif (bascule vers un soulagement risk-on).",
+  "delta": [
+    { "label": "Pétrole en forte hausse (Brent ~107 $, +9 % sur la semaine)", "direction": "up" },
+    { "label": "Taux US 10 ans proche de 5 % (plus haut depuis ~19 ans)", "direction": "up" },
+    { "label": "Or en repli malgré la géopolitique", "direction": "down" }
+  ],
+  "condense": {
+    "idee": "Marché prudent et défensif. Le pétrole flambe (Brent ~107 $, +9 % en une semaine) à cause du conflit USA-Iran ; ça relance l'inflation, et du coup la banque centrale américaine (la Fed) pourrait AUGMENTER ses taux demain — un vrai virage. Résultat : les taux d'emprunt US sont au plus haut depuis ~19 ans (près de 5 %), le dollar monte et les actions reculent doucement. L'incohérence du jour : l'or BAISSE alors qu'il y a une guerre, car des taux réels élevés le rendent moins attractif.",
+    "pourquoi": "L'envolée du pétrole (attaques autour du détroit d'Ormuz) fait remonter l'inflation. Face à ça, la Fed penche désormais pour resserrer (monter les taux) plutôt qu'assouplir.",
+    "evenement": "Demain soir (16 sept., 20h Paris), décision de taux de la Fed. Le marché voit ~83 % de chances d'une HAUSSE de 0,25 % (vers 3,75–4,00 %). Ce serait sa 1re hausse depuis ~3 ans : on attendait des baisses, on parle maintenant de hausse. Aujourd'hui, un chiffre à suivre : l'indice ZEW allemand (moral des investisseurs) à 11h05.",
+    "plan_avant": "Journée d'attente et de couverture avant la Fed. Peu d'appétit pour le risque : le dollar et l'énergie tiennent, la tech et les valeurs sensibles aux taux souffrent.",
+    "plan_apres": "Demain 20h, gros pic possible. Hausse + ton ferme : le 10 ans vise 5,10 %, le CAC casse sous 8 080. Si la Fed surprend en restant prudente : soulagement, rebond des actions et détente du dollar.",
+    "a_surveiller": "le pétrole (Brent > 110 $ = alerte inflation), le taux US 10 ans (le seuil des 5 % est clé) et les valeurs techno après la baisse de l'IA cette nuit.",
+    "overnight": "Wall Street en repli — S&P -0,48 % · Nasdaq -0,56 % · Dow -0,29 %. Asie mitigée : Nikkei +0,8 %, Hang Seng -0,2 %.",
+    "inflation": "3,4 % / an (2,4 % hors énergie & alimentation)"
+  },
+  "sources": ["TradingEconomics", "Reuters", "CNBC", "Investing.com"]
+}
