@@ -100,7 +100,7 @@
       <div class="card"><div class="h">Taux &amp; courbe</div><img class="chart" src="{{ img_curve }}">
         <div class="muted" style="font-size:7.2pt;margin-top:3pt">
           {% if d.courbe.spread_oat_bund is defined and d.courbe.spread_oat_bund is not none %}OAT-Bund : {{ d.courbe.spread_oat_bund|fmt(0) }} pb<br>{% endif %}
-          {% if d.courbe.fed_funds_range %}Fed : maintien probable ({{ d.courbe.fed_funds_proba }}) à {{ d.courbe.fed_funds_range }}{% endif %}
+          {% if d.courbe.fed_funds_proba or d.courbe.fed_funds_range %}Fed : {{ d.courbe.fed_funds_proba }}{% if d.courbe.fed_funds_range %} · {{ d.courbe.fed_funds_range }}{% endif %}{% endif %}
         </div>
       </div>
       {% endif %}

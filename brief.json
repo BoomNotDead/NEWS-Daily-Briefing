@@ -1,0 +1,59 @@
+{
+  "meta": { "date_str": "mercredi 16 septembre 2026", "heure": "08:00", "snapshot": "07:55", "tz": "Europe/Paris" },
+  "verdict": {
+    "biais": "Prudence avant la Fed — taux et dollar mènent, actions sous pression",
+    "pivot": "CAC 8 090",
+    "ne_pas_lacher": "8 050",
+    "vol": "VIX remonte (17,1) avant la décision de 20h"
+  },
+  "niveaux": [
+    { "actif": "CAC 40",    "spot": 8090,   "close_prev": 8118,   "sup1": 8050,   "sup2": 8000,   "res1": 8150,   "res2": 8210,   "biais": "neutre",   "decimals": 0 },
+    { "actif": "DAX",       "spot": 25441,  "close_prev": 25569,  "sup1": 25300,  "sup2": 25150,  "res1": 25600,  "res2": 25800,  "biais": "neutre",   "decimals": 0 },
+    { "actif": "EUR/USD",   "spot": 1.1536, "close_prev": 1.1549, "sup1": 1.1500, "sup2": 1.1460, "res1": 1.1585, "res2": 1.1620, "biais": "baissier", "decimals": 4 },
+    { "actif": "Brent",     "spot": 88.9,   "close_prev": 88.9,   "sup1": 87.0,   "sup2": 85.5,   "res1": 90.0,   "res2": 92.0,   "biais": "haussier", "decimals": 1, "unit": "$" },
+    { "actif": "Or",        "spot": 4288,   "close_prev": 4348,   "sup1": 4200,   "sup2": 4120,   "res1": 4380,   "res2": 4450,   "biais": "baissier", "decimals": 0, "unit": "$" },
+    { "actif": "US 10 ans", "spot": 4.97,   "close_prev": 4.78,   "sup1": 4.90,   "sup2": 4.80,   "res1": 5.00,   "res2": 5.05,   "biais": "tension",  "decimals": 2, "unit": "%" }
+  ],
+  "courbe": {
+    "points": [ { "t": "2Y", "v": 4.39 }, { "t": "5Y", "v": 4.57 }, { "t": "10Y", "v": 4.97 } ],
+    "bund10y": 3.55, "oat10y": 4.37, "spread_2s10s": 58, "spread_oat_bund": 82,
+    "fed_funds_proba": "hausse 25 pb quasi actée (≈ 90 %)", "fed_funds_range": "nouvelle cible 3,75–4,00 %"
+  },
+  "volatilite": { "vix": 17.1 },
+  "cross_asset": [
+    { "label": "Dow", "pct": -0.63 }, { "label": "S&P 500", "pct": -0.45 }, { "label": "Nasdaq", "pct": -0.78 },
+    { "label": "Hang Seng", "pct": -2.5 }, { "label": "Or", "pct": -1.38 }, { "label": "DXY", "pct": 0.27 }
+  ],
+  "agenda": [
+    { "heure": "20:00", "evenement": "Décision de taux de la Fed (FOMC)", "attendu": "3,75–4,00 %", "precedent": "3,50–3,75 %", "tier": 1, "evenement_du_jour": true }
+  ],
+  "secteurs": [
+    { "secteur": "Banques", "pct": null, "biais": "haussier" },
+    { "secteur": "Énergie", "pct": null, "biais": "haussier" },
+    { "secteur": "Tech/Semis", "pct": null, "biais": "baissier" },
+    { "secteur": "Luxe", "pct": null, "biais": "baissier" },
+    { "secteur": "Immobilier", "pct": null, "biais": "baissier" },
+    { "secteur": "Utilities", "pct": null, "biais": "baissier" }
+  ],
+  "playbook": [
+    { "si": "Hausse 25 pb + guidance ferme (d'autres hausses évoquées)", "proba": 45, "alors": "Baisse : le 10 ans US enfonce 5,00 %, dollar au plus haut, CAC vers 8 000 puis 7 950 ; EUR/USD sous 1,1500", "biais": "short" },
+    { "si": "Hausse 25 pb mais ton prudent (hausse 'unique', pause ensuite)", "proba": 40, "alors": "Soulagement : les taux refluent vers 4,85 %, le CAC rebondit vers 8 150 / 8 210", "biais": "long" },
+    { "si": "Statu quo surprise (pas de hausse)", "proba": 15, "alors": "Choc dovish : le dollar chute, or et Nasdaq rebondissent, CAC vers 8 210 ; mais crédibilité anti-inflation questionnée", "biais": "attente" }
+  ],
+  "invalidation": "Tant que le taux US 10 ans campe au-dessus de 5,00 %, tout rebond des actions reste fragile ; un net repli sous 4,85 % rouvrirait la porte à un vrai rebond.",
+  "delta": [
+    { "label": "Taux US 10 ans au plus haut depuis 2007 (~5 %)", "direction": "up" },
+    { "label": "Dollar (DXY) se renforce avant la Fed", "direction": "up" },
+    { "label": "Or sous pression (−1,4 %)", "direction": "down" }
+  ],
+  "condense": {
+    "idee": "Journée sous tension : la banque centrale américaine (la Fed) décide de ses taux ce soir à 20h. Fait rare, les marchés attendent une HAUSSE de taux — la première depuis 2023 — parce que l'inflation repart. Résultat : les taux d'emprunt américains flambent (près de 5 %, du jamais-vu depuis 2007), le dollar se renforce et les actions reculent partout. On patiente avant 20h.",
+    "pourquoi": "Quand une banque centrale monte ses taux, l'argent placé « sans risque » (les obligations d'État) rapporte plus : les actions deviennent moins attractives et le dollar monte. Le pétrole resté cher (~89 $) entretient l'inflation et pousse la Fed à durcir.",
+    "evenement": "Décision de taux de la Fed à 20h (heure de Paris), suivie de la conférence de presse. Le marché parie à ~90 % sur une hausse de 0,25 point (nouvelle cible 3,75–4,00 %). L'essentiel ne sera pas le chiffre — déjà anticipé — mais le TON : la Fed laisse-t-elle entendre d'AUTRES hausses à venir ?",
+    "plan_avant": "Peu de mouvement, marché nerveux et attentiste. On évite de se précipiter avant l'annonce.",
+    "plan_apres": "Gros pic de volatilité possible après 20h. On surveille le taux US 10 ans : s'il casse nettement 5,00 %, pression accrue sur les actions ; s'il reflue sous 4,85 %, rebond possible.",
+    "a_surveiller": "Le taux US 10 ans (proche de 5 %), le dollar (DXY), et le pétrole (~89 $) qui alimente l'inflation.",
+    "overnight": "Wall Street en baisse : Dow −0,63 % · S&P 500 −0,45 % · Nasdaq −0,78 %. Asie : Hang Seng −2,5 %."
+  },
+  "sources": ["Reuters", "CNBC", "Yahoo Finance", "TheStreet", "TradingEconomics", "CME FedWatch"]
+}
