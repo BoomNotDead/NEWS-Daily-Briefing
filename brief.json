@@ -1,0 +1,60 @@
+{
+  "meta": { "date_str": "jeudi 17 septembre 2026", "heure": "08:00", "snapshot": "07:55", "tz": "Europe/Paris" },
+  "verdict": {
+    "biais": "Résistance prudente — l'Europe encaisse le tour de vis de la Fed (euro faible + pétrole en repli), mais les taux US à 5 % restent l'épée de Damoclès",
+    "pivot": "CAC 8 140",
+    "ne_pas_lacher": "8 100",
+    "vol": "VIX 17,7 en légère hausse · cap sur la BoE à 13h"
+  },
+  "niveaux": [
+    { "actif": "CAC 40",    "spot": 8158,   "close_prev": 8141,   "sup1": 8100,   "sup2": 8040,   "res1": 8200,   "res2": 8260,   "biais": "haussier", "decimals": 0 },
+    { "actif": "DAX",       "spot": 25681,  "close_prev": 25559,  "sup1": 25500,  "sup2": 25350,  "res1": 25800,  "res2": 26000,  "biais": "haussier", "decimals": 0 },
+    { "actif": "EUR/USD",   "spot": 1.1465, "close_prev": 1.1472, "sup1": 1.1430, "sup2": 1.1380, "res1": 1.1520, "res2": 1.1560, "biais": "baissier", "decimals": 4 },
+    { "actif": "Brent",     "spot": 104.7,  "close_prev": 105.83, "sup1": 103.0,  "sup2": 101.0,  "res1": 107.0,  "res2": 109.0,  "biais": "baissier", "decimals": 1, "unit": "$" },
+    { "actif": "Or",        "spot": 4386,   "close_prev": 4333,   "sup1": 4320,   "sup2": 4260,   "res1": 4420,   "res2": 4480,   "biais": "haussier", "decimals": 0, "unit": "$" },
+    { "actif": "US 10 ans", "spot": 5.02,   "close_prev": 5.00,   "sup1": 4.95,   "sup2": 4.88,   "res1": 5.05,   "res2": 5.12,   "biais": "tension",  "decimals": 2, "unit": "%" }
+  ],
+  "courbe": {
+    "points": [ { "t": "2Y", "v": 4.74 }, { "t": "10Y", "v": 5.02 } ],
+    "bund10y": 3.50, "oat10y": 4.47, "spread_2s10s": 28, "spread_oat_bund": 96
+  },
+  "volatilite": { "vix": 17.71 },
+  "cross_asset": [
+    { "label": "Dow", "pct": -1.21 }, { "label": "S&P 500", "pct": -0.45 }, { "label": "Nasdaq", "pct": -0.01 },
+    { "label": "Nikkei", "pct": 0.2 }, { "label": "Kospi", "pct": 0.9 }, { "label": "Hang Seng", "pct": -0.7 },
+    { "label": "Brent", "pct": -1.07 }, { "label": "Or", "pct": 1.24 }
+  ],
+  "agenda": [
+    { "heure": "13:00", "evenement": "Décision de taux Banque d'Angleterre (BoE)", "attendu": "3,75 %", "precedent": "3,75 %", "tier": 1, "evenement_du_jour": true }
+  ],
+  "secteurs": [
+    { "secteur": "Luxe", "pct": null, "biais": "haussier" },
+    { "secteur": "Automobile", "pct": null, "biais": "haussier" },
+    { "secteur": "Services publics", "pct": null, "biais": "haussier" },
+    { "secteur": "Banques", "pct": null, "biais": "neutre" },
+    { "secteur": "Énergie", "pct": null, "biais": "baissier" },
+    { "secteur": "Tech/Semis", "pct": null, "biais": "baissier" }
+  ],
+  "playbook": [
+    { "si": "L'Europe tient malgré la Fed (euro faible + pétrole en repli portent luxe et auto)", "proba": 50, "alors": "CAC vers 8 200 puis 8 260 ; DAX teste 25 800. Invalidation sous 8 100.", "biais": "long" },
+    { "si": "Les taux US restent > 5 % et pèsent sur la tech mondiale", "proba": 30, "alors": "CAC reflue vers 8 100/8 040 ; EUR/USD casse 1,1430. Objectif baissier 8 040.", "biais": "short" },
+    { "si": "BoE plus ferme que prévu (dissidents pour 4 %)", "proba": 20, "alors": "Livre et taux UK montent, cycliques sous pression ; range nerveux 8 100–8 200.", "biais": "attente" }
+  ],
+  "invalidation": "Une clôture du CAC 40 sous 8 100 annulerait le scénario de résistance et rouvrirait 8 040, dans le sillage des taux US repassés au-dessus de 5 %.",
+  "delta": [
+    { "label": "La Fed a relevé ses taux (+25 pb → 3,75–4,00 %), 1re hausse depuis 2023", "direction": "up" },
+    { "label": "Taux US 10 ans repassé au-dessus de 5 %", "direction": "up" },
+    { "label": "Dollar au plus haut en 7 semaines, EUR/USD sous 1,15", "direction": "down" },
+    { "label": "Pétrole en repli (pipeline saoudien en cours de restauration)", "direction": "down" }
+  ],
+  "condense": {
+    "idee": "Coup de théâtre hier soir : la banque centrale américaine (la Fed) a RELEVÉ ses taux d'intérêt de 0,25 % — sa 1re hausse depuis 2023 — et laisse entendre qu'une autre pourrait suivre d'ici fin d'année. Wall Street a reculé. Mais ce matin, Paris résiste : l'euro faible dope le luxe et l'automobile, et le pétrole baisse. Journée d'équilibre, avec la banque centrale anglaise (BoE) à 13h.",
+    "pourquoi": "Des taux américains plus élevés rendent le dollar plus attractif, donc l'euro baisse. Or un euro faible, c'est une bonne nouvelle pour les entreprises européennes qui vendent à l'étranger (luxe, autos) : leurs produits deviennent moins chers pour les acheteurs en dollars. Ajoutez un pétrole qui recule (moins de facture d'énergie) et vous avez deux forces qui compensent le coup de froid venu de la Fed.",
+    "evenement": "Décision de taux de la Banque d'Angleterre (BoE) à 13h00, heure de Paris. Elle devrait laisser son taux inchangé à 3,75 % (6e réunion de suite sans changement). Ce qui comptera : le vote (combien de membres veulent monter à 4,00 %) et le ton sur l'inflation, encore élevée au Royaume-Uni.",
+    "plan_avant": "matinée d'observation ; on vérifie que le CAC tient au-dessus de 8 100.",
+    "plan_apres": "après la BoE (13h) puis l'ouverture américaine, on surveille les taux US : au-dessus de 5 % ils peuvent peser sur la tech ; l'euro et la livre donneront le tempo.",
+    "a_surveiller": "les taux US 10 ans (autour de 5 %), l'euro sous 1,15, et les valeurs bancaires (fortement chahutées à Wall Street hier, pire séance depuis février).",
+    "overnight": "Dow −1,21 % · S&P 500 −0,45 % · Nasdaq −0,01 % ; Asie mitigée (Nikkei +0,2 %, Kospi +0,9 %, Hang Seng −0,7 %)."
+  },
+  "sources": ["TradingEconomics", "CNBC", "Reuters", "FXStreet", "Bloomberg"]
+}
