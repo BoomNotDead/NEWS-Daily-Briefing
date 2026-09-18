@@ -1,0 +1,56 @@
+{
+  "meta": { "date_str": "vendredi 18 septembre 2026", "heure": "08:00", "snapshot": "07:55", "tz": "Europe/Paris" },
+  "verdict": {
+    "biais": "Rebond prudent des actions Europe — banques en tête, mais tenu en laisse par le pétrole et le 10 ans US",
+    "pivot": "CAC 8 120",
+    "ne_pas_lacher": "8 090",
+    "vol": "VIX 17,7 (+3 %) — nervosité contenue"
+  },
+  "niveaux": [
+    { "actif": "CAC 40",    "spot": 8159,   "close_prev": 8118,   "sup1": 8090,   "sup2": 8000,   "res1": 8200,   "res2": 8280,   "biais": "haussier", "decimals": 0 },
+    { "actif": "DAX",       "spot": 25717,  "close_prev": 25538,  "sup1": 25400,  "sup2": 25000,  "res1": 25800,  "res2": 26000,  "biais": "haussier", "decimals": 0 },
+    { "actif": "EUR/USD",   "spot": 1.1480, "close_prev": 1.1465, "sup1": 1.1440, "sup2": 1.1400, "res1": 1.1530, "res2": 1.1580, "biais": "baissier", "decimals": 4 },
+    { "actif": "Brent",     "spot": 103.8,  "close_prev": 105.83, "sup1": 102.0,  "sup2": 100.0,  "res1": 106.0,  "res2": 108.0,  "biais": "baissier", "decimals": 1, "unit": "$" },
+    { "actif": "Or",        "spot": 4307,   "close_prev": 4264,   "sup1": 4250,   "sup2": 4180,   "res1": 4360,   "res2": 4420,   "biais": "haussier", "decimals": 0, "unit": "$" },
+    { "actif": "US 10 ans", "spot": 4.93,   "close_prev": 5.01,   "sup1": 4.85,   "sup2": 4.75,   "res1": 5.00,   "res2": 5.05,   "biais": "detente",  "decimals": 2, "unit": "%" }
+  ],
+  "courbe": {
+    "points": [ { "t": "2Y", "v": 4.69 }, { "t": "5Y", "v": 4.80 }, { "t": "10Y", "v": 4.93 } ],
+    "bund10y": 3.49, "oat10y": 4.45, "spread_2s10s": 24, "spread_oat_bund": 96,
+    "fed_funds_range": "3,75–4,00 %", "fed_funds_proba": "16/19 membres FOMC voient ≥ 1 hausse de plus en 2026"
+  },
+  "volatilite": { "vix": 17.71 },
+  "cross_asset": [
+    { "label": "Dow", "pct": -1.2 }, { "label": "S&P 500", "pct": -0.5 }, { "label": "Nasdaq", "pct": -0.01 },
+    { "label": "Nikkei", "pct": 0.33 }, { "label": "Brent", "pct": -1.9 }, { "label": "Or", "pct": 1.0 }
+  ],
+  "agenda": [
+    { "heure": "≈04:00", "evenement": "Décision de taux Banque du Japon (BoJ)", "attendu": "1,25 %", "precedent": "1,00 %", "tier": 1, "evenement_du_jour": true }
+  ],
+  "secteurs": [
+    { "secteur": "Banques", "pct": 0.8, "biais": "haussier" }, { "secteur": "Énergie", "pct": -1.2, "biais": "baissier" },
+    { "secteur": "Automobile", "pct": 0.7, "biais": "haussier" }, { "secteur": "Tech/Semis", "pct": -0.2, "biais": "neutre" },
+    { "secteur": "Luxe", "pct": 0.4, "biais": "neutre" }, { "secteur": "Utilities", "pct": 0.5, "biais": "haussier" }
+  ],
+  "playbook": [
+    { "si": "Brent reste sous 105 $ ET le 10 ans US sous 5 %", "proba": 45, "alors": "Le rebond continue : CAC vise 8 200 puis 8 280 · invalidation sous 8 090", "biais": "long" },
+    { "si": "Statu quo : Brent 103-105 $, le marché digère les hausses de taux", "proba": 35, "alors": "Range 8 090-8 200, volatilité contenue (VIX ~18)", "biais": "attente" },
+    { "si": "Brent repasse > 106 $ OU le 10 ans US casse 5 %", "proba": 20, "alors": "Repli : CAC teste 8 090 puis 8 000 · les banques centrales redeviennent le risque", "biais": "short" }
+  ],
+  "invalidation": "Un retour du Brent au-dessus de 106 $ ou du 10 ans US au-dessus de 5 % relancerait la peur inflation/taux et casserait le scénario de rebond (CAC sous 8 090).",
+  "delta": [
+    { "label": "Pétrole en repli (l'Arabie réoriente ses flux via Yanbu)", "direction": "down" },
+    { "label": "10 ans US redescend sous 5 %", "direction": "down" },
+    { "label": "Vague de resserrement des banques centrales (Fed + BoJ)", "direction": "up" }
+  ],
+  "condense": {
+    "idee": "Les Bourses européennes rebondissent (CAC +0,5 %, DAX +0,7 % hier) parce que le pétrole a reflué et que le taux à 10 ans américain est redescendu sous le seuil des 5 %. Mais le décor reste inhabituel : cette semaine, la Fed (mercredi) ET la banque centrale du Japon (ce matin) ont TOUTES DEUX monté leurs taux pour lutter contre l'inflation. C'est donc un rebond de soulagement dans un monde qui se resserre : on en profite, mais on reste sur ses gardes.",
+    "pourquoi": "Le pétrole baisse (l'Arabie saoudite réoriente ses exportations par le terminal de Yanbu, ce qui apaise la peur d'une fermeture du détroit d'Ormuz). Un pétrole moins cher = moins d'inflation attendue = les taux obligataires se détendent = les actions respirent.",
+    "evenement": "La Banque du Japon a relevé son taux à 1,25 % (plus haut depuis 1995), la 2e grande banque centrale à durcir cette semaine après la Fed. « Monter les taux », c'est rendre l'argent plus cher à emprunter pour freiner la hausse des prix. Quand plusieurs banques centrales le font en même temps, c'est un frein pour l'économie mondiale — à surveiller.",
+    "plan_avant": "Ouverture européenne attendue calme et plutôt verte. On vérifie que le Brent reste sous 105 $ et le 10 ans US sous 5 %.",
+    "plan_apres": "L'après-midi US apporte la production industrielle (15h15) et des discours de membres de la Fed. On regarde si le CAC casse 8 200 (signal haussier) ou 8 090 (signal baissier).",
+    "a_surveiller": "Le Brent autour de 104 $ (s'il repasse > 105 $, la peur de l'inflation revient), le 10 ans US collé aux 5 %, et le dollar (indice DXY ~100, plus haut depuis 7 semaines) qui pèse sur l'euro (EUR/USD ~1,148, au plus bas depuis juillet).",
+    "overnight": "BoJ +0,25 % → 1,25 % · Nikkei +0,3 % · Wall Street mitigé hier : Dow -1,2 %, S&P 500 -0,5 %, Nasdaq stable."
+  },
+  "sources": ["TradingEconomics", "CNBC", "Reuters", "Bloomberg", "Investing.com"]
+}
