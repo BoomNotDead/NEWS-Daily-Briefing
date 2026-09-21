@@ -1,0 +1,61 @@
+{
+  "meta": { "date_str": "lundi 21 septembre 2026", "heure": "08:00", "snapshot": "07:55", "tz": "Europe/Paris" },
+  "verdict": {
+    "biais": "Défensif — taux hauts et pétrole cher pèsent sur les actions ; rebond technique fragile",
+    "pivot": "CAC 8 065 (clôture de vendredi)",
+    "ne_pas_lacher": "7 940",
+    "vol": "VIX très bas (14,8) alors que les taux s'affolent : les actions semblent trop sereines"
+  },
+  "niveaux": [
+    { "actif": "CAC 40",    "spot": 8090,    "close_prev": 8065,    "sup1": 8000,   "sup2": 7940,   "res1": 8150,   "res2": 8210,   "biais": "neutre",   "decimals": 0 },
+    { "actif": "DAX",       "spot": 25400,   "close_prev": 25304,   "sup1": 25200,  "sup2": 25000,  "res1": 25550,  "res2": 25750,  "biais": "neutre",   "decimals": 0 },
+    { "actif": "EUR/USD",   "spot": 1.1490,  "close_prev": 1.1483,  "sup1": 1.1440, "sup2": 1.1400, "res1": 1.1530, "res2": 1.1580, "biais": "baissier", "decimals": 4 },
+    { "actif": "Brent",     "spot": 103.5,   "close_prev": 103.9,   "sup1": 101.0,  "sup2": 98.0,   "res1": 106.0,  "res2": 109.0,  "biais": "haussier", "decimals": 1, "unit": "$" },
+    { "actif": "Or",        "spot": 4390,    "close_prev": 4383,    "sup1": 4300,   "sup2": 4230,   "res1": 4450,   "res2": 4520,   "biais": "haussier", "decimals": 0, "unit": "$" },
+    { "actif": "US 10 ans", "spot": 5.00,    "close_prev": 5.00,    "sup1": 4.90,   "sup2": 4.80,   "res1": 5.10,   "res2": 5.20,   "biais": "tension",  "decimals": 2, "unit": "%" }
+  ],
+  "courbe": {
+    "points": [ { "t": "2Y", "v": 4.75 }, { "t": "5Y", "v": 4.86 }, { "t": "10Y", "v": 5.00 } ],
+    "bund10y": 3.50, "oat10y": 4.48, "spread_2s10s": 25, "spread_oat_bund": 98
+  },
+  "volatilite": { "vix": 14.81 },
+  "cross_asset": [
+    { "label": "Dow", "pct": -0.18 }, { "label": "S&P 500", "pct": 0.17 }, { "label": "Nasdaq", "pct": 0.39 },
+    { "label": "Hang Seng", "pct": 0.5 }, { "label": "Brent", "pct": -0.91 }, { "label": "Or", "pct": 0.97 }
+  ],
+  "agenda": [
+    { "heure": "03:15", "evenement": "Taux préférentiels de prêt LPR 1 an (Chine, PBoC)", "attendu": "3,00 %", "precedent": "3,00 %", "tier": 3, "evenement_du_jour": false },
+    { "heure": "—", "evenement": "Séance sans publication majeure en zone euro et aux États-Unis (PMI flash attendus mercredi)", "tier": 3, "evenement_du_jour": false }
+  ],
+  "secteurs": [
+    { "secteur": "Énergie", "biais": "haussier", "pct": null },
+    { "secteur": "Banques", "biais": "neutre", "pct": null },
+    { "secteur": "Tech/Semis", "biais": "baissier", "pct": null },
+    { "secteur": "Immobilier", "biais": "baissier", "pct": null },
+    { "secteur": "Luxe", "biais": "baissier", "pct": null },
+    { "secteur": "Services aux collectivités", "biais": "baissier", "pct": null }
+  ],
+  "playbook": [
+    { "si": "Détente obligataire : le 10 ans US repasse sous 5 %", "proba": 30, "alors": "Rebond : CAC vise 8 150 puis 8 210, EUR/USD tente 1,1530", "biais": "long" },
+    { "si": "Statu quo : 10 ans US collé à 5 %, Brent autour de 104 $", "proba": 45, "alors": "Range nerveux : CAC coince entre 8 000 et 8 150, dollar ferme (EUR/USD ~1,149)", "biais": "attente" },
+    { "si": "Nouvelle tension : 10 ans US > 5,10 % ou Brent > 106 $", "proba": 25, "alors": "Rechute : CAC casse 8 000 puis teste 7 940, EUR/USD sous 1,1440", "biais": "short" }
+  ],
+  "invalidation": "Au-dessus de 5,10 % sur le taux US 10 ans (ou Brent > 106 $), le rebond des actions européennes est invalidé : retour du régime « risk-off ».",
+  "delta": [
+    { "label": "Fed : 1re hausse de taux en 3 ans, à 3,75–4,00 %", "direction": "up" },
+    { "label": "Taux US 10 ans repasse au-dessus de 5 %", "direction": "up" },
+    { "label": "Pétrole ancré au-dessus de 100 $", "direction": "up" },
+    { "label": "Actions européennes en repli (CAC −1,49 % vendredi)", "direction": "down" }
+  ],
+  "condense": {
+    "idee": "Nouveau régime de marché : la banque centrale américaine (la Fed) a AUGMENTÉ ses taux mercredi — du jamais-vu depuis 3 ans — à 3,75–4,00 %, et prévient qu'elle pourrait recommencer. Résultat : l'argent coûte plus cher, le taux à 10 ans américain repasse au-dessus de 5 %, le pétrole reste très cher (~104 $) et les Bourses européennes ont chuté vendredi (CAC −1,49 %). Ce lundi, petit rebond en Asie, mais le décor reste « taux hauts + pétrole cher ».",
+    "pourquoi": "L'inflation américaine est repartie (3,4 % en août, tirée par l'essence). La Fed durcit donc le ton pour la freiner. Or des taux plus élevés = crédit plus cher = moins d'appétit pour les actions, surtout la technologie.",
+    "evenement": "Pas de gros chiffre ce lundi. Le vrai rendez-vous de la semaine, ce sont les « PMI » (enquêtes mensuelles d'activité auprès des entreprises) mercredi en zone euro et aux États-Unis : ils diront si l'économie ralentit sous le poids des taux.",
+    "plan_avant": "agenda vide aujourd'hui : le marché suivra minute par minute le taux US à 10 ans (seuil des 5 %) et le pétrole (100 $), plus qu'un chiffre précis.",
+    "plan_apres": "cap sur mercredi (PMI) : un PMI faible = espoir de pause de la Fed (plutôt bon pour les actions) ; un PMI solide = « taux hauts plus longtemps » (pression sur les actions).",
+    "a_surveiller": "le taux US à 10 ans (les 5 %), le pétrole (les 100 $) et l'écart de taux France-Allemagne (OAT-Bund ~98 pb, proche des 100 pb : signe de nervosité sur la dette française).",
+    "overnight": "Vendredi à Wall Street : Dow −0,18 % · S&P +0,17 % · Nasdaq +0,39 %. Ce matin en Asie : Hang Seng +0,5 %, Kospi +1,6 % (Tokyo fermé, jour férié).",
+    "inflation": "3,4 %"
+  },
+  "sources": ["TradingEconomics", "Reuters", "CNBC", "Investing.com"]
+}
