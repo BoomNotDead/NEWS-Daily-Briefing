@@ -1,0 +1,61 @@
+{
+  "meta": { "date_str": "mardi 22 septembre 2026", "heure": "08:00", "snapshot": "07:55", "tz": "Europe/Paris" },
+  "verdict": {
+    "biais": "Rattrapage haussier — l'Europe rejoint le rally IA de Wall Street",
+    "pivot": "CAC 8 080",
+    "ne_pas_lacher": "8 010",
+    "vol": "VIX bas (14,8) — appétit pour le risque"
+  },
+  "niveaux": [
+    { "actif": "CAC 40",       "spot": 8130,   "close_prev": 8057,   "sup1": 8080,   "sup2": 8010,   "res1": 8180,   "res2": 8240,   "biais": "haussier", "decimals": 0 },
+    { "actif": "DAX",          "spot": 25609,  "close_prev": 25338,  "sup1": 25350,  "sup2": 25150,  "res1": 25750,  "res2": 25950,  "biais": "haussier", "decimals": 0 },
+    { "actif": "EuroStoxx 50", "spot": 6330,   "close_prev": 6249,   "sup1": 6280,   "sup2": 6220,   "res1": 6360,   "res2": 6410,   "biais": "haussier", "decimals": 0 },
+    { "actif": "EUR/USD",      "spot": 1.1472, "close_prev": 1.1486, "sup1": 1.1440, "sup2": 1.1400, "res1": 1.1510, "res2": 1.1560, "biais": "baissier", "decimals": 4 },
+    { "actif": "Brent",        "spot": 99.8,   "close_prev": 100.06, "sup1": 98.0,   "sup2": 96.0,   "res1": 102.0,  "res2": 104.5,  "biais": "baissier", "decimals": 1, "unit": "$" },
+    { "actif": "Or",           "spot": 4416,   "close_prev": 4400,   "sup1": 4350,   "sup2": 4300,   "res1": 4460,   "res2": 4520,   "biais": "haussier", "decimals": 0, "unit": "$" },
+    { "actif": "US 10 ans",    "spot": 4.96,   "close_prev": 5.00,   "sup1": 4.90,   "sup2": 4.82,   "res1": 5.02,   "res2": 5.10,   "biais": "neutre",   "decimals": 2, "unit": "%" }
+  ],
+  "courbe": {
+    "points": [ { "t": "2Y", "v": 4.75 }, { "t": "5Y", "v": 4.86 }, { "t": "10Y", "v": 4.96 } ],
+    "bund10y": 3.46, "oat10y": 4.47, "spread_2s10s": 21, "spread_oat_bund": 101
+  },
+  "volatilite": { "vix": 14.81 },
+  "cross_asset": [
+    { "label": "Nasdaq", "pct": 2.26 }, { "label": "S&P 500", "pct": 1.49 }, { "label": "Dow", "pct": 0.71 },
+    { "label": "Brent", "pct": -3.67 }, { "label": "WTI", "pct": -4.69 }, { "label": "Or", "pct": 0.37 }
+  ],
+  "agenda": [
+    { "heure": "—", "evenement": "Pas de publication majeure aujourd'hui", "tier": 3, "evenement_du_jour": false }
+  ],
+  "secteurs": [
+    { "secteur": "Tech/Semis", "pct": 1.8,  "biais": "haussier" },
+    { "secteur": "Industrie",  "pct": 1.1,  "biais": "haussier" },
+    { "secteur": "Auto",       "pct": 0.8,  "biais": "haussier" },
+    { "secteur": "Banques",    "pct": 0.7,  "biais": "haussier" },
+    { "secteur": "Luxe",       "pct": 0.5,  "biais": "haussier" },
+    { "secteur": "Énergie",    "pct": -0.8, "biais": "baissier" }
+  ],
+  "playbook": [
+    { "si": "Le momentum US se prolonge (semis/IA porteurs, Brent reste sous 100 $)", "proba": 45, "alors": "Poursuite du rattrapage : CAC vise 8 180 puis 8 240 · invalidation sous 8 080", "biais": "long" },
+    { "si": "Prises de bénéfices après le gap d'ouverture haussier", "proba": 40, "alors": "Digestion en range 8 080–8 180 · le rebond reste valide tant que 8 080 tient", "biais": "attente" },
+    { "si": "Les taux longs remontent (US 10 ans repasse > 5 %, OAT tend)", "proba": 15, "alors": "Repli : CAC teste 8 080 puis 8 010 · EUR/USD sous 1,1440", "biais": "short" }
+  ],
+  "invalidation": "Un retour du Brent au-dessus de 104 $ (réescalade US-Iran) relancerait le risque inflation et casserait le scénario de rattrapage haussier des actions européennes.",
+  "delta": [
+    { "label": "Wall Street : record du Nasdaq (+2,26 %) porté par les semis (AMD ~+10 %)", "direction": "up" },
+    { "label": "Pétrole en repli, 4e séance de baisse (désescalade US-Iran)", "direction": "down" },
+    { "label": "Taux longs toujours élevés (US 10 ans ~4,96 %, Bund proche de plus-hauts de 17 ans)", "direction": "up" },
+    { "label": "Spread OAT-Bund tendu (~101 pb) sur le risque politique français", "direction": "up" }
+  ],
+  "condense": {
+    "idee": "Grosse séance de rattrapage attendue en Europe. Wall Street a flambé hier soir (Nasdaq à un record, +2,26 %) grâce aux valeurs de l'intelligence artificielle et des semi-conducteurs (la puce AMD a bondi d'environ 10 %). En parallèle, le pétrole rechute vers 100 $. Résultat : le CAC 40 et le DAX ouvrent en nette hausse. Attention : ce rebond est porté par la croissance et la baisse du pétrole, PAS par une baisse des taux — les taux restent élevés.",
+    "pourquoi": "Deux bonnes nouvelles se cumulent. 1) Les investisseurs sont optimistes sur l'IA après des discussions États-Unis–Chine sur la sécurité de l'IA, ce qui fait flamber les valeurs technos. 2) Le pétrole baisse (4e séance) car la tension entre les États-Unis et l'Iran retombe : un pétrole moins cher = moins d'inflation = des marchés rassurés.",
+    "evenement": "Pas de publication économique majeure aujourd'hui (ni banque centrale, ni inflation, ni emploi américain). Plusieurs responsables de la Réserve fédérale s'expriment (J. Williams, P. Jefferson, T. Barkin) mais sans chiffre à la clé : c'est le TON de leurs propos qui compte, pas une donnée.",
+    "plan_avant": "À l'ouverture, le marché part déjà haut (effet Wall Street). On évite de courir après la hausse : on surveille surtout si le CAC tient au-dessus de 8 080.",
+    "plan_apres": "Si le pétrole reste sous 100 $ et que les taux ne remontent pas, la hausse peut se prolonger vers 8 180-8 240. Si les taux longs repartent (US 10 ans vers 5 %), le rebond peut caler.",
+    "a_surveiller": "Le pétrole (Brent autour de 100 $), les taux longs américains (US 10 ans ~4,96 %) et le spread OAT-Bund (~101 points) qui mesure le risque budgétaire et politique français à l'approche de la présidentielle.",
+    "overnight": "Nasdaq +2,26 % (record) · S&P 500 +1,49 % · Dow +0,71 %. Pétrole : Brent -3,7 %, WTI -4,7 %. Or +0,4 %.",
+    "inflation": "La chute du pétrole (-3,7 %) réduit la pression sur les prix, ce qui soutient les actions ; mais les taux longs restent hauts, signe que le marché ne parie pas encore sur des baisses de taux rapides."
+  },
+  "sources": ["TradingEconomics", "CNBC", "The Motley Fool", "Investing.com", "Bloomberg", "FXStreet"]
+}
