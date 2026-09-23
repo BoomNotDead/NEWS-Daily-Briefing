@@ -1,0 +1,57 @@
+{
+  "meta": { "date_str": "mercredi 23 septembre 2026", "heure": "08:00", "snapshot": "07:55", "tz": "Europe/Paris" },
+  "verdict": {
+    "biais": "Prudence — taux US proches de 5 % et dollar fort freinent les cycliques, tech US et pétrole en baisse amortissent",
+    "pivot": "CAC 8 155",
+    "ne_pas_lacher": "8 120",
+    "vol": "VIX bas (14,2) — calme avant les PMI de la matinée"
+  },
+  "niveaux": [
+    { "actif": "CAC 40",    "spot": 8155,   "close_prev": 8139,   "sup1": 8120,   "sup2": 8060,   "res1": 8200,   "res2": 8260,   "biais": "neutre",   "decimals": 0 },
+    { "actif": "DAX",       "spot": 25600,  "close_prev": 25574,  "sup1": 25400,  "sup2": 25200,  "res1": 25800,  "res2": 26000,  "biais": "neutre",   "decimals": 0 },
+    { "actif": "EUR/USD",   "spot": 1.1442, "close_prev": 1.1462, "sup1": 1.1400, "sup2": 1.1350, "res1": 1.1490, "res2": 1.1540, "biais": "baissier", "decimals": 4 },
+    { "actif": "Brent",     "spot": 98.4,   "close_prev": 99.3,   "sup1": 96.5,   "sup2": 94.0,   "res1": 100.0,  "res2": 102.0,  "biais": "baissier", "decimals": 1, "unit": "$" },
+    { "actif": "Or",        "spot": 4416,   "close_prev": 4400,   "sup1": 4350,   "sup2": 4280,   "res1": 4470,   "res2": 4540,   "biais": "haussier", "decimals": 0, "unit": "$" },
+    { "actif": "US 10 ans", "spot": 4.97,   "close_prev": 4.94,   "sup1": 4.90,   "sup2": 4.85,   "res1": 5.00,   "res2": 5.05,   "biais": "tension",  "decimals": 2, "unit": "%" }
+  ],
+  "courbe": {
+    "points": [ { "t": "2Y", "v": 4.74 }, { "t": "10Y", "v": 4.97 } ],
+    "bund10y": 3.44, "oat10y": 4.46, "spread_2s10s": 23, "spread_oat_bund": 102
+  },
+  "volatilite": { "vix": 14.21 },
+  "cross_asset": [
+    { "label": "Dow", "pct": -0.36 }, { "label": "S&P 500", "pct": 0.0 }, { "label": "Nasdaq", "pct": 0.82 },
+    { "label": "Brent", "pct": -0.9 }, { "label": "Or", "pct": 0.37 }, { "label": "DXY", "pct": 0.17 }
+  ],
+  "agenda": [
+    { "heure": "10:00", "evenement": "PMI flash composite zone euro (S&P Global)", "attendu": "51,7", "precedent": "52,0", "tier": 2, "evenement_du_jour": true },
+    { "heure": "15:45", "evenement": "PMI flash composite États-Unis (S&P Global)", "attendu": "54,5", "precedent": "54,6", "tier": 2, "evenement_du_jour": false }
+  ],
+  "secteurs": [
+    { "secteur": "Banques", "pct": -2.0, "biais": "baissier" }, { "secteur": "Énergie", "pct": -1.0, "biais": "baissier" },
+    { "secteur": "Tech/Semis", "pct": 0.9, "biais": "haussier" }, { "secteur": "Santé", "pct": 0.4, "biais": "haussier" },
+    { "secteur": "Luxe", "pct": 0.3, "biais": "neutre" }, { "secteur": "Industrie", "pct": 0.2, "biais": "neutre" }
+  ],
+  "playbook": [
+    { "si": "PMI solides ET 10 ans US casse 5,00 %", "proba": 30, "alors": "Dollar accélère, EUR/USD sous 1,1400 ; CAC bute sur 8 120, cycliques sous pression (invalidation 8 060)", "biais": "short" },
+    { "si": "PMI conformes, 10 ans US tient sous 5,00 %", "proba": 50, "alors": "Range : CAC entre 8 120 et 8 200, la tech US porte le sentiment (objectif 8 200)", "biais": "attente" },
+    { "si": "PMI décevants → détente des taux", "proba": 20, "alors": "Soulagement : CAC vise 8 200 puis 8 260, EUR/USD rebondit vers 1,1490", "biais": "long" }
+  ],
+  "invalidation": "Un franchissement durable de 5,00 % sur le taux US 10 ans relancerait la pression sur les cycliques et ouvrirait 8 060 sur le CAC.",
+  "delta": [
+    { "label": "Taux US 10 ans proches de 5 % (Fed ferme)", "direction": "up" },
+    { "label": "Dollar fort, EUR/USD sous 1,145", "direction": "up" },
+    { "label": "Pétrole en baisse (diplomatie Iran)", "direction": "down" },
+    { "label": "Nasdaq record porté par l'IA", "direction": "up" }
+  ],
+  "condense": {
+    "idee": "Le marché digère un discours ferme (« hawkish ») de la Fed : le taux à 10 ans américain frôle 5 % et le dollar se renforce, ce qui pèse sur les cycliques européennes (banques en net repli). En face, la tech US bat des records grâce à l'IA et le pétrole recule, ce qui limite la casse. L'Europe a clôturé en légère hausse hier (CAC +0,2 %), mais la journée reste une attente autour des indices PMI (baromètres d'activité) publiés en matinée.",
+    "pourquoi": "Des responsables de la Fed ont laissé entendre que les taux resteront élevés, voire monteront : les rendements obligataires grimpent et le dollar monte. Le pétrole, lui, baisse (Brent ~98 $) grâce à l'apaisement diplomatique avec l'Iran évoqué par D. Trump à l'ONU, ce qui rassure sur l'inflation.",
+    "evenement": "Indices PMI « flash » de septembre : zone euro vers 10h, États-Unis vers 15h45. Le PMI mesure l'activité des entreprises : au-dessus de 50 = croissance, en dessous = contraction. On vérifie si l'économie tient malgré des taux élevés.",
+    "plan_avant": "Peu de mouvement avant 10h : on surveille l'ouverture et le PMI zone euro (attendu 51,7 contre 52,0 le mois dernier).",
+    "plan_apres": "Après le PMI US de 15h45 : si le 10 ans casse 5,00 %, pression sur le CAC (test de 8 120). S'il reste sous 5,00 %, le range 8 120–8 200 devrait tenir.",
+    "a_surveiller": "Le taux US 10 ans (proche de 5 %), le dollar (EUR/USD ~1,144), le pétrole (Brent ~98 $) et le spread OAT-Bund (102 pb) sur fond de politique française.",
+    "overnight": "Dow -0,36 % · S&P 500 stable · Nasdaq +0,8 % (record, IA) · Brent -0,9 % · Or +0,4 % · DXY +0,17 %."
+  },
+  "sources": ["TradingEconomics", "Reuters", "Newsquawk", "S&P Global PMI", "Investing.com"]
+}
