@@ -1,0 +1,57 @@
+{
+  "meta": { "date_str": "jeudi 24 septembre 2026", "heure": "08:00", "snapshot": "07:55", "tz": "Europe/Paris" },
+  "verdict": {
+    "biais": "Prudence — la remontée des taux pèse sur les actions, la tech en tête",
+    "pivot": "CAC 8 123",
+    "ne_pas_lacher": "8 050",
+    "vol": "VIX bas (15) mais taux obligataires très volatils"
+  },
+  "niveaux": [
+    { "actif": "CAC 40",    "spot": 8088,   "close_prev": 8123,   "sup1": 8050,   "sup2": 8000,   "res1": 8150,   "res2": 8200,   "biais": "baissier", "decimals": 0 },
+    { "actif": "DAX",       "spot": 25400,  "close_prev": 25470,  "sup1": 25200,  "sup2": 25000,  "res1": 25600,  "res2": 25800,  "biais": "baissier", "decimals": 0 },
+    { "actif": "EUR/USD",   "spot": 1.1446, "close_prev": 1.1470, "sup1": 1.1400, "sup2": 1.1350, "res1": 1.1500, "res2": 1.1560, "biais": "baissier", "decimals": 4 },
+    { "actif": "US 10 ans", "spot": 5.11,   "close_prev": 5.09,   "sup1": 5.00,   "sup2": 4.90,   "res1": 5.20,   "res2": 5.30,   "biais": "tension",  "decimals": 2, "unit": "%" },
+    { "actif": "Brent",     "spot": 102.5,  "close_prev": 103.1,  "sup1": 100.0,  "sup2": 98.0,   "res1": 105.0,  "res2": 108.0,  "biais": "haussier", "decimals": 1, "unit": "$" },
+    { "actif": "Or",        "spot": 4314,   "close_prev": 4340,   "sup1": 4250,   "sup2": 4180,   "res1": 4380,   "res2": 4450,   "biais": "baissier", "decimals": 0, "unit": "$" }
+  ],
+  "courbe": {
+    "points": [ { "t": "2Y", "v": 4.89 }, { "t": "5Y", "v": 5.00 }, { "t": "10Y", "v": 5.11 } ],
+    "bund10y": 3.55, "oat10y": 4.64, "spread_2s10s": 22, "spread_oat_bund": 109
+  },
+  "volatilite": { "vix": 15.18 },
+  "cross_asset": [
+    { "label": "Dow", "pct": -0.68 }, { "label": "S&P 500", "pct": -0.75 }, { "label": "Nasdaq", "pct": -1.13 },
+    { "label": "Hang Seng", "pct": -1.0 }, { "label": "Or", "pct": -0.6 }, { "label": "Brent", "pct": 1.5 }
+  ],
+  "agenda": [
+    { "heure": "14:30", "evenement": "Inscriptions hebdomadaires au chômage (US)", "attendu": "201k", "precedent": "196k", "tier": 2, "evenement_du_jour": false },
+    { "heure": "16:00", "evenement": "Ventes de logements neufs (US, août)", "attendu": "0,626M", "precedent": "0,620M", "tier": 3, "evenement_du_jour": false }
+  ],
+  "secteurs": [
+    { "secteur": "Banques", "pct": 0.6, "biais": "haussier" }, { "secteur": "Énergie", "pct": 0.8, "biais": "haussier" },
+    { "secteur": "Tech/Semis", "pct": -1.3, "biais": "baissier" }, { "secteur": "Immobilier", "pct": -1.0, "biais": "baissier" },
+    { "secteur": "Luxe", "pct": -0.7, "biais": "baissier" }, { "secteur": "Services collectivités", "pct": -0.9, "biais": "baissier" }
+  ],
+  "playbook": [
+    { "si": "Détente des taux (le 10 ans US repasse sous 5,00 %)", "proba": 30, "alors": "Rebond de soulagement : CAC vise 8 150 puis 8 200, la tech respire", "biais": "long" },
+    { "si": "Taux stables vers 5,10 % (discours Fed sans surprise)", "proba": 45, "alors": "Range nerveux : CAC entre 8 050 et 8 150, rotation vers banques/énergie", "biais": "attente" },
+    { "si": "Nouveau pic des taux (10 ans > 5,20 %, Fed speakers fermes)", "proba": 25, "alors": "Pression : CAC teste 8 000, tech et immobilier décrochent", "biais": "short" }
+  ],
+  "invalidation": "Un retour du 10 ans US sous 4,90 % casserait le scénario de pression sur les actions ; au-dessus de 5,25 %, la baisse s'accélère.",
+  "delta": [
+    { "label": "Taux US 10 ans au plus haut depuis 2007 (5,11 %)", "direction": "up" },
+    { "label": "Pétrole qui rebondit (~102 $) ravive l'inflation", "direction": "up" },
+    { "label": "Tech et valeurs de croissance sous pression", "direction": "down" }
+  ],
+  "condense": {
+    "idee": "Les taux d'intérêt américains grimpent au plus haut depuis 2007 (le 10 ans à 5,11 %, le 5 ans a dépassé 5 %). Quand les taux montent, les actions souffrent — surtout la tech. À l'inverse, les banques et l'énergie profitent de la hausse des taux et du pétrole. Journée de prudence et de rotation.",
+    "pourquoi": "Deux moteurs se cumulent : une économie US plus forte que prévu (indicateur d'activité PMI au plus haut depuis 5 ans) et le pétrole qui rebondit (~102 $). Les deux réveillent la peur de l'inflation. Résultat : les investisseurs vendent les obligations — ce qui fait monter leurs taux — et préfèrent une obligation bien rémunérée à des actions risquées.",
+    "evenement": "Pas de grande statistique chiffrée aujourd'hui. Le vrai rendez-vous, ce sont les discours de responsables de la Fed (Williams, Barkin, Hammack) : le marché guette s'ils confirment le ton ferme (possibles hausses de taux) qui a fait plonger les obligations. À 14h30, on suit aussi les inscriptions hebdomadaires au chômage.",
+    "plan_avant": "Nerveux. On surveille le taux US 10 ans autour de 5,00 % : tant qu'il monte, la pression sur les actions reste.",
+    "plan_apres": "Selon le ton des banquiers centraux : si le CAC casse 8 050 puis 8 000, signal baissier ; s'il repasse au-dessus de 8 150, tentative de rebond.",
+    "a_surveiller": "Le seuil symbolique des 5 % sur les taux US, le ton des membres de la Fed, le pétrole (~102 $) et les valeurs techno (Nasdaq -1,13 % cette nuit).",
+    "overnight": "Wall Street en baisse : Dow -0,68 % · S&P 500 -0,75 % · Nasdaq -1,13 %. Asie : Hong Kong -1,0 %, Tokyo fermé (Silver Week).",
+    "inflation": "3,4 %"
+  },
+  "sources": ["TradingEconomics", "Yahoo Finance", "CNBC", "Bloomberg", "Investing.com"]
+}
