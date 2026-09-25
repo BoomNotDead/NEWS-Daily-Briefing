@@ -1,0 +1,59 @@
+{
+  "meta": { "date_str": "vendredi 25 septembre 2026", "heure": "08:00", "snapshot": "07:55", "tz": "Europe/Paris" },
+  "verdict": {
+    "biais": "Prudence — la flambée des taux domine, actions sous pression",
+    "pivot": "CAC 8 120",
+    "ne_pas_lacher": "8 080",
+    "vol": "VIX 15,2 (+6,8 %) · stress sur les obligations"
+  },
+  "niveaux": [
+    { "actif": "CAC 40",    "spot": 8123.41, "close_prev": 8155.0,  "sup1": 8080,   "sup2": 8000,   "res1": 8180,   "res2": 8250,   "biais": "baissier", "decimals": 0 },
+    { "actif": "DAX",       "spot": 25411,   "close_prev": 25580,   "sup1": 25200,  "sup2": 25000,  "res1": 25600,  "res2": 25800,  "biais": "baissier", "decimals": 0 },
+    { "actif": "EUR/USD",   "spot": 1.1378,  "close_prev": 1.1410,  "sup1": 1.1350, "sup2": 1.1300, "res1": 1.1420, "res2": 1.1470, "biais": "baissier", "decimals": 4 },
+    { "actif": "Brent",     "spot": 103.0,   "close_prev": 103.5,   "sup1": 101.0,  "sup2": 99.0,   "res1": 105.0,  "res2": 107.0,  "biais": "neutre",   "decimals": 1, "unit": "$" },
+    { "actif": "Or",        "spot": 4290,    "close_prev": 4320,    "sup1": 4250,   "sup2": 4200,   "res1": 4340,   "res2": 4400,   "biais": "neutre",   "decimals": 0, "unit": "$" },
+    { "actif": "US 10 ans", "spot": 5.11,    "close_prev": 4.96,    "sup1": 5.00,   "sup2": 4.90,   "res1": 5.20,   "res2": 5.30,   "biais": "tension",  "decimals": 2, "unit": "%" }
+  ],
+  "courbe": {
+    "points": [ { "t": "2Y", "v": 4.89 }, { "t": "10Y", "v": 5.11 } ],
+    "bund10y": 3.56, "oat10y": 4.67, "spread_2s10s": 22, "spread_oat_bund": 111
+  },
+  "volatilite": { "vix": 15.18 },
+  "cross_asset": [
+    { "label": "Dow", "pct": -0.68 }, { "label": "S&P 500", "pct": -0.75 }, { "label": "Nasdaq", "pct": -1.10 },
+    { "label": "Nikkei", "pct": 1.30 }, { "label": "WTI", "pct": -0.8 }, { "label": "Or", "pct": -0.7 }, { "label": "DXY", "pct": 0.4 }
+  ],
+  "agenda": [
+    { "heure": "16:00", "evenement": "Confiance des ménages (U. Michigan, définitif septembre)", "attendu": "47,8", "precedent": "51,7", "tier": 2, "evenement_du_jour": true }
+  ],
+  "secteurs": [
+    { "secteur": "Banques", "pct": null, "biais": "haussier" },
+    { "secteur": "Automobile", "pct": null, "biais": "baissier" },
+    { "secteur": "Tech/Semis", "pct": null, "biais": "baissier" },
+    { "secteur": "Immobilier", "pct": null, "biais": "baissier" },
+    { "secteur": "Énergie", "pct": null, "biais": "haussier" },
+    { "secteur": "Luxe", "pct": null, "biais": "neutre" }
+  ],
+  "playbook": [
+    { "si": "Le 10 ans US reflue sous 5,00 %", "proba": 30, "alors": "Détente : CAC rebond vers 8 180 puis 8 250, la tech respire", "biais": "attente" },
+    { "si": "Taux qui restent >5,10 % (statu quo tendu)", "proba": 45, "alors": "Range lourd 8 080–8 180, volumes fins avant le week-end", "biais": "attente" },
+    { "si": "10 ans US >5,20 % ou spread OAT-Bund >120 bps", "proba": 25, "alors": "Cassure : CAC sous 8 080, objectif 8 000, invalidation au-dessus de 8 180", "biais": "short" }
+  ],
+  "invalidation": "Un retour du 10 ans US sous 4,90 % invaliderait le scénario de pression : cycliques et tech rebondiraient de concert.",
+  "delta": [
+    { "label": "10 ans US au plus haut depuis 2007 (5,11 %)", "direction": "up" },
+    { "label": "Spread OAT-Bund tendu (~111 bps, budget français)", "direction": "up" },
+    { "label": "Dollar fort, EUR/USD sous 1,14", "direction": "down" }
+  ],
+  "condense": {
+    "idee": "Séance dictée par les obligations : le taux à 10 ans américain a bondi à 5,11 % (plus haut depuis 2007), ce qui rend les actions moins attractives — Wall Street a reculé (Nasdaq −1,1 %). Nuance : le CAC (−0,39 %) a mieux résisté que le DAX (−0,66 %), l'automobile allemande ayant été la plus punie. En Asie ce matin, le Nikkei monte (+1,3 %) porté par un yen faible face au dollar fort : les marchés ne vont pas tous dans le même sens.",
+    "pourquoi": "Les indices PMI (baromètres de l'activité des entreprises) sont ressortis très solides aux États-Unis. Résultat : les investisseurs craignent que la banque centrale garde les taux hauts plus longtemps. Quand les taux montent, le rendement des obligations grimpe et concurrence les actions, d'où la baisse. En France, s'ajoute le « spread OAT-Bund » (l'écart de taux entre la dette française et allemande, thermomètre du risque France) qui reste tendu sur fond de bataille budgétaire.",
+    "evenement": "À 16h00, indice de confiance des ménages américains (Université du Michigan, chiffre définitif de septembre). Attendu autour de 47,8, après 51,7 le mois dernier : moral en berne. À surveiller aussi les anticipations d'inflation à 1 an, montées à 4,6 %.",
+    "plan_avant": "avant 16h00, peu de catalyseur : range étroit, on respecte le pivot 8 120.",
+    "plan_apres": "un moral en forte baisse + inflation anticipée en hausse relancerait la peur des taux : on surveille la cassure de 8 080 (baissier) ou le retour au-dessus de 8 180 (soulagement).",
+    "a_surveiller": "le seuil des 5,00 % sur le taux US 10 ans, le spread OAT-Bund (~111 bps) et le pétrole (Brent ~103 $).",
+    "overnight": "Wall Street en baisse (Dow −0,68 % · S&P −0,75 % · Nasdaq −1,10 %) ; Asie en hausse (Nikkei +1,30 %).",
+    "inflation": "4,6 % (anticipations à 1 an, U. Michigan)"
+  },
+  "sources": ["Saxo Market Quick Take", "Reuters", "CNBC", "TradingEconomics"]
+}
