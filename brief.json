@@ -1,0 +1,59 @@
+{
+  "meta": { "date_str": "lundi 28 septembre 2026", "heure": "08:00", "snapshot": "07:55", "tz": "Europe/Paris" },
+  "verdict": {
+    "biais": "Prudence — taux US au plus haut depuis 2007, actions encore complaisantes",
+    "pivot": "CAC 8 078",
+    "ne_pas_lacher": "8 020",
+    "vol": "VIX très bas (14,9) : complaisance à surveiller"
+  },
+  "niveaux": [
+    { "actif": "CAC 40",    "spot": 8078,   "close_prev": 8082,   "sup1": 8020,   "sup2": 7960,   "res1": 8120,   "res2": 8180,   "biais": "neutre",   "decimals": 0 },
+    { "actif": "DAX",       "spot": 25409,  "close_prev": 25268,  "sup1": 25200,  "sup2": 25000,  "res1": 25600,  "res2": 25850,  "biais": "haussier", "decimals": 0 },
+    { "actif": "EUR/USD",   "spot": 1.1382, "close_prev": 1.1390, "sup1": 1.1350, "sup2": 1.1300, "res1": 1.1430, "res2": 1.1480, "biais": "baissier", "decimals": 4 },
+    { "actif": "Brent",     "spot": 106.2,  "close_prev": 104.3,  "sup1": 103.0,  "sup2": 100.0,  "res1": 108.0,  "res2": 112.0,  "biais": "haussier", "decimals": 1, "unit": "$" },
+    { "actif": "Or",        "spot": 4280,   "close_prev": 4278,   "sup1": 4200,   "sup2": 4120,   "res1": 4350,   "res2": 4420,   "biais": "neutre",   "decimals": 0, "unit": "$" },
+    { "actif": "US 10 ans", "spot": 5.21,   "close_prev": 5.18,   "sup1": 5.10,   "sup2": 5.00,   "res1": 5.25,   "res2": 5.35,   "biais": "tension",  "decimals": 2, "unit": "%" }
+  ],
+  "courbe": {
+    "points": [ { "t": "2Y", "v": 4.91 }, { "t": "5Y", "v": 5.05 }, { "t": "10Y", "v": 5.21 } ],
+    "bund10y": 3.61, "oat10y": 4.67, "spread_2s10s": 30, "spread_oat_bund": 106
+  },
+  "volatilite": { "vix": 14.87 },
+  "cross_asset": [
+    { "label": "Dow", "pct": 0.93 }, { "label": "S&P 500", "pct": 0.51 }, { "label": "Nasdaq", "pct": 0.50 },
+    { "label": "Nikkei", "pct": -0.10 }, { "label": "Kospi", "pct": -2.30 }, { "label": "Brent", "pct": 1.80 }
+  ],
+  "agenda": [
+    { "heure": "—", "evenement": "Pas de publication majeure aujourd'hui", "tier": 3, "evenement_du_jour": true }
+  ],
+  "secteurs": [
+    { "secteur": "Banques", "pct": null, "biais": "haussier" },
+    { "secteur": "Énergie", "pct": null, "biais": "haussier" },
+    { "secteur": "Luxe", "pct": null, "biais": "baissier" },
+    { "secteur": "Immobilier", "pct": null, "biais": "baissier" },
+    { "secteur": "Tech/Semis", "pct": null, "biais": "neutre" },
+    { "secteur": "Utilities", "pct": null, "biais": "baissier" }
+  ],
+  "playbook": [
+    { "si": "Détente des taux (10Y sous 5,10 %)", "proba": 30, "alors": "Soulagement : CAC vise 8 120 puis 8 180 ; invalidation sous 8 020", "biais": "long" },
+    { "si": "Taux stables autour de 5,20 % (scénario central)", "proba": 45, "alors": "Range 8 020–8 120 sur le CAC, en attendant les CPI et le PCE de la semaine", "biais": "attente" },
+    { "si": "Cassure haussière du 10Y au-dessus de 5,25 %", "proba": 25, "alors": "La complaisance craque : CAC teste 8 020 puis 7 960, le VIX se réveille", "biais": "short" }
+  ],
+  "invalidation": "Au-dessus de 5,25 % sur le taux US 10 ans, le scénario « actions résilientes » se fragilise ; repasser sous 5,10 % ramènerait l'appétit pour le risque.",
+  "delta": [
+    { "label": "Taux US 10 ans au plus haut depuis 2007 (5,21 %)", "direction": "up" },
+    { "label": "Spread OAT-Bund ~106 pb, au plus large depuis 2012", "direction": "up" },
+    { "label": "VIX au plancher (14,9) malgré la tension obligataire", "direction": "down" }
+  ],
+  "condense": {
+    "idee": "Journée sous tension obligataire. Le taux d'emprunt à 10 ans des États-Unis touche 5,21 %, son plus haut depuis 2007 : se financer coûte de plus en plus cher partout. Pourtant les actions restent calmes (Wall Street proche de ses records, VIX très bas à 14,9). Ce grand écart — des taux qui grimpent, une Bourse sereine — est LE point de vigilance du jour.",
+    "pourquoi": "Les investisseurs jugent que l'inflation ne recule pas assez vite (le pétrole remonte, Brent +1,8 % ce matin) et que les banques centrales garderont des taux élevés. Quand on vend les obligations, leur rendement (le « taux ») monte : c'est ce qui se passe.",
+    "evenement": "Rien de majeur au calendrier ce lundi. Le gros arrive ensuite : inflation allemande (mardi-mercredi), inflation de la zone euro et indice PCE américain — la mesure d'inflation préférée de la banque centrale US — puis le rapport emploi américain vendredi.",
+    "plan_avant": "Séance d'attente : peu de statistiques. On surveille surtout le taux US 10 ans et le pétrole.",
+    "plan_apres": "Tant que le 10 ans US reste sous 5,25 %, les actions peuvent tenir. S'il casse 5,25 %, la nervosité (VIX) peut revenir vite et peser sur le CAC.",
+    "a_surveiller": "Le taux US 10 ans (5,21 %), le spread OAT-Bund (~106 pb, signe de stress sur la dette française, au plus large depuis 2012) et le pétrole.",
+    "overnight": "Vendredi à Wall Street : Dow +0,93 % (record), S&P 500 +0,51 %, Nasdaq +0,50 %. Asie mitigée ce lundi : Nikkei −0,1 %, Kospi −2,3 %, Hang Seng +0,7 %.",
+    "inflation": "3,3 %"
+  },
+  "sources": ["TradingEconomics", "CNBC", "Reuters", "Euronews", "Investing.com"]
+}
