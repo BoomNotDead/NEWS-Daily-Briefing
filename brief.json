@@ -1,0 +1,59 @@
+{
+  "meta": { "date_str": "mardi 29 septembre 2026", "heure": "08:00", "snapshot": "07:55", "tz": "Europe/Paris" },
+  "verdict": {
+    "biais": "Prudence — pression jumelée pétrole + taux, dollar fort ; risque baissier à l'ouverture",
+    "pivot": "CAC 8 078",
+    "ne_pas_lacher": "8 040",
+    "vol": "VIX contenu (16) malgré le choc de taux"
+  },
+  "niveaux": [
+    { "actif": "CAC 40",    "spot": 8078,   "close_prev": null,   "sup1": 8040,   "sup2": 7980,   "res1": 8140,   "res2": 8200,   "biais": "neutre",   "decimals": 0 },
+    { "actif": "DAX",       "spot": 25374,  "close_prev": 25407,  "sup1": 25150,  "sup2": 24950,  "res1": 25550,  "res2": 25750,  "biais": "baissier", "decimals": 0 },
+    { "actif": "EUR/USD",   "spot": 1.1362, "close_prev": 1.1372, "sup1": 1.1330, "sup2": 1.1300, "res1": 1.1400, "res2": 1.1440, "biais": "baissier", "decimals": 4 },
+    { "actif": "Brent",     "spot": 107.07, "close_prev": 105.28, "sup1": 104.5,  "sup2": 101.5,  "res1": 109.5,  "res2": 112.0,  "biais": "haussier", "decimals": 1, "unit": "$" },
+    { "actif": "Or",        "spot": 4141,   "close_prev": 4115,   "sup1": 4080,   "sup2": 4020,   "res1": 4180,   "res2": 4240,   "biais": "neutre",   "decimals": 0, "unit": "$" },
+    { "actif": "US 10 ans", "spot": 5.25,   "close_prev": 5.25,   "sup1": 5.18,   "sup2": 5.10,   "res1": 5.30,   "res2": 5.38,   "biais": "neutre",   "decimals": 2, "unit": "%" }
+  ],
+  "courbe": {
+    "points": [ { "t": "2Y", "v": 4.94 }, { "t": "5Y", "v": 5.07 }, { "t": "10Y", "v": 5.25 } ],
+    "bund10y": 3.64, "oat10y": 4.69, "spread_2s10s": 31, "spread_oat_bund": 105
+  },
+  "volatilite": { "vix": 16.07 },
+  "cross_asset": [
+    { "label": "Dow", "pct": -0.67 }, { "label": "S&P 500", "pct": -0.77 }, { "label": "Nasdaq", "pct": -0.92 },
+    { "label": "Nikkei", "pct": -1.2 }, { "label": "Hang Seng", "pct": -0.5 }, { "label": "Brent", "pct": 1.70 }, { "label": "Or", "pct": 0.64 }
+  ],
+  "agenda": [
+    { "heure": "11:00", "evenement": "Confiance des consommateurs zone euro (estimation finale)", "attendu": "-16,5", "precedent": "-15,5", "tier": 3, "evenement_du_jour": false },
+    { "heure": "16:00", "evenement": "Indice de confiance des consommateurs du Conference Board (États-Unis)", "attendu": "89,4", "precedent": "89,4", "tier": 2, "evenement_du_jour": true }
+  ],
+  "secteurs": [
+    { "secteur": "Énergie", "pct": null, "biais": "haussier" },
+    { "secteur": "Luxe", "pct": null, "biais": "haussier" },
+    { "secteur": "Banques", "pct": null, "biais": "baissier" },
+    { "secteur": "Industrie", "pct": null, "biais": "baissier" },
+    { "secteur": "Technologie", "pct": null, "biais": "baissier" },
+    { "secteur": "Santé / défensives", "pct": null, "biais": "neutre" }
+  ],
+  "playbook": [
+    { "si": "Détente sur Ormuz : le Brent reflue sous 104 $", "proba": 25, "alors": "Soulagement : CAC rebond vers 8 140, le 10Y US se détend sous 5,18 %", "biais": "long" },
+    { "si": "Statu quo géopolitique, Brent bloqué 105–109 $", "proba": 50, "alors": "Range nerveux : CAC oscille 8 040–8 140, marché en attente de la confiance conso US (16h)", "biais": "attente" },
+    { "si": "Escalade Iran : Brent > 110 $ et 10Y US > 5,30 %", "proba": 25, "alors": "Pression : CAC casse 8 040 vers 8 000, EUR/USD sous 1,1330", "biais": "short" }
+  ],
+  "invalidation": "Un retour du Brent sous 104 $ et du taux US 10 ans sous 5,15 % invaliderait le biais prudent et rouvrirait la porte à un rebond des actions.",
+  "delta": [
+    { "label": "Prime géopolitique de retour sur le pétrole (Brent +1,7 %)", "direction": "up" },
+    { "label": "Rendements US au plus haut (10 ans 5,25 %)", "direction": "up" },
+    { "label": "Repli de la tech (Nasdaq −0,9 %)", "direction": "down" }
+  ],
+  "condense": {
+    "idee": "Journée prudente : le pétrole et les taux montent ensemble, ce qui pèse sur les actions et renforce le dollar. Deux nuances importantes : le VIX (l'« indice de la peur » des marchés actions) reste bas (16), donc le stress est surtout dans le pétrole et les taux, pas encore dans la panique boursière ; et le CAC a mieux résisté que ses voisins lundi (clôture quasi stable à 8 078), porté par le luxe, mais il reste vulnérable à l'ouverture vu la baisse de Wall Street et de l'Asie.",
+    "pourquoi": "Donald Trump a rejeté la proposition iranienne de rouvrir le détroit d'Ormuz (par où transite une grande partie du pétrole mondial). Résultat : le Brent bondit au-dessus de 107 $, ce qui ravive la crainte d'une inflation durable, pousse les taux d'emprunt américains vers le haut et fait monter le dollar.",
+    "evenement": "Pas de banque centrale ni de chiffre d'inflation aujourd'hui. La seule vraie donnée du jour est la confiance des consommateurs américains à 16h (attendue à 89,4, stable, près des plus bas du cycle). C'est un thermomètre du moral des ménages : un chiffre nettement plus faible raviverait les craintes sur la croissance. Mais le vrai moteur du marché reste le pétrole et les taux.",
+    "plan_avant": "Ouverture attendue sous pression (Asie en baisse, Wall Street −0,8 % lundi). Le premier test est de voir si le CAC tient son plancher à 8 040.",
+    "plan_apres": "Réaction sans doute limitée après la confiance conso US de 16h ; c'est le pétrole (seuils 104 $ et 110 $ sur le Brent) qui restera juge de paix de la séance.",
+    "a_surveiller": "Le Brent (104 $ en soutien, 110 $ en résistance), le taux US 10 ans (5,15 % / 5,30 %) et l'EUR/USD autour de 1,1330 (plus bas depuis fin juin).",
+    "overnight": "Wall Street en baisse lundi (S&P 500 −0,77 % · Nasdaq −0,92 % · Dow −0,67 %) · Asie en repli (Nikkei −1,2 % · Hang Seng −0,5 %)."
+  },
+  "sources": ["TradingEconomics", "Reuters", "CNBC", "Investing.com", "Conference Board"]
+}
