@@ -1,0 +1,63 @@
+{
+  "meta": { "date_str": "mercredi 30 septembre 2026", "heure": "08:00", "snapshot": "07:55", "tz": "Europe/Paris" },
+  "verdict": {
+    "biais": "Prudence — la flambée des taux longs commande, actions sous pression",
+    "pivot": "CAC 8 036",
+    "ne_pas_lacher": "7 980",
+    "vol": "VIX bas (16) mais stress obligataire élevé"
+  },
+  "niveaux": [
+    { "actif": "CAC 40",    "spot": 8036,    "close_prev": 8079,    "sup1": 7980,    "sup2": 7900,    "res1": 8080,    "res2": 8150,    "biais": "baissier", "decimals": 0 },
+    { "actif": "DAX",       "spot": 25399,   "close_prev": 25374,   "sup1": 25200,   "sup2": 25000,   "res1": 25550,   "res2": 25750,   "biais": "neutre",   "decimals": 0 },
+    { "actif": "EUR/USD",   "spot": 1.1350,  "close_prev": 1.1372,  "sup1": 1.1300,  "sup2": 1.1250,  "res1": 1.1400,  "res2": 1.1450,  "biais": "baissier", "decimals": 4 },
+    { "actif": "Brent",     "spot": 105.3,   "close_prev": 107.4,   "sup1": 103.0,   "sup2": 100.0,   "res1": 108.0,   "res2": 112.0,   "biais": "neutre",   "decimals": 1, "unit": "$" },
+    { "actif": "Or",        "spot": 4141,    "close_prev": 4180,    "sup1": 4100,    "sup2": 4050,    "res1": 4200,    "res2": 4260,    "biais": "baissier", "decimals": 0, "unit": "$" },
+    { "actif": "US 10 ans", "spot": 5.25,    "close_prev": 5.18,    "sup1": 5.15,    "sup2": 5.05,    "res1": 5.30,    "res2": 5.40,    "biais": "haussier", "decimals": 2, "unit": "%" }
+  ],
+  "courbe": {
+    "points": [ { "t": "2Y", "v": 4.89 }, { "t": "10Y", "v": 5.25 }, { "t": "30Y", "v": 5.60 } ],
+    "bund10y": 3.63, "oat10y": 4.74, "spread_2s10s": 36, "spread_oat_bund": 111
+  },
+  "volatilite": { "vix": 16.0 },
+  "cross_asset": [
+    { "label": "Nikkei", "pct": 1.81 },
+    { "label": "Nasdaq", "pct": -0.09 },
+    { "label": "S&P 500", "pct": -0.16 },
+    { "label": "Dow", "pct": -0.26 },
+    { "label": "Hang Seng", "pct": -0.65 },
+    { "label": "Or", "pct": -0.9 },
+    { "label": "Brent", "pct": -2.0 }
+  ],
+  "agenda": [
+    { "heure": "14:00", "evenement": "Inflation flash Allemagne (IPC, sur un an)", "attendu": "+3,1 %", "precedent": "+2,9 %", "tier": 1, "evenement_du_jour": true },
+    { "heure": "14:15", "evenement": "Enquête emploi privé ADP (États-Unis)", "attendu": "+70k", "precedent": "+38k", "tier": 2, "evenement_du_jour": false },
+    { "heure": "14:30", "evenement": "PIB américain T2 2026 (3ᵉ estimation, annualisé)", "attendu": "+1,5 %", "precedent": "+1,5 %", "tier": 3, "evenement_du_jour": false }
+  ],
+  "secteurs": [
+    { "secteur": "Techno/Semis", "pct": null, "biais": "haussier" },
+    { "secteur": "Banques", "pct": -0.5, "biais": "baissier" },
+    { "secteur": "Agro/Boissons", "pct": -1.4, "biais": "baissier" },
+    { "secteur": "Énergie", "pct": -1.4, "biais": "baissier" }
+  ],
+  "playbook": [
+    { "si": "IPC allemand ≤ +2,9 % (surprise à la baisse)", "proba": 25, "alors": "Répit sur les taux : CAC rebondit vers 8 080, EUR/USD vise 1,1400", "biais": "long" },
+    { "si": "IPC conforme (+3,1 %), taux US 10 ans stables sous 5,30 %", "proba": 50, "alors": "Range nerveux : CAC entre 7 980 et 8 080, la tendance reste fragile", "biais": "attente" },
+    { "si": "IPC ≥ +3,3 % et US 10 ans casse 5,30 %", "proba": 25, "alors": "Nouvelle jambe de baisse : CAC teste 7 900, EUR/USD sous 1,1300", "biais": "short" }
+  ],
+  "invalidation": "Un repli du taux US 10 ans sous 5,05 % (sup2) désamorcerait la pression sur les actions et redonnerait la main aux acheteurs.",
+  "delta": [
+    { "label": "Taux longs US au plus haut depuis 2007", "direction": "up" },
+    { "label": "Dollar fort, EUR/USD au plus bas depuis mai 2025", "direction": "up" },
+    { "label": "Or en repli, plus bas du mois", "direction": "down" }
+  ],
+  "condense": {
+    "idee": "Journée sous tension : les taux d'intérêt à long terme (le rendement que l'État paie pour emprunter) sont montés à leur plus haut depuis 2007 aux États-Unis. Quand ces taux montent, les actions deviennent moins attractives, donc les Bourses fatiguent. Curieusement, le baromètre de la peur des actions (le VIX) reste bas : le stress est dans les obligations, pas encore dans les actions.",
+    "pourquoi": "Le pétrole reste cher (Brent autour de 105 $, +16 % en un mois à cause des tensions au Moyen-Orient et du détroit d'Ormuz). Un pétrole cher fait craindre plus d'inflation ; pour se protéger, les investisseurs vendent les obligations, ce qui pousse les taux vers le haut et soutient le dollar.",
+    "evenement": "Inflation « flash » de l'Allemagne à 14h00 (première estimation des prix sur un an). On attend +3,1 % après +2,9 %. Si c'est plus haut que prévu, cela renforce la peur de l'inflation et pousse encore les taux à la hausse.",
+    "plan_avant": "prudence, on évite de courir après la tendance ; le marché attend le chiffre allemand de 14h00.",
+    "plan_apres": "si le CAC casse 7 980, signal de faiblesse (objectif 7 900) ; s'il repasse au-dessus de 8 080, la pression retombe.",
+    "a_surveiller": "le taux US 10 ans (seuil clé 5,30 %), le pétrole, et l'écart de taux France-Allemagne (spread OAT-Bund à 111 points, signe de nervosité sur la dette française).",
+    "overnight": "États-Unis en léger repli (Dow −0,26 % · S&P −0,16 % · Nasdaq −0,09 %) ; Japon en forme, Nikkei +1,81 %."
+  },
+  "sources": ["Trading Economics", "Reuters", "CNBC", "Investing.com", "FXStreet"]
+}
