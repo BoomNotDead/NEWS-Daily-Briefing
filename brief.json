@@ -1,0 +1,60 @@
+{
+  "meta": { "date_str": "jeudi 1er octobre 2026", "heure": "08:00", "snapshot": "07:55", "tz": "Europe/Paris" },
+  "verdict": {
+    "biais": "Prudence ciblée — taux longs et risque français pèsent, tech et Japon résistent",
+    "pivot": "CAC 8 000",
+    "ne_pas_lacher": "7 900",
+    "vol": "VIX bas (~16) malgré la tension obligataire"
+  },
+  "niveaux": [
+    { "actif": "CAC 40",     "spot": 7964,   "close_prev": 8036,   "sup1": 7900,   "sup2": 7820,   "res1": 8040,   "res2": 8120,   "biais": "baissier", "decimals": 0 },
+    { "actif": "DAX",        "spot": 25547,  "close_prev": 25399,  "sup1": 25300,  "sup2": 25050,  "res1": 25700,  "res2": 25950,  "biais": "neutre",   "decimals": 0 },
+    { "actif": "EUR/USD",    "spot": 1.1316, "close_prev": 1.1330, "sup1": 1.1280, "sup2": 1.1240, "res1": 1.1360, "res2": 1.1410, "biais": "baissier", "decimals": 4 },
+    { "actif": "Brent",      "spot": 96.8,   "close_prev": 98.1,   "sup1": 95.0,   "sup2": 93.0,   "res1": 99.0,   "res2": 101.0,  "biais": "baissier", "decimals": 1, "unit": "$" },
+    { "actif": "Or",         "spot": 4190,   "close_prev": 4156,   "sup1": 4120,   "sup2": 4050,   "res1": 4250,   "res2": 4320,   "biais": "haussier", "decimals": 0, "unit": "$" },
+    { "actif": "US 10 ans",  "spot": 5.28,   "close_prev": 5.29,   "sup1": 5.15,   "sup2": 5.05,   "res1": 5.35,   "res2": 5.45,   "biais": "tension",  "decimals": 2, "unit": "%" },
+    { "actif": "OAT 10 ans", "spot": 4.86,   "close_prev": 4.80,   "sup1": 4.75,   "sup2": 4.65,   "res1": 4.95,   "res2": 5.05,   "biais": "tension",  "decimals": 2, "unit": "%" }
+  ],
+  "courbe": {
+    "points": [ { "t": "2Y", "v": 4.89 }, { "t": "5Y", "v": 5.08 }, { "t": "10Y", "v": 5.28 } ],
+    "bund10y": 3.59, "oat10y": 4.86, "spread_2s10s": 39, "spread_oat_bund": 127
+  },
+  "volatilite": { "vix": 16.0 },
+  "cross_asset": [
+    { "label": "Dow", "pct": -0.86 }, { "label": "S&P 500", "pct": -0.25 }, { "label": "Nasdaq", "pct": 0.24 },
+    { "label": "Nikkei", "pct": 2.92 }, { "label": "Brent", "pct": -1.30 }, { "label": "Or", "pct": 0.81 }
+  ],
+  "agenda": [
+    { "heure": "14:30", "evenement": "Inscriptions hebdomadaires au chômage (États-Unis)", "attendu": "201k", "precedent": "197k", "tier": 2, "evenement_du_jour": false },
+    { "heure": "16:00", "evenement": "Indice ISM manufacturier (États-Unis)", "attendu": "54,8", "precedent": "54,6", "tier": 2, "evenement_du_jour": true }
+  ],
+  "secteurs": [
+    { "secteur": "Banques", "pct": -1.0, "biais": "baissier" },
+    { "secteur": "Luxe", "pct": -1.2, "biais": "baissier" },
+    { "secteur": "Santé/Pharma", "pct": 0.6, "biais": "haussier" },
+    { "secteur": "Chimie", "pct": 0.4, "biais": "haussier" },
+    { "secteur": "Énergie", "pct": -0.3, "biais": "neutre" }
+  ],
+  "playbook": [
+    { "si": "ISM manufacturier fort (>55) : les taux US restent tendus", "proba": 35, "alors": "Pression sur les actifs sensibles aux taux : CAC glisse vers 7 900, l'OAT 10 ans teste 4,95 %", "biais": "short" },
+    { "si": "ISM conforme (~54,8), le 10 ans US reste sous 5,30 %", "proba": 45, "alors": "Range prudent : CAC oscille 7 950–8 040 en attendant l'emploi US de vendredi", "biais": "attente" },
+    { "si": "Détente des taux (10 ans US repasse sous 5,15 %) + budget français apaisé", "proba": 20, "alors": "Rebond : CAC revient vers 8 120, banques et luxe se reprennent", "biais": "long" }
+  ],
+  "invalidation": "Un 10 ans US durablement sous 5,15 %, ou un geste crédible sur le budget français ramenant le spread OAT-Bund sous 110 pb, invaliderait le biais prudent et rouvrirait la porte à un rebond des cycliques européennes.",
+  "delta": [
+    { "label": "Taux longs US scotchés près de 5,3 %", "direction": "up" },
+    { "label": "Spread OAT-Bund au plus large depuis 2012 (127 pb)", "direction": "up" },
+    { "label": "Pétrole se détend (Brent sous 97 $)", "direction": "down" }
+  ],
+  "condense": {
+    "idee": "Le marché obligataire dicte le tempo. Le taux à 10 ans américain campe près de 5,3 % (un sommet pluriannuel) et, en France, le taux à 10 ans — l'OAT — touche 4,86 %, son plus haut depuis 2002, sur fond de bataille budgétaire. Résultat : le CAC souffre (−0,89 % hier, −5 % sur le mois), banques et luxe en tête de la baisse. Nuance importante : la tech américaine (Nasdaq +0,2 %) et le Japon (Nikkei +2,9 %, record) tiennent, et l'indice de la peur (VIX ~16) reste bas. La tension est donc ciblée sur les taux et sur la France, pas généralisée.",
+    "pourquoi": "Un « taux » est le prix que paie un État pour emprunter : plus il monte, plus le crédit coûte cher pour tout le monde (entreprises, immobilier), ce qui pèse sur les actions. Ici les taux montent NON PAS à cause de l'inflation (le cœur PCE US est ressorti à 3,0 %, SOUS les 3,3 % attendus) mais parce que les investisseurs réclament une prime de risque : trop de dette à financer aux États-Unis, et en France un budget qui menace le gouvernement Lecornu.",
+    "evenement": "Pas de banque centrale aujourd'hui. Le seul rendez-vous chiffré du jour est l'indice ISM manufacturier américain à 16h00 (attendu 54,8 ; au-dessus de 50 = l'industrie se développe). Un chiffre fort relancerait les taux, un chiffre faible les détendrait. Le vrai juge de paix, c'est demain : le rapport mensuel sur l'emploi américain (NFP), vendredi.",
+    "plan_avant": "séance prudente le matin, le marché se cale avant l'ISM de 16h et surtout l'emploi US de demain. On garde un œil sur l'OAT française : chaque poussée du taux au-dessus de 4,90 % pèse sur les banques.",
+    "plan_apres": "après 16h, l'ISM peut faire bouger les taux. Repères sur le CAC : sous 7 900 = accélération baissière ; au-dessus de 8 040 = tentative de rebond.",
+    "a_surveiller": "le taux à 10 ans US (seuil clé 5,30 %), l'écart de taux France-Allemagne (le « spread », 127 points = niveau de stress comparable à 2012) et les valeurs bancaires et de luxe françaises.",
+    "overnight": "Dow −0,86 % · S&P 500 −0,25 % · Nasdaq +0,24 % · Nikkei +2,92 % (record, Tankan solide) · Brent −1,3 %.",
+    "inflation": "3,0 % (cœur PCE, août ; sous les 3,3 % attendus)"
+  },
+  "sources": ["TradingEconomics", "Reuters", "CNBC", "Investing.com", "Newsquawk"]
+}
