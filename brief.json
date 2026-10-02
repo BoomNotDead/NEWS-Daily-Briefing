@@ -1,0 +1,67 @@
+{
+  "meta": { "date_str": "vendredi 2 octobre 2026", "heure": "08:00", "snapshot": "07:55", "tz": "Europe/Paris" },
+  "verdict": {
+    "biais": "Prudence sur l'Europe — taux longs qui flambent, Japon à contre-courant",
+    "pivot": "CAC 7 835",
+    "ne_pas_lacher": "7 800",
+    "vol": "VIX bas (16,4) malgré le krach obligataire"
+  },
+  "niveaux": [
+    { "actif": "CAC 40",      "spot": 7835,   "close_prev": 7964.5, "sup1": 7800,   "sup2": 7700,   "res1": 7900,   "res2": 7965,   "biais": "baissier", "decimals": 0 },
+    { "actif": "DAX",         "spot": 24939,  "close_prev": 25199,  "sup1": 24800,  "sup2": 24600,  "res1": 25100,  "res2": 25400,  "biais": "baissier", "decimals": 0 },
+    { "actif": "EuroStoxx 50","spot": 6175,   "close_prev": 6269,   "sup1": 6120,   "sup2": 6050,   "res1": 6230,   "res2": 6300,   "biais": "baissier", "decimals": 0 },
+    { "actif": "S&P 500",     "spot": 7666,   "close_prev": 7651,   "sup1": 7600,   "sup2": 7540,   "res1": 7700,   "res2": 7760,   "biais": "neutre",   "decimals": 0 },
+    { "actif": "EUR/USD",     "spot": 1.1316, "close_prev": 1.1330, "sup1": 1.1280, "sup2": 1.1250, "res1": 1.1360, "res2": 1.1400, "biais": "baissier", "decimals": 4 },
+    { "actif": "Brent",       "spot": 96.8,   "close_prev": 98.0,   "sup1": 95.0,   "sup2": 93.0,   "res1": 98.5,   "res2": 100.0,  "biais": "baissier", "decimals": 1, "unit": "$" },
+    { "actif": "Or",          "spot": 4187,   "close_prev": 4158,   "sup1": 4120,   "sup2": 4050,   "res1": 4220,   "res2": 4280,   "biais": "haussier", "decimals": 0, "unit": "$" },
+    { "actif": "US 10 ans",   "spot": 5.24,   "close_prev": 5.29,   "sup1": 5.10,   "sup2": 5.00,   "res1": 5.30,   "res2": 5.40,   "biais": "detente",  "decimals": 2, "unit": "%" }
+  ],
+  "courbe": {
+    "points": [ { "t": "2Y", "v": 4.80 }, { "t": "10Y", "v": 5.24 } ],
+    "bund10y": 3.60, "oat10y": 4.90, "spread_2s10s": 44, "spread_oat_bund": 130
+  },
+  "volatilite": { "vix": 16.4 },
+  "cross_asset": [
+    { "label": "Nikkei", "pct": 3.30 },
+    { "label": "S&P 500", "pct": 0.19 },
+    { "label": "Or", "pct": 0.70 },
+    { "label": "Dow", "pct": 0.04 },
+    { "label": "Nasdaq", "pct": 0.04 },
+    { "label": "Brent", "pct": -1.30 }
+  ],
+  "agenda": [
+    { "heure": "11:00", "evenement": "Inflation flash zone euro (septembre)", "precedent": "3,3 %", "tier": 3, "evenement_du_jour": false },
+    { "heure": "14:30", "evenement": "Rapport emploi américain (NFP, septembre) — reporté par le shutdown fédéral", "attendu": "+84 000", "precedent": "+162 000", "tier": 1, "move_implicite": "publication suspendue", "evenement_du_jour": true },
+    { "heure": "—", "evenement": "Autres statistiques US gelées par le shutdown (inscriptions chômage, etc.)", "tier": 3, "evenement_du_jour": false }
+  ],
+  "secteurs": [
+    { "secteur": "Banques FR", "pct": null, "biais": "baissier" },
+    { "secteur": "Luxe", "pct": null, "biais": "baissier" },
+    { "secteur": "Automobiles", "pct": null, "biais": "baissier" },
+    { "secteur": "Immobilier", "pct": null, "biais": "baissier" },
+    { "secteur": "Énergie", "pct": null, "biais": "haussier" },
+    { "secteur": "Technologie", "pct": null, "biais": "neutre" }
+  ],
+  "playbook": [
+    { "si": "Les taux longs continuent de monter (US 10 ans > 5,30 %, OAT > 5,00 %)", "proba": 40, "alors": "Baisse : le CAC enfonce 7 800 et vise 7 700 ; l'EUR/USD glisse sous 1,1280", "biais": "short" },
+    { "si": "Les taux se calment et l'absence de NFP fige les marchés (journée sans donnée)", "proba": 45, "alors": "Range nerveux : le CAC rebondit vers 7 900, sans conviction, invalidé sous 7 800", "biais": "attente" },
+    { "si": "Détente nette des taux (US 10 ans < 5,10 %) ou espoir de fin de shutdown", "proba": 15, "alors": "Rebond de soulagement : le CAC comble le gap vers 7 965, l'or souffle", "biais": "long" }
+  ],
+  "invalidation": "Tant que le CAC reste sous 7 965 (le gap de jeudi) et que l'US 10 ans campe au-dessus de 5,10 %, le biais reste vendeur ; au-dessus de 7 965, le scénario baissier s'essouffle.",
+  "delta": [
+    { "label": "Taux longs US au plus haut depuis ~24 ans", "direction": "up" },
+    { "label": "OAT 10 ans 4,90 % — spread/Bund 130 pb", "direction": "up" },
+    { "label": "Shutdown US : pas de rapport emploi aujourd'hui", "direction": "stable" }
+  ],
+  "condense": {
+    "idee": "Journée prudente sur l'Europe. Les taux d'emprunt à long terme flambent (le taux américain à 10 ans frôle son plus haut depuis ~24 ans), ce qui fait peur aux actions : le CAC 40 a chuté de 1,6 % hier, au plus bas depuis mars. À l'inverse, le Japon s'envole (Nikkei +3,3 %) grâce à son plan de relance — une divergence rare qu'il faut garder en tête.",
+    "pourquoi": "Quand l'État emprunte à des taux très élevés, tout l'argent devient plus cher et les actions paraissent moins attractives. En France, la dette record (119 % du PIB) et l'instabilité politique poussent le taux à 10 ans à 4,90 %, un pic inédit depuis 2008.",
+    "evenement": "LE grand rendez-vous du jour — le rapport sur l'emploi américain (NFP) prévu à 14h30 — N'AURA PAS LIEU : le gouvernement américain est en « shutdown » depuis le 1er octobre, les agences qui publient les chiffres sont à l'arrêt. Les marchés avancent donc à l'aveugle, sans leur boussole habituelle.",
+    "plan_avant": "peu d'animation avant l'ouverture ; on surveille l'inflation de la zone euro à 11h (précédent 3,3 %) et surtout le taux US 10 ans.",
+    "plan_apres": "sans NFP, pas de pic de 14h30. Le fil rouge reste les taux : si l'US 10 ans repasse sous 5,10 %, les actions respirent ; s'il monte vers 5,30 %, le CAC risque 7 700.",
+    "a_surveiller": "le taux français (OAT) et l'écart avec l'Allemagne (130 pb = baromètre du stress sur la dette française), le taux US 10 ans, et la durée du shutdown.",
+    "overnight": "Nikkei +3,3 % (relance japonaise) · Wall Street quasi stable (S&P +0,19 %, Nasdaq +0,04 %, Dow +0,04 %) · or +0,7 %.",
+    "inflation": "3,3 %"
+  },
+  "sources": ["TradingEconomics", "Reuters", "CNBC", "Eurostat", "Investing.com"]
+}
