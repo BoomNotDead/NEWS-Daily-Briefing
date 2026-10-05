@@ -1,0 +1,59 @@
+{
+  "meta": { "date_str": "lundi 5 octobre 2026", "heure": "08:00", "snapshot": "07:55", "tz": "Europe/Paris" },
+  "verdict": {
+    "biais": "Défensif — la hausse des taux prime sur les actions",
+    "pivot": "CAC 7 900",
+    "ne_pas_lacher": "7 800",
+    "vol": "VIX bas (15) mais sous tension si le 10 ans US casse 5,35 %"
+  },
+  "niveaux": [
+    { "actif": "CAC 40",    "spot": 7843,   "close_prev": 7897,   "sup1": 7800,   "sup2": 7720,   "res1": 7900,   "res2": 7960,   "biais": "baissier", "decimals": 0 },
+    { "actif": "DAX",       "spot": 25080,  "close_prev": 25231,  "sup1": 24950,  "sup2": 24700,  "res1": 25250,  "res2": 25450,  "biais": "baissier", "decimals": 0 },
+    { "actif": "EUR/USD",   "spot": 1.1207, "close_prev": 1.1255, "sup1": 1.1180, "sup2": 1.1150, "res1": 1.1250, "res2": 1.1300, "biais": "baissier", "decimals": 4 },
+    { "actif": "Brent",     "spot": 100.5,  "close_prev": 102.25, "sup1": 99.5,   "sup2": 97.5,   "res1": 103.0,  "res2": 105.0,  "biais": "baissier", "decimals": 1, "unit": "$" },
+    { "actif": "Or",        "spot": 4190,   "close_prev": 4182,   "sup1": 4120,   "sup2": 4050,   "res1": 4230,   "res2": 4300,   "biais": "haussier", "decimals": 0, "unit": "$" },
+    { "actif": "US 10 ans", "spot": 5.30,   "close_prev": 5.28,   "sup1": 5.20,   "sup2": 5.10,   "res1": 5.35,   "res2": 5.45,   "biais": "tension",  "decimals": 2, "unit": "%" }
+  ],
+  "courbe": {
+    "points": [ { "t": "2Y", "v": 4.84 }, { "t": "5Y", "v": 5.05 }, { "t": "10Y", "v": 5.28 } ],
+    "bund10y": 3.60, "oat10y": 4.86, "spread_2s10s": 44, "spread_oat_bund": 126
+  },
+  "volatilite": { "vix": 15.3 },
+  "cross_asset": [
+    { "label": "Dow", "pct": 0.49 }, { "label": "S&P 500", "pct": 0.73 }, { "label": "Nasdaq", "pct": 1.18 },
+    { "label": "Hang Seng", "pct": -0.30 }, { "label": "Brent", "pct": -1.7 }, { "label": "Or", "pct": 0.2 }
+  ],
+  "agenda": [
+    { "heure": "16:00", "evenement": "ISM Services (PMI non-manufacturier US, sept.)", "attendu": "55,1", "precedent": "55,4", "tier": 2, "evenement_du_jour": true }
+  ],
+  "secteurs": [
+    { "secteur": "Banques", "pct": -1.1, "biais": "baissier" },
+    { "secteur": "Énergie", "pct": -0.8, "biais": "baissier" },
+    { "secteur": "Tech/Semis", "pct": -0.9, "biais": "baissier" },
+    { "secteur": "Immobilier", "pct": -1.4, "biais": "baissier" },
+    { "secteur": "Utilities", "pct": -1.2, "biais": "baissier" },
+    { "secteur": "Luxe", "pct": -0.5, "biais": "baissier" }
+  ],
+  "playbook": [
+    { "si": "ISM Services « prices paid » qui retombe et 10 ans US sous 5,20 %", "proba": 30, "alors": "Rebond de soulagement : CAC vise 7 900 puis 7 960, le DAX repasse 25 250", "biais": "long" },
+    { "si": "Taux élevés qui tiennent (10 ans US autour de 5,30 %)", "proba": 45, "alors": "Range nerveux : CAC coincé 7 800–7 900, pas de direction nette avant 16h", "biais": "attente" },
+    { "si": "10 ans US qui casse 5,35 % ou « prices paid » qui surprend à la hausse", "proba": 25, "alors": "Risk-off : CAC teste 7 720, EUR/USD sous 1,1180, l'Or garde son statut de refuge", "biais": "short" }
+  ],
+  "invalidation": "Tant que le taux US 10 ans reste au-dessus de 5,20 %, le biais défensif domine. Un repli franc et durable sous 5,10 % rouvrirait la porte à un rebond des actions.",
+  "delta": [
+    { "label": "Taux US 10 ans au plus haut depuis 2007 (~5,30 %)", "direction": "up" },
+    { "label": "Actions européennes sur la défensive à l'ouverture", "direction": "down" },
+    { "label": "Pétrole qui se détend légèrement (Brent ~100 $)", "direction": "down" }
+  ],
+  "condense": {
+    "idee": "Journée défensive : l'Europe ouvre dans le rouge (CAC et DAX autour de -0,7 %). Vendredi, Wall Street avait pourtant bondi après un emploi US très faible, mais ce lundi c'est le marché des taux (obligations) qui reprend la main : quand les taux montent aussi haut, les actions deviennent moins attractives et reculent.",
+    "pourquoi": "Les taux longs américains touchent 5,30 % (10 ans), un plus haut depuis 2007, après le pire trimestre pour les obligations US depuis 1994. L'inflation reste collante (3,4 % en août) et les investisseurs exigent une prime pour prêter à l'État : ça tire les taux vers le haut, même si le pétrole se calme un peu aujourd'hui.",
+    "evenement": "ISM Services à 16h00 (enquête d'activité auprès des entreprises de services US). On surveille surtout la composante « prix payés » (signal d'inflation) et les « nouvelles commandes ». Une inflation chaude pousserait encore les taux et pèserait sur les actions ; une lecture molle apporterait un répit.",
+    "plan_avant": "Prudence, peu d'acheteurs : l'Europe suit l'Asie en baisse (Hang Seng -0,3 %) et subit la pression des taux. On patiente avant 16h.",
+    "plan_apres": "Après l'ISM, on regarde le 10 ans US : au-dessus de 5,35 %, la pression s'accentue sur les actions ; sous 5,20 %, rebond possible. Pivot du CAC : 7 900 (au-dessus = mieux) / 7 800 (en dessous = fragilité).",
+    "a_surveiller": "le taux US 10 ans (5,30 %), l'écart OAT-Bund (~126 pb, baromètre du risque France), le pétrole (Brent ~100 $) et le VIX, très bas à 15 — un réveil de la peur ferait mal aux actions.",
+    "overnight": "Vendredi, Wall Street en hausse sur un emploi US faible (+29k postes seulement) : Nasdaq +1,2 % · S&P +0,7 % · Dow +0,5 %. Mais ce lundi l'Asie recule (Hang Seng -0,3 %) et l'Europe ouvre en baisse, la remontée des taux reprenant le dessus.",
+    "inflation": "3,4 %"
+  },
+  "sources": ["Federal Reserve H.15", "Reuters", "CNBC", "TradingEconomics", "Investing.com"]
+}
