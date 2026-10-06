@@ -1,0 +1,60 @@
+{
+  "meta": { "date_str": "mardi 6 octobre 2026", "heure": "08:00", "snapshot": "07:55", "tz": "Europe/Paris" },
+  "verdict": {
+    "biais": "Prudence sur Paris : la tension sur la dette française pèse, l'IA tire New York",
+    "pivot": "CAC 7 834",
+    "ne_pas_lacher": "7 800",
+    "vol": "VIX bas (15,3) mais stress réel sur les taux"
+  },
+  "niveaux": [
+    { "actif": "CAC 40",     "spot": 7834,   "close_prev": 7897,   "sup1": 7800,   "sup2": 7720,   "res1": 7900,   "res2": 7980,   "biais": "baissier", "decimals": 0 },
+    { "actif": "DAX",        "spot": 25254,  "close_prev": 25231,  "sup1": 25000,  "sup2": 24800,  "res1": 25400,  "res2": 25600,  "biais": "neutre",   "decimals": 0 },
+    { "actif": "EUR/USD",    "spot": 1.1219, "close_prev": 1.1204, "sup1": 1.1170, "sup2": 1.1120, "res1": 1.1260, "res2": 1.1320, "biais": "baissier", "decimals": 4 },
+    { "actif": "OAT 10 ans", "spot": 4.90,   "close_prev": 4.84,   "sup1": 4.80,   "sup2": 4.70,   "res1": 4.95,   "res2": 5.00,   "biais": "tension",  "decimals": 2, "unit": "%" },
+    { "actif": "US 10 ans",  "spot": 5.31,   "close_prev": 5.33,   "sup1": 5.20,   "sup2": 5.10,   "res1": 5.35,   "res2": 5.45,   "biais": "tension",  "decimals": 2, "unit": "%" },
+    { "actif": "Brent",      "spot": 100.8,  "close_prev": 100.3,  "sup1": 98.0,   "sup2": 95.0,   "res1": 103.0,  "res2": 105.0,  "biais": "neutre",   "decimals": 1, "unit": "$" },
+    { "actif": "Or",         "spot": 4124,   "close_prev": 4140,   "sup1": 4050,   "sup2": 3980,   "res1": 4180,   "res2": 4250,   "biais": "neutre",   "decimals": 0, "unit": "$" }
+  ],
+  "courbe": {
+    "points": [ { "t": "2Y", "v": 4.83 }, { "t": "5Y", "v": 5.07 }, { "t": "10Y", "v": 5.31 } ],
+    "bund10y": 3.50, "oat10y": 4.90, "spread_2s10s": 48, "spread_oat_bund": 147
+  },
+  "volatilite": { "vix": 15.3 },
+  "cross_asset": [
+    { "label": "Nasdaq", "pct": 1.05 }, { "label": "S&P 500", "pct": 0.66 }, { "label": "Dow", "pct": 0.18 },
+    { "label": "Nikkei", "pct": 0.9 }, { "label": "Hang Seng", "pct": 0.7 }, { "label": "Brent", "pct": 0.5 }, { "label": "Or", "pct": -0.39 }
+  ],
+  "agenda": [
+    { "heure": "08:00", "evenement": "Commandes à l'industrie Allemagne (août)", "attendu": "+0,5 %", "precedent": "+2,5 %", "tier": 2, "evenement_du_jour": false },
+    { "heure": "11:00", "evenement": "Ventes au détail zone euro (août)", "attendu": "+0,3 %", "precedent": "−0,6 %", "tier": 2, "evenement_du_jour": true }
+  ],
+  "secteurs": [
+    { "secteur": "Banques", "pct": null, "biais": "baissier" },
+    { "secteur": "Immobilier", "pct": null, "biais": "baissier" },
+    { "secteur": "Services collectivités", "pct": null, "biais": "baissier" },
+    { "secteur": "Énergie", "pct": null, "biais": "haussier" },
+    { "secteur": "Luxe", "pct": null, "biais": "neutre" },
+    { "secteur": "Industrie", "pct": null, "biais": "neutre" }
+  ],
+  "playbook": [
+    { "si": "Détente des taux (OAT repasse sous 4,80 %, US 10 ans sous 5,25 %)", "proba": 30, "alors": "Rebond du CAC vers 7 900 puis 7 980 ; invalidation sous 7 800", "biais": "long" },
+    { "si": "Statu quo tendu (taux stables, OAT collée à 4,90 %)", "proba": 45, "alors": "Range nerveux 7 800–7 900, le CAC continue de sous-performer le DAX", "biais": "attente" },
+    { "si": "OAT franchit 5 % / US 10 ans vers 5,45 %", "proba": 25, "alors": "Le CAC enfonce 7 800 et vise 7 720 ; l'euro casse 1,1170", "biais": "short" }
+  ],
+  "invalidation": "Tant que l'OAT 10 ans reste sous 5 % et le spread OAT-Bund sous 150 pb, la baisse du CAC reste un dégagement ordonné. Au-delà, le risque de contagion souveraine revient au premier plan.",
+  "delta": [
+    { "label": "Taux longs US au plus haut depuis 2002 (10 ans à 5,31 %)", "direction": "up" },
+    { "label": "Spread OAT-Bund à 147 pb, plus haut depuis 2012", "direction": "up" },
+    { "label": "Euro au plus bas depuis 17 mois (1,1219 $)", "direction": "down" }
+  ],
+  "condense": {
+    "idee": "Journée à deux vitesses. À Paris, le CAC 40 est au plus bas depuis 6 mois : les investisseurs s'inquiètent de la dette de la France et exigent des taux d'intérêt plus élevés pour lui prêter. À l'inverse, à New York, la tech (intelligence artificielle) continue de battre des records, en ignorant la hausse des taux. Le CAC est donc le maillon faible du jour.",
+    "pourquoi": "Un « taux » est le prix que paie un État pour emprunter. Celui de la France (l'OAT 10 ans) grimpe à près de 4,90 %, un sommet depuis 18 ans, à cause des doutes sur le budget 2027 et une dette proche de 120 % du PIB. Du coup, l'écart de taux entre la France et l'Allemagne (le « spread OAT-Bund ») bondit à 147 points, du jamais-vu depuis 2012. Quand prêter à la France coûte plus cher, les actions françaises baissent et l'euro faiblit (plus bas depuis 17 mois).",
+    "evenement": "Pas de grande annonce de banque centrale aujourd'hui. Au programme : les commandes à l'industrie en Allemagne (8h) et les ventes au détail de la zone euro (11h). Ce sont des indicateurs secondaires : ils donnent le pouls de l'économie mais ne devraient pas, seuls, renverser la tendance.",
+    "plan_avant": "On garde un œil sur le taux français (l'OAT). Tant qu'il reste sous 5 %, la baisse du CAC reste « sous contrôle » et on évite de se précipiter.",
+    "plan_apres": "Si l'OAT franchit 5 % ou que le spread dépasse 150 points, la prudence s'impose : le CAC risque d'enfoncer 7 800. S'il se détend, un rebond vers 7 900 est jouable.",
+    "a_surveiller": "Le taux de l'OAT française, le spread OAT-Bund et l'euro (1,1219 $). Côté actions, voir si la tech US tient ses records malgré des taux à 5 %.",
+    "overnight": "Wall Street en hausse lundi : Nasdaq +1,05 % (record à 27 477, porté par Nvidia), S&P 500 +0,66 %, Dow +0,18 %. Asie positive ce matin : Nikkei +0,9 %, Hang Seng +0,7 %."
+  },
+  "sources": ["Trading Economics", "Reuters", "CNBC", "Newsquawk", "Investing.com"]
+}
