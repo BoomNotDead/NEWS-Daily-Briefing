@@ -1,0 +1,61 @@
+{
+  "meta": { "date_str": "mercredi 7 octobre 2026", "heure": "08:00", "snapshot": "07:55", "tz": "Europe/Paris" },
+  "verdict": {
+    "biais": "Rebond de soulagement sur la détente obligataire — fragile avant les minutes de la Fed (20h)",
+    "pivot": "CAC 7 865",
+    "ne_pas_lacher": "7 800",
+    "vol": "VIX au plancher (15) : calme trompeur, réveil possible après 20h"
+  },
+  "niveaux": [
+    { "actif": "CAC 40",    "spot": 7865,   "close_prev": 7834,   "sup1": 7800,   "sup2": 7720,   "res1": 7920,   "res2": 8000,   "biais": "haussier", "decimals": 0 },
+    { "actif": "DAX",       "spot": 25300,  "close_prev": 25106,  "sup1": 25000,  "sup2": 24800,  "res1": 25500,  "res2": 25750,  "biais": "haussier", "decimals": 0 },
+    { "actif": "EUR/USD",   "spot": 1.1253, "close_prev": 1.1223, "sup1": 1.1200, "sup2": 1.1150, "res1": 1.1300, "res2": 1.1360, "biais": "haussier", "decimals": 4 },
+    { "actif": "Brent",     "spot": 100.8,  "close_prev": 100.3,  "sup1": 99.0,   "sup2": 97.0,   "res1": 102.5,  "res2": 104.0,  "biais": "neutre",   "decimals": 1, "unit": "$" },
+    { "actif": "Or",        "spot": 4132,   "close_prev": 4164,   "sup1": 4080,   "sup2": 4000,   "res1": 4200,   "res2": 4260,   "biais": "baissier", "decimals": 0, "unit": "$" },
+    { "actif": "US 10 ans", "spot": 5.29,   "close_prev": 5.31,   "sup1": 5.20,   "sup2": 5.10,   "res1": 5.35,   "res2": 5.45,   "biais": "detente",  "decimals": 2, "unit": "%" }
+  ],
+  "courbe": {
+    "points": [ { "t": "2Y", "v": 4.80 }, { "t": "10Y", "v": 5.29 } ],
+    "bund10y": 3.45, "oat10y": 4.72, "spread_2s10s": 49, "spread_oat_bund": 127,
+    "fed_funds_proba": "≈ 80 % (statu quo au 28 oct.)", "fed_funds_range": "3,75–4,00 %"
+  },
+  "volatilite": { "vix": 15.01 },
+  "cross_asset": [
+    { "label": "S&P 500", "pct": 0.58 }, { "label": "Dow", "pct": 0.49 }, { "label": "Nasdaq", "pct": 0.45 },
+    { "label": "Brent", "pct": 0.51 }, { "label": "Or", "pct": -0.77 }
+  ],
+  "agenda": [
+    { "heure": "08:00", "evenement": "Production industrielle Allemagne (août, MoM)", "attendu": "+0,5 %", "precedent": "-1,1 %", "tier": 2, "evenement_du_jour": false },
+    { "heure": "20:00", "evenement": "Minutes de la réunion de la Fed (FOMC des 15-16 sept.)", "tier": 2, "evenement_du_jour": true }
+  ],
+  "secteurs": [
+    { "secteur": "Banques", "pct": null, "biais": "haussier" },
+    { "secteur": "Assurance", "pct": null, "biais": "haussier" },
+    { "secteur": "Santé", "pct": null, "biais": "haussier" },
+    { "secteur": "Tech/Semis", "pct": null, "biais": "haussier" },
+    { "secteur": "Énergie", "pct": null, "biais": "baissier" },
+    { "secteur": "Luxe", "pct": null, "biais": "neutre" }
+  ],
+  "playbook": [
+    { "si": "Minutes accommodantes (Fed divisée, pic des taux proche)", "proba": 30, "alors": "Détente : US 10 ans sous 5,20 %, CAC vise 7 920 puis 8 000, EUR/USD > 1,1300", "biais": "long" },
+    { "si": "Minutes sans surprise (hausse de sept. assumée, ton « on verra les données »)", "proba": 45, "alors": "Range : le CAC oscille 7 800–7 920, la volatilité reste basse", "biais": "attente" },
+    { "si": "Minutes fermes (plusieurs membres prêts à monter davantage)", "proba": 25, "alors": "Rechute : US 10 ans vers 5,35 %, CAC teste 7 800 puis 7 720, EUR/USD < 1,1200", "biais": "short" }
+  ],
+  "invalidation": "Au-dessus de 5,35 % sur le taux US 10 ans (plus haut en ~24 ans touché lundi), le rebond des actions s'essouffle et l'OAT française risque de repartir à la hausse.",
+  "delta": [
+    { "label": "Taux US 10 ans en repli depuis le pic de 24 ans", "direction": "down" },
+    { "label": "Dette française : détente après le budget-choc de Le Pen", "direction": "down" },
+    { "label": "Pétrole qui se calme", "direction": "down" },
+    { "label": "Wall Street de nouveau au record", "direction": "up" }
+  ],
+  "condense": {
+    "idee": "Journée de rebond prudent. Hier, deux marchés obligataires sous tension se sont détendus en même temps : le taux à 10 ans américain est redescendu de son plus haut en 24 ans (~5,29 %), et les emprunts d'État français (les « OAT ») se sont calmés après que Marine Le Pen a présenté un plan d'économies budgétaires. Résultat : les Bourses ont rebondi (CAC +0,40 %, DAX +0,77 %, S&P 500 au record). Mais c'est un répit fragile : ce soir à 20h, la Fed publie le compte-rendu de sa dernière réunion.",
+    "pourquoi": "Quand les taux auxquels les États empruntent baissent, les actions respirent (le placement « sans risque » rapporte moins, donc les actions redeviennent attractives) et les banques, qui prêtent, en profitent. Cette détente vient de deux choses : le marché pense que la hausse des taux de la Fed touche à sa fin, et le plan d'économies de 25 milliards € annoncé par Le Pen a un peu rassuré sur la dette française.",
+    "evenement": "À 20h (heure de Paris), la Fed publie ses « minutes » : le compte-rendu détaillé de sa réunion des 15-16 septembre, où elle a monté son taux directeur de +0,25 point (à 3,75-4,00 %). Il n'y a pas de nouveau chiffre, mais on y lit si les membres étaient d'accord et s'ils comptent monter encore. C'est ce ton qui peut faire bouger les marchés ce soir.",
+    "plan_avant": "séance plutôt calme attendue avant 20h ; le marché digère la bonne surprise du matin, la production industrielle allemande d'août (+2,0 %, bien au-dessus des +0,5 % prévus).",
+    "plan_apres": "la volatilité peut se réveiller après 20h. On surveille le taux US 10 ans : s'il repasse au-dessus de 5,35 %, les actions risquent de reculer (CAC vers 7 800) ; s'il casse 5,20 %, le rebond peut reprendre (CAC vers 7 920-8 000).",
+    "a_surveiller": "le taux à 10 ans américain (5,29 %) et l'écart OAT-Bund (127 points de base, le « thermomètre » du risque français, contre un pic au-dessus de 150 vendredi) : tant qu'il se resserre, le CAC et l'euro montent.",
+    "overnight": "Wall Street au record : S&P 500 +0,58 % · Nasdaq +0,45 % · Dow +0,49 %. VIX (l'« indice de la peur ») retombé à 15."
+  },
+  "sources": ["TradingEconomics", "Reuters", "CNBC", "FXStreet", "Investing.com"]
+}
