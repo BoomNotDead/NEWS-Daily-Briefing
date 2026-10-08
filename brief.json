@@ -1,0 +1,63 @@
+{
+  "meta": { "date_str": "jeudi 8 octobre 2026", "heure": "08:00", "snapshot": "07:55", "tz": "Europe/Paris" },
+  "verdict": {
+    "biais": "Prudent et défensif — les taux hauts écrasent les actions, la France en première ligne",
+    "pivot": "CAC 7 770",
+    "ne_pas_lacher": "7 680",
+    "vol": "VIX bas (15) mais taux au plus haut depuis 2002 — complaisance sur les actions"
+  },
+  "niveaux": [
+    { "actif": "CAC 40",      "spot": 7725,   "close_prev": 7769,   "sup1": 7680,   "sup2": 7600,   "res1": 7820,   "res2": 7900,   "biais": "baissier", "decimals": 0 },
+    { "actif": "DAX",         "spot": 24900,  "close_prev": 25104,  "sup1": 24800,  "sup2": 24600,  "res1": 25300,  "res2": 25550,  "biais": "baissier", "decimals": 0 },
+    { "actif": "EuroStoxx 50","spot": 6135,   "close_prev": 6180,   "sup1": 6100,   "sup2": 6040,   "res1": 6230,   "res2": 6300,   "biais": "baissier", "decimals": 0 },
+    { "actif": "EUR/USD",     "spot": 1.1200, "close_prev": 1.1225, "sup1": 1.1160, "sup2": 1.1100, "res1": 1.1260, "res2": 1.1320, "biais": "baissier", "decimals": 4 },
+    { "actif": "Brent",       "spot": 101.3,  "close_prev": 100.9,  "sup1": 99.0,   "sup2": 96.0,   "res1": 103.5,  "res2": 106.0,  "biais": "haussier", "decimals": 1, "unit": "$" },
+    { "actif": "Or",          "spot": 4110,   "close_prev": 4170,   "sup1": 4050,   "sup2": 3980,   "res1": 4180,   "res2": 4250,   "biais": "baissier", "decimals": 0, "unit": "$" },
+    { "actif": "US 10 ans",   "spot": 5.30,   "close_prev": 5.27,   "sup1": 5.20,   "sup2": 5.10,   "res1": 5.40,   "res2": 5.50,   "biais": "haussier", "decimals": 2, "unit": "%" },
+    { "actif": "OAT 10 ans",  "spot": 4.83,   "close_prev": 4.80,   "sup1": 4.70,   "sup2": 4.60,   "res1": 4.90,   "res2": 5.00,   "biais": "haussier", "decimals": 2, "unit": "%" }
+  ],
+  "courbe": {
+    "points": [ { "t": "2Y", "v": 4.80 }, { "t": "10Y", "v": 5.30 } ],
+    "bund10y": 3.50, "oat10y": 4.83, "spread_2s10s": 50, "spread_oat_bund": 134,
+    "fed_funds_range": "3,75–4,00 %"
+  },
+  "volatilite": { "vix": 15.08 },
+  "cross_asset": [
+    { "label": "Dow", "pct": -0.66 }, { "label": "S&P 500", "pct": -0.22 }, { "label": "Nasdaq", "pct": -0.22 },
+    { "label": "Nikkei", "pct": -0.92 }, { "label": "Hang Seng", "pct": -0.62 },
+    { "label": "Brent", "pct": 2.6 }, { "label": "Or", "pct": -1.4 }
+  ],
+  "agenda": [
+    { "heure": "14:30", "evenement": "Inscriptions hebdomadaires au chômage (US)", "attendu": "200k", "precedent": "197k", "tier": 2, "evenement_du_jour": true },
+    { "heure": "14:30", "evenement": "Chômeurs indemnisés en continu (US)", "attendu": "1 710k", "precedent": "1 701k", "tier": 2, "evenement_du_jour": false }
+  ],
+  "secteurs": [
+    { "secteur": "Énergie", "pct": null, "biais": "haussier" },
+    { "secteur": "Banques", "pct": null, "biais": "haussier" },
+    { "secteur": "Tech/Semis", "pct": null, "biais": "baissier" },
+    { "secteur": "Immobilier", "pct": null, "biais": "baissier" },
+    { "secteur": "Services aux collectivités", "pct": null, "biais": "baissier" },
+    { "secteur": "Luxe", "pct": null, "biais": "baissier" }
+  ],
+  "playbook": [
+    { "si": "Le taux US 10 ans casse 5,40 % (vers le pic de 5,50 %)", "proba": 35, "alors": "Pression accrue : CAC vise 7 680 puis 7 600, EUR/USD sous 1,1160. Invalidation si retour sous 5,30 %.", "biais": "short" },
+    { "si": "Taux stables sous 5,30 % et chômage US sans surprise", "proba": 45, "alors": "Range nerveux : CAC 7 720–7 820, rebond technique possible. Invalidation si cassure de 7 680.", "biais": "attente" },
+    { "si": "Détente des taux (10 ans < 5,20 %) et Brent qui reflue sous 99 $", "proba": 20, "alors": "Rebond : CAC retente 7 820 puis 7 900, EUR/USD > 1,1260. Invalidation sous 7 680.", "biais": "long" }
+  ],
+  "invalidation": "Un retour du Brent sous 96 $ ET du taux US 10 ans sous 5,10 % casserait le scénario défensif et rouvrirait la porte à un rebond des actions européennes.",
+  "delta": [
+    { "label": "Taux US 10 ans au plus haut depuis 2002 (~5,30 %)", "direction": "up" },
+    { "label": "Brent repasse au-dessus de 100 $ (choc d'offre)", "direction": "up" },
+    { "label": "Spread OAT-Bund à 134 pb : la France sous tension", "direction": "up" }
+  ],
+  "condense": {
+    "idee": "Journée prudente. Le vrai patron du marché aujourd'hui, ce sont les TAUX d'intérêt : le taux américain à 10 ans est au plus haut depuis 2002 (~5,30 %). Règle de base : quand les taux montent, les actions baissent (un placement sans risque rapporte plus, donc les actions deviennent moins attractives). L'Europe a fini dans le rouge hier (−1,3 % à −1,5 %) et la France est la place la plus fragile.",
+    "pourquoi": "Le pétrole est reparti au-dessus de 100 $ le baril (tempête dans le golfe du Mexique + attaques sur des sites énergétiques au Moyen-Orient). Pétrole cher = inflation qui revient = banques centrales obligées de garder, voire monter, les taux. La Fed (banque centrale US) a d'ailleurs relevé ses taux en septembre, sa 1re hausse depuis 2023, et ses comptes rendus laissent entendre une hausse de plus d'ici fin d'année.",
+    "evenement": "Pas de publication majeure aujourd'hui. Le seul rendez-vous chiffré : les inscriptions hebdomadaires au chômage aux États-Unis à 14h30 (attendu 200 000, contre 197 000 la semaine passée). Un chiffre très bas = marché de l'emploi solide = argument de plus pour des taux hauts (donc plutôt négatif pour les actions).",
+    "plan_avant": "avant 14h30, marché nerveux mais sans gros catalyseur. On garde l'œil sur le taux US 10 ans : tant qu'il grimpe, les actions restent sous pression.",
+    "plan_apres": "après les chiffres US, on regarde si le CAC tient 7 680 (le seuil à ne pas lâcher) ou s'il rebondit vers 7 820. Surveiller aussi le 10 ans US : au-dessus de 5,40 %, ça fait mal aux actions.",
+    "a_surveiller": "le taux français (OAT) qui s'approche de 5 % avant le budget 2027, le pétrole, et les valeurs sensibles aux taux (technologie, immobilier).",
+    "overnight": "Wall Street en léger recul (Dow −0,66 %, S&P 500 −0,22 %, Nasdaq −0,22 %). Asie dans le rouge (Nikkei −0,92 %, Hang Seng −0,62 %)."
+  },
+  "sources": ["Reuters", "CNBC", "Trading Economics", "Newsquawk", "FRED", "Investing.com"]
+}
