@@ -1,0 +1,61 @@
+{
+  "meta": { "date_str": "vendredi 9 octobre 2026", "heure": "08:00", "snapshot": "07:55", "tz": "Europe/Paris" },
+  "verdict": {
+    "biais": "Rebond de soulagement fragile — l'obligataire garde la main",
+    "pivot": "CAC 7 730",
+    "ne_pas_lacher": "7 700",
+    "vol": "VIX 15,4 : calme trompeur face à des taux au plus haut depuis 2002"
+  },
+  "niveaux": [
+    { "actif": "CAC 40",      "spot": 7765,   "close_prev": 7730,   "sup1": 7700,   "sup2": 7640,   "res1": 7800,   "res2": 7870,   "biais": "neutre",   "decimals": 0 },
+    { "actif": "DAX",         "spot": 24950,  "close_prev": 24823,  "sup1": 24700,  "sup2": 24500,  "res1": 25100,  "res2": 25350,  "biais": "neutre",   "decimals": 0 },
+    { "actif": "EuroStoxx 50","spot": 6165,   "close_prev": 6122,   "sup1": 6090,   "sup2": 6030,   "res1": 6200,   "res2": 6260,   "biais": "neutre",   "decimals": 0 },
+    { "actif": "EUR/USD",     "spot": 1.1230, "close_prev": 1.1215, "sup1": 1.1160, "sup2": 1.1115, "res1": 1.1280, "res2": 1.1340, "biais": "neutre",   "decimals": 4 },
+    { "actif": "Brent",       "spot": 103.0,  "close_prev": 103.8,  "sup1": 101.5,  "sup2": 99.0,   "res1": 105.5,  "res2": 108.0,  "biais": "haussier", "decimals": 1, "unit": "$" },
+    { "actif": "Or",          "spot": 4186,   "close_prev": 4133,   "sup1": 4100,   "sup2": 4040,   "res1": 4230,   "res2": 4300,   "biais": "haussier", "decimals": 0, "unit": "$" },
+    { "actif": "US 10 ans",   "spot": 5.23,   "close_prev": 5.24,   "sup1": 5.15,   "sup2": 5.05,   "res1": 5.30,   "res2": 5.38,   "biais": "detente",  "decimals": 2, "unit": "%" }
+  ],
+  "courbe": {
+    "points": [ { "t": "2Y", "v": 4.75 }, { "t": "5Y", "v": 4.99 }, { "t": "10Y", "v": 5.23 } ],
+    "bund10y": 3.49, "oat10y": 4.88, "spread_2s10s": 48, "spread_oat_bund": 139,
+    "fed_funds_proba": "Statu quo probable (28 oct.)", "fed_funds_range": "3,75–4,00 %"
+  },
+  "volatilite": { "vix": 15.4 },
+  "cross_asset": [
+    { "label": "Dow", "pct": 0.10 }, { "label": "S&P 500", "pct": -0.47 }, { "label": "Nasdaq", "pct": -1.25 },
+    { "label": "Nikkei", "pct": -1.06 }, { "label": "Brent", "pct": 3.8 }, { "label": "Or", "pct": 1.31 }
+  ],
+  "agenda": [
+    { "heure": "16:00", "evenement": "Confiance des consommateurs (U. Michigan, préliminaire)", "attendu": "54,1", "precedent": "51,7", "tier": 2, "evenement_du_jour": true }
+  ],
+  "secteurs": [
+    { "secteur": "Énergie", "pct": 1.5, "biais": "haussier" },
+    { "secteur": "Banques", "pct": -2.2, "biais": "baissier" },
+    { "secteur": "Tech/Semis", "pct": -1.8, "biais": "baissier" },
+    { "secteur": "Défensives", "pct": 0.3, "biais": "haussier" },
+    { "secteur": "Luxe", "pct": -0.9, "biais": "baissier" },
+    { "secteur": "Industrie", "pct": -0.6, "biais": "baissier" }
+  ],
+  "playbook": [
+    { "si": "Taux US 10 ans < 5,20 % ET sentiment Michigan > 54", "proba": 35, "alors": "Le rebond s'étend : CAC vise 7 800 puis 7 870, les banques respirent", "biais": "long" },
+    { "si": "Taux stables (≈ 5,23 %), séance de consolidation sans catalyseur", "proba": 40, "alors": "Range nerveux 7 700–7 800, volumes faibles avant le week-end", "biais": "attente" },
+    { "si": "Taux repartent > 5,30 % OU Brent repasse > 105 $", "proba": 25, "alors": "Rechute : CAC casse 7 700, cap sur 7 640 ; banques et tech sous pression", "biais": "short" }
+  ],
+  "invalidation": "Au-dessus de 5,30 % sur le taux US 10 ans (ou Brent > 105 $), le rebond de soulagement s'annule et le régime risk-off reprend le dessus.",
+  "delta": [
+    { "label": "Or : nouveau record (valeur refuge)", "direction": "up" },
+    { "label": "Taux 10 ans US : légère détente ce matin", "direction": "down" },
+    { "label": "Banques EU : pire séquence depuis mars", "direction": "down" }
+  ],
+  "condense": {
+    "idee": "Après une semaine brutale (taux au plus haut depuis 20 ans, pétrole qui flambe, banques et tech matraquées), les marchés reprennent leur souffle ce matin : les Bourses européennes sont attendues en légère hausse car les taux obligataires se détendent un peu et l'or bat un record. Mais c'est un rebond « de soulagement », pas un feu vert : la tech de Wall Street a encore reculé cette nuit et l'Asie a suivi.",
+    "pourquoi": "Tout est commandé par les taux d'intérêt. Le taux US à 10 ans à 5,23 % (plus haut depuis 2002) et le pétrole près de 103 $ nourrissent la peur de l'inflation, ce qui a fait chuter les obligations et, avec elles, les banques et la tech. Ce matin les taux baissent un peu : les actions respirent.",
+    "evenement": "Un seul chiffre important aujourd'hui : la confiance des consommateurs américains (indice Université du Michigan, version préliminaire), à 16h00 heure de Paris, attendue à 54,1 contre 51,7 le mois dernier. C'est un sondage qui mesure le moral des ménages US — surveillé de près après le choc énergétique. En toile de fond : le budget 2027 français reste en débat, avec l'OAT (taux français à 10 ans) proche de 5 %.",
+    "plan_avant": "Avant 16h00 : peu de catalyseurs. On regarde si le CAC tient 7 700 et parvient à reprendre 7 800. Le rebond n'est valable que tant que le taux US 10 ans reste sous 5,30 %.",
+    "plan_apres": "Après le chiffre : un bon chiffre (> 54) peut prolonger le rebond ; un chiffre décevant ravive la peur de « stagflation » (croissance molle + inflation) et renvoie banques et tech sous pression.",
+    "a_surveiller": "le taux US 10 ans (5,23 %), le pétrole (risque d'attaques de tankers par l'Iran), l'écart OAT-Bund (~139 points = stress France) et le VIX anormalement bas (complaisance).",
+    "overnight": "Dow +0,10 % · S&P −0,47 % · Nasdaq −1,25 % · Nikkei −1,1 % (SoftBank −5,4 %) · Or +1,3 % · Brent +3,8 %.",
+    "inflation": "Zone euro 3,8 % (sept., après 3,2 % en août)"
+  },
+  "sources": ["Reuters", "Bloomberg", "Trading Economics", "Investing.com", "CNBC", "FXStreet"]
+}
