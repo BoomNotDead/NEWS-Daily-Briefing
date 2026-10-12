@@ -1,0 +1,58 @@
+{
+  "meta": { "date_str": "lundi 12 octobre 2026", "heure": "08:00", "snapshot": "07:55", "tz": "Europe/Paris" },
+  "verdict": {
+    "biais": "Risk-on cyclique mais sélectif — mines/énergie portent, CAC bridé par l'OAT",
+    "pivot": "CAC 7 800",
+    "ne_pas_lacher": "7 740",
+    "vol": "VIX bas (14,8) ; vigilance liquidité, marché obligataire US fermé"
+  },
+  "niveaux": [
+    { "actif": "CAC 40",    "spot": 7843,   "close_prev": 7803,   "sup1": 7740,   "sup2": 7680,   "res1": 7880,   "res2": 7940,   "biais": "haussier", "decimals": 0 },
+    { "actif": "DAX",       "spot": 25558,  "close_prev": 25401,  "sup1": 25200,  "sup2": 24950,  "res1": 25700,  "res2": 25950,  "biais": "haussier", "decimals": 0 },
+    { "actif": "EUR/USD",   "spot": 1.1210, "close_prev": 1.1202, "sup1": 1.1160, "sup2": 1.1120, "res1": 1.1260, "res2": 1.1300, "biais": "neutre",   "decimals": 4 },
+    { "actif": "Brent",     "spot": 103.46, "close_prev": 104.70, "sup1": 101.0,  "sup2": 99.0,   "res1": 106.0,  "res2": 108.0,  "biais": "baissier", "decimals": 1, "unit": "$" },
+    { "actif": "Or",        "spot": 4194,   "close_prev": 4174,   "sup1": 4100,   "sup2": 4040,   "res1": 4250,   "res2": 4320,   "biais": "haussier", "decimals": 0, "unit": "$" },
+    { "actif": "US 10 ans", "spot": 5.24,   "close_prev": 5.24,   "sup1": 5.15,   "sup2": 5.05,   "res1": 5.31,   "res2": 5.40,   "biais": "neutre",   "decimals": 2, "unit": "%" }
+  ],
+  "courbe": {
+    "points": [ { "t": "2Y", "v": 4.80 }, { "t": "5Y", "v": 5.00 }, { "t": "10Y", "v": 5.24 } ],
+    "bund10y": 3.49, "oat10y": 4.87, "spread_2s10s": 44, "spread_oat_bund": 138
+  },
+  "volatilite": { "vix": 14.84 },
+  "cross_asset": [
+    { "label": "ASX 200", "pct": 0.8 }, { "label": "Hang Seng", "pct": 0.2 },
+    { "label": "Shanghai", "pct": -0.2 }, { "label": "Kospi", "pct": -2.9 },
+    { "label": "Brent", "pct": -1.2 }, { "label": "Or", "pct": 0.5 }
+  ],
+  "agenda": [
+    { "heure": "10:00", "evenement": "Discours BCE (V. Vujčić) — sans chiffre attendu", "tier": 3, "evenement_du_jour": false },
+    { "heure": "—", "evenement": "Pas de publication majeure aujourd'hui — marché obligataire US fermé (Columbus Day), Bourse de Tokyo fermée (Sports Day)", "tier": 3, "evenement_du_jour": true }
+  ],
+  "secteurs": [
+    { "secteur": "Mines & matériaux", "pct": null, "biais": "haussier" }, { "secteur": "Énergie", "pct": null, "biais": "neutre" },
+    { "secteur": "Banques zone euro", "pct": null, "biais": "haussier" }, { "secteur": "Banques France", "pct": null, "biais": "baissier" },
+    { "secteur": "Technologie", "pct": null, "biais": "baissier" }, { "secteur": "Télécoms", "pct": null, "biais": "baissier" },
+    { "secteur": "Luxe", "pct": null, "biais": "neutre" }
+  ],
+  "playbook": [
+    { "si": "Le rebond cyclique se poursuit (mines/énergie tiennent)", "proba": 45, "alors": "Hausse : CAC vise 7 880 puis 7 940 ; banques zone euro et minières en tête", "biais": "long" },
+    { "si": "Consolidation en liquidité réduite (double férié)", "proba": 35, "alors": "Range : CAC oscille autour de 7 800, peu de direction sans le marché obligataire US", "biais": "attente" },
+    { "si": "L'OAT se retend ou le Brent casse 101 $", "proba": 20, "alors": "Baisse : CAC teste 7 740 ; banques françaises et énergie décrochent", "biais": "short" }
+  ],
+  "invalidation": "Un spread OAT-Bund repassant au-dessus de 145 pb (stress budgétaire français) ferait sauter le pivot 7 800 du CAC, quel que soit le rebond des cycliques.",
+  "delta": [
+    { "label": "Minerai de fer rebondit → mines en tête", "direction": "up" },
+    { "label": "Marché obligataire US fermé (Columbus Day)", "direction": "stable" },
+    { "label": "Kospi −2,9 % : la tech asiatique décroche", "direction": "down" }
+  ],
+  "condense": {
+    "idee": "Journée « risk-on » mais sélective et à liquidité réduite. Les mines et l'énergie tirent les Bourses européennes (le minerai de fer rebondit, le pétrole reste au-dessus de 100 $), tandis que la tech et les télécoms souffrent (Kospi −2,9 %). Attention : le marché obligataire américain est fermé (Columbus Day) et Tokyo aussi (Sports Day) — moins d'acteurs, donc des mouvements qui peuvent s'exagérer. Pour la France, l'écart de taux OAT-Bund (138 pb, au plus haut depuis 2011) reste le vrai frein du CAC.",
+    "pourquoi": "Deux moteurs opposés. D'un côté, les matières premières repartent (restockage d'acier chinois → minerai de fer, et tensions au Moyen-Orient qui maintiennent le pétrole cher) : ça profite aux valeurs « cycliques ». De l'autre, la France paie sa crise budgétaire : les investisseurs exigent plus de rendement pour prêter à Paris qu'à Berlin (l'« écart OAT-Bund »), ce qui pèse sur les banques françaises et bride le CAC 40.",
+    "evenement": "Rien de chiffré aujourd'hui : pas de grande statistique, et le marché obligataire US est fermé pour Columbus Day (la Bourse de New York, elle, ouvre normalement vers 15h30 heure de Paris). Seul rendez-vous : un discours de la BCE (V. Vujčić) à 10h, sans chiffre attendu.",
+    "plan_avant": "séance européenne portée par les cycliques (mines, énergie, banques hors France) ; on surveille si le CAC tient son pivot 7 800.",
+    "plan_apres": "à l'ouverture de Wall Street (~15h30), la tech donnera le ton ; sans le marché obligataire US pour fixer les taux, les actions peuvent bouger plus brusquement que d'habitude.",
+    "a_surveiller": "l'écart OAT-Bund (138 pb) et les banques françaises ; le pétrole (un Brent sous 101 $ fragiliserait l'énergie) ; et l'or, collé à son record (~4 194 $).",
+    "overnight": "Asie : ASX +0,8 % · Hang Seng +0,2 % · Shanghai −0,2 % · Kospi −2,9 % · Tokyo fermé. Vendredi à Wall Street : Dow +0,83 %, S&P +0,59 %, Nasdaq +0,64 %."
+  },
+  "sources": ["Trading Economics / ETF Trends (taux)", "CNBC (Wall Street 9/10)", "ABC News Markets Live (Asie 12/10)", "Ideal-investisseur (spread OAT-Bund)", "Cboe / Yahoo Finance (VIX)", "Mitrade / Investing.com (pétrole, or)"]
+}
