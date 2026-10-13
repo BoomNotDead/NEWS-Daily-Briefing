@@ -1,0 +1,59 @@
+{
+  "meta": { "date_str": "mardi 13 octobre 2026", "heure": "08:00", "snapshot": "07:50", "tz": "Europe/Paris" },
+  "verdict": {
+    "biais": "Prudence avant le CPI US de demain — dollar au plus haut, pétrole nerveux",
+    "pivot": "CAC 7 830",
+    "ne_pas_lacher": "7 800",
+    "vol": "VIX bas (15,2) : la couverture est bon marché avant le chiffre"
+  },
+  "niveaux": [
+    { "actif": "CAC 40",    "spot": 7832.88, "close_prev": 7803.33, "sup1": 7800,   "sup2": 7760,   "res1": 7870,   "res2": 7920,   "biais": "neutre",   "decimals": 0 },
+    { "actif": "DAX",       "spot": 25277.69, "close_prev": 25087,  "sup1": 25100,  "sup2": 24900,  "res1": 25450,  "res2": 25650,  "biais": "haussier", "decimals": 0 },
+    { "actif": "EUR/USD",   "spot": 1.1180,  "close_prev": 1.1182, "sup1": 1.1155, "sup2": 1.1100, "res1": 1.1215, "res2": 1.1270, "biais": "baissier", "decimals": 4 },
+    { "actif": "Brent",     "spot": 105.4,   "close_prev": 106.0,  "sup1": 103.5,  "sup2": 101.0,  "res1": 107.5,  "res2": 110.0,  "biais": "neutre",   "decimals": 1, "unit": "$" },
+    { "actif": "Or",        "spot": 4165,    "close_prev": null,   "sup1": 4100,   "sup2": 4040,   "res1": 4230,   "res2": 4300,   "biais": "haussier", "decimals": 0, "unit": "$" },
+    { "actif": "US 10 ans", "spot": 5.24,    "close_prev": null,   "sup1": 5.15,   "sup2": 5.05,   "res1": 5.30,   "res2": 5.40,   "biais": "haussier", "decimals": 2, "unit": "%" }
+  ],
+  "courbe": {
+    "points": [ { "t": "2Y", "v": 4.80 }, { "t": "10Y", "v": 5.24 } ],
+    "bund10y": 3.47, "oat10y": 4.86, "spread_2s10s": 44, "spread_oat_bund": 139,
+    "fed_funds_proba": "≈ 83 % statu quo", "fed_funds_range": "3,75–4,00 %"
+  },
+  "volatilite": { "vix": 15.21 },
+  "cross_asset": [
+    { "label": "DAX", "pct": 0.76 }, { "label": "Stoxx 600", "pct": 0.65 }, { "label": "CAC 40", "pct": 0.38 },
+    { "label": "Dow", "pct": 0.38 }, { "label": "S&P 500", "pct": -0.06 }, { "label": "Nasdaq", "pct": -0.44 },
+    { "label": "Semis (SOX)", "pct": -2.7 }
+  ],
+  "agenda": [
+    { "heure": "12:00", "evenement": "Indice d'optimisme des PME américaines (NFIB, septembre)", "attendu": "98,0", "precedent": "98,7", "tier": 3, "evenement_du_jour": false }
+  ],
+  "secteurs": [
+    { "secteur": "Énergie", "pct": null, "biais": "haussier" },
+    { "secteur": "Luxe", "pct": null, "biais": "haussier" },
+    { "secteur": "Banques", "pct": null, "biais": "neutre" },
+    { "secteur": "Tech / Semis", "pct": null, "biais": "baissier" }
+  ],
+  "playbook": [
+    { "si": "Le pétrole reflue (désescalade au Moyen-Orient)", "proba": 35, "alors": "Soulagement : le CAC revient vers 7 870, l'EUR/USD rebondit vers 1,1215", "biais": "long" },
+    { "si": "Statu quo nerveux avant le CPI US (demain 14/10)", "proba": 45, "alors": "Range étroit : le CAC oscille 7 800–7 870, faibles volumes, on attend le chiffre", "biais": "attente" },
+    { "si": "Dollar et taux repartent à la hausse (Fed jugée ferme)", "proba": 20, "alors": "Pression : le CAC teste 7 800 puis 7 760, l'EUR/USD casse 1,1155", "biais": "short" }
+  ],
+  "invalidation": "Au-dessus de 5,30 % sur le taux US 10 ans ET sous 1,1155 sur l'EUR/USD, le scénario « range calme » saute : le marché bascule en aversion au risque avant le CPI.",
+  "delta": [
+    { "label": "Dollar au plus haut de l'année (DXY ≈ 102,6)", "direction": "up" },
+    { "label": "Pétrole sous tension (Houthis / Arabie saoudite)", "direction": "up" },
+    { "label": "Puces mémoire US sous pression (Micron −3,9 %)", "direction": "down" }
+  ],
+  "condense": {
+    "idee": "Journée d'attente avant un chiffre clé : demain (14/10) tombe l'inflation américaine (le « CPI »). En attendant, le dollar est au plus haut de l'année et le pétrole reste nerveux à cause des tensions au Moyen-Orient. Résultat : les Bourses européennes tiennent (le CAC a fini à 7 833 hier, +0,38 %), mais la tech américaine a souffert (valeurs de puces mémoire). On reste prudent : peu de paris avant le chiffre de demain.",
+    "pourquoi": "La banque centrale américaine (la Fed) reste « dure » : elle a monté ses taux en septembre et pourrait encore les monter d'ici la fin d'année. Des taux américains élevés rendent le dollar attractif, donc l'euro baisse (passé sous 1,12). Et un pétrole cher ravive la peur de l'inflation, ce qui pousse les taux encore plus haut : tout se tient.",
+    "evenement": "Pas de gros rendez-vous chiffré aujourd'hui (seulement l'indice des PME américaines NFIB à 12h, mineur). LE moment clé, c'est DEMAIN 14/10 : l'inflation US (CPI). C'est elle qui dira si la Fed doit encore serrer la vis. Chacun se positionne avant.",
+    "plan_avant": "peu de mouvement attendu, on patiente ; les écarts restent serrés.",
+    "plan_apres": "surveiller le CAC : sous 7 800 = signal de faiblesse, au-dessus de 7 870 = reprise. Sur l'EUR/USD, 1,1155 est la ligne à ne pas perdre.",
+    "a_surveiller": "le pétrole (Brent ~105 $), le dollar (indice DXY), les valeurs de puces (Micron, ASML) et les discours des membres de la Fed (Waller aujourd'hui).",
+    "overnight": "Dow +0,38 % · S&P 500 −0,06 % · Nasdaq −0,44 % (puces mémoire en baisse). En Europe hier : CAC +0,38 %, DAX +0,76 %.",
+    "inflation": "3,4 % (mesure PCE ; cœur 3,0 %)"
+  },
+  "sources": ["TradingEconomics", "Reuters", "CNBC", "FXStreet", "Investing.com"]
+}
