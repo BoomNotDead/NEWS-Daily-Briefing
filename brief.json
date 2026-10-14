@@ -1,0 +1,58 @@
+{
+  "meta": { "date_str": "mercredi 14 octobre 2026", "heure": "08:00", "snapshot": "07:55", "tz": "Europe/Paris" },
+  "verdict": {
+    "biais": "Attentisme avant le CPI US — risque asymétrique à la baisse",
+    "pivot": "CAC 7 828 (clôture de la veille)",
+    "ne_pas_lacher": "7 780",
+    "vol": "VIX bas (15,3) : marché trop serein avant 14h30"
+  },
+  "niveaux": [
+    { "actif": "CAC 40",    "spot": 7812,   "close_prev": 7828,   "sup1": 7780,   "sup2": 7740,   "res1": 7860,   "res2": 7900,   "biais": "baissier", "decimals": 0 },
+    { "actif": "DAX",       "spot": 25210,  "close_prev": 25251,  "sup1": 25100,  "sup2": 24950,  "res1": 25400,  "res2": 25560,  "biais": "neutre",   "decimals": 0 },
+    { "actif": "EUR/USD",   "spot": 1.1210, "close_prev": 1.1175, "sup1": 1.1150, "sup2": 1.1100, "res1": 1.1250, "res2": 1.1300, "biais": "haussier", "decimals": 4 },
+    { "actif": "Brent",     "spot": 106.0,  "close_prev": 106.65, "sup1": 103.5,  "sup2": 101.0,  "res1": 108.5,  "res2": 111.0,  "biais": "neutre",   "decimals": 1, "unit": "$" },
+    { "actif": "Or",        "spot": 4160,   "close_prev": 4170,   "sup1": 4080,   "sup2": 4000,   "res1": 4220,   "res2": 4300,   "biais": "neutre",   "decimals": 0, "unit": "$" },
+    { "actif": "US 10 ans", "spot": 5.19,   "close_prev": 5.24,   "sup1": 5.10,   "sup2": 5.00,   "res1": 5.30,   "res2": 5.36,   "biais": "detente",  "decimals": 2, "unit": "%" }
+  ],
+  "courbe": {
+    "points": [ { "t": "2Y", "v": 4.79 }, { "t": "5Y", "v": 5.00 }, { "t": "10Y", "v": 5.19 } ],
+    "bund10y": 3.44, "oat10y": 4.84, "spread_2s10s": 40, "spread_oat_bund": 140,
+    "fed_funds_proba": "≈ 80 % de statu quo (réunion 28 oct.)"
+  },
+  "volatilite": { "vix": 15.3 },
+  "cross_asset": [
+    { "label": "Dow", "pct": -0.35 }, { "label": "S&P 500", "pct": -0.01 }, { "label": "Nasdaq", "pct": -0.15 },
+    { "label": "Russell 2000", "pct": -0.39 }, { "label": "Brent", "pct": -0.9 }, { "label": "Or", "pct": -0.24 }
+  ],
+  "agenda": [
+    { "heure": "14:30", "evenement": "Inflation CPI US — total (septembre)", "attendu": "3,6 % sur un an", "precedent": "3,4 %", "tier": 1, "evenement_du_jour": true },
+    { "heure": "14:30", "evenement": "Inflation CPI US — sous-jacent (septembre)", "attendu": "2,5 % sur un an", "precedent": "2,4 %", "tier": 1, "evenement_du_jour": false }
+  ],
+  "secteurs": [
+    { "secteur": "Tech/Semis", "pct": -2.0, "biais": "baissier" }, { "secteur": "Énergie", "pct": 0.8, "biais": "haussier" },
+    { "secteur": "Luxe", "pct": 0.4, "biais": "haussier" }, { "secteur": "Banques", "pct": 0.3, "biais": "neutre" },
+    { "secteur": "Industrie", "pct": -0.2, "biais": "neutre" }, { "secteur": "Santé", "pct": 0.2, "biais": "neutre" }
+  ],
+  "playbook": [
+    { "si": "CPI chaud (total > 3,7 % ou sous-jacent > 2,6 %)", "proba": 35, "alors": "Baisse : 10 ans US repart vers 5,30–5,36 %, CAC casse 7 780 et teste 7 740, EUR/USD < 1,1150", "biais": "short" },
+    { "si": "CPI conforme (3,6 % / sous-jacent 2,5 %)", "proba": 45, "alors": "Range : soulagement modéré, CAC revient vers 7 860, 10 ans se détend sous 5,15 %", "biais": "attente" },
+    { "si": "CPI doux (total < 3,5 % ou sous-jacent 2,4 %)", "proba": 20, "alors": "Hausse : rallye soulagement, CAC vise 7 900, EUR/USD > 1,1250, 10 ans vers 5,10 %", "biais": "long" }
+  ],
+  "invalidation": "Au-dessus de 5,36 % sur le taux US 10 ans (plus haut depuis 2002), le scénario « actions résilientes » casse : rotation défensive généralisée.",
+  "delta": [
+    { "label": "VIX à 15,3 : trop de sérénité avant le CPI", "direction": "down" },
+    { "label": "10 ans US proche de 5,20 %, plus haut depuis 2002", "direction": "up" },
+    { "label": "ASML (−3,3 %) plombe les semis à l'ouverture", "direction": "down" }
+  ],
+  "condense": {
+    "idee": "Journée suspendue à un seul chiffre : l'inflation américaine (CPI) à 14h30 (heure de Paris). Le marché est très calme — le VIX, « l'indice de la peur », est bas à 15,3 — alors que les taux d'intérêt US sont au plus haut depuis 2002. Ce décalage est le vrai risque : si le chiffre déçoit, la correction peut être brutale. En attendant, les semi-conducteurs (ASML −3,3 % après ses résultats) pèsent sur l'ouverture européenne. Posture : prudence, on ne précipite rien avant 14h30.",
+    "pourquoi": "Le pétrole reste cher (~106 $ le Brent, tensions au Moyen-Orient autour du détroit d'Ormuz) et les prix de l'essence ont grimpé : c'est pour cela que l'inflation est attendue en hausse, à 3,6 % sur un an. Inflation élevée = la banque centrale garde des taux élevés = argent plus cher et pression sur les actions.",
+    "evenement": "CPI US de septembre (l'indice des prix à la consommation, qui mesure l'inflation), publié à 14h30. Attendu à +3,6 % sur un an, contre 3,4 % le mois dernier. Le « sous-jacent » (hors alimentation et énergie, jugé plus fiable par les banquiers centraux) est attendu à 2,5 %. Plus le chiffre dépasse l'attendu, plus les taux montent et plus les actions peuvent baisser.",
+    "plan_avant": "peu de mouvement, le marché patiente ; la vraie direction se jouera après 14h30.",
+    "plan_apres": "gros écart possible. On surveille si le CAC casse 7 780 (signal baissier) ou repasse 7 860 (signal de soulagement).",
+    "a_surveiller": "le taux US 10 ans (près de 5,20 %, un plus haut de 23 ans) et les semi-conducteurs (ASML −3,3 % entraîne tout le secteur).",
+    "overnight": "Wall St quasi stable (S&P −0,01 % · Nasdaq −0,15 % · Dow −0,35 %) · Asie tech en rebond (Nikkei repasse 68 000).",
+    "inflation": "3,4 % (août) — attendu 3,6 % pour septembre"
+  },
+  "sources": ["BLS", "CME FedWatch", "Newsquawk", "CNBC", "FXStreet", "Cboe", "TradingEconomics"]
+}
