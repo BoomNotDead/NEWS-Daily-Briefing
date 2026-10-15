@@ -1,0 +1,59 @@
+{
+  "meta": { "date_str": "jeudi 15 octobre 2026", "heure": "08:00", "snapshot": "07:55", "tz": "Europe/Paris" },
+  "verdict": {
+    "biais": "Risk-off importé (choc inflation US) — mais Europe plus résiliente",
+    "pivot": "CAC 7 870",
+    "ne_pas_lacher": "7 800",
+    "vol": "VIX 16,9 (+10 %), nervosité qui remonte"
+  },
+  "niveaux": [
+    { "actif": "CAC 40",    "spot": 7873,   "close_prev": 7828,   "sup1": 7800,   "sup2": 7720,   "res1": 7920,   "res2": 7980,   "biais": "neutre",   "decimals": 0 },
+    { "actif": "DAX",       "spot": 25299,  "close_prev": 25251,  "sup1": 25000,  "sup2": 24800,  "res1": 25500,  "res2": 25700,  "biais": "neutre",   "decimals": 0 },
+    { "actif": "EUR/USD",   "spot": 1.1135, "close_prev": 1.1185, "sup1": 1.1100, "sup2": 1.1050, "res1": 1.1200, "res2": 1.1250, "biais": "baissier", "decimals": 4 },
+    { "actif": "Brent",     "spot": 105.4,  "close_prev": 104.9,  "sup1": 103.0,  "sup2": 101.0,  "res1": 107.0,  "res2": 109.0,  "biais": "haussier", "decimals": 1, "unit": "$" },
+    { "actif": "Or",        "spot": 4085,   "close_prev": 4160,   "sup1": 4000,   "sup2": 3950,   "res1": 4150,   "res2": 4220,   "biais": "baissier", "decimals": 0, "unit": "$" },
+    { "actif": "US 10 ans", "spot": 5.15,   "close_prev": 5.10,   "sup1": 5.05,   "sup2": 4.95,   "res1": 5.20,   "res2": 5.30,   "biais": "baissier", "decimals": 2, "unit": "%" }
+  ],
+  "courbe": {
+    "points": [ { "t": "2Y", "v": 4.82 }, { "t": "5Y", "v": 5.00 }, { "t": "10Y", "v": 5.15 } ],
+    "bund10y": 3.47, "oat10y": 4.86, "spread_2s10s": 33, "spread_oat_bund": 139,
+    "fed_funds_proba": "Réunion 28 oct : statu quo ~66 %, hausse ~34 %, baisse quasi nulle"
+  },
+  "volatilite": { "vix": 16.87 },
+  "cross_asset": [
+    { "label": "S&P 500", "pct": -1.11 }, { "label": "Nasdaq", "pct": -1.88 }, { "label": "Dow", "pct": -0.09 },
+    { "label": "Nikkei", "pct": -4.5 }, { "label": "Kospi", "pct": -7.0 }, { "label": "Hang Seng", "pct": -1.0 }
+  ],
+  "agenda": [
+    { "heure": "08:00", "evenement": "PIB mensuel Royaume-Uni (août)", "attendu": "−0,1 %", "precedent": "+0,4 %", "tier": 2, "evenement_du_jour": false },
+    { "heure": "14:30", "evenement": "Ventes au détail US (septembre)", "attendu": "+0,3 %", "precedent": "+1,1 %", "tier": 2, "evenement_du_jour": false },
+    { "heure": "14:30", "evenement": "Prix à la production US — PPI (septembre)", "attendu": "+0,5 %", "precedent": "+0,4 %", "tier": 2, "move_implicite": "sensible sur les taux", "evenement_du_jour": true }
+  ],
+  "secteurs": [
+    { "secteur": "Tech/Semis", "pct": -2.0, "biais": "baissier" }, { "secteur": "Santé", "pct": 2.4, "biais": "haussier" },
+    { "secteur": "Conso de base", "pct": 2.2, "biais": "haussier" }, { "secteur": "Énergie", "pct": 0.7, "biais": "haussier" },
+    { "secteur": "Banques", "pct": 0.5, "biais": "haussier" }, { "secteur": "Luxe", "pct": -0.6, "biais": "baissier" }
+  ],
+  "playbook": [
+    { "si": "Europe absorbe le choc (faible expo IA, résultats bancaires solides)", "proba": 40, "alors": "Repli limité : le CAC défend 7 800 et rebondit vers 7 920", "biais": "attente" },
+    { "si": "Contagion de la déroute tech asiatique (Kospi −7 %, Nikkei ~−4,5 %)", "proba": 45, "alors": "Gap baissier à l'ouverture, cassure de 7 800, objectif 7 720 ; EUR/USD sous 1,1100", "biais": "short" },
+    { "si": "PPI US chaud à 14h30 (> +0,5 %)", "proba": 15, "alors": "Taux US 10 ans repassent > 5,20 %, nouvelle jambe de baisse : CAC vers 7 720, or sous 4 000", "biais": "short" }
+  ],
+  "invalidation": "Si le CAC 40 reprend 7 920 ET que le taux US 10 ans repasse sous 5,05 %, le scénario risk-off s'essouffle.",
+  "delta": [
+    { "label": "Taux US 10 ans au-dessus de 5 %, pression sur les actions", "direction": "up" },
+    { "label": "Déroute des techs en Asie (Kospi −7 %, Nikkei ~−4,5 %)", "direction": "down" },
+    { "label": "Dollar au plus haut depuis 17 mois (EUR/USD ~1,11)", "direction": "up" }
+  ],
+  "condense": {
+    "idee": "Hier soir le CAC a clôturé en hausse (+0,6 %), mais c'était AVANT la grosse chute de Wall Street. Depuis, l'Asie a dévissé cette nuit (Corée −7 %, Japon ~−5 %) à cause d'une inflation américaine plus forte que prévu. L'Europe ouvre donc sous tension ce matin — tout en résistant mieux que les autres, car elle contient peu de grosses valeurs d'intelligence artificielle.",
+    "pourquoi": "L'inflation américaine est remontée à 3,7 % sur un an (plus que les 3,6 % attendus). Du coup, le marché ne croit plus à une baisse des taux de la Fed — il parie même sur une possible HAUSSE le 28 octobre. Or des taux plus élevés font mal aux valeurs technos, qui valent cher sur leurs profits futurs. Même l'or a baissé, chose rare en période de stress : des taux réels plus hauts le rendent moins attractif.",
+    "evenement": "Prix à la production (PPI) aux États-Unis à 14h30. C'est l'inflation vue côté entreprises, avant qu'elle n'arrive au consommateur. Attendu +0,5 % sur le mois contre +0,4 % le mois précédent. Un chiffre encore chaud confirmerait la crainte d'inflation et pousserait les taux (donc la pression sur les actions) encore plus haut.",
+    "plan_avant": "Ouverture probablement nerveuse et en baisse. On regarde si le CAC défend le seuil de 7 800.",
+    "plan_apres": "Après 14h30 (ventes au détail + PPI US), gros pic possible. Au-dessus de 7 920 = soulagement ; sous 7 800 = la baisse s'installe.",
+    "a_surveiller": "Les semi-conducteurs (ASML, STMicro) et le taux américain à 10 ans : tant qu'il reste au-dessus de 5 %, les actions restent sous pression.",
+    "overnight": "États-Unis (hier soir) : Nasdaq −1,88 % · S&P 500 −1,11 % · Dow −0,09 %. Asie (cette nuit) : Kospi −7 % · Nikkei ~−4,5 % · Hang Seng −1 %.",
+    "inflation": "3,7 %"
+  },
+  "sources": ["CNBC", "Reuters", "Trading Economics", "Investing.com", "FXStreet", "ONS"]
+}
