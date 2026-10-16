@@ -1,0 +1,58 @@
+{
+  "meta": { "date_str": "vendredi 16 octobre 2026", "heure": "08:00", "snapshot": "07:55", "tz": "Europe/Paris" },
+  "verdict": {
+    "biais": "Rebond prudent après la secousse IA — banques et luxe mènent, la tech reste nerveuse",
+    "pivot": "CAC 7 900",
+    "ne_pas_lacher": "7 850",
+    "vol": "VIX retombé à 16,5 (le pic de volatilité est passé)"
+  },
+  "niveaux": [
+    { "actif": "CAC 40",    "spot": 7934.70, "close_prev": 7873.4, "sup1": 7850,   "sup2": 7760,   "res1": 7990,   "res2": 8060,   "biais": "haussier", "decimals": 0 },
+    { "actif": "DAX",       "spot": 25368,   "close_prev": 25299,  "sup1": 25150,  "sup2": 24900,  "res1": 25600,  "res2": 25850,  "biais": "neutre",   "decimals": 0 },
+    { "actif": "EUR/USD",   "spot": 1.1215,  "close_prev": 1.1165, "sup1": 1.1160, "sup2": 1.1120, "res1": 1.1260, "res2": 1.1300, "biais": "haussier", "decimals": 4 },
+    { "actif": "Brent",     "spot": 104.4,   "close_prev": 105.0,  "sup1": 102.0,  "sup2": 99.5,   "res1": 106.5,  "res2": 109.0,  "biais": "neutre",   "decimals": 1, "unit": "$" },
+    { "actif": "Or",        "spot": 4156,    "close_prev": 4105,   "sup1": 4090,   "sup2": 4020,   "res1": 4210,   "res2": 4270,   "biais": "haussier", "decimals": 0, "unit": "$" },
+    { "actif": "US 10 ans", "spot": 5.08,    "close_prev": 5.17,   "sup1": 4.98,   "sup2": 4.90,   "res1": 5.17,   "res2": 5.25,   "biais": "detente",  "decimals": 2, "unit": "%" }
+  ],
+  "courbe": {
+    "points": [ { "t": "2Y", "v": 4.75 }, { "t": "5Y", "v": 4.90 }, { "t": "10Y", "v": 5.08 } ],
+    "bund10y": 3.38, "oat10y": 4.77, "spread_2s10s": 33, "spread_oat_bund": 137
+  },
+  "volatilite": { "vix": 16.46 },
+  "cross_asset": [
+    { "label": "Dow", "pct": 1.08 }, { "label": "S&P 500", "pct": 0.33 }, { "label": "Nasdaq", "pct": 0.08 },
+    { "label": "Nikkei", "pct": 1.7 }, { "label": "Kospi", "pct": 3.2 }, { "label": "Or", "pct": 1.24 }
+  ],
+  "agenda": [
+    { "heure": "14:30", "evenement": "Prix à l'import US (septembre)", "attendu": "+0,6 %", "precedent": "+0,7 %", "tier": 2, "evenement_du_jour": false },
+    { "heure": "15:15", "evenement": "Production industrielle US (septembre)", "attendu": "+0,4 %", "precedent": "0,0 %", "tier": 2, "evenement_du_jour": false }
+  ],
+  "secteurs": [
+    { "secteur": "Luxe", "pct": 3.0, "biais": "haussier" },
+    { "secteur": "Banques", "pct": null, "biais": "haussier" },
+    { "secteur": "Technologie / Semis", "pct": null, "biais": "baissier" },
+    { "secteur": "Énergie", "pct": null, "biais": "haussier" }
+  ],
+  "playbook": [
+    { "si": "Le rebond tient (puces stabilisées, pas de nouvelle alerte sur la dette des acteurs de l'IA)", "proba": 50, "alors": "Hausse : le CAC prolonge vers 7 990 puis 8 060, les banques et le luxe tirent la cote", "biais": "long" },
+    { "si": "Journée de respiration (consolidation)", "proba": 30, "alors": "Range 7 850–7 990 : la tech hésite, les cycliques compensent, volumes calmes", "biais": "attente" },
+    { "si": "Rechute de l'IA (nouvelle inquiétude type CoreWeave sur le financement du cloud/IA)", "proba": 20, "alors": "Baisse : le CAC reteste 7 850 puis 7 760, fuite vers les obligations, l'or repart à la hausse", "biais": "short" }
+  ],
+  "invalidation": "Sous 7 850 puis 7 760 sur le CAC (le plus bas du rebond entamé le 8 octobre), le scénario de reprise s'annule et le marché bascule en mode « risk-off IA ». Un retour du taux US 10 ans au-dessus de 5,20 % jouerait dans le même sens.",
+  "delta": [
+    { "label": "Rotation vers les banques et le luxe", "direction": "up" },
+    { "label": "Taux US 10 ans en repli (≈ 5,08 %)", "direction": "down" },
+    { "label": "Or proche de ses records (valeur refuge)", "direction": "up" }
+  ],
+  "condense": {
+    "idee": "Grosse frayeur hier sur les valeurs de l'intelligence artificielle (IA) et des puces : les investisseurs ont craint que des entreprises qui construisent l'IA soient trop endettées (le cas CoreWeave). Résultat, l'Asie a plongé jeudi (Tokyo −4,9 %, Séoul −7,6 % avec un « coupe-circuit » qui suspend la cotation quand ça baisse trop vite). Mais la panique est vite retombée : Wall Street a rebondi (Dow +1,1 %, record) et, à Paris, les banques et le luxe (L'Oréal et Hermès +3 %) ont porté le CAC 40 (+0,8 %). Ce matin, l'Asie rebondit à son tour (Tokyo +1,7 %, Séoul +3,2 %). L'ambiance du jour : un soulagement, mais encore fragile.",
+    "pourquoi": "Quand les investisseurs doutent que les milliards investis dans l'IA rapporteront, ils vendent les actions techno (risquées) et achètent des obligations d'État (plus sûres). Cet afflux vers les obligations fait baisser les taux d'intérêt : le taux américain à 10 ans est repassé sous 5,10 %. C'est l'inverse de ce qu'on attendrait avec une inflation chaude (voir plus bas) — signe que, hier, la peur sur l'IA a dominé tout le reste.",
+    "evenement": "Pas de publication majeure aujourd'hui : la prochaine décision de la banque centrale américaine (la Fed) n'est que fin octobre. Deux chiffres américains secondaires sont attendus : les prix à l'import (14h30) et la production industrielle (15h15). Le vrai moteur de la journée restera l'humeur des marchés autour de l'IA.",
+    "plan_avant": "ouverture européenne probablement dans le vert, dans le sillage du rebond asiatique. On regarde si les valeurs de puces (ASML, Nvidia) confirment la stabilisation ou retombent.",
+    "plan_apres": "sans mauvaise nouvelle sur le financement de l'IA, la séance peut rester calme (consolidation). Une nouvelle alerte ferait vite repartir la baisse : on surveille alors le seuil des 7 850 points sur le CAC.",
+    "a_surveiller": "les semi-conducteurs (ASML, Nvidia), le dollar (indice DXY redescendu vers 102 après un plus haut de 18 mois) et l'or, toujours proche de ses records (≈ 4 160 $). Un CAC sous 7 850 relancerait la prudence.",
+    "overnight": "Wall Street jeudi : Dow +1,08 % (record) · S&P 500 +0,33 % · Nasdaq +0,08 %. Asie ce matin : Tokyo +1,7 % · Séoul +3,2 %.",
+    "inflation": "3,7 % (CPI de septembre, publié le 14/10 — au-dessus des attentes et en hausse, tiré par l'essence)"
+  },
+  "sources": ["Reuters", "Boursorama", "Investing.com", "TradingEconomics", "CNBC", "FXStreet", "Saxo"]
+}
