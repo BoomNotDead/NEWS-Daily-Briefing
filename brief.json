@@ -1,0 +1,59 @@
+{
+  "meta": { "date_str": "lundi 19 octobre 2026", "heure": "08:00", "snapshot": "07:50", "tz": "Europe/Paris" },
+  "verdict": {
+    "biais": "Rebond risk-on fragile — le pétrole chute, la tech US repart, la France à contre-courant",
+    "pivot": "CAC 7 950",
+    "ne_pas_lacher": "7 900",
+    "vol": "VIX retombé vers 20 après le pic de vendredi (22,3 en séance)"
+  },
+  "niveaux": [
+    { "actif": "CAC 40",    "spot": 7938,   "close_prev": 7956.70, "sup1": 7900,   "sup2": 7840,   "res1": 8000,   "res2": 8060,   "biais": "neutre",   "decimals": 0 },
+    { "actif": "DAX",       "spot": 25560,  "close_prev": 25622.61, "sup1": 25400, "sup2": 25150,  "res1": 25800,  "res2": 26000,  "biais": "neutre",   "decimals": 0 },
+    { "actif": "EUR/USD",   "spot": 1.1230, "close_prev": 1.1242,  "sup1": 1.1180, "sup2": 1.1130, "res1": 1.1280, "res2": 1.1330, "biais": "baissier", "decimals": 4 },
+    { "actif": "Brent",     "spot": 107.6,  "close_prev": 109.6,   "sup1": 106.0,  "sup2": 104.0,  "res1": 110.0,  "res2": 112.0,  "biais": "baissier", "decimals": 1, "unit": "$" },
+    { "actif": "Or",        "spot": 4190,   "close_prev": 4182,    "sup1": 4100,   "sup2": 4000,   "res1": 4250,   "res2": 4320,   "biais": "haussier", "decimals": 0, "unit": "$" },
+    { "actif": "US 10 ans", "spot": 5.07,   "close_prev": 5.09,    "sup1": 5.00,   "sup2": 4.90,   "res1": 5.15,   "res2": 5.20,   "biais": "detente",  "decimals": 2, "unit": "%" }
+  ],
+  "courbe": {
+    "points": [ { "t": "2Y", "v": 4.74 }, { "t": "10Y", "v": 5.07 } ],
+    "bund10y": 3.42, "oat10y": 4.79, "spread_2s10s": 33, "spread_oat_bund": 137
+  },
+  "volatilite": { "vix": 19.99 },
+  "cross_asset": [
+    { "label": "Nasdaq fut.", "pct": 1.3 }, { "label": "S&P 500 fut.", "pct": 0.8 }, { "label": "Dow fut.", "pct": 0.5 },
+    { "label": "Nikkei", "pct": -0.6 }, { "label": "Brent", "pct": -1.8 }, { "label": "Or", "pct": 0.2 }
+  ],
+  "agenda": [
+    { "heure": "16:00", "evenement": "Indice NAHB du marché immobilier US (octobre)", "attendu": "31", "precedent": "32", "tier": 3, "evenement_du_jour": true }
+  ],
+  "secteurs": [
+    { "secteur": "Énergie", "pct": null, "biais": "baissier" },
+    { "secteur": "Tech/Semis", "pct": null, "biais": "haussier" },
+    { "secteur": "Automobile", "pct": null, "biais": "haussier" },
+    { "secteur": "Luxe", "pct": null, "biais": "haussier" },
+    { "secteur": "Transport/Aérien", "pct": null, "biais": "haussier" },
+    { "secteur": "Banques", "pct": null, "biais": "neutre" }
+  ],
+  "playbook": [
+    { "si": "La détente pétrole/géopolitique se confirme (baril sous 106 $) et la tech US tient son rebond", "proba": 45, "alors": "Rebond : CAC comble le gap vers 8 000, puis 8 060 ; EUR/USD remonte vers 1,1280", "biais": "long" },
+    { "si": "Statu quo : le rebond US s'essouffle et la France plafonne le CAC avant le vote budgétaire de demain", "proba": 35, "alors": "Range 7 900–7 980, faible conviction, volumes légers", "biais": "attente" },
+    { "si": "Regain de tension française (spread OAT-Bund > 145 pb) ou rechute de la tech américaine", "proba": 20, "alors": "Repli : CAC teste 7 900 puis 7 840 ; EUR/USD casse 1,1180", "biais": "short" }
+  ],
+  "invalidation": "Au-dessus de 5,15 % sur le taux US 10 ans, ou un spread OAT-Bund repassant durablement au-dessus de 145 pb, le scénario de rebond du CAC se casse.",
+  "delta": [
+    { "label": "Pétrole en forte baisse (sanctions russes levées)", "direction": "down" },
+    { "label": "Rebond de la tech US (achat sur repli)", "direction": "up" },
+    { "label": "Spread OAT-Bund tendu à 137 pb", "direction": "up" },
+    { "label": "Taux US 10 ans en légère détente", "direction": "down" }
+  ],
+  "condense": {
+    "idee": "Journée de rebond prudent. Le pétrole chute fortement (les États-Unis ont levé des sanctions sur l'énergie russe, et un accord Ukraine semble se rapprocher), ce qui calme la peur de l'inflation. Résultat : la tech américaine, qui avait dévissé vendredi, repart à la hausse ce matin (contrats à terme bien orientés). Mais à Paris, la Bourse reste à la traîne, freinée par l'inquiétude sur le vote du budget demain.",
+    "pourquoi": "Moins de pétrole = moins d'inflation attendue = soulagement sur les taux (le 10 ans US repasse sous 5,10 %). Et quand les taux se détendent, les valeurs de croissance comme la tech respirent : d'où le rebond après la grosse baisse de vendredi.",
+    "evenement": "Pas de grande statistique aujourd'hui : journée calme côté chiffres (seul l'indice immobilier NAHB aux US, mineur). Le vrai rendez-vous est demain, mardi 20 : le vote du budget français à l'Assemblée. En toile de fond, les marchés parient toujours sur une hausse des taux de la Fed ET de la BCE en décembre, car l'inflation reste élevée (3,8 % en zone euro, prix à l'import US +8,1 % sur un an).",
+    "plan_avant": "peu de catalyseurs chiffrés aujourd'hui, on suit le prix du pétrole et les futures américains comme boussole.",
+    "plan_apres": "si le baril reste sous 106 $ et que la tech tient, le CAC peut combler vers 8 000. Sinon, range d'attente avant le vote de demain.",
+    "a_surveiller": "le pétrole (Brent), l'écart de taux France/Allemagne (spread OAT-Bund à 137 pb, au plus haut depuis 2012) et les valeurs techno américaines.",
+    "overnight": "Vendredi Wall Street a chuté (Nasdaq −2,14 %, pire semaine depuis juin) ; ce matin les futures rebondissent (Nasdaq +1,3 %, S&P +0,8 %). Asie mitigée (Nikkei −0,6 %). Chine : PIB T3 +4,5 % et ventes au détail solides (+1,1 %)."
+  },
+  "sources": ["Reuters", "Boursorama", "Newsquawk", "Trading Economics", "Investing.com", "Yahoo Finance"]
+}
