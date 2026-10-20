@@ -1,0 +1,62 @@
+{
+  "meta": { "date_str": "mardi 20 octobre 2026", "heure": "08:00", "snapshot": "07:55", "tz": "Europe/Paris" },
+  "verdict": {
+    "biais": "Risque franco-français isolé — CAC et dette française sous pression, tech US rebondit",
+    "pivot": "CAC 7 900",
+    "ne_pas_lacher": "7 800",
+    "vol": "VIX retombé à 18,4 — stress localisé sur la France, pas mondial"
+  },
+  "niveaux": [
+    { "actif": "CAC 40",      "spot": 7868,   "close_prev": 7956,   "sup1": 7800,   "sup2": 7720,   "res1": 7950,   "res2": 8020,   "biais": "baissier", "decimals": 0 },
+    { "actif": "DAX",         "spot": 25380,  "close_prev": 25460,  "sup1": 25200,  "sup2": 25000,  "res1": 25600,  "res2": 25850,  "biais": "neutre",   "decimals": 0 },
+    { "actif": "Euro Stoxx 50","spot": 6168,  "close_prev": 6200,   "sup1": 6120,   "sup2": 6060,   "res1": 6220,   "res2": 6280,   "biais": "neutre",   "decimals": 0 },
+    { "actif": "EUR/USD",     "spot": 1.1215, "close_prev": 1.1225, "sup1": 1.1180, "sup2": 1.1140, "res1": 1.1260, "res2": 1.1300, "biais": "baissier", "decimals": 4 },
+    { "actif": "Brent",       "spot": 108.5,  "close_prev": 109.9,  "sup1": 106.0,  "sup2": 103.0,  "res1": 110.0,  "res2": 112.0,  "biais": "baissier", "decimals": 1, "unit": "$" },
+    { "actif": "Or",          "spot": 4165,   "close_prev": 4186,   "sup1": 4100,   "sup2": 4040,   "res1": 4220,   "res2": 4280,   "biais": "neutre",   "decimals": 0, "unit": "$" },
+    { "actif": "US 10 ans",   "spot": 5.15,   "close_prev": 5.09,   "sup1": 5.05,   "sup2": 4.95,   "res1": 5.20,   "res2": 5.30,   "biais": "tension",  "decimals": 2, "unit": "%" },
+    { "actif": "OAT 10 ans",  "spot": 4.86,   "close_prev": 4.78,   "sup1": 4.75,   "sup2": 4.65,   "res1": 4.95,   "res2": 5.05,   "biais": "tension",  "decimals": 2, "unit": "%" }
+  ],
+  "courbe": {
+    "points": [ { "t": "2Y", "v": 4.77 }, { "t": "10Y", "v": 5.15 }, { "t": "30Y", "v": 5.44 } ],
+    "bund10y": 3.43, "oat10y": 4.86, "spread_2s10s": 38, "spread_oat_bund": 143
+  },
+  "volatilite": { "vix": 18.4 },
+  "cross_asset": [
+    { "label": "Nasdaq", "pct": 1.11 }, { "label": "S&P 500", "pct": 0.41 }, { "label": "Dow", "pct": -0.07 },
+    { "label": "Nikkei", "pct": -0.6 }, { "label": "Hang Seng", "pct": -0.8 },
+    { "label": "Brent", "pct": -1.3 }, { "label": "Or", "pct": -0.5 }
+  ],
+  "agenda": [
+    { "heure": "14:30", "evenement": "Mises en chantier de logements US (sept.)", "attendu": "1,30 M", "precedent": "1,275 M", "tier": 2, "evenement_du_jour": true }
+  ],
+  "secteurs": [
+    { "secteur": "Banques FR", "biais": "baissier", "pct": null },
+    { "secteur": "Luxe", "biais": "baissier", "pct": null },
+    { "secteur": "Énergie", "biais": "haussier", "pct": null },
+    { "secteur": "Tech/Semis", "biais": "haussier", "pct": null },
+    { "secteur": "Défense", "biais": "neutre", "pct": null },
+    { "secteur": "Services collectivités", "biais": "neutre", "pct": null }
+  ],
+  "playbook": [
+    { "si": "Apaisement en France (calme dans les rues, geste budgétaire)", "proba": 30, "alors": "CAC rebondit vers 7 950 puis 8 020 ; spread OAT-Bund se resserre sous 135 pb", "biais": "long" },
+    { "si": "Statu quo tendu (budget 2027 incertain, revue Moody's vendredi)", "proba": 45, "alors": "CAC campe en range 7 800-7 950 ; spread OAT-Bund figé 140-150 pb", "biais": "attente" },
+    { "si": "Escalade politique/sociale", "proba": 25, "alors": "CAC casse 7 800 vers 7 720 ; spread OAT-Bund > 155 pb, EUR/USD sous 1,1180", "biais": "short" }
+  ],
+  "invalidation": "Au-dessus de 7 950 avec un spread OAT-Bund repassant sous 135 pb, le stress France s'évacue et le CAC rejoint le rebond tech mondial. À l'inverse, un spread au-dessus de 155 pb rouvre le risque sur les banques françaises.",
+  "delta": [
+    { "label": "Spread OAT-Bund au plus haut depuis 2011-12", "direction": "up" },
+    { "label": "Tech US rebondit (Nasdaq +1,1 %)", "direction": "up" },
+    { "label": "VIX retombe à 18,4", "direction": "down" },
+    { "label": "Pétrole reflue après la levée des sanctions russes", "direction": "down" }
+  ],
+  "condense": {
+    "idee": "Grand écart ce matin : la France est le mouton noir (CAC −1,1 % hier, dette française sous pression) à cause des émeutes du week-end et des doutes sur le budget 2027, pendant que la tech américaine rebondit (Nasdaq +1,1 %). Le stress est local, pas mondial — le VIX, le « thermomètre de la peur » des marchés, est même retombé à 18,4.",
+    "pourquoi": "Des manifestations contre le coût de la vie ont dégénéré ce week-end (près de 2 400 interpellations). Les investisseurs craignent que le gouvernement minoritaire ne parvienne pas à faire passer son budget 2027 (≈ 54 Md€ d'économies). Du coup ils exigent plus d'intérêts pour prêter à l'État français.",
+    "evenement": "Pas de statistique majeure aujourd'hui (ni banque centrale, ni inflation, ni emploi). Le vrai rendez-vous est l'examen de la note de la France par l'agence Moody's vendredi 23 octobre. Une « note » mesure la capacité d'un pays à rembourser sa dette : si elle baisse, emprunter lui coûte plus cher.",
+    "plan_avant": "Séance pilotée par l'actualité (émeutes, déclarations politiques), pas par un chiffre. L'indicateur-clé à suivre est l'écart de taux entre la France et l'Allemagne, le « spread OAT-Bund » : c'est le baromètre du stress français.",
+    "plan_apres": "Si le calme revient, le CAC peut rattraper la tech mondiale vers 7 950. Si les tensions montent, le support 7 800 cède et on vise 7 720 ; l'euro glisserait alors sous 1,1180.",
+    "a_surveiller": "l'écart de taux France-Allemagne (≈ 143 points de base, au plus haut depuis 2011-12) et les banques françaises, très exposées à la dette de l'État.",
+    "overnight": "Wall Street partagé : Nasdaq +1,11 % · S&P +0,41 % · Dow −0,07 %. Asie en repli : Nikkei −0,6 %, Hang Seng −0,8 %."
+  },
+  "sources": ["Reuters", "CNBC", "Bloomberg", "Investing.com", "Trading Economics"]
+}
