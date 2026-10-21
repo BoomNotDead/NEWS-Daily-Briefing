@@ -1,0 +1,62 @@
+{
+  "meta": { "date_str": "mercredi 21 octobre 2026", "heure": "08:00", "snapshot": "07:55", "tz": "Europe/Paris" },
+  "verdict": {
+    "biais": "Rebond prudent — le repli du pétrole soulage, mais la France reste à la traîne",
+    "pivot": "CAC 7 840",
+    "ne_pas_lacher": "7 800",
+    "vol": "VIX détendu (17,3) · catalyseur CPI UK à 8h"
+  },
+  "niveaux": [
+    { "actif": "CAC 40",    "spot": 7875,   "close_prev": 7838,   "sup1": 7800,   "sup2": 7750,   "res1": 7900,   "res2": 7960,   "biais": "neutre",   "decimals": 0 },
+    { "actif": "DAX",       "spot": 25470,  "close_prev": 25304,  "sup1": 25100,  "sup2": 24900,  "res1": 25550,  "res2": 25800,  "biais": "haussier", "decimals": 0 },
+    { "actif": "EUR/USD",   "spot": 1.1252, "close_prev": 1.1245, "sup1": 1.1180, "sup2": 1.1120, "res1": 1.1300, "res2": 1.1360, "biais": "haussier", "decimals": 4 },
+    { "actif": "Brent",     "spot": 108.3,  "close_prev": 108.78, "sup1": 106.0,  "sup2": 103.0,  "res1": 111.0,  "res2": 113.0,  "biais": "baissier", "decimals": 1, "unit": "$" },
+    { "actif": "Or",        "spot": 4113,   "close_prev": 4120,   "sup1": 4100,   "sup2": 4050,   "res1": 4160,   "res2": 4200,   "biais": "baissier", "decimals": 0, "unit": "$" },
+    { "actif": "US 10 ans", "spot": 5.12,   "close_prev": 5.14,   "sup1": 5.05,   "sup2": 4.98,   "res1": 5.20,   "res2": 5.28,   "biais": "detente",  "decimals": 2, "unit": "%" }
+  ],
+  "courbe": {
+    "points": [ { "t": "2Y", "v": 4.79 }, { "t": "5Y", "v": 4.94 }, { "t": "10Y", "v": 5.12 } ],
+    "bund10y": 3.42, "oat10y": 4.96, "spread_2s10s": 33, "spread_oat_bund": 151,
+    "fed_funds_proba": "81 % (statu quo)", "fed_funds_range": "3,75–4,00 %"
+  },
+  "volatilite": { "vix": 17.31, "vix3m": 19.60 },
+  "cross_asset": [
+    { "label": "Dow", "pct": 1.02 }, { "label": "S&P 500", "pct": 0.28 }, { "label": "Nasdaq", "pct": -0.02 },
+    { "label": "Nikkei", "pct": 1.1 }, { "label": "KOSPI", "pct": 5.0 }, { "label": "Brent", "pct": -0.7 }
+  ],
+  "agenda": [
+    { "heure": "08:00", "evenement": "Inflation CPI Royaume-Uni (septembre, a/a)", "attendu": "3,4 %", "precedent": "3,1 %", "tier": 1, "evenement_du_jour": true },
+    { "heure": "08:00", "evenement": "Inflation core CPI Royaume-Uni (septembre, a/a)", "attendu": "2,8 %", "precedent": "2,6 %", "tier": 2, "evenement_du_jour": false }
+  ],
+  "secteurs": [
+    { "secteur": "Énergie", "pct": null, "biais": "baissier" },
+    { "secteur": "Défense", "pct": null, "biais": "baissier" },
+    { "secteur": "Banques", "pct": null, "biais": "baissier" },
+    { "secteur": "Technologie", "pct": null, "biais": "neutre" },
+    { "secteur": "Luxe", "pct": null, "biais": "neutre" },
+    { "secteur": "Services collectifs (utilities)", "pct": null, "biais": "haussier" }
+  ],
+  "playbook": [
+    { "si": "Le pétrole poursuit sa baisse et le 10 ans US reflue sous 5,05 %", "proba": 45, "alors": "Rebond : CAC vise 7 900 puis 7 960, DAX > 25 550", "biais": "long" },
+    { "si": "La France reste sous tension (OAT > 4,95 %), le pétrole se stabilise", "proba": 40, "alors": "Range : CAC coince 7 800–7 900, sous-performance vs DAX", "biais": "attente" },
+    { "si": "CPI UK trop chaud (> 3,4 %) et rebond du pétrole, 10 ans US > 5,18 %", "proba": 15, "alors": "Repli : CAC teste 7 780, EUR/USD sous 1,1180", "biais": "short" }
+  ],
+  "invalidation": "Un retour du Brent au-dessus de 111 $ (échec des négociations US-Iran) relancerait la pression sur les taux (10 ans US > 5,20 %) et casserait le scénario de soulagement.",
+  "delta": [
+    { "label": "Brent en repli sur les espoirs US-Iran", "direction": "down" },
+    { "label": "Taux US 10 ans en détente", "direction": "down" },
+    { "label": "Bourses US & Asie en hausse (KOSPI +5 %)", "direction": "up" },
+    { "label": "OAT française au plus haut depuis 2002", "direction": "up" }
+  ],
+  "condense": {
+    "idee": "Le marché respire : le pétrole chute fort (Brent sous 109 $) sur des espoirs d'accord entre les États-Unis et l'Iran, ce qui calme la peur de l'inflation. Résultat : Wall Street a fini en hausse, l'Asie monte (la Corée +5 %) et les taux d'intérêt américains refluent un peu. Le CAC devrait ouvrir en hausse modérée. SEUL point noir : la France reste le maillon faible (tensions politiques et budgétaires), ce qui explique qu'elle monte moins que l'Allemagne.",
+    "pourquoi": "Le pétrole baisse car Washington et Téhéran semblent se rapprocher d'un accord pour mettre fin au conflit. Moins de risque géopolitique + énergie moins chère = moins d'inflation attendue = les taux se détendent et la Bourse est soulagée. C'est crucial car l'inflation US de septembre (3,7 %) a justement été tirée par l'énergie.",
+    "evenement": "À 8h, inflation du Royaume-Uni (CPI). On attend une HAUSSE à 3,4 % (contre 3,1 % le mois dernier). Le CPI mesure la hausse des prix : s'il sort plus haut que prévu, cela ravive la crainte que les banques centrales montent encore les taux, ce qui pèserait sur les actions.",
+    "plan_avant": "peu de mouvement avant 8h : on démarre sur une légère hausse (niveaux « futures ») et on attend le chiffre d'inflation britannique.",
+    "plan_apres": "on surveille si le CAC tient au-dessus de 7 800 et peut reprendre 7 900 (signal positif) ; à l'inverse, un retour sous 7 800 relancerait la prudence.",
+    "a_surveiller": "le pétrole (Brent ~108 $ : l'accord Iran tient-il ?), le taux US à 10 ans (5,12 %) et l'écart de taux France-Allemagne (OAT ~4,96 %, au plus haut depuis 2002).",
+    "overnight": "Dow +1,02 % · S&P 500 +0,28 % · Nasdaq -0,02 % · Nikkei +1,1 % · KOSPI +5,0 % · Brent -0,7 %.",
+    "inflation": "3,7 %"
+  },
+  "sources": ["Reuters", "CNBC", "FXStreet", "Kitco", "Trading Economics", "CME FedWatch", "Investing.com"]
+}
