@@ -1,0 +1,59 @@
+{
+  "meta": { "date_str": "jeudi 22 octobre 2026", "heure": "08:00", "snapshot": "07:55", "tz": "Europe/Paris" },
+  "verdict": {
+    "biais": "Défensif — énergie oui, tech et banques sous surveillance (pétrole + dette française)",
+    "pivot": "CAC 7 920",
+    "ne_pas_lacher": "7 860",
+    "vol": "VIX bas (~17) mais risque géopolitique qui remonte"
+  },
+  "niveaux": [
+    { "actif": "CAC 40",     "spot": 7895,   "close_prev": 7922,   "sup1": 7860,   "sup2": 7800,   "res1": 7960,   "res2": 8040,   "biais": "neutre",   "decimals": 0 },
+    { "actif": "DAX",        "spot": 25560,  "close_prev": 25645,  "sup1": 25400,  "sup2": 25100,  "res1": 25800,  "res2": 26050,  "biais": "neutre",   "decimals": 0 },
+    { "actif": "EUR/USD",    "spot": 1.1215, "close_prev": 1.1233, "sup1": 1.1180, "sup2": 1.1150, "res1": 1.1260, "res2": 1.1300, "biais": "baissier", "decimals": 4 },
+    { "actif": "Brent",      "spot": 110.5,  "close_prev": 108.82, "sup1": 106.0,  "sup2": 102.0,  "res1": 113.0,  "res2": 116.0,  "biais": "haussier", "decimals": 1, "unit": "$" },
+    { "actif": "Or",         "spot": 4120,   "close_prev": 4128,   "sup1": 4050,   "sup2": 3980,   "res1": 4180,   "res2": 4250,   "biais": "neutre",   "decimals": 0, "unit": "$" },
+    { "actif": "US 10 ans",  "spot": 5.12,   "close_prev": 5.11,   "sup1": 5.05,   "sup2": 4.95,   "res1": 5.20,   "res2": 5.30,   "biais": "tension",  "decimals": 2, "unit": "%" },
+    { "actif": "OAT 10 ans", "spot": 4.99,   "close_prev": 4.92,   "sup1": 4.85,   "sup2": 4.70,   "res1": 5.05,   "res2": 5.20,   "biais": "tension",  "decimals": 2, "unit": "%" }
+  ],
+  "courbe": {
+    "points": [ { "t": "2Y", "v": 4.81 }, { "t": "5Y", "v": 4.90 }, { "t": "10Y", "v": 5.12 } ],
+    "bund10y": 3.43, "oat10y": 4.99, "spread_2s10s": 31, "spread_oat_bund": 157
+  },
+  "volatilite": { "vix": 17.3 },
+  "cross_asset": [
+    { "label": "Dow", "pct": 0.69 }, { "label": "S&P 500", "pct": 0.60 }, { "label": "Nasdaq", "pct": 1.10 },
+    { "label": "Kospi", "pct": -1.2 }, { "label": "Brent", "pct": 1.5 }, { "label": "Or", "pct": -0.2 }
+  ],
+  "agenda": [
+    { "heure": "14:30", "evenement": "Inscriptions hebdomadaires au chômage (US)", "attendu": "200k", "precedent": "199k", "tier": 2, "evenement_du_jour": false }
+  ],
+  "secteurs": [
+    { "secteur": "Énergie", "pct": null, "biais": "haussier" },
+    { "secteur": "Banques", "pct": null, "biais": "baissier" },
+    { "secteur": "Tech/Semis", "pct": null, "biais": "neutre" },
+    { "secteur": "Luxe", "pct": null, "biais": "neutre" },
+    { "secteur": "Santé/Défensives", "pct": null, "biais": "haussier" },
+    { "secteur": "Transport/Aérien", "pct": null, "biais": "baissier" }
+  ],
+  "playbook": [
+    { "si": "Le pétrole se calme et les résultats tech rassurent", "proba": 45, "alors": "Range nerveux : CAC entre 7 860 et 7 960, retour possible vers 7 960", "biais": "attente" },
+    { "si": "Escalade au Golfe, Brent casse 113 $", "proba": 40, "alors": "Repli : CAC teste 7 860 puis 7 800 ; invalidation du rebond sous 7 800", "biais": "short" },
+    { "si": "Désescalade géopolitique + bons résultats tech", "proba": 15, "alors": "Rebond : au-dessus de 7 960, objectif 8 040 ; Brent sous 106 $", "biais": "long" }
+  ],
+  "invalidation": "Au-dessus de 5,05 % sur l'OAT 10 ans (ou un spread OAT-Bund > 165 pb), le stress budgétaire français prend le dessus : banques et CAC décrochent, quel que soit le pétrole.",
+  "delta": [
+    { "label": "Pétrole en hausse sur les tensions au Golfe", "direction": "up" },
+    { "label": "Taux de la dette française proche de 5 %", "direction": "up" },
+    { "label": "Appétit pour le risque qui s'essouffle ce matin", "direction": "down" }
+  ],
+  "condense": {
+    "idee": "Après une belle séance hier portée par l'IA (Nasdaq +1,1 %), l'ambiance est plus prudente ce matin. Deux choses pèsent : le pétrole grimpe (tensions au Moyen-Orient) et la France emprunte de plus en plus cher (son taux à 10 ans frôle 5 %). Résultat : l'énergie monte, mais la tech et les banques sont plus fragiles. Les contrats à terme pointent une ouverture en léger repli du CAC, alors que la clôture d'hier était en hausse.",
+    "pourquoi": "Le pétrole monte car des installations pétrolières ont été attaquées dans le Golfe et les États-Unis font partir du personnel de certaines ambassades. Moins de pétrole disponible = prix plus hauts = plus d'inflation = mauvais pour les marchés et pour les taux d'intérêt.",
+    "evenement": "Pas de grande statistique aujourd'hui, mais une avalanche de résultats d'entreprises : IBM, Texas Instruments et SAP publient ce soir après la clôture US. Hier soir, Tesla a déçu (−3 % : dépenses d'investissement jugées trop élevées) et Meta a plu (+2 %). En toile de fond, le budget français à l'Assemblée, dont la prochaine étape clé est le vote du 27 octobre.",
+    "plan_avant": "ouverture prudente attendue ; le pétrole (Brent) et le taux français donnent le ton de la matinée.",
+    "plan_apres": "ce soir, les résultats tech (IBM, Texas Instruments, SAP) peuvent faire bouger fort le Nasdaq et, par ricochet, nos valeurs techno demain.",
+    "a_surveiller": "le pétrole (un Brent au-dessus de 113 $ = signal de stress), le taux français à 10 ans (l'OAT, qui approche 5 %) et l'écart avec l'Allemagne (spread OAT-Bund ~157 pb, au plus haut depuis 2011).",
+    "overnight": "Wall Street en hausse hier sur l'IA (Nasdaq +1,1 %, Dow +0,7 %), mais Tesla −3 % après la clôture ; l'Asie recule ce matin (Kospi −1,2 %) et les futures US pointent en baisse."
+  },
+  "sources": ["Saxo", "Newsquawk", "Reuters", "TradingEconomics", "Investing.com", "CNBC"]
+}
