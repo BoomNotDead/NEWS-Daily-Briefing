@@ -1,0 +1,65 @@
+{
+  "meta": { "date_str": "vendredi 23 octobre 2026", "heure": "08:00", "snapshot": "07:50", "tz": "Europe/Paris" },
+  "verdict": {
+    "biais": "Risk-off : purge de la « trade IA », fuite vers les obligations",
+    "pivot": "CAC 7 800",
+    "ne_pas_lacher": "7 750",
+    "vol": "VIX 18,1 (+8,5 %) — tension qui remonte"
+  },
+  "niveaux": [
+    { "actif": "CAC 40",    "spot": 7809,   "close_prev": 7921,   "sup1": 7750,   "sup2": 7680,   "res1": 7880,   "res2": 7960,   "biais": "baissier", "decimals": 0 },
+    { "actif": "DAX",       "spot": 25372,  "close_prev": 25645,  "sup1": 25100,  "sup2": 24850,  "res1": 25650,  "res2": 25950,  "biais": "baissier", "decimals": 0 },
+    { "actif": "EUR/USD",   "spot": 1.1217, "close_prev": 1.1223, "sup1": 1.1180, "sup2": 1.1150, "res1": 1.1250, "res2": 1.1290, "biais": "neutre",   "decimals": 4 },
+    { "actif": "Brent",     "spot": 111.5,  "close_prev": 108.0,  "sup1": 107.0,  "sup2": 103.0,  "res1": 114.0,  "res2": 118.0,  "biais": "haussier", "decimals": 1, "unit": "$" },
+    { "actif": "Or",        "spot": 4047,   "close_prev": 4110,   "sup1": 4000,   "sup2": 3950,   "res1": 4120,   "res2": 4180,   "biais": "baissier", "decimals": 0, "unit": "$" },
+    { "actif": "US 10 ans", "spot": 4.97,   "close_prev": 5.14,   "sup1": 4.90,   "sup2": 4.80,   "res1": 5.05,   "res2": 5.15,   "biais": "detente",  "decimals": 2, "unit": "%" }
+  ],
+  "courbe": {
+    "points": [ { "t": "2Y", "v": 4.66 }, { "t": "10Y", "v": 4.97 } ],
+    "bund10y": 3.36, "oat10y": 4.94, "spread_2s10s": 31, "spread_oat_bund": 158,
+    "fed_funds_proba": "≈ 80 % de statu quo", "fed_funds_range": "3,75–4,00 %"
+  },
+  "volatilite": { "vix": 18.1 },
+  "cross_asset": [
+    { "label": "Dow", "pct": 0.02 },
+    { "label": "S&P 500", "pct": -1.21 },
+    { "label": "Nasdaq", "pct": -2.6 },
+    { "label": "Semis (US)", "pct": -6.0 }
+  ],
+  "agenda": [
+    { "heure": "10:00", "evenement": "PMI manufacturier flash zone euro", "attendu": "52,8", "precedent": "52,9", "tier": 2, "evenement_du_jour": false },
+    { "heure": "10:00", "evenement": "PMI services flash zone euro", "attendu": "52,8", "precedent": "53,0", "tier": 2, "evenement_du_jour": false },
+    { "heure": "15:45", "evenement": "PMI manufacturier flash États-Unis (S&P Global)", "attendu": "55,5", "precedent": "55,9", "tier": 2, "evenement_du_jour": false },
+    { "heure": "15:45", "evenement": "PMI services flash États-Unis (S&P Global)", "attendu": "58,0", "precedent": "58,8", "tier": 2, "evenement_du_jour": true },
+    { "heure": "16:00", "evenement": "Confiance consommateurs U. Michigan (final) & anticipations d'inflation à 1 an", "attendu": "4,7 %", "precedent": "4,7 %", "tier": 3, "evenement_du_jour": false }
+  ],
+  "secteurs": [
+    { "secteur": "Tech / Semis", "biais": "baissier", "pct": null },
+    { "secteur": "Énergie", "biais": "haussier", "pct": null },
+    { "secteur": "Banques", "biais": "baissier", "pct": null },
+    { "secteur": "Luxe", "biais": "baissier", "pct": null },
+    { "secteur": "Défensives", "biais": "haussier", "pct": null },
+    { "secteur": "Industrie", "biais": "neutre", "pct": null }
+  ],
+  "playbook": [
+    { "si": "Les semi-conducteurs se stabilisent et le pétrole reflue sous 108 $", "proba": 30, "alors": "Rebond technique : CAC vise 7 880 puis 7 960 ; invalidation sous 7 750", "biais": "long" },
+    { "si": "La vente sur l'IA reprend et le Brent tient au-dessus de 110 $ (scénario de base)", "proba": 45, "alors": "Repli : CAC teste 7 750 puis 7 680 ; au-dessus de 7 880 le scénario s'annule", "biais": "short" },
+    { "si": "Nouvelle escalade dans le Golfe, Brent > 114 $", "proba": 25, "alors": "Peur de « stagflation » : CAC < 7 680, l'or rebondit vers 4 120", "biais": "short" }
+  ],
+  "invalidation": "Au-dessus de 7 880 sur le CAC, avec un 10 ans US qui remonte franchement au-dessus de 5 %, le scénario « purge » s'essouffle.",
+  "delta": [
+    { "label": "Nasdaq −2,6 %, semis −6 % (pire séance depuis juin)", "direction": "down" },
+    { "label": "10 ans US repasse sous 5 %", "direction": "down" },
+    { "label": "Pétrole en hausse (attaques en Arabie saoudite)", "direction": "up" }
+  ],
+  "condense": {
+    "idee": "Journée défensive. Hier à Wall Street, les investisseurs ont massivement vendu la « trade IA » (les valeurs liées à l'intelligence artificielle) : le Nasdaq a chuté de 2,6 % et les fabricants de puces de 6 %, après des résultats décevants de Meta. L'argent s'est réfugié dans les obligations d'État (leurs taux baissent quand on les achète). Fait inhabituel : l'or a BAISSÉ malgré la peur — signe que les investisseurs vendent ce qui a gagné pour couvrir leurs pertes, plutôt qu'une panique classique.",
+    "pourquoi": "Deux chocs se cumulent. 1) On doute que les dépenses géantes en IA soient rentables un jour. 2) Le pétrole grimpe (Brent ~111 $) après des attaques de drones sur un aéroport et une installation pétrolière en Arabie saoudite — ce qui ravive la crainte de l'inflation, juste avant la banque centrale US la semaine prochaine.",
+    "evenement": "Pas de rendez-vous majeur AUJOURD'HUI : on surveille les PMI « flash » (enquêtes auprès des entreprises ; au-dessus de 50 = l'activité progresse) en zone euro ce matin, puis aux États-Unis à 15h45. Le vrai juge de paix, c'est la décision de la Fed mercredi prochain (28 oct.), où un maintien des taux à 3,75–4,00 % est attendu (≈ 80 %).",
+    "plan_avant": "peu d'enjeu avant 15h45 ; on regarde si les PMI de la zone euro confirment une activité encore au-dessus de 50.",
+    "plan_apres": "tout se joue sur les futures des semi-conducteurs et sur le pétrole. Repère simple sur le CAC : sous 7 750 = signal de faiblesse, au-dessus de 7 880 = tentative de rebond.",
+    "a_surveiller": "les fabricants de puces (semi-conducteurs), le Brent au-dessus de 110 $, et le taux US à 10 ans autour de 5 %.",
+    "overnight": "Dow +0,02 % (quasi stable) · S&P 500 −1,21 % · Nasdaq −2,6 % (pire séance depuis juin) · semis −6 %."
+  },
+  "sources": ["CNBC", "Reuters", "Bloomberg", "Trading Economics", "S&P Global / Investing.com"]
+}
