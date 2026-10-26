@@ -1,0 +1,62 @@
+{
+  "meta": { "date_str": "lundi 26 octobre 2026", "heure": "08:00", "snapshot": "07:50", "tz": "Europe/Paris" },
+  "verdict": {
+    "biais": "Neutre prudent — stress obligataire français, rebond plafonné avant la Fed",
+    "pivot": "CAC 7 780",
+    "ne_pas_lacher": "7 680",
+    "vol": "VIX 19,5 — tension contenue avant le FOMC de mercredi"
+  },
+  "niveaux": [
+    { "actif": "CAC 40",    "spot": 7795,   "close_prev": 7783,   "sup1": 7740,   "sup2": 7680,   "res1": 7850,   "res2": 7920,   "biais": "neutre",   "decimals": 0 },
+    { "actif": "DAX",       "spot": 25230,  "close_prev": 25182,  "sup1": 25000,  "sup2": 24800,  "res1": 25400,  "res2": 25600,  "biais": "neutre",   "decimals": 0 },
+    { "actif": "EUR/USD",   "spot": 1.1223, "close_prev": 1.1203, "sup1": 1.1180, "sup2": 1.1130, "res1": 1.1260, "res2": 1.1310, "biais": "haussier", "decimals": 4 },
+    { "actif": "Brent",     "spot": 114.3,  "close_prev": 116.72, "sup1": 112.0,  "sup2": 108.0,  "res1": 117.0,  "res2": 120.0,  "biais": "baissier", "decimals": 1, "unit": "$" },
+    { "actif": "Or",        "spot": 4000,   "close_prev": 4008,   "sup1": 3950,   "sup2": 3900,   "res1": 4050,   "res2": 4100,   "biais": "neutre",   "decimals": 0, "unit": "$" },
+    { "actif": "US 10 ans", "spot": 4.97,   "close_prev": 5.00,   "sup1": 4.90,   "sup2": 4.80,   "res1": 5.05,   "res2": 5.15,   "biais": "detente",  "decimals": 2, "unit": "%" }
+  ],
+  "courbe": {
+    "points": [ { "t": "2Y", "v": 4.69 }, { "t": "10Y", "v": 4.97 } ],
+    "bund10y": 3.33, "oat10y": 5.04, "spread_2s10s": 28, "spread_oat_bund": 171,
+    "fed_funds_proba": "≈ 83 % statu quo", "fed_funds_range": "3,75–4,00 %"
+  },
+  "volatilite": { "vix": 19.45 },
+  "cross_asset": [
+    { "label": "Dow", "pct": -1.23 }, { "label": "S&P 500", "pct": -0.52 }, { "label": "Nasdaq", "pct": -0.21 },
+    { "label": "Nikkei", "pct": -0.30 }, { "label": "Hang Seng", "pct": 0.29 }, { "label": "Brent", "pct": -2.1 }
+  ],
+  "agenda": [
+    { "heure": "10:00", "evenement": "Indice Ifo du climat des affaires (Allemagne, octobre)", "attendu": "89,8", "precedent": "89,9", "tier": 2, "evenement_du_jour": true },
+    { "heure": "14:30", "evenement": "Indice d'activité nationale Fed de Chicago (septembre)", "attendu": "-0,10", "precedent": "-0,04", "tier": 3, "evenement_du_jour": false },
+    { "heure": "15:30", "evenement": "Indice manufacturier Fed de Dallas (octobre)", "attendu": "7,0", "precedent": "9,8", "tier": 3, "evenement_du_jour": false }
+  ],
+  "secteurs": [
+    { "secteur": "Banques FR", "pct": null, "biais": "baissier" },
+    { "secteur": "Énergie", "pct": null, "biais": "baissier" },
+    { "secteur": "Tech/Semis", "pct": null, "biais": "baissier" },
+    { "secteur": "Santé/Défensives", "pct": null, "biais": "haussier" },
+    { "secteur": "Luxe", "pct": null, "biais": "neutre" },
+    { "secteur": "Utilities", "pct": null, "biais": "neutre" }
+  ],
+  "playbook": [
+    { "si": "Détente obligataire : spread OAT-Bund < 160 pb et pétrole qui reflue", "proba": 35, "alors": "Rebond : CAC vise 7 850 puis 7 920, EUR/USD vers 1,1300", "biais": "long" },
+    { "si": "Statu quo tendu : spread OAT ~170 pb, pétrole stable, attente de la Fed", "proba": 45, "alors": "Range 7 740–7 850, volumes faibles jusqu'à mercredi", "biais": "attente" },
+    { "si": "Stress obligataire + pétrole qui repart : OAT 10 ans > 5,14 % (plus haut de 24 ans)", "proba": 20, "alors": "Baisse : CAC casse 7 740 et teste 7 680, EUR/USD sous 1,1180", "biais": "short" }
+  ],
+  "invalidation": "Un retour du spread OAT-Bund au-dessus de 180 pb (seuils de crise) invaliderait tout rebond du CAC et ferait replonger les banques françaises.",
+  "delta": [
+    { "label": "Spread OAT-Bund tendu (~171 pb, proche des niveaux de crise)", "direction": "up" },
+    { "label": "Pétrole en repli (-2 %) après un plus haut de 6 mois", "direction": "down" },
+    { "label": "Actions tech/IA encore sous pression", "direction": "down" }
+  ],
+  "condense": {
+    "idee": "Ouverture prudente. Le gros sujet du jour, côté Paris : la dette française (les « OAT », les emprunts de l'État) coûte de plus en plus cher. L'écart de taux avec l'Allemagne frôle des niveaux vus en temps de crise, ce qui pèse sur le CAC et surtout sur les banques françaises. En face, une bonne nouvelle : le pétrole redescend (-2 %) après un pic, ce qui soulage un peu l'inflation. Détail qui montre la nervosité : le taux américain à 10 ans baisse légèrement (fuite vers la sécurité) alors que le taux français, lui, monte — les deux ne vont pas dans le même sens.",
+    "pourquoi": "Quand un État inspire moins confiance (inquiétudes sur le budget et la présidentielle de 2027 en France), les investisseurs exigent un taux d'intérêt plus élevé pour lui prêter : c'est ce qui arrive à la France. Des taux élevés rognent les marges et font peur sur les actions, surtout les banques qui détiennent beaucoup de dette d'État.",
+    "evenement": "Aujourd'hui, le rendez-vous chiffré est l'indice Ifo allemand (un sondage de confiance des patrons allemands : plus il est haut, plus l'économie va bien). Mais LE grand événement de la semaine est la décision de taux de la Fed (banque centrale américaine) mercredi 28 : les taux devraient rester à 3,75-4,00 %, une hausse restant possible en décembre.",
+    "plan_avant": "Journée probablement calme, petits volumes : le marché attend la Fed de mercredi.",
+    "plan_apres": "Peu d'impact attendu aujourd'hui ; le vrai mouvement viendra mercredi soir avec la Fed. On surveille si le CAC tient 7 740 (sinon direction 7 680) ou franchit 7 850.",
+    "a_surveiller": "l'écart de taux France-Allemagne (OAT-Bund), les banques françaises, le pétrole, et le taux US 10 ans qui flirte avec 5 %.",
+    "overnight": "Vendredi à Wall Street : Dow -1,23 % (grosse baisse), S&P 500 -0,52 %, Nasdaq -0,21 %. En Asie ce matin : Nikkei -0,30 %, Hang Seng +0,29 %.",
+    "inflation": "3,7 % (US)"
+  },
+  "sources": ["Reuters", "CNBC", "Trading Economics", "Investing.com", "LSEG", "ifo Institut", "CME FedWatch"]
+}
