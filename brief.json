@@ -1,0 +1,62 @@
+{
+  "meta": { "date_str": "mardi 27 octobre 2026", "heure": "08:00", "snapshot": "07:55", "tz": "Europe/Paris" },
+  "verdict": {
+    "biais": "Risque-on fragile — la tech porte, mais taux proches de 5 % et Fed en embuscade",
+    "pivot": "CAC 7 847",
+    "ne_pas_lacher": "7 780",
+    "vol": "VIX ~18, calme trompeur avant la Fed (décision demain)"
+  },
+  "niveaux": [
+    { "actif": "CAC 40",      "spot": 7847,   "close_prev": 7783,   "sup1": 7780,   "sup2": 7700,   "res1": 7900,   "res2": 7960,   "biais": "haussier", "decimals": 0 },
+    { "actif": "DAX",         "spot": 25411,  "close_prev": 25182,  "sup1": 25180,  "sup2": 25000,  "res1": 25600,  "res2": 25800,  "biais": "haussier", "decimals": 0 },
+    { "actif": "EUR/USD",     "spot": 1.1220, "close_prev": null,   "sup1": 1.1180, "sup2": 1.1140, "res1": 1.1270, "res2": 1.1310, "biais": "neutre",   "decimals": 4 },
+    { "actif": "Brent",       "spot": 114.7,  "close_prev": 115.81, "sup1": 113.0,  "sup2": 110.0,  "res1": 117.0,  "res2": 120.0,  "biais": "baissier", "decimals": 1, "unit": "$" },
+    { "actif": "Or",          "spot": 4006,   "close_prev": 3994,   "sup1": 3950,   "sup2": 3900,   "res1": 4080,   "res2": 4150,   "biais": "neutre",   "decimals": 0, "unit": "$" },
+    { "actif": "US 10 ans",   "spot": 4.99,   "close_prev": 4.98,   "sup1": 4.92,   "sup2": 4.85,   "res1": 5.05,   "res2": 5.12,   "biais": "tension",  "decimals": 2, "unit": "%" },
+    { "actif": "OAT 10 ans",  "spot": 4.98,   "close_prev": 5.02,   "sup1": 4.90,   "sup2": 4.80,   "res1": 5.05,   "res2": 5.14,   "biais": "tension",  "decimals": 2, "unit": "%" }
+  ],
+  "courbe": {
+    "points": [ { "t": "2Y", "v": 4.72 }, { "t": "10Y", "v": 4.99 } ],
+    "bund10y": 3.38, "oat10y": 4.98, "spread_2s10s": 27, "spread_oat_bund": 160,
+    "fed_funds_proba": "≈ 90 % (statu quo demain)", "fed_funds_range": "3,75–4,00 %"
+  },
+  "volatilite": { "vix": 18.4 },
+  "cross_asset": [
+    { "label": "S&P 500", "pct": 0.70 }, { "label": "Nasdaq", "pct": 0.82 }, { "label": "Dow", "pct": 0.28 },
+    { "label": "Nikkei", "pct": 2.2 }, { "label": "Kospi", "pct": 4.0 }, { "label": "Hang Seng", "pct": -0.2 }
+  ],
+  "agenda": [
+    { "heure": "13:30", "evenement": "Commandes de biens durables US (sept.)", "attendu": "+1,2 %", "precedent": "0,0 %", "tier": 2, "evenement_du_jour": false },
+    { "heure": "15:00", "evenement": "Confiance des consommateurs US (Conference Board, oct.)", "attendu": "80,5", "precedent": "81,9", "tier": 2, "evenement_du_jour": true },
+    { "heure": "15:00", "evenement": "Ventes de logements neufs US (sept.)", "attendu": "655k", "precedent": "684k", "tier": 2, "evenement_du_jour": false }
+  ],
+  "secteurs": [
+    { "secteur": "Tech / Semi-conducteurs", "pct": null, "biais": "haussier" },
+    { "secteur": "Banques", "pct": null, "biais": "haussier" },
+    { "secteur": "Énergie", "pct": null, "biais": "baissier" },
+    { "secteur": "Luxe", "pct": null, "biais": "neutre" },
+    { "secteur": "Défensives (santé, conso)", "pct": null, "biais": "neutre" }
+  ],
+  "playbook": [
+    { "si": "Chiffres US FORTS (durables > +1,2 %, confiance > 82)", "proba": 35, "alors": "Les taux poussent vers 5,05 %, la tech cale : CAC vers 7 780, invalidation 7 900", "biais": "short" },
+    { "si": "Chiffres US SANS SURPRISE (en ligne)", "proba": 45, "alors": "Range d'attente avant la Fed : CAC 7 800–7 900, volatilité comprimée", "biais": "attente" },
+    { "si": "Chiffres US FAIBLES (confiance < 79)", "proba": 20, "alors": "Soulagement sur les taux : CAC vise 7 900 puis 7 960, EUR/USD > 1,1270", "biais": "long" }
+  ],
+  "invalidation": "Un passage durable du 10 ans US au-dessus de 5,05 % (et de l'OAT au-dessus de 5,10 %) casse le scénario risque-on : les actions, et d'abord la tech, décrocheraient.",
+  "delta": [
+    { "label": "Pétrole reflue de son pic (diplomatie Moyen-Orient)", "direction": "down" },
+    { "label": "Tech / IA repart (IPO Anthropic, semis asiatiques)", "direction": "up" },
+    { "label": "Taux longs collés à 5 % (pari hausse Fed en décembre)", "direction": "up" }
+  ],
+  "condense": {
+    "idee": "Ambiance « risque-on » mais nerveuse. La tech et l'IA portent les marchés — l'entrée en Bourse prochaine d'Anthropic enthousiasme le secteur et l'Asie techno a bondi cette nuit (Nikkei +2,2 %, Corée +4 %) — et le pétrole qui reflue soulage. MAIS les taux d'emprunt américains frôlent 5 % et la banque centrale US (la Fed) réunit ses membres aujourd'hui et demain : tout le monde retient son souffle. Les actions montent malgré des taux élevés : pour l'instant la promesse de l'IA l'emporte, mais l'équilibre est fragile.",
+    "pourquoi": "Deux forces s'opposent. D'un côté, l'engouement pour l'intelligence artificielle et la baisse du pétrole (des discussions diplomatiques au Moyen-Orient apaisent la crainte de pénurie) poussent les actions. De l'autre, l'inflation est repartie à la hausse (prix US à 3,7 % sur un an en septembre, contre 3,4 % le mois d'avant) : la Fed a déjà monté ses taux en septembre et le marché parie désormais à ~80 % sur une NOUVELLE hausse en décembre. Or des taux élevés rendent les actions, surtout la tech, plus chères à financer.",
+    "evenement": "Attention au calendrier : PAS de décision de la Fed aujourd'hui. Sa réunion COMMENCE aujourd'hui et le verdict tombe DEMAIN (mercredi 28 octobre, 19h heure de Paris). Presque personne n'attend de changement cette fois : taux maintenus à 3,75–4,00 % (~90 % de probabilité). Ce qui comptera, c'est le TON de Kevin Warsh (président de la Fed) demain, pour jauger une éventuelle hausse en décembre. En attendant, trois chiffres US aujourd'hui (commandes de biens durables, confiance des ménages, ventes de logements neufs) donnent un avant-goût.",
+    "plan_avant": "Journée d'attente. Peu de direction tant que les chiffres US de l'après-midi (13h30 puis 15h, heure de Paris) ne sont pas tombés. On surveille si le CAC tient son plancher à 7 780.",
+    "plan_apres": "Si les chiffres US ressortent FORTS, les taux montent encore (vers 5,05 %) et la tech peut caler → le CAC risque 7 780. S'ils ressortent FAIBLES, soulagement possible → le CAC peut viser 7 900, puis 7 960. Mais le vrai pic de volatilité, lui, sera demain soir avec la Fed.",
+    "a_surveiller": "Le taux US 10 ans (franchit-il 5 % ?), le taux français OAT 10 ans (près de 5 %, la dette française reste sous tension malgré le répit offert par Moody's) et les valeurs techno / semi-conducteurs qui mènent la danse.",
+    "overnight": "Wall Street en hausse lundi (S&P +0,70 %, Nasdaq +0,82 %, Dow +0,28 %) · Asie techno en feu cette nuit (Nikkei +2,2 %, Corée Kospi +4 %) · Hong Kong à la traîne (−0,2 %).",
+    "inflation": "3,7 %"
+  },
+  "sources": ["CNBC", "Investing.com", "TradingEconomics", "FXEmpire", "Oilprice.com"]
+}
