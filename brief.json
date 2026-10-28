@@ -1,0 +1,60 @@
+{
+  "meta": { "date_str": "mercredi 28 octobre 2026", "heure": "08:00", "snapshot": "07:55", "tz": "Europe/Paris" },
+  "verdict": {
+    "biais": "Attentisme avant la Fed — risque orienté « hawkish » (pas de baisse en vue)",
+    "pivot": "CAC 7 887",
+    "ne_pas_lacher": "7 810",
+    "vol": "VIX bas (17,5) mais pic probable à 19h"
+  },
+  "niveaux": [
+    { "actif": "CAC 40",    "spot": 7887,   "close_prev": 7847,   "sup1": 7810,   "sup2": 7750,   "res1": 7910,   "res2": 7960,   "biais": "neutre",   "decimals": 0 },
+    { "actif": "DAX",       "spot": 25591,  "close_prev": 25411,  "sup1": 25400,  "sup2": 25250,  "res1": 25750,  "res2": 25900,  "biais": "neutre",   "decimals": 0 },
+    { "actif": "EUR/USD",   "spot": 1.1140, "close_prev": 1.1152, "sup1": 1.1100, "sup2": 1.1060, "res1": 1.1180, "res2": 1.1220, "biais": "baissier", "decimals": 4 },
+    { "actif": "Brent",     "spot": 114.5,  "close_prev": 113.1,  "sup1": 112.0,  "sup2": 110.0,  "res1": 117.0,  "res2": 119.0,  "biais": "haussier", "decimals": 1, "unit": "$" },
+    { "actif": "Or",        "spot": 4046,   "close_prev": 4058,   "sup1": 4000,   "sup2": 3950,   "res1": 4100,   "res2": 4160,   "biais": "neutre",   "decimals": 0, "unit": "$" },
+    { "actif": "US 10 ans", "spot": 4.97,   "close_prev": 4.98,   "sup1": 4.90,   "sup2": 4.82,   "res1": 5.02,   "res2": 5.08,   "biais": "detente",  "decimals": 2, "unit": "%" }
+  ],
+  "courbe": {
+    "points": [ { "t": "2Y", "v": 4.69 }, { "t": "5Y", "v": 4.78 }, { "t": "10Y", "v": 4.97 } ],
+    "bund10y": 3.37, "oat10y": 4.93, "spread_2s10s": 28, "spread_oat_bund": 150,
+    "fed_funds_proba": "≈ 93 %", "fed_funds_range": "3,75–4,00 %"
+  },
+  "volatilite": { "vix": 17.5 },
+  "cross_asset": [
+    { "label": "Dow", "pct": 0.03 }, { "label": "S&P 500", "pct": 0.6 }, { "label": "Nasdaq", "pct": 1.2 },
+    { "label": "DAX", "pct": 0.71 }, { "label": "Brent", "pct": 1.2 }, { "label": "Or", "pct": -0.3 }
+  ],
+  "agenda": [
+    { "heure": "19:00", "evenement": "Décision de taux de la Fed (FOMC)", "attendu": "3,75–4,00 %", "precedent": "3,75–4,00 %", "tier": 1, "move_implicite": "±1 % sur le S&P 500", "evenement_du_jour": true }
+  ],
+  "secteurs": [
+    { "secteur": "Énergie", "pct": null, "biais": "haussier" },
+    { "secteur": "Banques", "pct": null, "biais": "neutre" },
+    { "secteur": "Tech/Semis", "pct": null, "biais": "neutre" },
+    { "secteur": "Luxe", "pct": null, "biais": "neutre" },
+    { "secteur": "Industrie", "pct": null, "biais": "neutre" },
+    { "secteur": "Services aux collectivités", "pct": null, "biais": "baissier" }
+  ],
+  "playbook": [
+    { "si": "Ton ferme de Warsh (hausse de décembre confirmée)", "proba": 45, "alors": "Repli : CAC teste 7 810 puis 7 750 · EUR/USD < 1,1100 · 10 ans US > 5,02 %", "biais": "short" },
+    { "si": "Statu quo sans surprise, ton équilibré", "proba": 40, "alors": "Range : CAC coincé 7 850–7 910, la volatilité retombe après 19h", "biais": "attente" },
+    { "si": "Ouverture à une pause (surprise accommodante)", "proba": 15, "alors": "Soulagement : CAC repasse 7 910 vers 7 960 · EUR/USD rebondit > 1,1180", "biais": "long" }
+  ],
+  "invalidation": "Un taux US à 10 ans qui repasse durablement au-dessus de 5,00 % invalide tout rebond des actions : le marché re-price alors une hausse de taux en décembre.",
+  "delta": [
+    { "label": "Pétrole proche de 115 $ (attaque d'une raffinerie saoudienne)", "direction": "up" },
+    { "label": "Dollar (DXY) au plus haut de 2 semaines (~102,5)", "direction": "up" },
+    { "label": "VIX en repli juste avant la Fed", "direction": "down" }
+  ],
+  "condense": {
+    "idee": "Journée d'attente avant un double déclencheur ce soir : la décision de la Fed (19h) et les résultats de Microsoft et Alphabet (après la clôture américaine). Les Bourses européennes restent près de leurs plus hauts récents (CAC vers 7 887) mais sans prendre de risque avant 19h.",
+    "pourquoi": "Le fait marquant : la Fed ne baisse PAS ses taux. Elle les a même montés en septembre et pourrait recommencer en décembre, car l'inflation reste chaude — le pétrole est repassé vers 115 $ après une attaque sur une raffinerie en Arabie saoudite. Le seul vrai sujet du jour, c'est le TON du président Kevin Warsh.",
+    "evenement": "Décision de taux de la Fed (FOMC) à 19h. Le marché parie à ~93 % sur un statu quo (fourchette 3,75–4,00 %), et le seul risque est une HAUSSE (aucune baisse envisagée). À 19h30, conférence de presse de Kevin Warsh : ses mots sur décembre comptent plus que la décision elle-même.",
+    "plan_avant": "Peu de mouvement et des volumes faibles : on patiente jusqu'à 19h.",
+    "plan_apres": "Pic de volatilité possible dès 19h, puis un second à la clôture US (résultats Microsoft / Alphabet). On surveille si le CAC casse 7 810 (signal de repli) ou repasse 7 910 (signal de rebond).",
+    "a_surveiller": "Le taux US à 10 ans, collé à 5 % : au-dessus de 5,00 %, les actions souffrent. Et l'EUR/USD, affaibli par les inquiétudes sur la dette française (écart OAT-Bund encore large, ~150 points de base).",
+    "overnight": "Dow +0,03 % · S&P 500 +0,6 % · Nasdaq +1,2 % (la tech a tiré). En Europe hier : CAC +0,51 % (7 887) · DAX +0,71 % (25 591).",
+    "inflation": "3,7 %"
+  },
+  "sources": ["FXStreet", "Reuters", "TradingEconomics", "Investing.com", "CME FedWatch"]
+}
