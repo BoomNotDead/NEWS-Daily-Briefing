@@ -1,0 +1,62 @@
+{
+  "meta": { "date_str": "jeudi 29 octobre 2026", "heure": "08:00", "snapshot": "07:55", "tz": "Europe/Paris" },
+  "verdict": {
+    "biais": "Prudence : la tech sous pression (choc Alphabet), l'énergie tient grâce au pétrole",
+    "pivot": "CAC 7 887",
+    "ne_pas_lacher": "7 820",
+    "vol": "VIX ~17 mais futures tech en baisse avant une journée à 3 risques (BCE, PIB/PCE US, Amazon)"
+  },
+  "niveaux": [
+    { "actif": "CAC 40",    "spot": 7887,   "close_prev": 7887,   "sup1": 7820,   "sup2": 7750,   "res1": 7920,   "res2": 7980,   "biais": "neutre",   "decimals": 0 },
+    { "actif": "DAX",       "spot": 25704,  "close_prev": 25591,  "sup1": 25550,  "sup2": 25400,  "res1": 25850,  "res2": 26000,  "biais": "neutre",   "decimals": 0 },
+    { "actif": "EUR/USD",   "spot": 1.1140, "close_prev": 1.1120, "sup1": 1.1080, "sup2": 1.1040, "res1": 1.1180, "res2": 1.1230, "biais": "haussier", "decimals": 4 },
+    { "actif": "Brent",     "spot": 114.8,  "close_prev": 115.3,  "sup1": 112.0,  "sup2": 109.0,  "res1": 117.0,  "res2": 120.0,  "biais": "neutre",   "decimals": 1, "unit": "$" },
+    { "actif": "Or",        "spot": 4051,   "close_prev": 4060,   "sup1": 3980,   "sup2": 3900,   "res1": 4120,   "res2": 4200,   "biais": "neutre",   "decimals": 0, "unit": "$" },
+    { "actif": "US 10 ans", "spot": 5.01,   "close_prev": 5.03,   "sup1": 4.90,   "sup2": 4.80,   "res1": 5.10,   "res2": 5.20,   "biais": "neutre",   "decimals": 2, "unit": "%" }
+  ],
+  "courbe": {
+    "points": [ { "t": "2Y", "v": 4.70 }, { "t": "5Y", "v": 4.82 }, { "t": "10Y", "v": 5.01 } ],
+    "bund10y": 3.38, "oat10y": 4.94, "spread_2s10s": 31, "spread_oat_bund": 156,
+    "fed_funds_proba": "85 %", "fed_funds_range": "3,75–4,00 %"
+  },
+  "volatilite": { "vix": 17.3 },
+  "cross_asset": [
+    { "label": "S&P 500", "pct": 0.28 }, { "label": "Nasdaq", "pct": 0.27 }, { "label": "Dow", "pct": 0.19 },
+    { "label": "Nikkei", "pct": 0.63 }, { "label": "KOSPI", "pct": 6.6 }, { "label": "Alphabet (après-clôture)", "pct": -10.0 }
+  ],
+  "agenda": [
+    { "heure": "13:30", "evenement": "PIB US T3 (avance, annualisé)", "attendu": "3,0 %", "precedent": "2,2 %", "tier": 2, "evenement_du_jour": false },
+    { "heure": "13:30", "evenement": "Inflation PCE cœur US (septembre, sur un an)", "attendu": "3,1 %", "precedent": "3,0 %", "tier": 1, "evenement_du_jour": true },
+    { "heure": "14:15", "evenement": "Décision de taux BCE (taux de dépôt)", "attendu": "2,50 %", "precedent": "2,50 %", "tier": 1, "evenement_du_jour": false }
+  ],
+  "secteurs": [
+    { "secteur": "Énergie", "pct": null, "biais": "haussier" },
+    { "secteur": "Tech/Semis", "pct": null, "biais": "baissier" },
+    { "secteur": "Banques", "pct": null, "biais": "haussier" },
+    { "secteur": "Luxe", "pct": null, "biais": "neutre" },
+    { "secteur": "Industrie", "pct": null, "biais": "neutre" },
+    { "secteur": "Défensives/Santé", "pct": null, "biais": "haussier" }
+  ],
+  "playbook": [
+    { "si": "Les 3 rendez-vous rassurent (BCE prudente, PIB solide, PCE sage) et Amazon rassure ce soir sur l'IA", "proba": 30, "alors": "Rebond : le CAC récupère vers 7 980, EUR/USD teste 1,1180", "biais": "long" },
+    { "si": "Journée d'attente : contagion Alphabet limitée, données conformes aux attentes", "proba": 45, "alors": "Range nerveux 7 820–7 920, l'énergie surperforme, la tech reste lourde", "biais": "attente" },
+    { "si": "PCE cœur > 3,1 % (inflation persistante) ou BCE ferme, et Amazon déçoit", "proba": 25, "alors": "Repli : le CAC casse 7 820 vers 7 750, EUR/USD sous 1,1080, taux US 10 ans > 5,10 %", "biais": "short" }
+  ],
+  "invalidation": "Au-dessus de 5,10 % sur le taux US 10 ans, le scénario « actions » déraille : la remontée des taux frappe d'abord la tech et le luxe.",
+  "delta": [
+    { "label": "Alphabet −10 % après clôture : l'IA sous le feu des questions", "direction": "down" },
+    { "label": "Pétrole élevé (Brent ~115 $) : l'énergie européenne soutenue", "direction": "up" },
+    { "label": "Taux US 10 ans proche de 5 % : pression sur les valeurs de croissance", "direction": "up" }
+  ],
+  "condense": {
+    "idee": "Matinée prudente à Paris. Hier soir, les résultats de Google (Alphabet) ont déçu : l'action chute d'environ 10 % après la clôture car le groupe dépense énormément pour l'intelligence artificielle (IA) sans que ça rapporte encore. Du coup, les contrats à terme sur la tech US reculent (~−0,9 %) et plombent l'ouverture, alors même que Paris avait fini stable la veille en attendant la Fed. À l'inverse, Microsoft a rassuré : le marché trie les gagnants et les perdants de l'IA.",
+    "pourquoi": "Les investisseurs se demandent si les milliards investis dans l'IA par les géants de la tech seront rentables. Alphabet a brûlé du cash (trésorerie négative) à cause de dépenses record (plus de 50 Mds$ sur le trimestre). Ça refroidit tout le secteur techno, mais pas les fabricants de puces : en Asie, SK Hynix a bondi et tiré la Corée (+6,6 %).",
+    "evenement": "Grosse journée à 3 rendez-vous. 13h30 : croissance US (PIB du 3e trimestre, attendu +3,0 % contre +2,2 % avant) ET inflation PCE cœur (la mesure préférée de la Fed, attendue à 3,1 % sur un an contre 3,0 %). 14h15 : la Banque centrale européenne (BCE) décide de ses taux — maintien probable à 2,50 % — puis Christine Lagarde s'exprime (on écoute le ton et les tensions sur la dette française). Rappel : la Fed a maintenu ses taux hier soir à 3,75–4,00 %, mais avec un ton ferme (2 membres voulaient même les monter) ; une hausse en décembre est jugée probable (~85 %).",
+    "plan_avant": "ouverture sous pression sur la tech, l'énergie résiste. On surveille 7 820 (le seuil à ne pas lâcher) et 7 920 (la résistance au-dessus).",
+    "plan_apres": "après 13h30 et 14h15, pic de volatilité possible. Si l'inflation PCE dépasse 3,1 % ou si la BCE est ferme, les taux montent et la tech souffre ; si tout est sage, rebond possible vers 7 980.",
+    "a_surveiller": "les valeurs techno et semi-conducteurs (effet Alphabet, mais STMicro soutenu par le bond de SK Hynix), le pétrole (Brent ~115 $ sur fond de tensions avec l'Iran) et les résultats d'Amazon ce soir après la clôture américaine.",
+    "overnight": "S&P 500 +0,28 % · Nasdaq +0,27 % · Dow +0,19 % (clôtures AVANT le choc Alphabet) · Nikkei +0,63 % · KOSPI +6,6 % (SK Hynix).",
+    "inflation": "3,4 %"
+  },
+  "sources": ["Reuters", "CNBC", "FXStreet", "TradingEconomics", "Investing.com", "Saxo"]
+}
