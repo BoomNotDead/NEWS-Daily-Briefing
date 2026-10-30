@@ -1,0 +1,68 @@
+{
+  "meta": { "date_str": "vendredi 30 octobre 2026", "heure": "08:00", "snapshot": "07:55", "tz": "Europe/Paris" },
+  "verdict": {
+    "biais": "Risk-off tech — l'Europe résiste un peu mieux",
+    "pivot": "CAC 7 970",
+    "ne_pas_lacher": "7 880",
+    "vol": "VIX 17, en hausse"
+  },
+  "niveaux": [
+    { "actif": "CAC 40",    "spot": 7970,    "close_prev": 7886.96, "sup1": 7880,   "sup2": 7800,   "res1": 8000,   "res2": 8060,   "biais": "baissier", "decimals": 0 },
+    { "actif": "DAX",       "spot": 26040,   "close_prev": 25704,   "sup1": 25700,  "sup2": 25400,  "res1": 26300,  "res2": 26600,  "biais": "baissier", "decimals": 0 },
+    { "actif": "EUR/USD",   "spot": 1.1141,  "close_prev": 1.1157,  "sup1": 1.1113, "sup2": 1.1050, "res1": 1.1190, "res2": 1.1245, "biais": "baissier", "decimals": 4 },
+    { "actif": "Brent",     "spot": 116.54,  "close_prev": 114.88,  "sup1": 114.0,  "sup2": 110.0,  "res1": 118.0,  "res2": 120.0,  "biais": "haussier", "decimals": 1, "unit": "$" },
+    { "actif": "Or",        "spot": 4010,    "close_prev": 4030,    "sup1": 3950,   "sup2": 3900,   "res1": 4080,   "res2": 4150,   "biais": "neutre",   "decimals": 0, "unit": "$" },
+    { "actif": "US 10 ans", "spot": 4.92,    "close_prev": 4.96,    "sup1": 4.85,   "sup2": 4.78,   "res1": 4.98,   "res2": 5.05,   "biais": "detente",  "decimals": 2, "unit": "%" }
+  ],
+  "courbe": {
+    "points": [ { "t": "2Y", "v": 4.58 }, { "t": "5Y", "v": 4.68 }, { "t": "10Y", "v": 4.92 } ],
+    "bund10y": 3.37, "oat10y": 4.93, "spread_2s10s": 34, "spread_oat_bund": 156,
+    "fed_funds_proba": "2 dissidents voulaient +25 pb le 28/10", "fed_funds_range": "3,75–4,00 %"
+  },
+  "volatilite": { "vix": 17.2, "straddle_actif": "" },
+  "cross_asset": [
+    { "label": "Hang Seng", "pct": 1.00 },
+    { "label": "S&P 500", "pct": -0.30 },
+    { "label": "Dow", "pct": -0.25 },
+    { "label": "Nasdaq", "pct": -1.38 },
+    { "label": "Nikkei", "pct": -2.58 },
+    { "label": "KOSPI", "pct": -5.01 },
+    { "label": "Brent", "pct": 1.44 }
+  ],
+  "agenda": [
+    { "heure": "11:00", "evenement": "PIB zone euro T3 (estimation flash)", "attendu": "+0,2 % T/T", "precedent": "+0,6 % T/T", "tier": 2, "evenement_du_jour": true },
+    { "heure": "14:30", "evenement": "Indice du coût de l'emploi US (ECI, T3)", "tier": 3, "evenement_du_jour": false },
+    { "heure": "15:45", "evenement": "PMI de Chicago (octobre)", "tier": 3, "evenement_du_jour": false }
+  ],
+  "secteurs": [
+    { "secteur": "Technologie / Semis", "pct": null, "biais": "baissier" },
+    { "secteur": "Énergie", "pct": null, "biais": "haussier" },
+    { "secteur": "Santé / Défensives", "pct": null, "biais": "haussier" },
+    { "secteur": "Banques", "pct": null, "biais": "neutre" },
+    { "secteur": "Automobile", "pct": null, "biais": "neutre" },
+    { "secteur": "Luxe", "pct": null, "biais": "baissier" }
+  ],
+  "playbook": [
+    { "si": "Le repli tech persiste (futures Nasdaq rouges, semis plombés)", "proba": 50, "alors": "CAC casse 7 880 puis vise 7 800 ; fuite vers les obligations, US 10 ans sous 4,89 %", "biais": "short" },
+    { "si": "Stabilisation : l'énergie (TotalEnergies) et les défensives amortissent", "proba": 30, "alors": "CAC tient 7 880, range 7 900–7 970 ; EUR/USD campe autour de 1,1140", "biais": "attente" },
+    { "si": "Rebond de soulagement (chasse aux bonnes affaires sur la tech européenne)", "proba": 20, "alors": "CAC reprend 7 970 → 8 000 ; EUR/USD rebondit vers 1,1190", "biais": "long" }
+  ],
+  "invalidation": "Au-dessus de 8 000 sur le CAC avec un VIX qui retombe sous 15, le scénario « repli tech » perd sa force.",
+  "delta": [
+    { "label": "Rotation hors de la tech / IA (2e séance)", "direction": "down" },
+    { "label": "Pétrole en hausse (Brent > 116 $)", "direction": "up" },
+    { "label": "Taux US en baisse (fuite vers les obligations)", "direction": "down" },
+    { "label": "VIX qui remonte (17)", "direction": "up" }
+  ],
+  "condense": {
+    "idee": "La planète déteste l'IA ce matin : après des résultats jugés décevants d'Alphabet, Amazon et Intel, les investisseurs fuient la tech pour se réfugier dans les obligations. C'est la 2e séance de baisse. L'Asie a dévissé (Corée −5 %, avec coupe-circuit), le Nasdaq a lâché −1,4 % et l'Europe ouvre dans le rouge. Nuance utile : le CAC a fini EN HAUSSE hier (+1 %) grâce à Renault et Airbus, et l'Europe — moins « techno » et portée par le pétrole haut — pourrait limiter la casse, même si le stress budgétaire français pèse. Détail paradoxal : les taux américains BAISSENT alors que l'inflation et le pétrole plaideraient pour des taux plus hauts — à court terme, c'est la peur qui commande et l'argent se rue sur les obligations refuge.",
+    "pourquoi": "Les géants de la tech dépensent des fortunes dans l'IA (le « capex », l'argent investi dans les centres de données) sans que les profits suivent assez vite : Amazon a perdu ~7 % après la clôture là-dessus. En parallèle, le pétrole flambe (Brent > 116 $, tensions au Moyen-Orient et sanctions sur la Russie), ce qui ravive la peur de l'inflation — juste après une Fed qui a maintenu ses taux mais compté DEUX votants voulant les augmenter.",
+    "evenement": "Pas de grande statistique ce matin : le marché digère la réunion de la Fed (28/10, taux maintenus à 3,75–4,00 %, ton ferme) et la vague de résultats de la tech. Seul rendez-vous chiffré du jour : le PIB de la zone euro à 11h (attendu +0,2 % sur le trimestre, après +0,6 %). Côté banque centrale US, les paris sur une HAUSSE de taux en décembre montent (~82 %).",
+    "plan_avant": "ouverture attendue en baisse ; on ne court pas après la chute, on repère d'abord les supports (CAC 7 880, puis 7 800).",
+    "plan_apres": "après le PIB zone euro (11h) et surtout l'ouverture de Wall Street (14h30), on regarde si la vente sur la tech s'essouffle ou s'étend ; cassure de 7 880 = signal baissier, retour sur 8 000 = signal de stabilisation.",
+    "a_surveiller": "les valeurs techno et les semi-conducteurs (ASML, STMicro), le pétrole (Brent > 116 $) et le spread OAT-Bund français (~156 points de base, proche de son plus haut depuis 15 ans à cause du budget).",
+    "overnight": "Wall Street : Nasdaq −1,38 %, S&P 500 −0,30 %, Dow −0,25 %. Asie : Nikkei −2,6 %, KOSPI −5,0 % (coupe-circuit), Hang Seng +1,0 %.",
+    "inflation": "~3,6 % et en hausse (PCE US, la jauge préférée de la Fed)"
+  },
+  "sources": ["Reuters", "CNBC", "Yahoo Finance", "Investing.com", "Eurostat", "TradingEconomics", "Kitco"]
+}
