@@ -1,0 +1,59 @@
+{
+  "meta": { "date_str": "lundi 2 novembre 2026", "heure": "08:00", "snapshot": "07:55", "tz": "Europe/Paris" },
+  "verdict": {
+    "biais": "Prudence — purge de la tech/IA, tentative de rebond fragile",
+    "pivot": "CAC 7 970",
+    "ne_pas_lacher": "7 900",
+    "vol": "VIX ~19,4 (pic à 24 vendredi)"
+  },
+  "niveaux": [
+    { "actif": "CAC 40",    "spot": 7969,    "close_prev": 7970,    "sup1": 7900,   "sup2": 7800,   "res1": 8050,   "res2": 8120,   "biais": "baissier", "decimals": 0 },
+    { "actif": "DAX",       "spot": 25818,   "close_prev": 26039,   "sup1": 25600,  "sup2": 25400,  "res1": 26050,  "res2": 26300,  "biais": "baissier", "decimals": 0 },
+    { "actif": "EUR/USD",   "spot": 1.1183,  "close_prev": 1.1155,  "sup1": 1.1113, "sup2": 1.1050, "res1": 1.1240, "res2": 1.1300, "biais": "neutre",   "decimals": 4 },
+    { "actif": "Brent",     "spot": 110.6,   "close_prev": 113.3,   "sup1": 108.0,  "sup2": 105.0,  "res1": 113.5,  "res2": 116.0,  "biais": "baissier", "decimals": 1, "unit": "$" },
+    { "actif": "Or",        "spot": 3876,    "close_prev": 4021,    "sup1": 3800,   "sup2": 3700,   "res1": 4020,   "res2": 4100,   "biais": "baissier", "decimals": 0, "unit": "$" },
+    { "actif": "US 10 ans", "spot": 4.93,    "close_prev": 5.00,    "sup1": 4.85,   "sup2": 4.80,   "res1": 5.00,   "res2": 5.05,   "biais": "detente",  "decimals": 2, "unit": "%" }
+  ],
+  "courbe": {
+    "points": [ { "t": "2Y", "v": 4.59 }, { "t": "10Y", "v": 4.93 } ],
+    "bund10y": 3.34, "oat10y": 4.93, "spread_2s10s": 34, "spread_oat_bund": 159
+  },
+  "volatilite": { "vix": 19.42 },
+  "cross_asset": [
+    { "label": "S&P 500", "pct": -1.82 }, { "label": "Nasdaq", "pct": -2.86 }, { "label": "Dow", "pct": -1.10 },
+    { "label": "Nikkei", "pct": -0.3 }, { "label": "KOSPI", "pct": 2.6 }, { "label": "Brent", "pct": -2.5 }
+  ],
+  "agenda": [
+    { "heure": "09:55", "evenement": "PMI manufacturier zone euro (final, octobre)", "attendu": "52,4", "precedent": "52,4", "tier": 2, "evenement_du_jour": false },
+    { "heure": "16:00", "evenement": "ISM manufacturier US (octobre)", "attendu": "54,7", "precedent": "54,5", "tier": 2, "evenement_du_jour": true }
+  ],
+  "secteurs": [
+    { "secteur": "Tech/Semis", "pct": null, "biais": "baissier" },
+    { "secteur": "Luxe", "pct": null, "biais": "baissier" },
+    { "secteur": "Énergie", "pct": null, "biais": "baissier" },
+    { "secteur": "Banques", "pct": null, "biais": "haussier" },
+    { "secteur": "Santé", "pct": null, "biais": "haussier" },
+    { "secteur": "Utilities/Défensives", "pct": null, "biais": "haussier" }
+  ],
+  "playbook": [
+    { "si": "Rebond technique (futures US verts, l'Asie se stabilise)", "proba": 45, "alors": "Respiration : le CAC rebondit vers 8 050, puis 8 120 si les acheteurs reviennent", "biais": "long" },
+    { "si": "Catch-down (le CAC rattrape la baisse de Wall Street de vendredi soir)", "proba": 35, "alors": "Glissade vers 7 900, test de 7 800 si la vente sur la tech continue", "biais": "short" },
+    { "si": "Range nerveux avant l'ISM US (16h)", "proba": 20, "alors": "Oscillations 7 900–8 050, volumes faibles, on attend le chiffre", "biais": "attente" }
+  ],
+  "invalidation": "Au-dessus de 8 120, la purge est digérée et le rebond devient tendance ; sous 7 800, la correction s'étend à toute la cote.",
+  "delta": [
+    { "label": "Futures US rebondissent (+0,4 %), KOSPI +2,6 %", "direction": "up" },
+    { "label": "Tech/semis purgés : indice des semis US −7,2 % vendredi", "direction": "down" },
+    { "label": "Taux US en détente (10 ans à 4,93 %), fuite vers les obligations", "direction": "down" }
+  ],
+  "condense": {
+    "idee": "Journée prudente après le gros coup de vendredi : Wall Street a violemment vendu la tech et l'intelligence artificielle (Nasdaq −2,86 %), l'indice des semi-conducteurs a chuté de 7,2 %. L'Europe avait fermé avant le gros de la baisse (CAC quasi stable vendredi), donc ce matin elle risque de « rattraper » cette baisse à l'ouverture. Bonne nouvelle : l'Asie se stabilise et les futures US repassent dans le vert, donc un rebond est possible — mais fragile.",
+    "pourquoi": "La peur, c'est que les géants de la tech aient trop dépensé pour l'IA et soient trop chers. Résultat : vente massive. Détail inhabituel : l'or a aussi chuté (−3,6 %) au lieu de jouer son rôle de refuge — signe que des investisseurs ont vendu TOUT pour faire du cash. Seules les obligations d'État ont servi d'abri (les taux baissent).",
+    "evenement": "Pas de banque centrale aujourd'hui. Deux « PMI » (enquêtes de confiance des directeurs d'achat de l'industrie ; au-dessus de 50 = l'activité progresse) : zone euro à 9h55 (attendu 52,4), puis l'ISM manufacturier US à 16h (attendu 54,7 contre 54,5 le mois dernier). Un ISM très fort pourrait raviver la crainte de « taux hauts plus longtemps » et re-taper la tech.",
+    "plan_avant": "Ouverture européenne qui encaisse la baisse de Wall Street, mais amortie par le rebond des futures US. On surveille 7 900 : tenu = stabilisation, cassé = la vente continue.",
+    "plan_apres": "À 16h, l'ISM US donne le ton de l'après-midi. Chiffre fort = pression sur la tech et les taux ; chiffre faible = soulagement pour les obligations. Gros pic de nervosité possible autour de 16h.",
+    "a_surveiller": "la réouverture des valeurs techno et des semi-conducteurs, le VIX (l'« indice de la peur », monté à 24 en séance vendredi), le plancher 1,1113 sur l'EUR/USD, et l'écart OAT-Bund à 159 points (le surcoût que paie la dette française — tension budgétaire persistante).",
+    "overnight": "Vendredi : Nasdaq −2,86 % · S&P 500 −1,82 % · Dow −1,10 %. Ce matin en Asie : Nikkei ~−0,3 %, KOSPI +2,6 %, futures US +0,4 %."
+  },
+  "sources": ["Bloomberg", "Reuters", "Investing.com", "TradingEconomics"]
+}
