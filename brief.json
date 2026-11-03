@@ -1,0 +1,62 @@
+{
+  "meta": { "date_str": "mardi 3 novembre 2026", "heure": "08:00", "snapshot": "07:55", "tz": "Europe/Paris" },
+  "verdict": {
+    "biais": "Prudence avant les urnes — défensives oui, tech non",
+    "pivot": "CAC 8 050",
+    "ne_pas_lacher": "7 980",
+    "vol": "VIX 19,4 (+13 %), sous tension avant les résultats"
+  },
+  "niveaux": [
+    { "actif": "CAC 40",    "spot": 8048,   "close_prev": 7969,   "sup1": 7980,   "sup2": 7900,   "res1": 8120,   "res2": 8180,   "biais": "neutre",   "decimals": 0 },
+    { "actif": "DAX",       "spot": 25981,  "close_prev": 25818,  "sup1": 25800,  "sup2": 25600,  "res1": 26200,  "res2": 26400,  "biais": "neutre",   "decimals": 0 },
+    { "actif": "S&P 500",   "spot": 7541,   "close_prev": 7580,   "sup1": 7480,   "sup2": 7420,   "res1": 7620,   "res2": 7700,   "biais": "baissier", "decimals": 0 },
+    { "actif": "EUR/USD",   "spot": 1.1185, "close_prev": 1.1163, "sup1": 1.1120, "sup2": 1.1080, "res1": 1.1220, "res2": 1.1270, "biais": "haussier", "decimals": 4 },
+    { "actif": "Brent",     "spot": 104.77, "close_prev": 113.44, "sup1": 102.0,  "sup2": 98.0,   "res1": 108.0,  "res2": 113.0,  "biais": "baissier", "decimals": 1, "unit": "$" },
+    { "actif": "Or",        "spot": 3957,   "close_prev": 3886,   "sup1": 3880,   "sup2": 3800,   "res1": 4020,   "res2": 4100,   "biais": "haussier", "decimals": 0, "unit": "$" },
+    { "actif": "US 10 ans", "spot": 4.89,   "close_prev": 4.94,   "sup1": 4.80,   "sup2": 4.72,   "res1": 4.95,   "res2": 5.00,   "biais": "detente",  "decimals": 2, "unit": "%" }
+  ],
+  "courbe": {
+    "points": [ { "t": "2Y", "v": 4.59 }, { "t": "5Y", "v": 4.72 }, { "t": "10Y", "v": 4.89 } ],
+    "bund10y": 3.29, "oat10y": 4.90, "spread_2s10s": 30, "spread_oat_bund": 160,
+    "fed_funds_range": "3,75–4,00 %"
+  },
+  "volatilite": { "vix": 19.42 },
+  "cross_asset": [
+    { "label": "Dow", "pct": 0.41 }, { "label": "S&P 500", "pct": -0.51 }, { "label": "Nasdaq", "pct": -1.07 },
+    { "label": "Nikkei", "pct": -0.29 }, { "label": "Hang Seng", "pct": 0.40 },
+    { "label": "Or", "pct": 1.83 }, { "label": "Brent", "pct": -7.63 }, { "label": "Dollar (DXY)", "pct": -0.35 }
+  ],
+  "agenda": [
+    { "heure": "Nuit", "evenement": "Élections de mi-mandat américaines (résultats)", "tier": 1, "evenement_du_jour": true },
+    { "heure": "16:00", "evenement": "Commandes à l'industrie US (sept.)", "attendu": "+1,1 %", "precedent": "+0,1 %", "tier": 2, "evenement_du_jour": false }
+  ],
+  "secteurs": [
+    { "secteur": "Voyage/Loisirs", "pct": 3.03, "biais": "haussier" },
+    { "secteur": "Énergie", "pct": null, "biais": "baissier" },
+    { "secteur": "Tech/Semis", "pct": null, "biais": "baissier" },
+    { "secteur": "Banques", "pct": null, "biais": "neutre" },
+    { "secteur": "Défensives (santé/conso)", "pct": null, "biais": "haussier" }
+  ],
+  "playbook": [
+    { "si": "Résultat conforme aux sondages (poussée démocrate déjà anticipée)", "proba": 55, "alors": "Soulagement mesuré : le CAC revient vers 8 120 puis 8 180, la tech tente de se stabiliser", "biais": "attente" },
+    { "si": "Surprise favorable aux actifs risqués (blocage du Congrès, statu quo rassurant)", "proba": 20, "alors": "Rebond : CAC > 8 180, retour des achats sur la tech, EUR/USD vise 1,1270", "biais": "long" },
+    { "si": "Résultat serré, contesté ou retardé", "proba": 25, "alors": "Repli : le CAC teste 7 980 puis 7 900, VIX > 22, l'or poursuit vers 4 020 $", "biais": "short" }
+  ],
+  "invalidation": "Si le CAC casse 7 980 avec un VIX au-dessus de 22, l'attente prudente bascule en repli franc : le thème « correction de la tech » prend alors le dessus sur le simple attentisme électoral.",
+  "delta": [
+    { "label": "Pétrole en chute libre (−7,6 %, espoir d'accord USA-Iran)", "direction": "down" },
+    { "label": "VIX qui remonte avant les urnes", "direction": "up" },
+    { "label": "Or recherché comme valeur refuge (+1,8 %)", "direction": "up" },
+    { "label": "Taux US en légère détente (10 ans à 4,89 %)", "direction": "down" }
+  ],
+  "condense": {
+    "idee": "Journée d'attente et de prudence. Les investisseurs se mettent à l'abri avant les élections américaines de mi-mandat, dont les résultats tombent cette nuit. Hier à Wall Street, l'argent est sorti de la tech (Nasdaq −1,1 %) pour aller vers les valeurs défensives (Dow +0,4 %). L'« indice de la peur » (VIX) est remonté à 19,4.",
+    "pourquoi": "Deux forces s'opposent. D'un côté, le pétrole s'est effondré (−7,6 %) sur l'espoir d'un accord USA-Iran : ça calme l'inflation et ça a aidé l'Europe (le CAC a fini +1 % hier). De l'autre, la tech américaine corrige depuis une semaine (crainte que les dépenses en intelligence artificielle soient devenues excessives), et personne ne veut prendre de risque avant le vote.",
+    "evenement": "Élections de mi-mandat aux États-Unis : on renouvelle une partie du Congrès (les députés et un tiers des sénateurs). Les paris en ligne donnent environ 74 % de chances à une reprise des deux chambres par les démocrates. Pour les marchés, ce qui compte, c'est la SURPRISE : un résultat conforme aux sondages = peu de réaction ; un résultat inattendu, très serré ou contesté = volatilité.",
+    "plan_avant": "peu de conviction et des volumes faibles : on évite de se surexposer avant la nuit.",
+    "plan_apres": "la vraie réaction viendra demain à l'ouverture, une fois les résultats connus. On regarde si le CAC tient 7 980 (signal de faiblesse) ou repasse 8 120 (signal de force).",
+    "a_surveiller": "la tech américaine (le Nasdaq approche de la zone de « correction »), le pétrole (rebond possible si les discussions avec l'Iran échouent) et le taux français (OAT à 4,90 %, écart avec l'Allemagne toujours tendu à ~160 points).",
+    "overnight": "Dow +0,4 % · S&P 500 −0,5 % · Nasdaq −1,1 % · Nikkei −0,3 % · Hang Seng +0,4 %. Or +1,8 % (refuge), Brent −7,6 %, dollar en léger repli (DXY 101,4)."
+  },
+  "sources": ["Reuters", "Boursorama", "NBC News", "Trading Economics", "Morgan Stanley", "Investing.com"]
+}
