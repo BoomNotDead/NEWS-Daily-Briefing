@@ -1,0 +1,57 @@
+{
+  "meta": { "date_str": "jeudi 5 novembre 2026", "heure": "08:00", "snapshot": "07:55", "tz": "Europe/Paris" },
+  "verdict": {
+    "biais": "Risk-on post-midterms — banques en tête, énergie à la peine",
+    "pivot": "CAC 8 180",
+    "ne_pas_lacher": "8 100",
+    "vol": "VIX retombé à 16,6 — BoE attendue à 13h"
+  },
+  "niveaux": [
+    { "actif": "CAC 40",    "spot": 8177.89, "close_prev": 8020,   "sup1": 8100,   "sup2": 8020,   "res1": 8230,   "res2": 8300,   "biais": "haussier", "decimals": 0 },
+    { "actif": "DAX",       "spot": 26437,   "close_prev": 25864,  "sup1": 26200,  "sup2": 25900,  "res1": 26600,  "res2": 26800,  "biais": "haussier", "decimals": 0 },
+    { "actif": "EUR/USD",   "spot": 1.1216,  "close_prev": 1.1193, "sup1": 1.1180, "sup2": 1.1140, "res1": 1.1260, "res2": 1.1300, "biais": "haussier", "decimals": 4 },
+    { "actif": "Brent",     "spot": 94.14,   "close_prev": 103.6,  "sup1": 92.0,   "sup2": 90.0,   "res1": 97.0,   "res2": 100.0,  "biais": "baissier", "decimals": 1, "unit": "$" },
+    { "actif": "Or",        "spot": 4047,    "close_prev": 3932,   "sup1": 4000,   "sup2": 3950,   "res1": 4100,   "res2": 4180,   "biais": "haussier", "decimals": 0, "unit": "$" },
+    { "actif": "US 10 ans", "spot": 4.89,    "close_prev": 4.95,   "sup1": 4.80,   "sup2": 4.75,   "res1": 4.95,   "res2": 5.00,   "biais": "detente",  "decimals": 2, "unit": "%" }
+  ],
+  "courbe": {
+    "points": [ { "t": "2Y", "v": 4.57 }, { "t": "10Y", "v": 4.89 } ],
+    "bund10y": 3.29, "oat10y": 4.88, "spread_2s10s": 32, "spread_oat_bund": 159
+  },
+  "volatilite": { "vix": 16.6 },
+  "cross_asset": [
+    { "label": "Dow", "pct": 3.03 }, { "label": "S&P 500", "pct": 1.58 }, { "label": "Nasdaq", "pct": 1.44 },
+    { "label": "Nikkei", "pct": -1.40 }, { "label": "Brent", "pct": -9.13 }, { "label": "Or", "pct": 2.94 }
+  ],
+  "agenda": [
+    { "heure": "13:00", "evenement": "Décision de taux Banque d'Angleterre (BoE) + Rapport de politique monétaire", "attendu": "4,00 %", "precedent": "3,75 %", "tier": 1, "evenement_du_jour": true }
+  ],
+  "secteurs": [
+    { "secteur": "Banques", "pct": 4.32, "biais": "haussier" },
+    { "secteur": "Renouvelables", "pct": null, "biais": "haussier" },
+    { "secteur": "Énergie / pétrole", "pct": null, "biais": "baissier" },
+    { "secteur": "Tech / Semis", "pct": null, "biais": "neutre" }
+  ],
+  "playbook": [
+    { "si": "BoE monte à 4,00 % comme prévu, ton ferme (inflation 3,5 %)", "proba": 55, "alors": "Digestion du rallye : le CAC tient 8 100 et vise 8 230, la livre reste soutenue", "biais": "attente" },
+    { "si": "BoE surprend en laissant le taux à 3,75 % (ton accommodant)", "proba": 15, "alors": "Détente : prime au risque, le CAC pousse vers 8 300, EUR/USD > 1,1260", "biais": "long" },
+    { "si": "Prises de bénéfices sur les banques (+4 % hier) ou rebond du pétrole", "proba": 30, "alors": "Repli : le CAC repasse sous 8 100 vers 8 020, l'énergie rebondit", "biais": "short" }
+  ],
+  "invalidation": "Un rebond du Brent au-dessus de 100 $ (retour de la « prime de guerre » sur l'Iran) casserait le scénario désinflation et remettrait la pression sur les actions.",
+  "delta": [
+    { "label": "Pétrole en chute libre (−9 %), désinflation", "direction": "down" },
+    { "label": "Rotation haussière sur les banques européennes", "direction": "up" },
+    { "label": "Taux US en détente (10 ans −6 pb à 4,89 %)", "direction": "down" }
+  ],
+  "condense": {
+    "idee": "Grosse journée « risk-on » hier (appétit pour le risque) après les élections américaines de mi-mandat : les démocrates ont remporté les deux chambres du Congrès. Les marchés y voient moins de risque de réglementation dure sur la tech et l'IA, et les banques flambent (+4 %). Fait rare : l'or monte AUSSI (+3 %) en même temps que les actions — c'est le dollar qui faiblit et les taux qui baissent qui dopent le métal jaune. Aujourd'hui, on digère ce rallye en attendant la banque centrale britannique à 13h.",
+    "pourquoi": "Un sénateur démocrate (Chuck Schumer) a évoqué la fin de la guerre contre l'Iran. Résultat : le pétrole s'effondre de 9 %, le marché retirant la « prime de guerre » (le surcoût lié au risque géopolitique). Un pétrole moins cher = moins d'inflation = soulagement sur les actions et les obligations.",
+    "evenement": "À 13h (heure de Paris), la Banque d'Angleterre (BoE) décide de son taux. Les économistes attendent une HAUSSE à 4,00 % (contre 3,75 %), car l'inflation britannique est remontée à 3,5 %. Monter le taux sert à freiner les prix. C'est déjà largement anticipé : ce qui comptera, c'est le TON du discours (d'autres hausses à venir ou non).",
+    "plan_avant": "Avant 13h : marché plutôt calme, on digère la hausse de la veille sans s'emballer.",
+    "plan_apres": "Après 13h : surveiller la livre sterling et les banques. Une BoE à 4,00 % sans surprise = peu de réaction ; un ton très ferme peut peser sur les actions.",
+    "a_surveiller": "Le pétrole (rebond possible après la chute ?) et les banques européennes, qui ont beaucoup monté hier et peuvent subir des prises de bénéfices.",
+    "overnight": "Dow +3,03 % (meilleure séance depuis avril 2025) · S&P 500 +1,58 % · Nasdaq +1,44 % · Tokyo −1,4 % (la tech a pesé).",
+    "inflation": "Royaume-Uni : 3,5 %"
+  },
+  "sources": ["Reuters", "Boursorama", "CNBC", "Trading Economics", "Bank of England"]
+}
