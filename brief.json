@@ -1,0 +1,63 @@
+{
+  "meta": { "date_str": "vendredi 6 novembre 2026", "heure": "08:00", "snapshot": "07:55", "tz": "Europe/Paris" },
+  "verdict": {
+    "biais": "Risk-off : la panique IA de Wall Street gagne l'Europe, prudence avant l'emploi US de 14h30",
+    "pivot": "CAC 8 205",
+    "ne_pas_lacher": "8 120",
+    "vol": "VIX à 28 (+70 %), au plus haut depuis mars"
+  },
+  "niveaux": [
+    { "actif": "CAC 40",    "spot": 8205,   "close_prev": 8181,   "sup1": 8120,   "sup2": 8050,   "res1": 8260,   "res2": 8320,   "biais": "baissier", "decimals": 0 },
+    { "actif": "DAX",       "spot": 26325,  "close_prev": 26431,  "sup1": 26000,  "sup2": 25700,  "res1": 26600,  "res2": 26900,  "biais": "baissier", "decimals": 0 },
+    { "actif": "S&P 500",   "spot": 7354,   "close_prev": 7688,   "sup1": 7250,   "sup2": 7150,   "res1": 7500,   "res2": 7620,   "biais": "baissier", "decimals": 0 },
+    { "actif": "Nasdaq",    "spot": 24315,  "close_prev": 25736,  "sup1": 24000,  "sup2": 23500,  "res1": 25000,  "res2": 25700,  "biais": "baissier", "decimals": 0 },
+    { "actif": "EUR/USD",   "spot": 1.1240, "close_prev": null,   "sup1": 1.1180, "sup2": 1.1130, "res1": 1.1290, "res2": 1.1340, "biais": "haussier", "decimals": 4 },
+    { "actif": "Brent",     "spot": 94.6,   "close_prev": 103.6,  "sup1": 92.0,   "sup2": 88.0,   "res1": 98.0,   "res2": 104.0,  "biais": "baissier", "decimals": 1, "unit": "$" },
+    { "actif": "Or",        "spot": 4100,   "close_prev": 4050,   "sup1": 4000,   "sup2": 3950,   "res1": 4180,   "res2": 4250,   "biais": "haussier", "decimals": 0, "unit": "$" },
+    { "actif": "US 10 ans", "spot": 4.85,   "close_prev": 4.90,   "sup1": 4.75,   "sup2": 4.68,   "res1": 4.92,   "res2": 5.00,   "biais": "detente",  "decimals": 2, "unit": "%" }
+  ],
+  "courbe": {
+    "points": [ { "t": "2Y", "v": 4.48 }, { "t": "10Y", "v": 4.85 } ],
+    "bund10y": 3.27, "oat10y": 4.77, "spread_2s10s": 37, "spread_oat_bund": 150
+  },
+  "volatilite": { "vix": 28.18 },
+  "cross_asset": [
+    { "label": "Dow", "pct": -3.44 }, { "label": "S&P 500", "pct": -4.36 }, { "label": "Nasdaq", "pct": -5.52 },
+    { "label": "EuroStoxx 50", "pct": -0.29 }, { "label": "Brent", "pct": -8.7 }, { "label": "Or", "pct": 2.9 }
+  ],
+  "agenda": [
+    { "heure": "14:30", "evenement": "Rapport sur l'emploi américain – créations de postes (NFP, octobre)", "attendu": "+65k", "precedent": "+29k", "tier": 1, "evenement_du_jour": true },
+    { "heure": "14:30", "evenement": "Taux de chômage américain (octobre)", "attendu": "4,2 %", "precedent": "4,2 %", "tier": 1, "evenement_du_jour": false },
+    { "heure": "14:30", "evenement": "Salaire horaire moyen américain (m/m, octobre)", "attendu": "+0,3 %", "precedent": "+0,1 %", "tier": 2, "evenement_du_jour": false }
+  ],
+  "secteurs": [
+    { "secteur": "Tech/Semis", "pct": null, "biais": "baissier" },
+    { "secteur": "Luxe", "pct": null, "biais": "baissier" },
+    { "secteur": "Énergie", "pct": null, "biais": "baissier" },
+    { "secteur": "Banques", "pct": null, "biais": "neutre" },
+    { "secteur": "Utilities", "pct": null, "biais": "haussier" },
+    { "secteur": "Santé", "pct": null, "biais": "haussier" }
+  ],
+  "playbook": [
+    { "si": "NFP faible (< 50k) → le marché parie sur plus de baisses de taux Fed", "proba": 35, "alors": "Rebond de soulagement : les taux baissent, le Nasdaq tente de récupérer 25 000, le CAC rebondit vers 8 260", "biais": "long" },
+    { "si": "NFP conforme (~65k) → statu quo sur les taux", "proba": 40, "alors": "La panique IA reste le moteur : range nerveux, CAC bloqué sous 8 260, VIX maintenu > 25", "biais": "attente" },
+    { "si": "NFP fort (> 90k) → moins de baisses de taux attendues", "proba": 25, "alors": "Nouvelle pression sur la tech : Nasdaq vers 24 000, le CAC teste 8 120", "biais": "short" }
+  ],
+  "invalidation": "Tant que le VIX reste au-dessus de 25 et le Nasdaq sous 25 000, chaque rebond est fragile ; un retour du VIX sous 20 signalerait la fin de la panique.",
+  "delta": [
+    { "label": "Déroute des valeurs d'IA, Nasdaq en correction (−10 % depuis son pic)", "direction": "down" },
+    { "label": "Ruée vers les refuges : or et obligations d'État", "direction": "up" },
+    { "label": "Pétrole en chute libre (−8,7 %)", "direction": "down" },
+    { "label": "Volatilité : le VIX bondit de 70 %", "direction": "up" }
+  ],
+  "condense": {
+    "idee": "Panique sur les valeurs d'intelligence artificielle à Wall Street : le Nasdaq (indice des grandes valeurs techno américaines) a chuté de 5,5 % et entre en « correction » (il a perdu plus de 10 % depuis son record). L'Europe va ouvrir dans le rouge. Le CAC a résisté hier (+0,3 %) mais devrait ouvrir en baisse ce matin. Point de bascule de la journée : le rapport sur l'emploi américain à 14h30.",
+    "pourquoi": "Après la large victoire des Démocrates aux élections de mi-mandat, les marchés craignent une régulation des « data centers » (ces immenses centres informatiques qui font tourner l'IA). Les fabricants de puces ont dévissé : AMD −17 %, Nvidia −9 %, et l'indice des semi-conducteurs −12 %. Environ 2 500 milliards de dollars de valeur sont partis en fumée en une séance.",
+    "evenement": "Rapport sur l'emploi américain (NFP = nombre d'emplois créés hors agriculture), publié à 14h30. On attend +65 000 postes en octobre, après seulement +29 000 en septembre. Un chiffre faible = espoir de baisses de taux de la Fed (bon pour la tech) ; un chiffre fort = l'inverse.",
+    "plan_avant": "Ouverture européenne sous pression. On surveille si le CAC tient 8 120 ; la tech et les semi-conducteurs (ASML) encaissent le choc venu des États-Unis.",
+    "plan_apres": "Gros pic de volatilité possible à 14h30. Un CAC qui repasse au-dessus de 8 260 = soulagement ; sous 8 120 = la baisse s'étend.",
+    "a_surveiller": "Le VIX (indice de la peur) à 28, au plus haut depuis mars ; le Nasdaq et le seuil psychologique des 25 000 points ; le pétrole qui tente de rebondir après son plongeon.",
+    "overnight": "Dow −3,4 % · S&P 500 −4,4 % · Nasdaq −5,5 % (plus forte baisse depuis avril 2025) · VIX +70 % à 28,2."
+  },
+  "sources": ["Yahoo Finance", "CNBC", "Reuters / RTTNews", "FXStreet", "Trading Economics", "Investing.com"]
+}
