@@ -1,0 +1,61 @@
+{
+  "meta": { "date_str": "lundi 9 novembre 2026", "heure": "08:00", "snapshot": "07:55", "tz": "Europe/Paris" },
+  "verdict": {
+    "biais": "Rebond fragile — on respire après la chute tech, mais le CPI US de demain commande",
+    "pivot": "CAC 8 140",
+    "ne_pas_lacher": "8 100",
+    "vol": "VIX encore tendu (~25,6), détente possible si l'inflation sort douce"
+  },
+  "niveaux": [
+    { "actif": "CAC 40",      "spot": 8170,   "close_prev": 8139,   "sup1": 8100,   "sup2": 8040,   "res1": 8200,   "res2": 8280,   "biais": "neutre",   "decimals": 0 },
+    { "actif": "DAX",         "spot": 25900,  "close_prev": 25820,  "sup1": 25600,  "sup2": 25350,  "res1": 26000,  "res2": 26200,  "biais": "haussier", "decimals": 0 },
+    { "actif": "EuroStoxx 50","spot": 6190,   "close_prev": 6170,   "sup1": 6120,   "sup2": 6060,   "res1": 6220,   "res2": 6280,   "biais": "haussier", "decimals": 0 },
+    { "actif": "EUR/USD",     "spot": 1.1160, "close_prev": 1.1151, "sup1": 1.1120, "sup2": 1.1080, "res1": 1.1200, "res2": 1.1240, "biais": "baissier", "decimals": 4 },
+    { "actif": "Brent",       "spot": 98.3,   "close_prev": 98.3,   "sup1": 96.5,   "sup2": 94.5,   "res1": 100.0,  "res2": 102.0,  "biais": "neutre",   "decimals": 1, "unit": "$" },
+    { "actif": "Or",          "spot": 4070,   "close_prev": 4074,   "sup1": 4000,   "sup2": 3950,   "res1": 4120,   "res2": 4180,   "biais": "neutre",   "decimals": 0, "unit": "$" },
+    { "actif": "US 10 ans",   "spot": 4.86,   "close_prev": 4.83,   "sup1": 4.80,   "sup2": 4.72,   "res1": 4.90,   "res2": 4.95,   "biais": "tension",  "decimals": 2, "unit": "%" }
+  ],
+  "courbe": {
+    "points": [ { "t": "2Y", "v": 4.51 }, { "t": "5Y", "v": 4.65 }, { "t": "10Y", "v": 4.86 } ],
+    "bund10y": 3.27, "oat10y": 4.76, "spread_2s10s": 35, "spread_oat_bund": 148
+  },
+  "volatilite": { "vix": 25.6 },
+  "cross_asset": [
+    { "label": "Dow", "pct": -0.46 }, { "label": "S&P 500", "pct": 0.31 }, { "label": "Nasdaq", "pct": 1.09 },
+    { "label": "Nikkei", "pct": 1.4 }, { "label": "Nvidia", "pct": 2.78 }, { "label": "Brent", "pct": 0.03 }
+  ],
+  "agenda": [
+    { "heure": "10:30", "evenement": "Confiance des investisseurs Sentix (zone euro)", "attendu": "1,8", "precedent": "2,7", "tier": 2, "evenement_du_jour": false },
+    { "heure": "16:00", "evenement": "Stocks des grossistes US (wholesale inventories, sept.)", "attendu": "0,6 %", "precedent": "0,5 %", "tier": 3, "evenement_du_jour": false }
+  ],
+  "secteurs": [
+    { "secteur": "Banques", "pct": null, "biais": "haussier" },
+    { "secteur": "Tech/Semis", "pct": null, "biais": "haussier" },
+    { "secteur": "Énergie", "pct": null, "biais": "haussier" },
+    { "secteur": "Industrie/Autos", "pct": null, "biais": "haussier" },
+    { "secteur": "Luxe", "pct": null, "biais": "baissier" },
+    { "secteur": "Immobilier/Utilities", "pct": null, "biais": "baissier" }
+  ],
+  "playbook": [
+    { "si": "CPI de demain anticipé doux, le rebond se prolonge", "proba": 40, "alors": "CAC vise 8 200 puis 8 280 ; EUR/USD remonte vers 1,1200. Invalidé sous 8 100.", "biais": "long" },
+    { "si": "On attend le CPI sans bouger (journée d'attente)", "proba": 40, "alors": "CAC coince entre 8 100 et 8 200, le VIX reste autour de 25. Pas de conviction avant 14h30 demain.", "biais": "attente" },
+    { "si": "L'enquête Nvidia + la hausse des taux cassent le rebond", "proba": 20, "alors": "CAC repasse sous 8 100 vers 8 040 ; US 10 ans > 4,90 %. Objectif baissier 8 040, invalidé au-dessus de 8 200.", "biais": "short" }
+  ],
+  "invalidation": "Au-dessus de 4,90 % sur le taux US 10 ans, le rebond des actions s'essouffle : le coût de l'argent redevient le vrai sujet.",
+  "delta": [
+    { "label": "Taux US 10 ans qui remontent (pari sur une hausse Fed en décembre)", "direction": "up" },
+    { "label": "Semi-conducteurs qui rebondissent après la chute (Nvidia +2,8 %, AMD +11 %)", "direction": "up" },
+    { "label": "Enquête sur le PDG de Nvidia qui pèse sur les futures du Nasdaq", "direction": "down" }
+  ],
+  "condense": {
+    "idee": "Après la grosse chute de la tech la semaine dernière, les marchés rebondissent : l'Asie monte (Nikkei +1,4 %) et les puces se sont reprises vendredi. Mais le rebond est fragile : les taux américains remontent parce que la banque centrale US (la Fed) pourrait MONTER ses taux en décembre, et tout le monde attend le chiffre de l'inflation US de demain. Résultat : journée de respiration, sans grande conviction.",
+    "pourquoi": "L'emploi US est ressorti solide (plus de créations de postes que prévu). Un marché du travail fort = la Fed peut durcir, donc les taux obligataires montent (US 10 ans à 4,86 %), ce qui pèse surtout sur les actions chères (la tech). En face, les puces ont rebondi (Nvidia +2,8 %, AMD +11 %), ce qui a rassuré et porté le moral.",
+    "evenement": "LE rendez-vous est DEMAIN (mardi) : l'inflation US d'octobre (indice CPI), attendue à +0,3 % sur le mois (cœur, hors énergie/alimentation : +0,2 %). C'est ce chiffre qui décidera si la Fed relève ses taux en décembre. Aujourd'hui, rien de majeur : juste le moral des investisseurs en zone euro (Sentix) et quelques discours de membres de la Fed.",
+    "plan_avant": "On patiente et on respecte le range 8 100–8 200 sur le CAC. Peu d'intérêt à prendre des paris tranchés avant le chiffre de demain.",
+    "plan_apres": "Le vrai pic de volatilité, c'est demain 14h30 (heure de Paris) à la sortie du CPI. D'ici là : cassure de 8 200 = signal positif, perte de 8 100 = signal négatif.",
+    "a_surveiller": "le seuil des 4,90 % sur le taux US 10 ans, l'actualité Nvidia (enquête du conseil sur son PDG) et les semi-conducteurs qui mènent le rebond.",
+    "overnight": "Vendredi (dernière séance US) : Dow −0,46 % · S&P 500 +0,31 % · Nasdaq +1,09 %. Ce matin en Asie : Nikkei +1,4 %.",
+    "inflation": "3,7 %"
+  },
+  "sources": ["Reuters", "CNBC", "Yahoo Finance", "TradingEconomics", "Investing.com", "Morningstar"]
+}
