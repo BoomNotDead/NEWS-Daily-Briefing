@@ -1,0 +1,60 @@
+{
+  "meta": { "date_str": "mardi 10 novembre 2026", "heure": "08:00", "snapshot": "07:55", "tz": "Europe/Paris" },
+  "verdict": {
+    "biais": "Rebond technique — risk-on prudent avant le CPI US de 14h30",
+    "pivot": "CAC 8 200",
+    "ne_pas_lacher": "8 140",
+    "vol": "VIX retombé à 23 ; pic attendu à 14h30"
+  },
+  "niveaux": [
+    { "actif": "CAC 40",    "spot": 8233,   "close_prev": 8139,   "sup1": 8180,   "sup2": 8120,   "res1": 8280,   "res2": 8340,   "biais": "haussier", "decimals": 0 },
+    { "actif": "DAX",       "spot": 26267,  "close_prev": 25820,  "sup1": 26000,  "sup2": 25800,  "res1": 26450,  "res2": 26650,  "biais": "haussier", "decimals": 0 },
+    { "actif": "EUR/USD",   "spot": 1.1172, "close_prev": 1.1151, "sup1": 1.1130, "sup2": 1.1090, "res1": 1.1210, "res2": 1.1250, "biais": "haussier", "decimals": 4 },
+    { "actif": "Brent",     "spot": 91.7,   "close_prev": 93.4,   "sup1": 90.0,   "sup2": 88.0,   "res1": 94.0,   "res2": 96.5,   "biais": "baissier", "decimals": 1, "unit": "$" },
+    { "actif": "Or",        "spot": 4114,   "close_prev": 4123,   "sup1": 4050,   "sup2": 4000,   "res1": 4150,   "res2": 4200,   "biais": "neutre",   "decimals": 0, "unit": "$" },
+    { "actif": "US 10 ans", "spot": 4.87,   "close_prev": 4.88,   "sup1": 4.80,   "sup2": 4.75,   "res1": 4.92,   "res2": 4.97,   "biais": "tension",  "decimals": 2, "unit": "%" }
+  ],
+  "courbe": {
+    "points": [ { "t": "2Y", "v": 4.56 }, { "t": "5Y", "v": 4.70 }, { "t": "10Y", "v": 4.87 } ],
+    "bund10y": 3.26, "oat10y": 4.78, "spread_2s10s": 31, "spread_oat_bund": 152
+  },
+  "volatilite": { "vix": 22.92 },
+  "cross_asset": [
+    { "label": "Dow", "pct": 2.15 }, { "label": "S&P 500", "pct": 2.35 }, { "label": "Nasdaq", "pct": 2.74 },
+    { "label": "Or", "pct": 1.4 }, { "label": "Brent", "pct": -4.96 }, { "label": "VIX", "pct": -10.61 }
+  ],
+  "agenda": [
+    { "heure": "14:30", "evenement": "Indice des prix à la consommation US (CPI, octobre)", "attendu": "+0,3 % sur le mois", "precedent": "+0,6 % sur le mois", "tier": 1, "evenement_du_jour": true },
+    { "heure": "14:30", "evenement": "Inflation sous-jacente US (core CPI, octobre)", "attendu": "+0,2 % sur le mois", "precedent": "+0,3 % sur le mois", "tier": 1, "evenement_du_jour": true }
+  ],
+  "secteurs": [
+    { "secteur": "Tech / Semi-conducteurs", "pct": null, "biais": "haussier" },
+    { "secteur": "Banques", "pct": null, "biais": "haussier" },
+    { "secteur": "Luxe", "pct": null, "biais": "haussier" },
+    { "secteur": "Automobile / Industrie", "pct": null, "biais": "haussier" },
+    { "secteur": "Énergie / Pétrole", "pct": null, "biais": "baissier" },
+    { "secteur": "Utilities / Défensives", "pct": null, "biais": "baissier" }
+  ],
+  "playbook": [
+    { "si": "CPI mou (core +0,1/+0,2 %, les taux US se détendent)", "proba": 35, "alors": "Le rebond s'étend : CAC vise 8 280 puis 8 340, EUR/USD repasse 1,1210", "biais": "long" },
+    { "si": "CPI conforme (core +0,2 %, pas de surprise)", "proba": 40, "alors": "Digestion en range : CAC entre 8 180 et 8 280, la volatilité retombe après 14h30", "biais": "attente" },
+    { "si": "CPI chaud (core ≥ +0,3 %, pari d'une hausse Fed en décembre renforcé)", "proba": 25, "alors": "Repli : CAC teste 8 140 puis 8 120, EUR/USD sous 1,1130, US 10 ans vers 4,92 %", "biais": "short" }
+  ],
+  "invalidation": "Sous 8 140 (comblement du gap haussier de lundi), le scénario de rebond est invalidé ; au-dessus de 4,92 % sur le taux US 10 ans, la pression remonte sur les actions.",
+  "delta": [
+    { "label": "Pétrole en forte baisse (désescalade sur l'Iran)", "direction": "down" },
+    { "label": "Appétit pour le risque de retour (VIX -10,6 %)", "direction": "up" },
+    { "label": "Taux US toujours élevés (pari d'une hausse Fed en décembre)", "direction": "up" }
+  ],
+  "condense": {
+    "idee": "Gros rebond hier (Wall Street +2,2 % à +2,7 %, meilleure séance depuis avril) : la tech rebondit et le pétrole plonge grâce à l'apaisement sur l'Iran. Mais tout se joue à 14h30 avec l'inflation américaine (CPI), la dernière avant la réunion de la Fed de décembre. Matinée plutôt calme et constructive, puis coup de volatilité à 14h30.",
+    "pourquoi": "Le pétrole chute parce que le risque d'une escalade militaire avec l'Iran recule : pétrole moins cher = moins d'inflation = marchés rassurés. En plus, les valeurs techno (semi-conducteurs) ont rebondi après la chute de la semaine dernière liée aux craintes sur l'intelligence artificielle.",
+    "evenement": "Inflation US d'octobre (CPI) à 14h30. Fait rare : à cause du blocage budgétaire américain de 2025, il n'y aura PAS de chiffre annuel ; on regarde donc la variation sur le mois. On attend +0,3 % (général) et +0,2 % hors énergie et alimentation. Enjeu : des chiffres trop forts pousseraient la Fed à MONTER ses taux en décembre, scénario auquel le marché croit déjà à environ 80 %.",
+    "plan_avant": "Peu de mouvement, on digère le rebond d'hier. On surveille que le CAC tienne au-dessus de 8 180.",
+    "plan_apres": "Pic de volatilité probable à 14h30. CPI mou = le rebond continue (CAC vers 8 280) ; CPI chaud = repli (test de 8 140).",
+    "a_surveiller": "Le pétrole (Brent ~91,7 $, toujours sous pression) et le taux US 10 ans (4,87 %, proche de 4,90 % = zone de tension pour les actions).",
+    "overnight": "Dow +2,15 % (+1 104 pts) · S&P 500 +2,35 % · Nasdaq +2,74 %. VIX -10,6 % à 22,9.",
+    "inflation": "pas de taux annuel ce mois (blocage budgétaire US de 2025) ; +0,3 % attendu sur le mois"
+  },
+  "sources": ["Investing.com", "TradingEconomics", "CNBC", "Reuters", "FXStreet", "Kitco"]
+}
