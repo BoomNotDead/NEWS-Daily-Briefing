@@ -1,0 +1,56 @@
+{
+  "meta": { "date_str": "mercredi 11 novembre 2026", "heure": "08:00", "snapshot": "07:55", "tz": "Europe/Paris" },
+  "verdict": {
+    "biais": "Stress importé des US (taux vers 5 %), Europe amortie par le pétrole",
+    "pivot": "CAC 8 278",
+    "ne_pas_lacher": "8 230",
+    "vol": "VIX ~20 · pétrole = variable clé"
+  },
+  "niveaux": [
+    { "actif": "CAC 40",    "spot": 8278.59, "close_prev": 8233.29, "sup1": 8230,   "sup2": 8180,   "res1": 8320,   "res2": 8380,   "biais": "neutre",   "decimals": 0 },
+    { "actif": "DAX",       "spot": 26347,   "close_prev": 26266,   "sup1": 26200,  "sup2": 26000,  "res1": 26500,  "res2": 26700,  "biais": "neutre",   "decimals": 0 },
+    { "actif": "EUR/USD",   "spot": 1.1160,  "close_prev": 1.1225,  "sup1": 1.1120, "sup2": 1.1080, "res1": 1.1200, "res2": 1.1240, "biais": "baissier", "decimals": 4 },
+    { "actif": "Brent",     "spot": 91.2,    "close_prev": 92.1,    "sup1": 90.0,   "sup2": 88.0,   "res1": 93.0,   "res2": 95.0,   "biais": "baissier", "decimals": 1, "unit": "$" },
+    { "actif": "Or",        "spot": 4033,    "close_prev": 4140,    "sup1": 4000,   "sup2": 3950,   "res1": 4100,   "res2": 4180,   "biais": "baissier", "decimals": 0, "unit": "$" },
+    { "actif": "US 10 ans", "spot": 4.99,    "close_prev": 4.90,    "sup1": 4.90,   "sup2": 4.80,   "res1": 5.05,   "res2": 5.15,   "biais": "tension",  "decimals": 2, "unit": "%" }
+  ],
+  "courbe": {
+    "points": [ { "t": "2Y", "v": 4.74 }, { "t": "5Y", "v": 4.80 }, { "t": "10Y", "v": 4.99 } ],
+    "bund10y": 3.25, "oat10y": 4.72, "spread_2s10s": 25, "spread_oat_bund": 147
+  },
+  "volatilite": { "vix": 19.9 },
+  "cross_asset": [
+    { "label": "Dow", "pct": -0.30 }, { "label": "S&P 500", "pct": -0.38 }, { "label": "Nasdaq", "pct": -0.74 },
+    { "label": "Nikkei", "pct": 0.85 }, { "label": "Or", "pct": -2.6 }, { "label": "Brent", "pct": -1.0 }
+  ],
+  "agenda": [
+    { "heure": "Journée", "evenement": "Pas de publication majeure aujourd'hui (marché obligataire US fermé — Veterans Day)", "tier": 3, "evenement_du_jour": false }
+  ],
+  "secteurs": [
+    { "secteur": "Banques", "pct": 0.6, "biais": "haussier" }, { "secteur": "Énergie", "pct": -1.2, "biais": "baissier" },
+    { "secteur": "Tech/Semis", "pct": -0.8, "biais": "baissier" }, { "secteur": "Industrie", "pct": 0.4, "biais": "haussier" },
+    { "secteur": "Luxe", "pct": 0.3, "biais": "neutre" }, { "secteur": "Immobilier", "pct": -0.6, "biais": "baissier" }
+  ],
+  "playbook": [
+    { "si": "Les taux US restent collés à 5 % (réouverture jeudi)", "proba": 35, "alors": "Le stress revient : CAC teste 8 230 puis 8 180, invalidation au-dessus de 8 320", "biais": "short" },
+    { "si": "Le pétrole poursuit sa chute (WTI casse les plus bas d'août)", "proba": 30, "alors": "La désinflation soutient Paris : CAC vise 8 320 puis 8 380, invalidation sous 8 230", "biais": "long" },
+    { "si": "Journée calme, liquidité réduite (férié obligataire US)", "proba": 35, "alors": "Range 8 230–8 320, la volatilité retombe faute de catalyseur", "biais": "attente" }
+  ],
+  "invalidation": "Au-dessus de 5,05 % sur le 10 ans US (à la réouverture), la pression sur la tech et les valeurs de croissance s'intensifie et le découplage européen devient difficile à tenir.",
+  "delta": [
+    { "label": "Taux US 10 ans de retour vers 5 %", "direction": "up" },
+    { "label": "Pétrole en chute libre (WTI ~-16 % sur le mois)", "direction": "down" },
+    { "label": "Or décroché (-2,6 % hier)", "direction": "down" }
+  ],
+  "condense": {
+    "idee": "Paradoxe du jour : Wall Street a calé hier soir mais la Bourse de Paris résiste (CAC autour de 8 280). La cause américaine : une inflation plus chaude que prévu (prix +0,4 % en octobre contre +0,3 % attendu), qui a fait remonter le taux à 10 ans US vers 5 % et ravivé le scénario d'une HAUSSE des taux de la Fed en décembre — l'inverse d'une baisse. La raison européenne : le pétrole s'effondre, ce qui calme l'inflation ici. En clair : stress côté US, accalmie côté Europe.",
+    "pourquoi": "L'inflation mesure la hausse des prix. Plus chaude que prévu = la Fed (banque centrale US) risque de monter ses taux au lieu de les baisser. Des taux plus hauts pénalisent surtout la tech et l'or (d'où Nasdaq -0,74 % et or -2,6 % hier). À l'inverse, le pétrole au plus bas depuis août allège la facture énergétique de l'Europe et rassure sur son inflation.",
+    "evenement": "Aucune statistique majeure aujourd'hui. Point important : le marché obligataire américain est FERMÉ (jour férié, Veterans Day) — moins d'acteurs, donc des mouvements qui peuvent être exagérés et peu représentatifs. Christine Lagarde (présidente de la BCE) s'exprime dans la journée, mais sans chiffre à publier.",
+    "plan_avant": "Liquidité réduite à cause du férié américain. On surveille surtout le pétrole et la tenue des 8 230 points sur le CAC.",
+    "plan_apres": "Le vrai test sera la réouverture du marché obligataire US jeudi : si le 10 ans reste collé à 5 %, la pression revient sur les actions de croissance.",
+    "a_surveiller": "Le pétrole (Brent/WTI) et l'or : s'ils continuent de baisser, c'est que les investisseurs digèrent le risque de hausse des taux.",
+    "overnight": "Wall Street en baisse mardi : Nasdaq -0,74 % · S&P 500 -0,38 % · Dow -0,30 %. Asie mitigée ce matin : Nikkei +0,85 %, Hang Seng -0,66 %.",
+    "inflation": "+0,4 % sur le mois (octobre, US)"
+  },
+  "sources": ["BLS", "CNBC", "Bloomberg", "Reuters", "Investing.com", "TradingEconomics"]
+}
