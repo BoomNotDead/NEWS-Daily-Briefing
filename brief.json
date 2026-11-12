@@ -1,0 +1,61 @@
+{
+  "meta": { "date_str": "jeudi 12 novembre 2026", "heure": "08:00", "snapshot": "07:55", "tz": "Europe/Paris" },
+  "verdict": {
+    "biais": "Neutre à prudent — le thème IA tient, mais le choc Nvidia menace l'ouverture tech",
+    "pivot": "CAC 8 300",
+    "ne_pas_lacher": "8 250",
+    "vol": "VIX ~19, risque de pic à l'ouverture (Nvidia)"
+  },
+  "niveaux": [
+    { "actif": "CAC 40",    "spot": 8333,   "close_prev": 8278,   "sup1": 8300,   "sup2": 8250,   "res1": 8360,   "res2": 8400,   "biais": "haussier", "decimals": 0 },
+    { "actif": "DAX",       "spot": 26662,  "close_prev": 26367,  "sup1": 26500,  "sup2": 26300,  "res1": 26800,  "res2": 27000,  "biais": "haussier", "decimals": 0 },
+    { "actif": "EUR/USD",   "spot": 1.1089, "close_prev": 1.1164, "sup1": 1.1050, "sup2": 1.1000, "res1": 1.1140, "res2": 1.1190, "biais": "baissier", "decimals": 4 },
+    { "actif": "Brent",     "spot": 93.9,   "close_prev": 91.5,   "sup1": 91.0,   "sup2": 88.5,   "res1": 95.5,   "res2": 97.5,   "biais": "neutre",   "decimals": 1, "unit": "$" },
+    { "actif": "Or",        "spot": 3985,   "close_prev": 4030,   "sup1": 3950,   "sup2": 3900,   "res1": 4050,   "res2": 4100,   "biais": "baissier", "decimals": 0, "unit": "$" },
+    { "actif": "US 10 ans", "spot": 4.99,   "close_prev": 4.97,   "sup1": 4.90,   "sup2": 4.82,   "res1": 5.05,   "res2": 5.15,   "biais": "tension",  "decimals": 2, "unit": "%" }
+  ],
+  "courbe": {
+    "points": [ { "t": "2Y", "v": 4.66 }, { "t": "5Y", "v": 4.78 }, { "t": "10Y", "v": 4.99 } ],
+    "bund10y": 3.26, "oat10y": 4.78, "spread_2s10s": 33, "spread_oat_bund": 152,
+    "fed_funds_proba": "≈80 % (hausse déc.)", "fed_funds_range": "3,75–4,00 %"
+  },
+  "volatilite": { "vix": 19.0 },
+  "cross_asset": [
+    { "label": "S&P 500", "pct": 1.31 }, { "label": "Nasdaq", "pct": 1.60 }, { "label": "Dow", "pct": 0.49 },
+    { "label": "Nvidia (après clôture)", "pct": -8.6 }, { "label": "Nikkei", "pct": 0.8 },
+    { "label": "Hang Seng", "pct": -1.1 }, { "label": "Brent", "pct": 2.6 }, { "label": "DXY", "pct": 0.67 }
+  ],
+  "agenda": [
+    { "heure": "14:30", "evenement": "Inscriptions hebdomadaires au chômage (US)", "attendu": "192 k", "precedent": "189 k", "tier": 2, "evenement_du_jour": true }
+  ],
+  "secteurs": [
+    { "secteur": "Tech / Semis", "pct": null, "biais": "volatil" },
+    { "secteur": "Banques", "pct": null, "biais": "haussier" },
+    { "secteur": "Énergie", "pct": null, "biais": "haussier" },
+    { "secteur": "Défense / Industrie", "pct": null, "biais": "haussier" },
+    { "secteur": "Luxe", "pct": null, "biais": "neutre" },
+    { "secteur": "Santé", "pct": null, "biais": "neutre" },
+    { "secteur": "Immobilier", "pct": null, "biais": "baissier" }
+  ],
+  "playbook": [
+    { "si": "Les semis européens absorbent le choc Nvidia, taux US 10 ans sous 5 %", "proba": 45, "alors": "Le thème IA reprend la main : CAC vers 8 360 puis 8 400, tech européenne qui se stabilise", "biais": "long" },
+    { "si": "Ouverture nerveuse mais sans contagion (scénario central)", "proba": 35, "alors": "Range sous 8 360 : la tech digère Nvidia, rotation vers banques et énergie", "biais": "attente" },
+    { "si": "Contagion Nvidia + taux US 10 ans qui s'installent au-dessus de 5 %", "proba": 20, "alors": "Repli : le CAC teste 8 300 puis 8 250, or et tech sous pression", "biais": "short" }
+  ],
+  "invalidation": "Sous 8 250 sur le CAC, ou un taux US 10 ans qui s'installe au-dessus de 5 %, le scénario « l'IA l'emporte » s'essouffle et la prudence domine.",
+  "delta": [
+    { "label": "Nvidia −8,6 % après clôture : risque de gap sur la tech", "direction": "down" },
+    { "label": "Thème IA toujours porteur (CAC 3e hausse d'affilée)", "direction": "up" },
+    { "label": "Taux US 10 ans collés à 5 %, pari de hausse Fed en décembre", "direction": "up" }
+  ],
+  "condense": {
+    "idee": "Grosse bagarre ce matin entre deux forces. D'un côté, le thème de l'intelligence artificielle a fait rebondir les marchés 3 jours de suite (CAC +0,66 % hier, au plus haut depuis fin août). De l'autre, Nvidia a chuté de 8,6 % APRÈS la clôture américaine : son patron Jensen Huang risque d'être écarté par le conseil d'administration. C'est un problème propre à Nvidia, pas un doute sur l'IA en général — l'Asie l'a d'ailleurs compris ce matin (les autres fabricants de puces rebondissent). Attendez-vous donc à une ouverture tech nerveuse à Paris, mais pas forcément à une panique.",
+    "pourquoi": "Nvidia est la plus grosse société liée à l'IA : quand son dirigeant est menacé, tout le secteur tremble le temps d'une nuit. Mais comme il s'agit d'une affaire de gouvernance (un scandale personnel + une enquête), et non d'une baisse de la demande de puces, les concurrents (Samsung, SK Hynix) remontent au lieu de chuter. Le message des marchés est clair : « c'est le problème de Nvidia, pas celui de l'IA ».",
+    "evenement": "Peu de gros chiffre au programme aujourd'hui. Le seul vrai repère : les inscriptions hebdomadaires au chômage aux États-Unis à 14h30 (attendu ~192 000, précédent 189 000). Un chiffre bas = marché de l'emploi solide = la banque centrale américaine garde les mains libres pour monter ses taux. En toile de fond, le marché parie à ~80 % sur une HAUSSE des taux Fed en décembre (chose rare), ce qui colle le taux à 10 ans américain tout près de 5 %.",
+    "plan_avant": "Avant 14h30, la séance se joue surtout sur la réaction à Nvidia. On surveille les valeurs techno et semi-conducteurs européennes (ASML, STMicroelectronics, BE Semiconductor) à l'ouverture : si elles encaissent sans s'effondrer, le CAC peut tenir ses 8 300. Pas de précipitation, on laisse le marché digérer le titre.",
+    "plan_apres": "Après 14h30, les inscriptions chômage peuvent bouger les taux américains. Un chiffre bas pousserait le taux à 10 ans au-dessus de 5 % → pression sur la tech et sur l'or. On regarde si le CAC casse 8 300 par le bas (signal de prudence, objectif 8 250) ou repart vers 8 360 / 8 400 (le thème IA l'emporte).",
+    "a_surveiller": "1) Les semi-conducteurs européens à l'ouverture (effet Nvidia). 2) Le taux US 10 ans : sous 5 % = soulagement, au-dessus = vent de face pour les actions. 3) L'euro, tombé à ~1,109 $ (plus bas de 2026) : un dollar fort pèse sur l'or et les matières premières.",
+    "overnight": "S&P 500 +1,31 % · Nasdaq +1,60 % · Dow +0,49 % (séance IA solide) — MAIS Nvidia −8,6 % après la clôture (menace sur son PDG). Asie ce matin : Nikkei +0,8 %, les puces rebondissent (KOSDAQ +5 %) ; Hong Kong −1,1 %."
+  },
+  "sources": ["Boursorama", "Morningstar", "Reuters", "TechCrunch", "Forbes", "Saxo Bank", "TradingEconomics", "Vantage Markets", "Kitco", "Cboe"]
+}
