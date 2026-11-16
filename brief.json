@@ -1,0 +1,60 @@
+{
+  "meta": { "date_str": "lundi 16 novembre 2026", "heure": "08:00", "snapshot": "07:55", "tz": "Europe/Paris" },
+  "verdict": {
+    "biais": "Prudence — taux au plus haut et dollar fort pèsent sur la tech ; attentisme avant Nvidia",
+    "pivot": "CAC 8 370",
+    "ne_pas_lacher": "8 320",
+    "vol": "VIX 19,3 — nervosité croissante avant Nvidia mardi soir"
+  },
+  "niveaux": [
+    { "actif": "CAC 40",    "spot": 8369,   "close_prev": 8361,   "sup1": 8320,   "sup2": 8250,   "res1": 8420,   "res2": 8480,   "biais": "neutre",   "decimals": 0 },
+    { "actif": "DAX",       "spot": 26750,  "close_prev": 26772,  "sup1": 26500,  "sup2": 26250,  "res1": 27000,  "res2": 27250,  "biais": "neutre",   "decimals": 0 },
+    { "actif": "EUR/USD",   "spot": 1.1024, "close_prev": 1.1055, "sup1": 1.0980, "sup2": 1.0930, "res1": 1.1080, "res2": 1.1130, "biais": "baissier", "decimals": 4 },
+    { "actif": "Brent",     "spot": 95.1,   "close_prev": 95.8,   "sup1": 93.5,   "sup2": 91.5,   "res1": 97.0,   "res2": 99.0,   "biais": "neutre",   "decimals": 1, "unit": "$" },
+    { "actif": "Or",        "spot": 3885,   "close_prev": 3879,   "sup1": 3820,   "sup2": 3750,   "res1": 3950,   "res2": 4020,   "biais": "neutre",   "decimals": 0, "unit": "$" },
+    { "actif": "US 10 ans", "spot": 5.15,   "close_prev": 5.08,   "sup1": 5.05,   "sup2": 4.95,   "res1": 5.20,   "res2": 5.30,   "biais": "tension",  "decimals": 2, "unit": "%" }
+  ],
+  "courbe": {
+    "points": [ { "t": "2Y", "v": 4.88 }, { "t": "10Y", "v": 5.15 } ],
+    "bund10y": 3.37, "oat10y": 4.83, "spread_2s10s": 27, "spread_oat_bund": 146,
+    "fed_funds_proba": "≈ 88 %", "fed_funds_range": "3,75–4,00 % (hausse probable le 9 déc.)"
+  },
+  "volatilite": { "vix": 19.3 },
+  "cross_asset": [
+    { "label": "Dow", "pct": 0.10 }, { "label": "S&P 500", "pct": -0.40 }, { "label": "Nasdaq", "pct": -0.91 },
+    { "label": "Nikkei", "pct": -1.6 }, { "label": "Kospi", "pct": -4.0 }, { "label": "Hang Seng", "pct": 0.9 }
+  ],
+  "agenda": [
+    { "heure": "14:30",     "evenement": "Indice manufacturier Empire State (Fed de New York), novembre", "attendu": "+19", "precedent": "+25,5", "tier": 2, "evenement_du_jour": true },
+    { "heure": "Mar 14:30", "evenement": "Ventes au détail US (octobre)", "attendu": "+0,2 %", "precedent": "+0,8 %", "tier": 2, "evenement_du_jour": false },
+    { "heure": "Mar 22:20", "evenement": "Résultats trimestriels Nvidia (T3, après clôture US)", "attendu": "BPA ~2,47 $ · CA ~108,8 Mds$", "tier": 1, "move_implicite": "±7 % sur NVDA", "evenement_du_jour": false }
+  ],
+  "secteurs": [
+    { "secteur": "Tech / Semis", "pct": -1.7, "biais": "baissier" },
+    { "secteur": "Énergie", "pct": null, "biais": "haussier" },
+    { "secteur": "Conso de base (défensives)", "pct": null, "biais": "haussier" },
+    { "secteur": "Banques", "pct": null, "biais": "haussier" }
+  ],
+  "playbook": [
+    { "si": "Les taux US se stabilisent sous 5,15 % et la tech respire", "proba": 35, "alors": "Rebond : CAC vise 8 420 puis 8 480, EUR/USD tente 1,1080. Invalidé sous 8 320.", "biais": "long" },
+    { "si": "Marché nerveux en range, personne ne se positionne avant Nvidia (mardi soir)", "proba": 40, "alors": "Range 8 320–8 420 sur le CAC, volatilité contenue, faibles volumes. Pas de signal directionnel avant mercredi.", "biais": "attente" },
+    { "si": "Le 10 ans US casse 5,20 % et le stress sur la tech s'aggrave", "proba": 25, "alors": "Repli : CAC teste 8 320 puis objectif 8 250, EUR/USD sous 1,0980, Nasdaq vers de nouveaux plus bas. Invalidation au-dessus de 8 420.", "biais": "short" }
+  ],
+  "invalidation": "Au-dessus de 5,30 % sur le taux US 10 ans, la décote des valeurs de croissance (tech) s'accélère et tout rebond des indices est à vendre.",
+  "delta": [
+    { "label": "Taux US 10 ans à 5,15 %, plus haut de cycle", "direction": "up" },
+    { "label": "Dollar au plus haut depuis 19 mois (DXY 103,4)", "direction": "up" },
+    { "label": "Tech sous pression avant les résultats Nvidia", "direction": "down" }
+  ],
+  "condense": {
+    "idee": "Ambiance prudente et nerveuse. Les taux d'emprunt américains sont très hauts (le « 10 ans » à 5,15 %, c'est-à-dire le coût auquel l'État US emprunte sur 10 ans) parce que l'inflation reste chaude et que la banque centrale américaine (la Fed) devrait AUGMENTER ses taux le 9 décembre. Des taux élevés font mal aux valeurs technologiques (la « tech », des sociétés de croissance très sensibles aux taux), qui baissent. Et tout le monde retient son souffle avant les résultats de Nvidia mardi soir, capables de faire bouger toute la cote.",
+    "pourquoi": "L'inflation américaine est repartie (prix +0,4 % en octobre, soit environ 4,2 % sur un an) et le pétrole reste cher (Brent ~95 $). Du coup la Fed penche pour une HAUSSE de taux : les rendements obligataires et le dollar montent, et l'argent sort de la tech pour aller vers les secteurs défensifs (énergie, consommation de base, banques).",
+    "evenement": "Aujourd'hui, seule publication chiffrée : l'indice manufacturier Empire State de New York (indicateur régional d'activité des usines — mineur). LE rendez-vous de la semaine arrive mardi après la clôture américaine : les résultats trimestriels de Nvidia, les premiers depuis le départ du PDG Jensen Huang (c'est la directrice financière Colette Kress qui assure l'intérim). C'est un « événement binaire » : le cours peut faire un grand saut dans un sens ou l'autre et entraîner tout le Nasdaq avec lui.",
+    "plan_avant": "journée d'attente. Range nerveux, faibles volumes, peu de conviction. On évite de courir après les mouvements avant Nvidia.",
+    "plan_apres": "gros potentiel de mouvement à partir de mardi soir. On regarde si le CAC casse 8 320 (signal baissier) ou repasse 8 420 (signal haussier) — et surtout si le 10 ans US franchit 5,20 %.",
+    "a_surveiller": "le taux US 10 ans (5,15 %, c'est LE moteur du moment), le dollar (DXY au plus haut depuis 19 mois) et Nvidia.",
+    "overnight": "Dow +0,1 % · S&P 500 −0,4 % · Nasdaq −0,9 % · Nikkei −1,6 % · Kospi −4,0 % · Hang Seng +0,9 %.",
+    "inflation": "≈ 4,2 % sur un an (estimation ; IPC +0,4 % en octobre, cœur +0,3 %)"
+  },
+  "sources": ["Reuters", "CNBC", "TradingEconomics", "Investing.com", "New York Fed"]
+}
