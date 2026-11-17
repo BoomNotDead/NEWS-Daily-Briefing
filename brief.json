@@ -1,0 +1,62 @@
+{
+  "meta": { "date_str": "mardi 17 novembre 2026", "heure": "08:00", "snapshot": "07:55", "tz": "Europe/Paris" },
+  "verdict": {
+    "biais": "Défensif — la tech décroche, la France résiste mais reste sous tension taux",
+    "pivot": "CAC 8 350",
+    "ne_pas_lacher": "8 300",
+    "vol": "VIX 22,9 — tendu avant les ventes US (14h30)"
+  },
+  "niveaux": [
+    { "actif": "CAC 40",    "spot": 8352,   "close_prev": 8369,   "sup1": 8300,   "sup2": 8250,   "res1": 8400,   "res2": 8450,   "biais": "baissier", "decimals": 0 },
+    { "actif": "DAX",       "spot": 26599,  "close_prev": 26752,  "sup1": 26400,  "sup2": 26200,  "res1": 26800,  "res2": 27050,  "biais": "baissier", "decimals": 0 },
+    { "actif": "EUR/USD",   "spot": 1.1000, "close_prev": 1.1035, "sup1": 1.0950, "sup2": 1.0900, "res1": 1.1060, "res2": 1.1120, "biais": "baissier", "decimals": 4 },
+    { "actif": "Brent",     "spot": 92.4,   "close_prev": 95.9,   "sup1": 90.0,   "sup2": 88.0,   "res1": 95.0,   "res2": 97.5,   "biais": "baissier", "decimals": 1, "unit": "$" },
+    { "actif": "Or",        "spot": 3859,   "close_prev": 3900,   "sup1": 3800,   "sup2": 3750,   "res1": 3920,   "res2": 4000,   "biais": "baissier", "decimals": 0, "unit": "$" },
+    { "actif": "US 10 ans", "spot": 5.13,   "close_prev": 5.15,   "sup1": 5.00,   "sup2": 4.90,   "res1": 5.17,   "res2": 5.25,   "biais": "tension",  "decimals": 2, "unit": "%" }
+  ],
+  "courbe": {
+    "points": [ { "t": "2Y", "v": 4.84 }, { "t": "5Y", "v": 4.96 }, { "t": "10Y", "v": 5.13 }, { "t": "30Y", "v": 5.47 } ],
+    "bund10y": 3.37, "oat10y": 4.93, "spread_2s10s": 29, "spread_oat_bund": 155,
+    "fed_funds_proba": "≈ 92 %", "fed_funds_range": "+25 pb (hausse) le 9 déc."
+  },
+  "volatilite": { "vix": 22.91 },
+  "cross_asset": [
+    { "label": "Dow", "pct": -1.41 }, { "label": "S&P 500", "pct": -1.92 }, { "label": "Nasdaq", "pct": -2.49 },
+    { "label": "Nikkei", "pct": -1.4 }, { "label": "Hang Seng", "pct": -0.8 }, { "label": "Brent", "pct": -3.6 }
+  ],
+  "agenda": [
+    { "heure": "14:30", "evenement": "Ventes au détail US (avancées, octobre)", "attendu": "+0,2 %", "precedent": "+0,8 %", "tier": 2, "evenement_du_jour": true },
+    { "heure": "14:30", "evenement": "Ventes au détail US hors automobile (octobre)", "attendu": "+0,4 %", "precedent": "+0,9 %", "tier": 2, "evenement_du_jour": false }
+  ],
+  "secteurs": [
+    { "secteur": "Tech/Semis", "pct": null, "biais": "baissier" },
+    { "secteur": "Énergie", "pct": null, "biais": "baissier" },
+    { "secteur": "Banques", "pct": null, "biais": "neutre" },
+    { "secteur": "Luxe", "pct": null, "biais": "neutre" },
+    { "secteur": "Utilities", "pct": null, "biais": "haussier" },
+    { "secteur": "Santé", "pct": null, "biais": "haussier" }
+  ],
+  "playbook": [
+    { "si": "Ventes au détail chaudes (> +0,3 %)", "proba": 35, "alors": "Le pari d'une hausse de taux le 9 déc. se renforce : CAC glisse vers 8 300, EUR/USD sous 1,0950, la tech reste sous pression", "biais": "short" },
+    { "si": "Ventes conformes (~ +0,2 %)", "proba": 45, "alors": "Range nerveux : CAC tenu entre 8 300 et 8 400, le marché attend les résultats de Nvidia (19 nov.)", "biais": "attente" },
+    { "si": "Ventes molles (< +0,1 %)", "proba": 20, "alors": "Bol d'air : les taux refluent sous 5 %, CAC rebondit vers 8 400, l'or se stabilise", "biais": "long" }
+  ],
+  "invalidation": "Au-dessus de 5,25 % sur le taux US 10 ans, la pression sur la tech et les actions s'aggrave ; un retour sous 5,00 % allègerait le scénario défensif.",
+  "delta": [
+    { "label": "Taux US 10 ans > 5 % (pari d'une hausse Fed)", "direction": "up" },
+    { "label": "Tech / IA en repli (crise Nvidia)", "direction": "down" },
+    { "label": "Dollar fort, euro au plus bas depuis 19 mois", "direction": "up" },
+    { "label": "Or au plus bas depuis un an", "direction": "down" }
+  ],
+  "condense": {
+    "idee": "Journée défensive. Les marchés parient désormais sur une HAUSSE des taux de la Fed en décembre (et non une baisse), ce qui fait grimper les taux obligataires et plombe la tech, déjà fragilisée par la crise chez Nvidia. Le CAC 40 résiste mieux (−0,2 % hier) car Paris compte peu de valeurs techno, mais il reste coincé sous 8 400.",
+    "pourquoi": "L'inflation américaine d'octobre est ressortie plus chaude que prévu (+0,4 % sur le mois). Résultat : les investisseurs voient maintenant ~92 % de chances d'une hausse de taux le 9 décembre. Des taux plus hauts rendent les actions chères (surtout la tech) moins attractives, font monter le dollar et baisser l'or.",
+    "evenement": "Ventes au détail américaines d'octobre à 14h30 (heure de Paris) : c'est le thermomètre de la consommation US. Prévision +0,2 % après +0,8 %. Un chiffre élevé renforcerait le scénario de hausse de taux et pèserait encore sur les actions.",
+    "plan_avant": "marché nerveux et sans direction claire ; on surveille le taux US 10 ans (autour de 5,13 %) et les futures de la tech.",
+    "plan_apres": "si les ventes dépassent +0,3 %, le CAC peut tester 8 300 ; si elles déçoivent (< +0,1 %), rebond possible vers 8 400. Grand rendez-vous de la semaine : les résultats de Nvidia le 19 novembre.",
+    "a_surveiller": "le taux US 10 ans (le seuil psychologique des 5 %), le dollar (euro près de son plus bas depuis 19 mois) et le secteur des semi-conducteurs.",
+    "overnight": "Wall Street en forte baisse hier : Dow −1,4 %, S&P 500 −1,9 %, Nasdaq −2,5 %. En Asie ce matin, Nikkei encore sous pression (−1,4 %). Brent −3,6 %.",
+    "inflation": "+0,4 % sur le mois en octobre (cœur +0,3 %), au-dessus des attentes — d'où le virage vers une hausse de taux."
+  },
+  "sources": ["Newsquawk", "CNBC", "Reuters", "FXStreet", "TradingEconomics", "Investing.com"]
+}
