@@ -1,0 +1,64 @@
+{
+  "meta": { "date_str": "mercredi 18 novembre 2026", "heure": "08:00", "snapshot": "07:55", "tz": "Europe/Paris" },
+  "verdict": {
+    "biais": "Rebond fragile porté par Nvidia, bridé par des taux US à 5 % et une Fed qui durcit",
+    "pivot": "CAC 8 220",
+    "ne_pas_lacher": "8 080",
+    "vol": "VIX à 25 : stress encore élevé, minutes Fed à 20h"
+  },
+  "niveaux": [
+    { "actif": "CAC 40",      "spot": 8217,   "close_prev": 8352,   "sup1": 8160,   "sup2": 8080,   "res1": 8300,   "res2": 8380,   "biais": "neutre",   "decimals": 0 },
+    { "actif": "DAX",         "spot": 26045,  "close_prev": 26598,  "sup1": 25800,  "sup2": 25500,  "res1": 26400,  "res2": 26800,  "biais": "neutre",   "decimals": 0 },
+    { "actif": "EuroStoxx 50","spot": 6219,   "close_prev": 6349,   "sup1": 6160,   "sup2": 6080,   "res1": 6300,   "res2": 6380,   "biais": "neutre",   "decimals": 0 },
+    { "actif": "EUR/USD",     "spot": 1.0989, "close_prev": 1.1002, "sup1": 1.0960, "sup2": 1.0935, "res1": 1.1040, "res2": 1.1065, "biais": "baissier", "decimals": 4 },
+    { "actif": "Brent",       "spot": 92.6,   "close_prev": 93.1,   "sup1": 91.5,   "sup2": 89.9,   "res1": 94.0,   "res2": 95.5,   "biais": "neutre",   "decimals": 1, "unit": "$" },
+    { "actif": "Or",          "spot": 3795,   "close_prev": 3850,   "sup1": 3760,   "sup2": 3730,   "res1": 3870,   "res2": 3910,   "biais": "baissier", "decimals": 0, "unit": "$" },
+    { "actif": "US 10 ans",   "spot": 5.11,   "close_prev": 5.13,   "sup1": 5.02,   "sup2": 4.95,   "res1": 5.18,   "res2": 5.25,   "biais": "neutre",   "decimals": 2, "unit": "%" }
+  ],
+  "courbe": {
+    "points": [ { "t": "2Y", "v": 4.80 }, { "t": "10Y", "v": 5.11 } ],
+    "bund10y": 3.37, "oat10y": 4.93, "spread_2s10s": 31, "spread_oat_bund": 156,
+    "fed_funds_proba": "≈ 94 % de hausse", "fed_funds_range": "3,75–4,00 %"
+  },
+  "volatilite": { "vix": 25.46 },
+  "cross_asset": [
+    { "label": "Nvidia (après clôture)", "pct": 4.8 },
+    { "label": "Kospi", "pct": 1.17 }, { "label": "Nikkei", "pct": 0.31 },
+    { "label": "Nasdaq", "pct": -0.74 }, { "label": "S&P 500", "pct": -1.03 },
+    { "label": "Dow", "pct": -1.64 }, { "label": "Brent", "pct": -0.55 }, { "label": "Or", "pct": -1.85 }
+  ],
+  "agenda": [
+    { "heure": "14:30", "evenement": "Mises en chantier de logements (États-Unis, octobre)", "attendu": "1,27 M", "precedent": "1,22 M", "tier": 2, "evenement_du_jour": false },
+    { "heure": "20:00", "evenement": "Minutes de la Fed (compte-rendu du FOMC du 28 octobre)", "tier": 2, "evenement_du_jour": true }
+  ],
+  "secteurs": [
+    { "secteur": "Semi-conducteurs", "pct": null, "biais": "haussier" },
+    { "secteur": "Tech / Logiciels", "pct": null, "biais": "haussier" },
+    { "secteur": "Banques", "pct": null, "biais": "neutre" },
+    { "secteur": "Énergie", "pct": null, "biais": "neutre" },
+    { "secteur": "Luxe", "pct": null, "biais": "baissier" },
+    { "secteur": "Services aux collectivités", "pct": null, "biais": "baissier" }
+  ],
+  "playbook": [
+    { "si": "Le rebond Nvidia tient et les minutes Fed ne surprennent pas", "proba": 45, "alors": "CAC remonte vers 8 300 puis 8 380 ; le VIX reflue sous 22", "biais": "long" },
+    { "si": "Le rebond s'essouffle, les taux US restent collés à 5 %", "proba": 35, "alors": "CAC retombe vers 8 160, range nerveux jusqu'à 20h", "biais": "attente" },
+    { "si": "Minutes très fermes (hausse de décembre assumée, voire au-delà)", "proba": 20, "alors": "CAC casse 8 080, EUR/USD sous 1,0935, l'or accélère sa baisse", "biais": "short" }
+  ],
+  "invalidation": "Au-dessus de 5,25 % sur le taux US à 10 ans, le scénario de rebond des actions s'effondre : la pression des taux l'emporte sur l'embellie Nvidia.",
+  "delta": [
+    { "label": "Nvidia relance l'appétit pour le risque (+4,8 % après clôture)", "direction": "up" },
+    { "label": "Taux US à 5 % et dollar au plus haut depuis 19 mois", "direction": "up" },
+    { "label": "Or sous 3 800 $, plombé par les taux réels", "direction": "down" }
+  ],
+  "condense": {
+    "idee": "Soulagement prudent ce matin : les résultats XXL de Nvidia (hier soir, après la clôture) relancent l'appétit pour la tech, après une séance de panique mardi (le VIX, l'« indice de la peur », a bondi à 25,5). Mais le rebond reste fragile : les taux américains restent collés au-dessus de 5 % et le dollar est au plus haut depuis 19 mois, ce qui continue de peser. Journée sous tension avant le compte-rendu de la Fed à 20h.",
+    "pourquoi": "Nvidia prévoit une croissance de son chiffre d'affaires de +75 % l'an prochain (mieux que les +70 % attendus) : de quoi rassurer sur la solidité de la vague « intelligence artificielle » après une semaine de doutes. L'action a pris +4,8 % juste après la publication, et a entraîné les fabricants de puces en Asie (Kospi +1,17 %).",
+    "evenement": "Compte-rendu (les « minutes ») de la dernière réunion de la Fed, publié à 20h (heure de Paris). C'est le récit détaillé de la réunion du 28 octobre, où la banque centrale a laissé ses taux inchangés (3,75–4,00 %). Les marchés parient désormais à ~94 % sur une HAUSSE des taux le 9 décembre, car l'inflation américaine est remontée à 4,1 %. On lira ce texte pour mesurer à quel point les membres de la Fed sont décidés à durcir.",
+    "plan_avant": "nervosité et petits écarts ; on surveille si le rebond de la tech tient à l'ouverture européenne.",
+    "plan_apres": "la publication des minutes à 20h peut créer un pic de volatilité. On regarde si le CAC tient 8 160 (soutien) ou casse vers 8 080 (signal de faiblesse), et s'il franchit 8 300 (signal positif).",
+    "a_surveiller": "le taux US à 10 ans (au-dessus de 5 % = frein pour la tech), le dollar, et les valeurs de semi-conducteurs dans le sillage de Nvidia.",
+    "overnight": "Wall Street en baisse mardi — Dow −1,64 % · S&P 500 −1,03 % · Nasdaq −0,74 %. En Asie ce matin : Kospi +1,17 %, Nikkei +0,31 % grâce aux puces.",
+    "inflation": "4,1 %"
+  },
+  "sources": ["Reuters", "CNBC", "Investing.com", "TradingEconomics", "ATFX", "FactSet"]
+}
