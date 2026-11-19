@@ -1,0 +1,60 @@
+{
+  "meta": { "date_str": "jeudi 19 novembre 2026", "heure": "08:00", "snapshot": "07:55", "tz": "Europe/Paris" },
+  "verdict": {
+    "biais": "Défensif — la Fed vire faucon, le dollar écrase actions et or",
+    "pivot": "CAC 8 150",
+    "ne_pas_lacher": "8 100",
+    "vol": "VIX 24,6 — stress élevé"
+  },
+  "niveaux": [
+    { "actif": "CAC 40",    "spot": 8150,   "close_prev": 8147,   "sup1": 8100,   "sup2": 8020,   "res1": 8210,   "res2": 8290,   "biais": "baissier", "decimals": 0 },
+    { "actif": "DAX",       "spot": 25740,  "close_prev": 25736,  "sup1": 25500,  "sup2": 25280,  "res1": 26050,  "res2": 26300,  "biais": "baissier", "decimals": 0 },
+    { "actif": "EUR/USD",   "spot": 1.0980, "close_prev": 1.0960, "sup1": 1.0940, "sup2": 1.0900, "res1": 1.1020, "res2": 1.1060, "biais": "baissier", "decimals": 4 },
+    { "actif": "Brent",     "spot": 92.6,   "close_prev": 93.1,   "sup1": 91.0,   "sup2": 89.5,   "res1": 94.2,   "res2": 95.8,   "biais": "neutre",   "decimals": 1, "unit": "$" },
+    { "actif": "Or",        "spot": 3790,   "close_prev": 3845,   "sup1": 3750,   "sup2": 3700,   "res1": 3850,   "res2": 3920,   "biais": "baissier", "decimals": 0, "unit": "$" },
+    { "actif": "US 10 ans", "spot": 5.08,   "close_prev": 5.10,   "sup1": 5.00,   "sup2": 4.92,   "res1": 5.15,   "res2": 5.22,   "biais": "tendu",    "decimals": 2, "unit": "%" }
+  ],
+  "courbe": {
+    "points": [ { "t": "2Y", "v": 4.81 }, { "t": "10Y", "v": 5.08 } ],
+    "bund10y": 3.37, "oat10y": 4.88, "spread_2s10s": 27, "spread_oat_bund": 151,
+    "fed_funds_proba": "95,7 %", "fed_funds_range": "3,75–4,00 %"
+  },
+  "volatilite": { "vix": 24.6 },
+  "cross_asset": [
+    { "label": "Dow", "pct": -1.11 }, { "label": "S&P 500", "pct": -0.23 }, { "label": "Nasdaq", "pct": 0.42 },
+    { "label": "Nvidia", "pct": -2.89 }, { "label": "Nikkei", "pct": 0.1 }, { "label": "Hang Seng", "pct": -1.1 },
+    { "label": "Or", "pct": -1.5 }, { "label": "Brent", "pct": -0.5 }
+  ],
+  "agenda": [
+    { "heure": "10:00", "evenement": "Coût du travail zone euro (T3, estimation flash)", "attendu": "3,0 %", "precedent": "3,1 %", "tier": 3, "evenement_du_jour": false },
+    { "heure": "14:30", "evenement": "Inscriptions hebdomadaires au chômage (États-Unis)", "attendu": "197k", "precedent": "200k", "tier": 2, "evenement_du_jour": true },
+    { "heure": "14:30", "evenement": "Indice manufacturier Fed de Philadelphie (novembre)", "attendu": "20,0", "precedent": "20,9", "tier": 2, "evenement_du_jour": false }
+  ],
+  "secteurs": [
+    { "secteur": "Banques", "pct": null, "biais": "haussier" }, { "secteur": "Assurance", "pct": null, "biais": "haussier" },
+    { "secteur": "Technologie / Semis", "pct": null, "biais": "baissier" }, { "secteur": "Luxe", "pct": null, "biais": "baissier" },
+    { "secteur": "Immobilier", "pct": null, "biais": "baissier" }, { "secteur": "Énergie", "pct": null, "biais": "neutre" }
+  ],
+  "playbook": [
+    { "si": "La Fed garde un ton très ferme (hausse de 50 pb en déc. reste sur la table)", "proba": 30, "alors": "Accélération baissière : CAC vers 8 020, EUR/USD sous 1,0940, or sous 3 750 $", "biais": "short" },
+    { "si": "Le récit ne bouge pas (hausse de 25 pb en déc. déjà intégrée à ~96 %)", "proba": 50, "alors": "Consolidation nerveuse : CAC coincé entre 8 100 et 8 210, dollar reste fort", "biais": "attente" },
+    { "si": "Un chiffre US faible (chômage ou Philly Fed) ravive l'espoir d'une pause", "proba": 20, "alors": "Rebond technique : CAC vers 8 290, EUR/USD retente 1,1020", "biais": "long" }
+  ],
+  "invalidation": "Un retour du taux US 10 ans sous 4,92 % (détente) invaliderait le biais défensif et rouvrirait un rebond des actions.",
+  "delta": [
+    { "label": "Dollar au plus haut depuis 19 mois (DXY)", "direction": "up" },
+    { "label": "L'or casse sous 3 800 $, plus bas en un an", "direction": "down" },
+    { "label": "Pari d'une hausse de taux Fed en décembre (~96 %)", "direction": "up" }
+  ],
+  "condense": {
+    "idee": "Journée défensive. Après les « minutes » de la Fed (le compte-rendu de sa dernière réunion) publiées hier soir, le marché parie désormais à ~96 % sur une HAUSSE des taux américains en décembre — pas une baisse. Résultat : le dollar explose (plus haut en 19 mois), l'or chute sous 3 800 $ (plus bas en un an) et les actions reculent (5e séance de baisse d'affilée pour le S&P 500, repassé sous sa moyenne 200 jours). Nuance : le Nasdaq a fini vert, mais surtout grâce à l'engouement autour de l'introduction en Bourse d'Anthropic ; Nvidia, elle, a perdu 2,9 % malgré d'excellents résultats — mauvais signe quand une bonne nouvelle ne fait plus monter le titre.",
+    "pourquoi": "L'inflation américaine reste trop forte (prix « cœur » +0,4 % sur le seul mois d'octobre). Quand l'inflation résiste, la banque centrale durcit (taux plus hauts) ; des taux plus hauts rendent les obligations plus intéressantes que les actions et que l'or, et renforcent le dollar. C'est ce triple effet qu'on voit ce matin.",
+    "evenement": "Pas de grande statistique en Europe ce matin. Les deux rendez-vous chiffrés du jour sont américains, à 14h30 : les inscriptions hebdomadaires au chômage (attendu 197 000, précédent 200 000) et l'indice manufacturier de la Fed de Philadelphie (attendu 20,0, précédent 20,9). Un chiffre nettement faible relancerait le débat sur une pause de la Fed.",
+    "plan_avant": "ouverture prudente attendue en Europe après 3 séances de baisse ; le CAC se bat autour de 8 150. Seuil à ne pas lâcher : 8 100.",
+    "plan_apres": "la vraie réaction viendra à 14h30 avec les chiffres US. Sous 8 100, le CAC ouvre la porte à 8 020 ; au-dessus de 8 210, un rebond technique se dessine.",
+    "a_surveiller": "l'or et le dollar (les deux baromètres du stress sur les taux), et en France le vote du budget 2027 à l'Assemblée : un blocage élargirait l'écart de taux OAT-Bund (déjà tendu à ~151 points).",
+    "overnight": "Dow −1,11 % (−561 pts) · S&P 500 −0,23 % (5e baisse) · Nasdaq +0,42 % · Nikkei +0,1 % · Hang Seng −1,1 %.",
+    "inflation": "+0,4 % (cœur, octobre, sur un mois)"
+  },
+  "sources": ["CME FedWatch", "Reuters", "FXStreet", "Investing.com", "Trading Economics"]
+}
