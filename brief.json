@@ -1,0 +1,60 @@
+{
+  "meta": { "date_str": "vendredi 20 novembre 2026", "heure": "08:00", "snapshot": "07:55", "tz": "Europe/Paris" },
+  "verdict": {
+    "biais": "Risk-off — correction tech mondiale (IA), repli généralisé",
+    "pivot": "CAC 8 000",
+    "ne_pas_lacher": "7 900",
+    "vol": "VIX ~28, au plus haut de la purge"
+  },
+  "niveaux": [
+    { "actif": "CAC 40",    "spot": 8081,   "close_prev": 8147,   "sup1": 8000,   "sup2": 7900,   "res1": 8150,   "res2": 8250,   "biais": "baissier", "decimals": 0 },
+    { "actif": "DAX",       "spot": 25112,  "close_prev": 25463,  "sup1": 25000,  "sup2": 24700,  "res1": 25500,  "res2": 25900,  "biais": "baissier", "decimals": 0 },
+    { "actif": "EUR/USD",   "spot": 1.0982, "close_prev": 1.0990, "sup1": 1.0950, "sup2": 1.0900, "res1": 1.1010, "res2": 1.1060, "biais": "baissier", "decimals": 4 },
+    { "actif": "Brent",     "spot": 92.3,   "close_prev": 91.9,   "sup1": 91.0,   "sup2": 89.5,   "res1": 93.5,   "res2": 95.0,   "biais": "haussier", "decimals": 1, "unit": "$" },
+    { "actif": "Or",        "spot": 3675,   "close_prev": 3725,   "sup1": 3620,   "sup2": 3550,   "res1": 3730,   "res2": 3800,   "biais": "baissier", "decimals": 0, "unit": "$" },
+    { "actif": "US 10 ans", "spot": 5.05,   "close_prev": 5.07,   "sup1": 5.00,   "sup2": 4.92,   "res1": 5.10,   "res2": 5.15,   "biais": "neutre",   "decimals": 2, "unit": "%" }
+  ],
+  "courbe": {
+    "points": [ { "t": "2Y", "v": 4.78 }, { "t": "10Y", "v": 5.05 }, { "t": "30Y", "v": 5.42 } ],
+    "bund10y": 3.39, "oat10y": 4.95, "spread_2s10s": 27, "spread_oat_bund": 156,
+    "fed_funds_proba": "≈ 100 % (hausse en déc.)"
+  },
+  "volatilite": { "vix": 28.3 },
+  "cross_asset": [
+    { "label": "Dow", "pct": -2.18 }, { "label": "S&P 500", "pct": -1.96 }, { "label": "Nasdaq", "pct": -2.23 },
+    { "label": "Nikkei", "pct": -3.95 }, { "label": "Kospi", "pct": -4.6 }, { "label": "Hang Seng", "pct": -2.0 },
+    { "label": "Brent", "pct": 0.35 }, { "label": "Or", "pct": -1.36 }
+  ],
+  "agenda": [
+    { "heure": "08:00", "evenement": "Ventes au détail Royaume-Uni (oct., sur un mois)", "attendu": "0,0 %", "precedent": "−0,4 %", "tier": 2, "evenement_du_jour": true }
+  ],
+  "secteurs": [
+    { "secteur": "Tech / Semis", "pct": null, "biais": "baissier" },
+    { "secteur": "Luxe", "pct": null, "biais": "baissier" },
+    { "secteur": "Banques", "pct": null, "biais": "neutre" },
+    { "secteur": "Énergie", "pct": null, "biais": "haussier" },
+    { "secteur": "Industrie", "pct": null, "biais": "baissier" },
+    { "secteur": "Défense", "pct": null, "biais": "neutre" }
+  ],
+  "playbook": [
+    { "si": "La purge mondiale se poursuit (futures US rouges, Asie −4/−5 %)", "proba": 45, "alors": "CAC ouvre en gap baissier, teste 8 000 puis 7 900 ; VIX > 30. Invalidation : retour franc > 8 150.", "biais": "short" },
+    { "si": "Stabilisation nerveuse (futures US se redressent, chasse aux bonnes affaires)", "proba": 35, "alors": "CAC défend 8 000, range 8 000–8 150, rebond technique vers 8 150. Invalidation : cassure nette de 8 000.", "biais": "attente" },
+    { "si": "Rebond de survente (couverture de shorts avant le week-end)", "proba": 20, "alors": "CAC rebondit vers 8 220, EUR/USD repasse > 1,1010. Invalidation : échec sous 8 150.", "biais": "long" }
+  ],
+  "invalidation": "Au-dessus de 8 150 sur le CAC avec un VIX qui reflue sous 25, le scénario de purge s'essouffle. Sous 7 900, la correction s'étend et vise la zone 7 800.",
+  "delta": [
+    { "label": "Tech mondiale (IA) : repli qui s'étend", "direction": "down" },
+    { "label": "VIX (stress du marché) : forte hausse", "direction": "up" },
+    { "label": "Taux US 10 ans : quasi stable à 5,05 %", "direction": "stable" }
+  ],
+  "condense": {
+    "idee": "Grosse journée de stress. Les marchés chutent partout : Wall Street a perdu ~2 % hier (6e séance de baisse d'affilée), et cette nuit l'Asie dévisse (Tokyo −4 %, Séoul ~−5 %). La cause : les investisseurs doutent des valeurs liées à l'intelligence artificielle (IA), jugées trop chères. L'Europe va probablement ouvrir en nette baisse. Journée à jouer en défense, pas en héros.",
+    "pourquoi": "Depuis des mois, une poignée de géants de la tech (puces, IA) tirait toute la hausse. Les résultats de Nvidia étaient bons mais n'ont pas rassuré : on craint que les montagnes de dépenses en IA soient excessives. En parallèle, la banque centrale américaine (la Fed) devrait AUGMENTER ses taux en décembre (quasi certain) — de l'argent plus cher, c'est mauvais pour les actions chères. Résultat : tout le monde allège.",
+    "evenement": "Pas de grande statistique américaine aujourd'hui. Seul chiffre européen : les ventes au détail au Royaume-Uni à 8h (attendu stable, 0,0 % sur un mois, après −0,4 %). La séance sera surtout dictée par l'ambiance (les futures américains) et la vague de ventes venue d'Asie.",
+    "plan_avant": "ouverture probablement en forte baisse (gap). On évite de « rattraper le couteau qui tombe » : mieux vaut attendre que ça se stabilise avant d'agir.",
+    "plan_apres": "on surveille le seuil des 8 000 points sur le CAC. S'il tient, rebond technique possible vers 8 150. S'il casse, prochain palier à 7 900.",
+    "a_surveiller": "le VIX (l'« indice de la peur », ~28, au plus haut de la correction) : au-dessus de 30 = panique. Et les futures américains avant l'ouverture de Wall Street (15h30 heure de Paris).",
+    "overnight": "Wall St : Dow −2,18 % · S&P 500 −1,96 % (sous sa moyenne 200 jours) · Nasdaq −2,23 %. Asie : Tokyo −4 % (SoftBank −15 %), Séoul ~−5 %, Hong Kong −2 %. Or −1,4 % · Brent +0,4 % · EUR/USD sous 1,10."
+  },
+  "sources": ["Reuters", "CNBC", "TradingEconomics", "FXStreet", "Newsquawk", "Investing.com"]
+}
