@@ -1,0 +1,60 @@
+{
+  "meta": { "date_str": "lundi 23 novembre 2026", "heure": "08:00", "snapshot": "07:55", "tz": "Europe/Paris" },
+  "verdict": {
+    "biais": "Rebond de soulagement à confirmer — capitulation vendredi, futures US +2 % ce matin",
+    "pivot": "CAC 7 930",
+    "ne_pas_lacher": "7 850",
+    "vol": "VIX 35,9 (panique) — doit refluer pour valider le rebond"
+  },
+  "niveaux": [
+    { "actif": "CAC 40",    "spot": 7928,   "close_prev": 8081,   "sup1": 7850,   "sup2": 7760,   "res1": 8020,   "res2": 8120,   "biais": "neutre",   "decimals": 0 },
+    { "actif": "DAX",       "spot": 24803,  "close_prev": 25464,  "sup1": 24500,  "sup2": 24000,  "res1": 25200,  "res2": 25700,  "biais": "neutre",   "decimals": 0 },
+    { "actif": "EUR/USD",   "spot": 1.0973, "close_prev": 1.0965, "sup1": 1.0950, "sup2": 1.0900, "res1": 1.1020, "res2": 1.1080, "biais": "neutre",   "decimals": 4 },
+    { "actif": "US 10 ans", "spot": 4.92,   "close_prev": 4.98,   "sup1": 4.85,   "sup2": 4.78,   "res1": 4.98,   "res2": 5.05,   "biais": "detente",  "decimals": 2, "unit": "%" },
+    { "actif": "Brent",     "spot": 92.6,   "close_prev": 92.0,   "sup1": 90.5,   "sup2": 88.0,   "res1": 94.5,   "res2": 96.5,   "biais": "neutre",   "decimals": 1, "unit": "$" },
+    { "actif": "Or",        "spot": 3535,   "close_prev": 3626,   "sup1": 3480,   "sup2": 3400,   "res1": 3620,   "res2": 3700,   "biais": "baissier", "decimals": 0, "unit": "$" }
+  ],
+  "courbe": {
+    "points": [ { "t": "2Y", "v": 4.63 }, { "t": "10Y", "v": 4.92 } ],
+    "bund10y": 3.35, "oat10y": 4.87, "spread_2s10s": 29, "spread_oat_bund": 152
+  },
+  "volatilite": { "vix": 35.89 },
+  "cross_asset": [
+    { "label": "S&P 500 (vend.)", "pct": -3.70 }, { "label": "Nasdaq (vend.)", "pct": -5.28 },
+    { "label": "Dow (vend.)", "pct": -1.93 }, { "label": "Kospi (lundi)", "pct": -3.20 },
+    { "label": "Brent", "pct": 0.64 }, { "label": "Or", "pct": -2.51 }
+  ],
+  "agenda": [
+    { "heure": "10:00", "evenement": "PMI composite flash zone euro (novembre)", "attendu": "51,9", "precedent": "51,7", "tier": 2, "evenement_du_jour": true },
+    { "heure": "15:45", "evenement": "PMI composite flash États-Unis (novembre)", "attendu": "55,6", "precedent": "55,9", "tier": 2, "evenement_du_jour": true }
+  ],
+  "secteurs": [
+    { "secteur": "Tech / Semis", "pct": null, "biais": "baissier" },
+    { "secteur": "Auto", "pct": null, "biais": "baissier" },
+    { "secteur": "Luxe", "pct": null, "biais": "baissier" },
+    { "secteur": "Banques", "pct": null, "biais": "neutre" },
+    { "secteur": "Énergie", "pct": null, "biais": "neutre" },
+    { "secteur": "Santé / Conso de base", "pct": null, "biais": "haussier" }
+  ],
+  "playbook": [
+    { "si": "Le rebond se confirme (futures US tenus, Wall St ouvre vert à 15:30)", "proba": 45, "alors": "CAC reprend 8 020 puis vise 8 120 ; VIX reflue sous 30. Invalidation : retour sous 7 850.", "biais": "long" },
+    { "si": "Range nerveux avant les PMI et l'ouverture US", "proba": 20, "alors": "Oscillation 7 850–8 020, volatilité élevée, on attend la confirmation du cash US.", "biais": "attente" },
+    { "si": "Le rebond avorte (Wall St infirme les futures, nouvelle vague de ventes)", "proba": 35, "alors": "CAC rebascule sous 7 850 vers 7 760 ; VIX repart > 35. Objectif baissier 7 760, invalidation au-dessus de 8 020.", "biais": "short" }
+  ],
+  "invalidation": "Sous 7 850 sur le CAC (et un VIX qui refuse de refluer sous 30), le rebond de ce matin se lit comme un simple « dead-cat bounce » et le scénario baissier reprend la main.",
+  "delta": [
+    { "label": "Krach tech : pire semaine depuis 2020", "direction": "down" },
+    { "label": "Rebond ce matin : futures US +2 %", "direction": "up" },
+    { "label": "Or vendu dans la panique (liquidation forcée)", "direction": "down" }
+  ],
+  "condense": {
+    "idee": "Après la pire semaine des actions US depuis 2020 (panique sur l'intelligence artificielle), un rebond de soulagement se dessine ce matin : les « futures » (contrats qui anticipent l'ouverture) US montent de +2 %. Mais c'est fragile : l'Asie reste lourde (Corée −3 %, Tokyo fermé) et il faut que Wall Street confirme à la réouverture (15:30, heure de Paris).",
+    "pourquoi": "La chute vient de la peur que le boom de l'IA soit une « bulle » (valeurs trop chères) : les investisseurs ont tout vendu, y compris l'or — signe de ventes forcées (appels de marge). En parallèle, les taux courts US ont baissé : le marché parie sur davantage de baisses de taux de la Fed si l'économie ralentit.",
+    "evenement": "Aujourd'hui, PMI « flash » (enquêtes mensuelles qui mesurent l'activité des entreprises ; au-dessus de 50 = croissance). Zone euro à 10:00, États-Unis à 15:45. Ce n'est PAS une banque centrale : impact secondaire. Le vrai juge de paix du jour, c'est la tenue (ou non) du rebond.",
+    "plan_avant": "Ouverture européenne attendue en légère hausse (futures Euro Stoxx ~+0,5 %, bien moins que les +2 % US car l'Europe avait moins chuté). On reste prudent tant que le cash US n'a pas ouvert.",
+    "plan_apres": "Surveiller le CAC : au-dessus de 8 020, le rebond prend de l'ampleur ; sous 7 850, il s'essouffle et le risque baissier revient. L'ouverture de Wall Street (15:30) tranchera.",
+    "a_surveiller": "les futures Nasdaq et les semi-conducteurs (ASML −8,7 %, Infineon −7,9 % vendredi), le rebond éventuel de l'or, et un VIX qui doit repasser sous 30 pour signaler un retour au calme.",
+    "overnight": "Vendredi : S&P 500 −3,7 % (6 910), Nasdaq −5,3 % (efface ses gains 2026), Dow −1,9 %. Asie lundi : Corée −3,2 %, Tokyo fermé (jour férié). Ce matin : futures S&P +2,2 %, Nasdaq +2,9 %."
+  },
+  "sources": ["Reuters / CNBC", "TradingEconomics", "Investing.com / Newsquawk", "S&P Global (HCOB) PMI"]
+}
