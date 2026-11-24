@@ -1,0 +1,55 @@
+{
+  "meta": { "date_str": "mardi 24 novembre 2026", "heure": "08:00", "snapshot": "07:55", "tz": "Europe/Paris" },
+  "verdict": {
+    "biais": "Rebond IA — risk-on prudent, plafonné par la Fed",
+    "pivot": "CAC 8 050",
+    "ne_pas_lacher": "7 930",
+    "vol": "VIX retombe à 26,6"
+  },
+  "niveaux": [
+    { "actif": "CAC 40",    "spot": 8050,   "close_prev": 7928,   "sup1": 7930,   "sup2": 7800,   "res1": 8150,   "res2": 8260,   "biais": "haussier", "decimals": 0 },
+    { "actif": "DAX",       "spot": 25364,  "close_prev": 24803,  "sup1": 24800,  "sup2": 24500,  "res1": 25600,  "res2": 25950,  "biais": "haussier", "decimals": 0 },
+    { "actif": "EUR/USD",   "spot": 1.0996, "close_prev": 1.0955, "sup1": 1.0950, "sup2": 1.0900, "res1": 1.1050, "res2": 1.1155, "biais": "baissier", "decimals": 4 },
+    { "actif": "Brent",     "spot": 89.5,   "close_prev": 90.6,   "sup1": 88.0,   "sup2": 86.0,   "res1": 92.0,   "res2": 94.0,   "biais": "baissier", "decimals": 1, "unit": "$" },
+    { "actif": "Or",        "spot": 3655,   "close_prev": 3640,   "sup1": 3600,   "sup2": 3550,   "res1": 3700,   "res2": 3760,   "biais": "neutre",   "decimals": 0, "unit": "$" },
+    { "actif": "US 10 ans", "spot": 4.92,   "close_prev": 4.92,   "sup1": 4.85,   "sup2": 4.78,   "res1": 4.97,   "res2": 5.05,   "biais": "tension",  "decimals": 2, "unit": "%" }
+  ],
+  "courbe": {
+    "points": [ { "t": "2Y", "v": 4.63 }, { "t": "10Y", "v": 4.92 } ],
+    "bund10y": 3.30, "oat10y": 4.82, "spread_2s10s": 29, "spread_oat_bund": 151
+  },
+  "volatilite": { "vix": 26.6 },
+  "cross_asset": [
+    { "label": "Dow", "pct": 3.01 }, { "label": "S&P 500", "pct": 4.73 }, { "label": "Nasdaq", "pct": 6.51 },
+    { "label": "Nikkei", "pct": 3.95 }, { "label": "Kospi", "pct": 6.5 }, { "label": "Or", "pct": 0.4 }, { "label": "Brent", "pct": -1.2 }
+  ],
+  "agenda": [
+    { "heure": "16:00", "evenement": "Confiance des consommateurs (Conference Board, novembre)", "attendu": "92,5", "precedent": "91,7", "tier": 2, "evenement_du_jour": true }
+  ],
+  "secteurs": [
+    { "secteur": "Tech / Semis", "pct": 4.5, "biais": "haussier" }, { "secteur": "Luxe", "pct": 1.2, "biais": "haussier" },
+    { "secteur": "Banques", "pct": 0.8, "biais": "haussier" }, { "secteur": "Industrie", "pct": 1.0, "biais": "haussier" },
+    { "secteur": "Énergie", "pct": -0.9, "biais": "baissier" }, { "secteur": "Défensives", "pct": -0.3, "biais": "neutre" }
+  ],
+  "playbook": [
+    { "si": "Le rebond IA tient (l'Asie confirme, Nikkei +3,9 %)", "proba": 50, "alors": "Hausse : CAC vise 8 150 puis 8 260, DAX rejoint 25 600. Invalidation sous 7 930.", "biais": "long" },
+    { "si": "Prises de bénéfices après +1 400 pts de Dow lundi", "proba": 35, "alors": "Range : CAC digère entre 7 930 et 8 150, la volatilité retombe doucement.", "biais": "attente" },
+    { "si": "La Fed hawkish reprend la main (10 ans US > 4,97 %)", "proba": 15, "alors": "Rechute : CAC casse 7 930, cap sur 7 800 ; EUR/USD sous 1,0950.", "biais": "short" }
+  ],
+  "invalidation": "Un taux US 10 ans repassant au-dessus de 4,97 %, ou un VIX qui remonte franchement au-dessus de 30, couperait le carburant du rebond et invaliderait le biais risk-on.",
+  "delta": [
+    { "label": "Rebond IA qui s'étend à l'Asie", "direction": "up" },
+    { "label": "Pétrole au plus bas de 3 mois", "direction": "down" },
+    { "label": "Taux US tendus avant la Fed du 9 déc.", "direction": "up" }
+  ],
+  "condense": {
+    "idee": "Gros rebond des actions, qui s'étend ce matin à l'Asie (Nikkei +3,9 %, Kospi +6,5 %). Lundi, Wall Street a signé sa meilleure séance depuis avril 2025 (S&P +4,7 %, Nasdaq +6,5 %) après le retour de Jensen Huang à la tête de Nvidia (+31 %). Mais ce n'est pas un feu vert macro : la banque centrale US (Fed) devrait RELEVER ses taux le 9 décembre (≈98 % de probabilité), ce qui plafonne le rebond. En clair : soulagement technique sur l'IA, mais vent de face côté taux.",
+    "pourquoi": "Le plongeon de la semaine dernière (pire semaine depuis 2020) venait d'une panique sur l'IA et les semi-conducteurs. Le retour de Huang chez Nvidia a rassuré d'un coup tout le secteur. En parallèle, le pétrole tombe au plus bas depuis 3 mois (Brent ~89 $), ce qui aide l'inflation ; mais les taux américains restent élevés (10 ans à 4,92 %) car la Fed veut encore resserrer.",
+    "evenement": "Peu d'événement macro majeur aujourd'hui. Le seul chiffre, à 16h00 (heure de Paris) : la confiance des consommateurs américains (Conference Board), attendue à 92,5 contre 91,7 le mois dernier — un thermomètre du moral des ménages avant les fêtes. Le vrai juge de paix reste la décision de taux de la Fed, mais elle n'est que le 9 décembre.",
+    "plan_avant": "séance de suivi du rebond. Tant que le CAC tient au-dessus de 7 930 (clôture de vendredi), le scénario reste au vert ; on surveille si l'élan asiatique se confirme à l'ouverture européenne.",
+    "plan_apres": "si l'élan s'essouffle et que le CAC repasse sous 7 930, risque de rechute vers 7 800. À la hausse, 8 150 puis 8 260 sont les prochains obstacles.",
+    "a_surveiller": "les taux américains (un 10 ans au-dessus de 4,97 % couperait l'élan des actions), le pétrole, et un éventuel retour du VIX au-dessus de 30.",
+    "overnight": "Lundi à Wall Street : Dow +3,0 % · S&P 500 +4,7 % · Nasdaq +6,5 % (meilleure séance depuis avril 2025). Ce matin en Asie : Nikkei +3,9 % · Kospi +6,5 %."
+  },
+  "sources": ["Reuters", "CNBC", "Yahoo Finance", "Saxo", "Trading Economics", "CME FedWatch", "FXStreet"]
+}
