@@ -1,0 +1,61 @@
+{
+  "meta": { "date_str": "mercredi 25 novembre 2026", "heure": "08:00", "snapshot": "07:55", "tz": "Europe/Paris" },
+  "verdict": {
+    "biais": "Risk-off tech, rotation défensive — prudence avant le PCE de 14h30",
+    "pivot": "CAC 8 040",
+    "ne_pas_lacher": "7 960",
+    "vol": "VIX ~28, remonte avant le PCE"
+  },
+  "niveaux": [
+    { "actif": "CAC 40",      "spot": 8040,   "close_prev": 8044,   "sup1": 7980,   "sup2": 7900,   "res1": 8090,   "res2": 8150,   "biais": "baissier", "decimals": 0 },
+    { "actif": "DAX",         "spot": 25018,  "close_prev": 25337,  "sup1": 24800,  "sup2": 24600,  "res1": 25250,  "res2": 25500,  "biais": "baissier", "decimals": 0 },
+    { "actif": "EuroStoxx 50","spot": 6004,   "close_prev": 6074,   "sup1": 5950,   "sup2": 5880,   "res1": 6060,   "res2": 6130,   "biais": "baissier", "decimals": 0 },
+    { "actif": "EUR/USD",     "spot": 1.0910, "close_prev": 1.0920, "sup1": 1.0870, "sup2": 1.0830, "res1": 1.0950, "res2": 1.1000, "biais": "baissier", "decimals": 4 },
+    { "actif": "Brent",       "spot": 86.6,   "close_prev": 86.9,   "sup1": 85.5,   "sup2": 84.0,   "res1": 88.5,   "res2": 90.5,   "biais": "baissier", "decimals": 1, "unit": "$" },
+    { "actif": "Or",          "spot": 3625,   "close_prev": 3639,   "sup1": 3560,   "sup2": 3500,   "res1": 3680,   "res2": 3750,   "biais": "neutre",   "decimals": 0, "unit": "$" },
+    { "actif": "US 10 ans",   "spot": 4.93,   "close_prev": 4.96,   "sup1": 4.85,   "sup2": 4.78,   "res1": 4.98,   "res2": 5.05,   "biais": "neutre",   "decimals": 2, "unit": "%" }
+  ],
+  "courbe": {
+    "points": [ { "t": "2Y", "v": 4.66 }, { "t": "10Y", "v": 4.93 } ],
+    "bund10y": 3.27, "oat10y": 4.78, "spread_2s10s": 27, "spread_oat_bund": 151
+  },
+  "volatilite": { "vix": 28.3 },
+  "cross_asset": [
+    { "label": "Dow", "pct": 0.85 }, { "label": "S&P 500", "pct": -0.50 }, { "label": "Nasdaq", "pct": -1.48 },
+    { "label": "Nikkei", "pct": -3.10 }, { "label": "Kospi", "pct": -5.60 }, { "label": "Brent", "pct": -0.30 }
+  ],
+  "agenda": [
+    { "heure": "14:30", "evenement": "Inflation PCE cœur US (oct., jauge préférée de la Fed)", "attendu": "3,2 % a/a", "precedent": "3,1 % a/a", "tier": 1, "evenement_du_jour": true },
+    { "heure": "14:30", "evenement": "PIB US T3 (2e estimation, annualisé)", "attendu": "3,5 %", "precedent": "3,4 %", "tier": 2, "evenement_du_jour": false }
+  ],
+  "secteurs": [
+    { "secteur": "Tech/Semis", "pct": -8.6, "biais": "baissier" },
+    { "secteur": "Énergie", "pct": null, "biais": "baissier" },
+    { "secteur": "Banques", "pct": null, "biais": "haussier" },
+    { "secteur": "Industrie", "pct": null, "biais": "haussier" },
+    { "secteur": "Santé/Pharma", "pct": null, "biais": "haussier" },
+    { "secteur": "Luxe", "pct": null, "biais": "neutre" }
+  ],
+  "playbook": [
+    { "si": "PCE cœur ≤ 3,1 % (surprise basse, l'inflation décélère)", "proba": 25, "alors": "Soulagement : rebond tech, CAC vise 8 090 puis 8 150 ; invalidation si retour sous 8 040", "biais": "long" },
+    { "si": "PCE conforme (~3,2 %)", "proba": 45, "alors": "Statu quo nerveux : CAC oscille 7 980–8 090, la rotation value/tech se poursuit, VIX reste > 25", "biais": "attente" },
+    { "si": "PCE cœur ≥ 3,3 % (inflation collante, hausse Fed de décembre relancée)", "proba": 30, "alors": "Choc : CAC casse 7 960 cap 7 900 ; EUR/USD < 1,0870 ; US 10 ans > 5,00 %", "biais": "short" }
+  ],
+  "invalidation": "Une clôture du Nasdaq au-dessus de 24 100 invaliderait le scénario de dé-rating de l'IA et rouvrirait le risk-on.",
+  "delta": [
+    { "label": "Dé-rating du secteur IA / semis (−8,6 %)", "direction": "down" },
+    { "label": "Rotation vers la value : Dow > 50 000 (record)", "direction": "up" },
+    { "label": "VIX qui remonte (~28) avant le PCE", "direction": "up" }
+  ],
+  "condense": {
+    "idee": "Journée prudente : les valeurs techno/IA (puces, semis) chutent partout dans le monde, et l'argent file vers les valeurs « value » (banques, industrie, santé). Le paradoxe du jour : le Dow américain bat un record au-dessus de 50 000 pendant que le Nasdaq (riche en techno) plonge — c'est une rotation, pas une panique globale. Tout le monde attend l'inflation US (PCE) à 14h30.",
+    "pourquoi": "Les doutes reviennent sur l'IA : les investissements géants, souvent financés par la dette, vont-ils vraiment rapporter ? S'ajoutent des craintes de droits de douane US. Nvidia a perdu −6 % hier après son bond de +31 % lundi (retour de Jensen Huang comme PDG). Cette nuit, l'Asie a dévissé : Corée −5,6 %, Japon −3,1 %.",
+    "evenement": "Le PCE est la mesure d'inflation PRÉFÉRÉE de la Fed. On attend +3,2 % sur un an pour la version « cœur » (hors énergie/alimentation), contre +3,1 % le mois dernier ; version globale vers +3,8 %. Si c'est plus chaud que prévu, une baisse de taux en décembre devient improbable (certains parlent même d'une hausse) — mauvais pour les actions. Publié à 14h30 avec le PIB T3.",
+    "plan_avant": "ouverture probablement en baisse après la nuit asiatique ; peu de conviction, on ne court pas après le marché.",
+    "plan_apres": "gros mouvement possible à 14h30. On regarde si le CAC casse 7 960 (signal baissier) ou reprend 8 090 (signal de soulagement).",
+    "a_surveiller": "les semis/techno (Nasdaq, Infineon, ASML), le dollar (EUR/USD au plus bas depuis 19 mois) et le taux US 10 ans proche de 4,93 % — au-dessus de 5 %, la pression s'accentue.",
+    "overnight": "Dow +0,85 % (record, > 50 000) · S&P 500 −0,50 % · Nasdaq −1,48 % · Nikkei −3,1 % · Kospi −5,6 %.",
+    "inflation": "3,2 % (cœur, attendu)"
+  },
+  "sources": ["Reuters", "CNBC", "Investing.com", "Trading Economics", "Yahoo Finance"]
+}
