@@ -1,0 +1,63 @@
+{
+  "meta": { "date_str": "jeudi 26 novembre 2026", "heure": "08:00", "snapshot": "07:55", "tz": "Europe/Paris" },
+  "verdict": {
+    "biais": "Prudence en liquidité réduite — semis fragiles, défensives et « value » résistantes",
+    "pivot": "CAC 7 980",
+    "ne_pas_lacher": "7 920",
+    "vol": "VIX figé à 28 (bourses US fermées)"
+  },
+  "niveaux": [
+    { "actif": "CAC 40",    "spot": 7980,   "close_prev": 8040,   "sup1": 7920,   "sup2": 7850,   "res1": 8040,   "res2": 8100,   "biais": "baissier", "decimals": 0 },
+    { "actif": "DAX",       "spot": 24702,  "close_prev": 25017,  "sup1": 24500,  "sup2": 24300,  "res1": 24900,  "res2": 25100,  "biais": "baissier", "decimals": 0 },
+    { "actif": "EUR/USD",   "spot": 1.0960, "close_prev": 1.0966, "sup1": 1.0930, "sup2": 1.0900, "res1": 1.1010, "res2": 1.1060, "biais": "baissier", "decimals": 4 },
+    { "actif": "Brent",     "spot": 90.1,   "close_prev": 91.4,   "sup1": 88.5,   "sup2": 86.5,   "res1": 92.0,   "res2": 94.0,   "biais": "neutre",   "decimals": 1, "unit": "$" },
+    { "actif": "Or",        "spot": 3504,   "close_prev": 3562,   "sup1": 3450,   "sup2": 3400,   "res1": 3580,   "res2": 3650,   "biais": "baissier", "decimals": 0, "unit": "$" },
+    { "actif": "US 10 ans", "spot": 4.87,   "close_prev": 4.90,   "sup1": 4.80,   "sup2": 4.72,   "res1": 4.92,   "res2": 5.00,   "biais": "detente",  "decimals": 2, "unit": "%" }
+  ],
+  "courbe": {
+    "points": [ { "t": "2Y", "v": 4.65 }, { "t": "10Y", "v": 4.87 } ],
+    "bund10y": 3.22, "oat10y": 4.78, "spread_2s10s": 22, "spread_oat_bund": 156
+  },
+  "volatilite": { "vix": 28.0 },
+  "cross_asset": [
+    { "label": "Dow", "pct": 0.33 }, { "label": "Russell 2000", "pct": 0.70 },
+    { "label": "S&P 500", "pct": -0.25 }, { "label": "Nasdaq", "pct": -0.60 },
+    { "label": "Nikkei", "pct": -1.21 }, { "label": "Hang Seng", "pct": -1.14 },
+    { "label": "Or", "pct": -2.45 }, { "label": "Brent", "pct": 2.27 }
+  ],
+  "agenda": [
+    { "heure": "08:00", "evenement": "Confiance des consommateurs GfK Allemagne (déc.)", "attendu": "-32", "precedent": "-30,8", "tier": 2, "evenement_du_jour": true },
+    { "heure": "00:30", "evenement": "Inflation de Tokyo (CPI, nov., publié dans la nuit)", "attendu": "3,1 %", "precedent": "2,8 %", "tier": 2, "evenement_du_jour": false }
+  ],
+  "secteurs": [
+    { "secteur": "Semi-conducteurs", "pct": null, "biais": "baissier" },
+    { "secteur": "Tech", "pct": null, "biais": "baissier" },
+    { "secteur": "Automobile", "pct": null, "biais": "haussier" },
+    { "secteur": "Énergie", "pct": null, "biais": "haussier" },
+    { "secteur": "Consommation", "pct": null, "biais": "haussier" },
+    { "secteur": "Banques", "pct": null, "biais": "neutre" },
+    { "secteur": "Luxe", "pct": null, "biais": "neutre" }
+  ],
+  "playbook": [
+    { "si": "Journée calme à faible volume (scénario le plus probable, US fermés)", "proba": 55, "alors": "Le CAC dérive dans 7 920–8 040 ; les écarts s'élargissent, mouvements amplifiés mais sans direction nette. Invalidation : sortie franche de la zone.", "biais": "attente" },
+    { "si": "Les semis européens (ASML, STMicro) prolongent la purge IA de Wall Street", "proba": 30, "alors": "Le CAC teste 7 920 puis 7 850, le DAX glisse vers 24 500. Objectif baissier 7 850 ; invalidation : retour > 8 040.", "biais": "short" },
+    { "si": "Stabilisation / rebond technique après la secousse sur l'IA", "proba": 15, "alors": "Le CAC rebondit vers 8 040 puis 8 100 ; invalidation : repli sous 7 920.", "biais": "long" }
+  ],
+  "invalidation": "Un retour du CAC au-dessus de 8 040 (clôture de mardi) annule le biais prudent ; une cassure franche de 7 850 ouvre un trou d'air de liquidité, amplifié par l'absence des Américains.",
+  "delta": [
+    { "label": "Wall Street rebondit en fin de séance (Dow +0,3 %)", "direction": "up" },
+    { "label": "Semis / stars de l'IA sous pression", "direction": "down" },
+    { "label": "Or au plus bas depuis ~14 mois", "direction": "down" },
+    { "label": "Bourses US fermées (Thanksgiving)", "direction": "stable" }
+  ],
+  "condense": {
+    "idee": "Journée creuse et nerveuse : la Bourse américaine est FERMÉE pour Thanksgiving, donc l'Europe trade seule et avec peu de volume — les mouvements peuvent être exagérés dans les deux sens. Hier soir, Wall Street a fait le grand écart : le Dow a effacé une chute de 1 100 points pour finir en hausse, pendant que les stars de l'IA (Nvidia, Oracle) reculaient. On reste donc prudent, surtout sur les fabricants de puces.",
+    "pourquoi": "Les investisseurs sortent des valeurs d'intelligence artificielle, devenues très chères, pour aller vers le reste de la cote (banques, industrie, petites valeurs). En toile de fond, la banque centrale américaine (la Fed) devrait RELEVER ses taux en décembre — c'est quasi certain après l'inflation de mardi — car les prix montent encore trop. Des taux plus hauts pénalisent la tech et l'or (qui ne rapporte pas d'intérêts).",
+    "evenement": "Pas de grand rendez-vous aujourd'hui : les marchés américains sont fermés, il n'y a donc aucune statistique US. Le seul vrai chiffre est européen — le moral des consommateurs allemands (indice GfK), attendu en baisse à -32 contre -30,8. Plus l'indice est négatif, plus les ménages sont pessimistes.",
+    "plan_avant": "rien de forcé. Sans les Américains, mieux vaut de petites tailles : les écarts de prix (« spreads ») s'élargissent et un mouvement peut partir sans vraie raison.",
+    "plan_apres": "surveiller la clôture européenne — si le CAC casse 7 920, la baisse peut s'accélérer dans le vide ; au-dessus de 8 040, le stress retombe.",
+    "a_surveiller": "les fabricants de puces (ASML, STMicro) qui copient le Nasdaq, et l'euro au plus bas depuis 19 mois face au dollar (environ 1,096).",
+    "overnight": "Dow +0,3 % (rebond) · S&P 500 −0,25 % · Nasdaq −0,6 % · Nikkei −1,2 % · Hang Seng −1,1 %."
+  },
+  "sources": ["Reuters", "Boursorama", "CNBC", "Trading Economics", "Investing.com"]
+}
