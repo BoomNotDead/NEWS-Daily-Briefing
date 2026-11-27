@@ -1,0 +1,64 @@
+{
+  "meta": { "date_str": "vendredi 27 novembre 2026", "heure": "08:00", "snapshot": "07:50", "tz": "Europe/Paris" },
+  "verdict": {
+    "biais": "Rebond de soulagement (détente tarifaire) — cyclique oui, mais séance creuse",
+    "pivot": "CAC 8 110",
+    "ne_pas_lacher": "8 050",
+    "vol": "VIX élevé à 27 · Black Friday, demi-séance US = à-coups"
+  },
+  "niveaux": [
+    { "actif": "CAC 40",    "spot": 8108.74, "close_prev": 7980.57, "sup1": 8050,   "sup2": 7980,   "res1": 8150,   "res2": 8200,   "biais": "haussier", "decimals": 0 },
+    { "actif": "DAX",       "spot": 25215.52,"close_prev": 24701,   "sup1": 25000,  "sup2": 24700,  "res1": 25400,  "res2": 25600,  "biais": "haussier", "decimals": 0 },
+    { "actif": "EUR/USD",   "spot": 1.0977,  "close_prev": 1.0970,  "sup1": 1.0900, "sup2": 1.0850, "res1": 1.1000, "res2": 1.1050, "biais": "baissier", "decimals": 4 },
+    { "actif": "Brent",     "spot": 96.6,    "close_prev": 94.9,    "sup1": 95.0,   "sup2": 92.5,   "res1": 98.0,   "res2": 100.0,  "biais": "haussier", "decimals": 1, "unit": "$" },
+    { "actif": "Or",        "spot": 3566,    "close_prev": 3580,    "sup1": 3500,   "sup2": 3425,   "res1": 3600,   "res2": 3650,   "biais": "neutre",   "decimals": 0, "unit": "$" },
+    { "actif": "US 10 ans", "spot": 4.85,    "close_prev": 4.86,    "sup1": 4.70,   "sup2": 4.60,   "res1": 4.90,   "res2": 5.00,   "biais": "tendu",    "decimals": 2, "unit": "%" }
+  ],
+  "courbe": {
+    "points": [ { "t": "2Y", "v": 4.66 }, { "t": "10Y", "v": 4.85 } ],
+    "bund10y": 3.25, "oat10y": 4.75, "spread_2s10s": 19, "spread_oat_bund": 150,
+    "fed_funds_proba": "≈ 99 % (hausse le 9 déc.)"
+  },
+  "volatilite": { "vix": 26.80 },
+  "cross_asset": [
+    { "label": "Fut. Nasdaq", "pct": 2.3 }, { "label": "Fut. Dow", "pct": 0.8 },
+    { "label": "Nikkei", "pct": 1.7 }, { "label": "Hang Seng", "pct": 0.4 },
+    { "label": "Brent", "pct": 1.8 }, { "label": "Or", "pct": 0.3 }
+  ],
+  "agenda": [
+    { "heure": "08:45", "evenement": "PIB France T3 (définitif, trimestriel)", "attendu": "-0,1 %", "precedent": "-0,1 %", "tier": 2, "evenement_du_jour": false },
+    { "heure": "09:55", "evenement": "Chômage Allemagne (variation, octobre)", "attendu": "+5 k", "precedent": "+4 k", "tier": 2, "evenement_du_jour": false },
+    { "heure": "11:00", "evenement": "Indice de sentiment économique zone euro (novembre)", "attendu": "97,2", "precedent": "96,9", "tier": 2, "evenement_du_jour": true },
+    { "heure": "14:30", "evenement": "Balance commerciale biens US (octobre, prélim.)", "attendu": "-133,1 Md$", "precedent": "-135,9 Md$", "tier": 3, "evenement_du_jour": false }
+  ],
+  "secteurs": [
+    { "secteur": "Automobile", "pct": null, "biais": "haussier" },
+    { "secteur": "Banques", "pct": null, "biais": "haussier" },
+    { "secteur": "Industrie", "pct": null, "biais": "haussier" },
+    { "secteur": "Énergie", "pct": null, "biais": "haussier" },
+    { "secteur": "Technologie", "pct": null, "biais": "neutre" },
+    { "secteur": "Luxe", "pct": null, "biais": "neutre" }
+  ],
+  "playbook": [
+    { "si": "Wall Street confirme en demi-séance (risk-on)", "proba": 45, "alors": "Hausse : CAC vise 8 200, EuroStoxx > 6 050, autos/banques en tête", "biais": "long" },
+    { "si": "Séance creuse de Black Friday sans catalyseur", "proba": 40, "alors": "Range 8 050–8 150 : prises de bénéfices, volumes faibles, on patiente", "biais": "attente" },
+    { "si": "Le pétrole s'emballe (> 100 $) + 10 ans US vers 5 %", "proba": 15, "alors": "Repli : CAC retombe tester 7 980, les cycliques rendent leurs gains", "biais": "short" }
+  ],
+  "invalidation": "Au-dessus de 5,00 % sur le taux US 10 ans (ou Brent > 100 $), le rebond de soulagement cale et les cycliques rendent leurs gains.",
+  "delta": [
+    { "label": "Détente tarifaire US → rotation vers cycliques et autos", "direction": "up" },
+    { "label": "Pétrole qui repart (risque Golfe, OPEP+ dimanche)", "direction": "up" },
+    { "label": "Black Friday : demi-séance US, liquidité faible", "direction": "down" }
+  ],
+  "condense": {
+    "idee": "Journée de rebond. Les Bourses européennes ont bondi hier (CAC +1,6 %, DAX +2,1 %) parce que les États-Unis ont adouci leurs menaces de droits de douane. Wall Street était fermé (Thanksgiving) ; aujourd'hui c'est « Black Friday » avec une séance US écourtée, et les futures américains montent fort (Nasdaq +2 %), donc Wall Street devrait rattraper. Ce qui monte : les valeurs « cycliques » (autos, banques, industrie). Attention : le rebond est fragile — le pétrole grimpe et la banque centrale US s'apprête à MONTER ses taux dans 15 jours.",
+    "pourquoi": "Les droits de douane (taxes sur les produits importés) font peur car ils pèsent sur les bénéfices des entreprises. Les propositions US sont ressorties moins dures que prévu : une grosse inquiétude s'éloigne, donc les investisseurs rachètent les actions qui souffraient le plus (constructeurs auto comme Stellantis +8,9 % et Renault +5,7 %, banques, industrie).",
+    "evenement": "Rien de majeur aujourd'hui (pas de banque centrale, pas d'inflation, pas d'emploi US). Au menu : sentiment économique de la zone euro (attendu 97,2 contre 96,9) et chômage allemand. Le vrai rendez-vous est le 9 décembre : la Fed devrait monter ses taux (quasi certain, ≈ 99 %).",
+    "plan_avant": "Ouverture dans des volumes fins. On surveille si le CAC tient au-dessus de 8 050 (plancher de la journée).",
+    "plan_apres": "Wall Street rouvre à 15h30 (Paris) pour une demi-journée (clôture 19h). On regarde si le rebond se confirme (CAC vers 8 200) ou si des prises de bénéfices apparaissent dans un marché peu liquide.",
+    "a_surveiller": "le pétrole (Brent ~96 $, réunion OPEP+ dimanche), le taux US 10 ans qui frôle 5 %, l'écart OAT-Bund toujours large (~150 points = stress budgétaire français), et les valeurs techno/IA restées fragiles.",
+    "overnight": "Wall St (mer.) : Dow +0,33 %, S&P -0,25 %, Nasdaq -0,62 %. Jeudi férié (Thanksgiving). Asie ce matin : Nikkei +1,7 %, Hang Seng ~stable. Futures US nettement positifs (Nasdaq +2,3 %).",
+    "inflation": "3,3 %"
+  },
+  "sources": ["Investing.com", "Reuters", "FXStreet", "ActionForex", "TradingEconomics", "CNBC"]
+}

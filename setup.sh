@@ -14,4 +14,10 @@ apt-get install -y --no-install-recommends \
 python3 -m pip install --break-system-packages \
   "weasyprint>=62,<64" "matplotlib>=3.8" "jinja2>=3.1" "jsonschema>=4" "pypdfium2>=4" "pillow>=10" "requests>=2.31"
 
+# Pillow : une version système préinstallée (apt, dans /usr/lib) peut masquer
+# celle de pip et casser l'import de PIL._imaging (matplotlib ne charge plus).
+# On la réinstalle de force pour garantir un Pillow sain dans /usr/local.
+python3 -m pip install --break-system-packages --force-reinstall --no-cache-dir "pillow>=10"
+python3 -c "from PIL import Image; import PIL; print('Pillow OK', PIL.__version__)"
+
 echo "setup_render OK"
